@@ -1,0 +1,10 @@
+import = [
+{
+ table = "CDA_4_HANA.Data.Tables::T_0CUSTOMER_ATTR";
+ schema = "CDA_4_HANA";
+ file = "CDA_4_HANA.Data.Tables:CSV_T_0CUSTOMER_ATTR.csv";
+ header = false;
+ delimField = ",";
+ delimEnclosing="\"";
+ distinguishEmptyFromNull = true;
+}];

@@ -1,0 +1,10 @@
+import = [
+{
+ table = "CDA_4_HANA.Data.Tables::T_0FI_AR_4";
+ schema = "CDA_4_HANA";
+ file = "CDA_4_HANA.Data.Tables:CSV_T_0FI_AR_4.csv";
+ header = false;
+ delimField = ",";
+ delimEnclosing="\"";
+ distinguishEmptyFromNull = true;
+}];

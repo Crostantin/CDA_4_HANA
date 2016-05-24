@@ -1,0 +1,11 @@
+//To define the HDB schema, you can use the following code: 
+//CREATE SCHEMA CDA_4_HANA OWNED BY system;
+
+//  grant select on schema CDA_4_HANA to _SYS_REPO with grant option;
+//  grant execute on schema CDA_4_HANA to _SYS_REPO with grant option;
+//  grant insert on schema CDA_4_HANA to _SYS_REPO with grant option;
+//  grant update on schema CDA_4_HANA to _SYS_REPO with grant option;
+//  grant delete on schema CDA_4_HANA to _SYS_REPO with grant option;
+
+
+schema_name = "CDA_4_HANA";

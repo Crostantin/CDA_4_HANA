@@ -1,0 +1,31 @@
+FUNCTION "CDA_4_HANA"."CDA_4_HANA.Aging.Functions::TB_S_CDA_DOCUMENTO" ( ) 
+	RETURNS TABLE (
+		"PARTITA_ID" BIGINT,
+		"BUKRS" VARCHAR(4),
+		"FISCPER" DECIMAL(7,0),
+	 	"BELNR" VARCHAR(10),
+	 	"BUZEI" DECIMAL(3,0),
+	 	"UPOSZ" VARCHAR(4)
+	 )
+	LANGUAGE SQLSCRIPT
+	SQL SECURITY INVOKER AS
+BEGIN
+/***************************** 
+	Write your function logic
+ *****************************/
+
+return 
+	select
+		"CDA_4_HANA.Aging.Sequence::SEQ_S_CDA_DOCUMENTO".nextval as "PARTITA_ID",
+		"BUKRS", 
+		"FISCPER", 
+	 	"BELNR",
+	 	"BUZEI",
+	 	"UPOSZ"
+	 from 
+	 	"CDA_4_HANA.Data.Tables::T_0FI_AR_4"
+	 where 
+	 	UPOSZ = '0001'
+	 ;
+
+END;

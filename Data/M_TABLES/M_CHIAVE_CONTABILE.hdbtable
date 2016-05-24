@@ -1,0 +1,11 @@
+table.schemaName = "CDA_4_HANA";
+table.tableType = COLUMNSTORE;
+table.columns = [
+
+{name="BSCHL";sqlType=VARCHAR; length=2;},
+{name="CHIAVE_CONTABILE_DES";sqlType=VARCHAR; length=23;},
+{name="TIPO";sqlType=VARCHAR; length=5;},
+{name="TIPO_CHIAVE";sqlType=VARCHAR; length=9;},
+{name="DESTINAZIONE";sqlType=VARCHAR; length=7;}
+
+];

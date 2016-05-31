@@ -25,14 +25,16 @@ FUNCTION "CDA_4_HANA"."CDA_4_HANA.Fact_Tables.Functions::TB_CLI_PAGAMENTI_PASSO1
 	NUM_RIGA_PAGAMENTO DECIMAL(3,0)
 	) 
 	LANGUAGE SQLSCRIPT
-	SQL SECURITY INVOKER AS
+	SQL SECURITY INVOKER
+	DEFAULT SCHEMA "CDA_4_HANA"
+	AS
 BEGIN
 /***************************** 
 	Write your function logic
  *****************************/
  
- M_CHIAVE_CONTABILE = select * from "CDA_4_HANA.Data.M_TABLES::M_CHIAVE_CONTABILE";
- T_0FI_AR_4 = select * from "CDA_4_HANA.Data.Tables::T_0FI_AR_4";
+ --M_CHIAVE_CONTABILE = select * from "CDA_4_HANA.Data.M_TABLES:"CDA_4_HANA.Data.M_TABLES::M_CHIAVE_CONTABILE"";
+ --T_0FI_AR_4 = select * from "CDA_4_HANA.Data.Tables:"CDA_4_HANA.Data.Tables::T_0FI_AR_4"";
  WT_CLI_RESI_PASSO2 = 
 		 SELECT
 			 "BUKRS",
@@ -92,8 +94,8 @@ BEGIN
 	--Pagamenti con associazione a fatture diretta
 	Temp_Pagamenti =
 		select  BUKRS, REBZG, REBZJ, REBZZ, DMSHB, WRSHB, BLDAT
-		FROM :T_0FI_AR_4 a
-		join :M_CHIAVE_CONTABILE b
+		FROM "CDA_4_HANA.Data.Tables::T_0FI_AR_4" a
+		join "CDA_4_HANA.Data.M_TABLES::M_CHIAVE_CONTABILE" b
 		on (a.BSCHL=b.BSCHL)
 		where b.DESTINAZIONE='Cliente'
 		and b.TIPO_CHIAVE='Pagamenti'
@@ -114,7 +116,7 @@ BEGIN
 		from :WT_CLI_RESI_PASSO2 a
 		join 	:Temp_Pagamenti b
 		on (a.BUKRS=b.BUKRS and a.GJAHR=b.REBZJ and a.BELNR=b.REBZG and a.BUZEI=b.REBZZ)
-		join :M_CHIAVE_CONTABILE c
+		join "CDA_4_HANA.Data.M_TABLES::M_CHIAVE_CONTABILE" c
 		on (a.BSCHL=c.BSCHL)
 		join :Temp_Fatture d
 		on (a.BUKRS=d.BUKRS and a.GJAHR=d.GJAHR and a.BELNR=d.BELNR and a.BUZEI=d.BUZEI)
@@ -172,7 +174,7 @@ BEGIN
 		join (
 				select a.BUKRS, a.GJAHR, a.BELNR, a.BUZEI
 				from :WT_CLI_RESI_PASSO2 a
-				join :M_CHIAVE_CONTABILE b
+				join "CDA_4_HANA.Data.M_TABLES::M_CHIAVE_CONTABILE" b
 				on (a.BSCHL=b.BSCHL)
 				where b.TIPO='dare'
 				and TIPO_CHIAVE='Fatture'
@@ -218,7 +220,7 @@ BEGIN
 			join :TMP_GMP_CLI_PASSO1 b
 			on (a.BUKRS=b.BUKRS and a.GJAHR=b.GJAHR and a.BELNR=b.BELNR and a.BUZEI=b.BUZEI)
 		) a
-		join :T_0FI_AR_4 b
+		join "CDA_4_HANA.Data.Tables::T_0FI_AR_4" b
 		on (a.BUKRS=b.BUKRS and a.GJAHR=b.GJAHR and a.BELNR=b.BELNR and a.BUZEI=b.BUZEI)
 		join :TMP_GMP_CLI_PAGATO_ALLOCATO c
 		on (a.BUKRS=c.BUKRS and a.GJAHR=c.GJAHR and a.BELNR=c.BELNR and a.BUZEI=c.BUZEI)
@@ -255,7 +257,7 @@ BEGIN
 		from :WT_CLI_RESI_PASSO2 a
 		left join :TMP_Fatture_Gestite b
 		on (a.BUKRS=b.BUKRS and a.GJAHR=b.GJAHR and a.BELNR=b.BELNR and a.BUZEI=b.BUZEI)
-		join :M_CHIAVE_CONTABILE c
+		join "CDA_4_HANA.Data.M_TABLES::M_CHIAVE_CONTABILE" c
 		on (a.BSCHL=c.BSCHL)
 		where c.TIPO='dare'
 		and c.TIPO_CHIAVE='Fatture'
@@ -284,8 +286,8 @@ BEGIN
 		null ESERCIZIO_PAGAMENTO, 
 		null DOCUMENTO_PAGAMENTO, 
 		null NUM_RIGA_PAGAMENTO
-		from :T_0FI_AR_4 a
-		JOIN :M_CHIAVE_CONTABILE b
+		from "CDA_4_HANA.Data.Tables::T_0FI_AR_4" a
+		JOIN "CDA_4_HANA.Data.M_TABLES::M_CHIAVE_CONTABILE" b
 		on (a.BSCHL=b.BSCHL)
 		where b.TIPO_CHIAVE='Pagamenti'
 		and b.DESTINAZIONE='Cliente'

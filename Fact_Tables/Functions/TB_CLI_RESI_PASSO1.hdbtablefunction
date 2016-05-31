@@ -31,8 +31,8 @@ BEGIN
 	Write your function logic
  *****************************/
 
- M_CHIAVE_CONTABILE = select * from "CDA_4_HANA.Data.M_TABLES::M_CHIAVE_CONTABILE";
- T_0FI_AR_4 = select * from "CDA_4_HANA.Data.Tables::T_0FI_AR_4";
+ --M_CHIAVE_CONTABILE = select * from "CDA_4_HANA.Data.M_TABLES::M_CHIAVE_CONTABILE"";
+ --"CDA_4_HANA.Data.Tables::T_0FI_AR_4" = select * from "CDA_4_HANA.Data.Tables:"CDA_4_HANA.Data.Tables::T_0FI_AR_4"";
  
 --Seleziono i pagamenti relativi a fatture secche
  TMP_GMP_CLI_RESI_PASSO1 =
@@ -47,12 +47,12 @@ BEGIN
 		b.REBZJ ESERCIZIO_PAGAMENTO, 
 		b.REBZG DOCUMENTO_PAGAMENTO, 
 		b.REBZZ NUM_RIGA_PAGAMENTO
-	from :T_0FI_AR_4 a
+	from "CDA_4_HANA.Data.Tables::T_0FI_AR_4" a
 	inner join 
 	(
 		select  BUKRS, REBZG, REBZJ, REBZZ, DMSHB, WRSHB, BLDAT
-		from :T_0FI_AR_4 a
-		inner join :M_CHIAVE_CONTABILE b
+		from "CDA_4_HANA.Data.Tables::T_0FI_AR_4" a
+		inner join "CDA_4_HANA.Data.M_TABLES::M_CHIAVE_CONTABILE" b
 		on (a.BSCHL=b.BSCHL)
 		where b.DESTINAZIONE='Cliente'
 		and b.TIPO_CHIAVE='Fatture'
@@ -116,10 +116,10 @@ BEGIN
 		b.DOCUMENTO_PAGAMENTO, 
 		b.NUM_RIGA_PAGAMENTO
 		--into [dbo].[WT_CLI_PASSO1]
-		from :T_0FI_AR_4 a
+		from "CDA_4_HANA.Data.Tables::T_0FI_AR_4" a
 		left join :TMP_GMP_CLI_RESI_PASSO2 b
 		on (a.BUKRS=b.BUKRS and a.GJAHR=b.GJAHR and a.BELNR=b.BELNR and a.BUZEI=b.BUZEI)
-		inner JOIN :M_CHIAVE_CONTABILE c
+		inner join "CDA_4_HANA.Data.M_TABLES::M_CHIAVE_CONTABILE" c
 		on (a.BSCHL=c.BSCHL)
 	);
  

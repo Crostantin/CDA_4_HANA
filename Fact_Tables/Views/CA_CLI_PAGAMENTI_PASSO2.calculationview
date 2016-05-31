@@ -106,8 +106,8 @@ GROUP BY &quot;BUKRS&quot;,
 		SUM(A.WRSHB) OVER (PARTITION BY  a.BUKRS, a.AUGBL, a.AUGDT, a.KUNNR ORDER BY a.BLDAT, a.BELNR, a.BUZEI) RUNNINGSUM_PAGAMENTO_LC,
 		BLDAT
 		--into :TMP_Passo2_Pagamenti
-		FROM :WT_CLI_PASSO1 a
-		join :M_CHIAVE_CONTABILE b
+		FROM &quot;CDA_4_HANA.Fact_Tables.Functions::TB_CLI_PAGAMENTI_PASSO1&quot;() a
+		join &quot;CDA_4_HANA.Data.M_TABLES::M_CHIAVE_CONTABILE&quot; b
 		on (a.BSCHL=b.BSCHL)
 		where b.DESTINAZIONE='Cliente'
 		and b.TIPO_CHIAVE='Pagamenti'
@@ -133,8 +133,8 @@ GROUP BY &quot;BUKRS&quot;,
 		SUM(A.WRSHB + ifnull(a.VAL_PAGATO_ALLOCATO_LC, 0)) OVER (PARTITION BY  a.BUKRS, a.AUGBL, a.AUGDT, a.KUNNR ORDER BY a.BLDAT, a.BELNR, a.BUZEI) RUNNINGSUM_FATTURA_LC,
 		BLDAT, NETDT
 		--into :TMP_Passo2_Fatture
-		FROM :WT_CLI_PASSO1 a
-		join :M_CHIAVE_CONTABILE b
+		FROM &quot;CDA_4_HANA.Fact_Tables.Functions::TB_CLI_PAGAMENTI_PASSO1&quot;() a
+		join &quot;CDA_4_HANA.Data.M_TABLES::M_CHIAVE_CONTABILE&quot; b
 		on (a.BSCHL=b.BSCHL)
 		where b.DESTINAZIONE='Cliente'
 		and b.TIPO_CHIAVE='Fatture'
@@ -148,8 +148,8 @@ GROUP BY &quot;BUKRS&quot;,
 		VAL_PAGATO_ALLOCATO, VAL_PAGATO_ALLOCATO_GMP, VAL_PAGATO_ALLOCATO_LC, VAL_PAGATO_ALLOCATO_GMP_LC, 
 		DATA_PAGAMENTO, ESERCIZIO_PAGAMENTO, DOCUMENTO_PAGAMENTO, NUM_RIGA_PAGAMENTO
 		--into :TMP_Partite_Elaborate
-		FROM :WT_CLI_PASSO1 a
-		join :M_CHIAVE_CONTABILE b
+		FROM &quot;CDA_4_HANA.Fact_Tables.Functions::TB_CLI_PAGAMENTI_PASSO1&quot;() a
+		join &quot;CDA_4_HANA.Data.M_TABLES::M_CHIAVE_CONTABILE&quot; b
 		on (a.BSCHL=b.BSCHL)
 		where b.DESTINAZIONE='Cliente'
 		and b.TIPO_CHIAVE='Fatture'
@@ -160,8 +160,8 @@ GROUP BY &quot;BUKRS&quot;,
 		(select BUKRS, GJAHR, BELNR, BUZEI, a.BSCHL, AUGBL, AUGDT, KUNNR, BLDAT, NETDT, STATUS, DMSHB, WRSHB, &quot;ROWID&quot;, 
 		VAL_PAGATO_ALLOCATO, VAL_PAGATO_ALLOCATO_GMP, VAL_PAGATO_ALLOCATO_LC, VAL_PAGATO_ALLOCATO_GMP_LC, 
 		DATA_PAGAMENTO, ESERCIZIO_PAGAMENTO, DOCUMENTO_PAGAMENTO, NUM_RIGA_PAGAMENTO
-		FROM :WT_CLI_PASSO1 a
-		join :M_CHIAVE_CONTABILE b
+		FROM &quot;CDA_4_HANA.Fact_Tables.Functions::TB_CLI_PAGAMENTI_PASSO1&quot;() a
+		join &quot;CDA_4_HANA.Data.M_TABLES::M_CHIAVE_CONTABILE&quot; b
 		on (a.BSCHL=b.BSCHL)
 		where b.DESTINAZIONE='Cliente'
 		and b.TIPO_CHIAVE='Pagamenti'
@@ -173,7 +173,7 @@ GROUP BY &quot;BUKRS&quot;,
 		VAL_PAGATO_ALLOCATO, VAL_PAGATO_ALLOCATO_GMP, VAL_PAGATO_ALLOCATO_LC, VAL_PAGATO_ALLOCATO_GMP_LC, 
 		DATA_PAGAMENTO, ESERCIZIO_PAGAMENTO, DOCUMENTO_PAGAMENTO, NUM_RIGA_PAGAMENTO
 		from :WT_CLI_RESI_PASSO2 a
-		join :M_CHIAVE_CONTABILE b
+		join &quot;CDA_4_HANA.Data.M_TABLES::M_CHIAVE_CONTABILE&quot; b
 		on (a.BSCHL=b.BSCHL)
 		where b.DESTINAZIONE='Cliente'
 		and b.TIPO_CHIAVE='Fatture'
@@ -183,8 +183,8 @@ GROUP BY &quot;BUKRS&quot;,
 		(select BUKRS, GJAHR, BELNR, BUZEI, a.BSCHL, AUGBL, AUGDT, KUNNR, BLDAT, NETDT, STATUS, DMSHB, WRSHB, &quot;ROWID&quot;, 
 		VAL_PAGATO_ALLOCATO, VAL_PAGATO_ALLOCATO_GMP, VAL_PAGATO_ALLOCATO_LC, VAL_PAGATO_ALLOCATO_GMP_LC, 
 		DATA_PAGAMENTO, ESERCIZIO_PAGAMENTO, DOCUMENTO_PAGAMENTO, NUM_RIGA_PAGAMENTO
-		FROM :WT_CLI_PASSO1 a
-		join :M_CHIAVE_CONTABILE b
+		FROM &quot;CDA_4_HANA.Fact_Tables.Functions::TB_CLI_PAGAMENTI_PASSO1&quot;() a
+		join &quot;CDA_4_HANA.Data.M_TABLES::M_CHIAVE_CONTABILE&quot; b
 		on (a.BSCHL=b.BSCHL)
 		where b.DESTINAZIONE='Cliente'
 		and b.TIPO_CHIAVE='Fatture'
@@ -288,7 +288,7 @@ GROUP BY &quot;BUKRS&quot;,
 		select a.BUKRS, a.GJAHR, a.BELNR, a.BUZEI, 
 		ifnull(max(case when a.VAL_PAGATO_ALLOCATO_GMP_LC is null then null else a.&quot;ROWID&quot; end), 0) MAX_ROWID
 		--into :Temp_Fatture
-		From :WT_CLI_PASSO1 a
+		From &quot;CDA_4_HANA.Fact_Tables.Functions::TB_CLI_PAGAMENTI_PASSO1&quot;() a
 		join :TMP_Passo2_Fatture b
 		on (a.BUKRS=b.BUKRS and a.GJAHR=b.GJAHR and a.BELNR=b.BELNR and a.BUZEI=b.BUZEI)
 		group by a.BUKRS, a.GJAHR, a.BELNR, a.BUZEI
@@ -389,7 +389,7 @@ GROUP BY &quot;BUKRS&quot;,
 		AUGDT,
 		null DATA_PAREGGIO
 		from :TMP_Partite_Elaborate a
-		join :M_CHIAVE_CONTABILE b
+		join &quot;CDA_4_HANA.Data.M_TABLES::M_CHIAVE_CONTABILE&quot; b
 		on (a.BSCHL=b.BSCHL)
 		union all
 		--Pagamento coinvolti in questo ciclo
@@ -448,13 +448,9 @@ GROUP BY &quot;BUKRS&quot;,
 		sum(VAL_PAGATO_ALLOCATO_GMP_LC) VAL_PAGATO_ALLOCATO_LC, 
 		max(DATA_PAREGGIO) DATA_PAREGGIO
 		From :TMP_Passo2_P5 a
-		join :M_CHIAVE_CONTABILE b
+		join &quot;CDA_4_HANA.Data.M_TABLES::M_CHIAVE_CONTABILE&quot; b
 		on (a.BSCHL=b.BSCHL)
 		where b.TIPO_CHIAVE='Fatture' and b.TIPO='dare' and b.DESTINAZIONE='Cliente'
-		and a.AUGBL='0006004370'
-		and a.AUGDT='2015-05-27'
-		and a.BUKRS='1000'
-		and a.KUNNR='0002029134'
 		group by a.BUKRS, a.GJAHR, a.BELNR, a.BUZEI, a.BSCHL, a.BSCHL, b.TIPO_CHIAVE
 	) b
 	on (a.BUKRS=b.BUKRS and a.GJAHR=b.GJAHR and a.BELNR=b.BELNR and a.BUZEI=b.BUZEI and a.BSCHL=b.BSCHL)
@@ -479,8 +475,8 @@ GROUP BY &quot;BUKRS&quot;,
 	a.AUGBL, --Vengono considerate anche le partite pareggiate ma che non si chiudono a causa di insoluti e resi in fattura
 	a.AUGDT, --Vengono considerate anche le partite pareggiate ma che non si chiudono a causa di insoluti e resi in fattura
 	null DATA_PAREGGIO
-	from :WT_CLI_PASSO1 a
-	join :M_CHIAVE_CONTABILE c
+	from &quot;CDA_4_HANA.Fact_Tables.Functions::TB_CLI_PAGAMENTI_PASSO1&quot;() a
+	join &quot;CDA_4_HANA.Data.M_TABLES::M_CHIAVE_CONTABILE&quot; c
 	on (a.BSCHL=c.BSCHL)
 	left join :TMP_Passo2_P5 d
 	on (a.BUKRS=d.BUKRS and a.GJAHR=d.GJAHR and a.BELNR=d.BELNR and a.BUZEI=d.BUZEI)

@@ -1,0 +1,311 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Calculation:scenario xmlns:Calculation="http://www.sap.com/ndb/BiModelCalculation.ecore" schemaVersion="2.3" id="CA_S_CLIENTE_SOCIETA" applyPrivilegeType="ANALYTIC_PRIVILEGE" checkAnalyticPrivileges="true" defaultClient="$$client$$" defaultLanguage="$$language$$" hierarchiesSQLEnabled="false" translationRelevant="true" visibility="internal" calculationScenarioType="TREE_BASED" dataCategory="DIMENSION" enforceSqlExecution="false" executionSemantic="UNDEFINED" outputViewType="Projection">
+  <descriptions defaultDescription="CA_S_CLIENTE_SOCIETA"/>
+  <localVariables/>
+  <variableMappings/>
+  <informationModelLayout relativeWidthScenario="27"/>
+  <dataSources>
+    <DataSource id="CDA_4_HANA.ETL.Tables::T_0CUST_COMPC_ATTR" type="DATA_BASE_TABLE">
+      <viewAttributes allViewAttributes="true"/>
+      <columnObject schemaName="CDA_4_HANA" columnObjectName="CDA_4_HANA.ETL.Tables::T_0CUST_COMPC_ATTR"/>
+    </DataSource>
+  </dataSources>
+  <calculationViews/>
+  <logicalModel id="CDA_4_HANA.ETL.Tables::T_0CUST_COMPC_ATTR">
+    <descriptions/>
+    <attributes>
+      <attribute id="KUNNR" order="1" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="KUNNR"/>
+        <keyMapping schemaName="CDA_4_HANA" columnObjectName="CDA_4_HANA.ETL.Tables::T_0CUST_COMPC_ATTR" columnName="KUNNR"/>
+      </attribute>
+      <attribute id="BUKRS" order="2" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="BUKRS"/>
+        <keyMapping schemaName="CDA_4_HANA" columnObjectName="CDA_4_HANA.ETL.Tables::T_0CUST_COMPC_ATTR" columnName="BUKRS"/>
+      </attribute>
+      <attribute id="PERNR" order="3" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="PERNR"/>
+        <keyMapping schemaName="CDA_4_HANA" columnObjectName="CDA_4_HANA.ETL.Tables::T_0CUST_COMPC_ATTR" columnName="PERNR"/>
+      </attribute>
+      <attribute id="ERDAT" order="4" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="ERDAT"/>
+        <keyMapping schemaName="CDA_4_HANA" columnObjectName="CDA_4_HANA.ETL.Tables::T_0CUST_COMPC_ATTR" columnName="ERDAT"/>
+      </attribute>
+      <attribute id="ERNAM" order="5" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="ERNAM"/>
+        <keyMapping schemaName="CDA_4_HANA" columnObjectName="CDA_4_HANA.ETL.Tables::T_0CUST_COMPC_ATTR" columnName="ERNAM"/>
+      </attribute>
+      <attribute id="SPERR" order="6" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="SPERR"/>
+        <keyMapping schemaName="CDA_4_HANA" columnObjectName="CDA_4_HANA.ETL.Tables::T_0CUST_COMPC_ATTR" columnName="SPERR"/>
+      </attribute>
+      <attribute id="LOEVM" order="7" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="LOEVM"/>
+        <keyMapping schemaName="CDA_4_HANA" columnObjectName="CDA_4_HANA.ETL.Tables::T_0CUST_COMPC_ATTR" columnName="LOEVM"/>
+      </attribute>
+      <attribute id="ZUAWA" order="8" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="ZUAWA"/>
+        <keyMapping schemaName="CDA_4_HANA" columnObjectName="CDA_4_HANA.ETL.Tables::T_0CUST_COMPC_ATTR" columnName="ZUAWA"/>
+      </attribute>
+      <attribute id="BUSAB" order="9" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="BUSAB"/>
+        <keyMapping schemaName="CDA_4_HANA" columnObjectName="CDA_4_HANA.ETL.Tables::T_0CUST_COMPC_ATTR" columnName="BUSAB"/>
+      </attribute>
+      <attribute id="AKONT" order="10" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="AKONT"/>
+        <keyMapping schemaName="CDA_4_HANA" columnObjectName="CDA_4_HANA.ETL.Tables::T_0CUST_COMPC_ATTR" columnName="AKONT"/>
+      </attribute>
+      <attribute id="BEGRU" order="11" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="BEGRU"/>
+        <keyMapping schemaName="CDA_4_HANA" columnObjectName="CDA_4_HANA.ETL.Tables::T_0CUST_COMPC_ATTR" columnName="BEGRU"/>
+      </attribute>
+      <attribute id="KNRZE" order="12" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="KNRZE"/>
+        <keyMapping schemaName="CDA_4_HANA" columnObjectName="CDA_4_HANA.ETL.Tables::T_0CUST_COMPC_ATTR" columnName="KNRZE"/>
+      </attribute>
+      <attribute id="KNRZB" order="13" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="KNRZB"/>
+        <keyMapping schemaName="CDA_4_HANA" columnObjectName="CDA_4_HANA.ETL.Tables::T_0CUST_COMPC_ATTR" columnName="KNRZB"/>
+      </attribute>
+      <attribute id="ZAMIM" order="14" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="ZAMIM"/>
+        <keyMapping schemaName="CDA_4_HANA" columnObjectName="CDA_4_HANA.ETL.Tables::T_0CUST_COMPC_ATTR" columnName="ZAMIM"/>
+      </attribute>
+      <attribute id="ZAMIV" order="15" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="ZAMIV"/>
+        <keyMapping schemaName="CDA_4_HANA" columnObjectName="CDA_4_HANA.ETL.Tables::T_0CUST_COMPC_ATTR" columnName="ZAMIV"/>
+      </attribute>
+      <attribute id="ZAMIR" order="16" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="ZAMIR"/>
+        <keyMapping schemaName="CDA_4_HANA" columnObjectName="CDA_4_HANA.ETL.Tables::T_0CUST_COMPC_ATTR" columnName="ZAMIR"/>
+      </attribute>
+      <attribute id="ZAMIB" order="17" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="ZAMIB"/>
+        <keyMapping schemaName="CDA_4_HANA" columnObjectName="CDA_4_HANA.ETL.Tables::T_0CUST_COMPC_ATTR" columnName="ZAMIB"/>
+      </attribute>
+      <attribute id="ZAMIO" order="18" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="ZAMIO"/>
+        <keyMapping schemaName="CDA_4_HANA" columnObjectName="CDA_4_HANA.ETL.Tables::T_0CUST_COMPC_ATTR" columnName="ZAMIO"/>
+      </attribute>
+      <attribute id="ZWELS" order="19" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="ZWELS"/>
+        <keyMapping schemaName="CDA_4_HANA" columnObjectName="CDA_4_HANA.ETL.Tables::T_0CUST_COMPC_ATTR" columnName="ZWELS"/>
+      </attribute>
+      <attribute id="XVERR" order="20" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="XVERR"/>
+        <keyMapping schemaName="CDA_4_HANA" columnObjectName="CDA_4_HANA.ETL.Tables::T_0CUST_COMPC_ATTR" columnName="XVERR"/>
+      </attribute>
+      <attribute id="ZAHLS" order="21" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="ZAHLS"/>
+        <keyMapping schemaName="CDA_4_HANA" columnObjectName="CDA_4_HANA.ETL.Tables::T_0CUST_COMPC_ATTR" columnName="ZAHLS"/>
+      </attribute>
+      <attribute id="ZTERM" order="22" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="ZTERM"/>
+        <keyMapping schemaName="CDA_4_HANA" columnObjectName="CDA_4_HANA.ETL.Tables::T_0CUST_COMPC_ATTR" columnName="ZTERM"/>
+      </attribute>
+      <attribute id="WAKON" order="23" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="WAKON"/>
+        <keyMapping schemaName="CDA_4_HANA" columnObjectName="CDA_4_HANA.ETL.Tables::T_0CUST_COMPC_ATTR" columnName="WAKON"/>
+      </attribute>
+      <attribute id="VZSKZ" order="24" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="VZSKZ"/>
+        <keyMapping schemaName="CDA_4_HANA" columnObjectName="CDA_4_HANA.ETL.Tables::T_0CUST_COMPC_ATTR" columnName="VZSKZ"/>
+      </attribute>
+      <attribute id="EIKTO" order="25" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="EIKTO"/>
+        <keyMapping schemaName="CDA_4_HANA" columnObjectName="CDA_4_HANA.ETL.Tables::T_0CUST_COMPC_ATTR" columnName="EIKTO"/>
+      </attribute>
+      <attribute id="ZSABE" order="26" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="ZSABE"/>
+        <keyMapping schemaName="CDA_4_HANA" columnObjectName="CDA_4_HANA.ETL.Tables::T_0CUST_COMPC_ATTR" columnName="ZSABE"/>
+      </attribute>
+      <attribute id="KVERM" order="27" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="KVERM"/>
+        <keyMapping schemaName="CDA_4_HANA" columnObjectName="CDA_4_HANA.ETL.Tables::T_0CUST_COMPC_ATTR" columnName="KVERM"/>
+      </attribute>
+      <attribute id="FDGRV" order="28" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="FDGRV"/>
+        <keyMapping schemaName="CDA_4_HANA" columnObjectName="CDA_4_HANA.ETL.Tables::T_0CUST_COMPC_ATTR" columnName="FDGRV"/>
+      </attribute>
+      <attribute id="VRBKZ" order="29" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="VRBKZ"/>
+        <keyMapping schemaName="CDA_4_HANA" columnObjectName="CDA_4_HANA.ETL.Tables::T_0CUST_COMPC_ATTR" columnName="VRBKZ"/>
+      </attribute>
+      <attribute id="VRSZL" order="30" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="VRSZL"/>
+        <keyMapping schemaName="CDA_4_HANA" columnObjectName="CDA_4_HANA.ETL.Tables::T_0CUST_COMPC_ATTR" columnName="VRSZL"/>
+      </attribute>
+      <attribute id="VRSPR" order="31" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="VRSPR"/>
+        <keyMapping schemaName="CDA_4_HANA" columnObjectName="CDA_4_HANA.ETL.Tables::T_0CUST_COMPC_ATTR" columnName="VRSPR"/>
+      </attribute>
+      <attribute id="VRSNR" order="32" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="VRSNR"/>
+        <keyMapping schemaName="CDA_4_HANA" columnObjectName="CDA_4_HANA.ETL.Tables::T_0CUST_COMPC_ATTR" columnName="VRSNR"/>
+      </attribute>
+      <attribute id="VERDT" order="33" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="VERDT"/>
+        <keyMapping schemaName="CDA_4_HANA" columnObjectName="CDA_4_HANA.ETL.Tables::T_0CUST_COMPC_ATTR" columnName="VERDT"/>
+      </attribute>
+      <attribute id="PERKZ" order="34" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="PERKZ"/>
+        <keyMapping schemaName="CDA_4_HANA" columnObjectName="CDA_4_HANA.ETL.Tables::T_0CUST_COMPC_ATTR" columnName="PERKZ"/>
+      </attribute>
+      <attribute id="XDEZV" order="35" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="XDEZV"/>
+        <keyMapping schemaName="CDA_4_HANA" columnObjectName="CDA_4_HANA.ETL.Tables::T_0CUST_COMPC_ATTR" columnName="XDEZV"/>
+      </attribute>
+      <attribute id="XAUSZ" order="36" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="XAUSZ"/>
+        <keyMapping schemaName="CDA_4_HANA" columnObjectName="CDA_4_HANA.ETL.Tables::T_0CUST_COMPC_ATTR" columnName="XAUSZ"/>
+      </attribute>
+      <attribute id="REMIT" order="37" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="REMIT"/>
+        <keyMapping schemaName="CDA_4_HANA" columnObjectName="CDA_4_HANA.ETL.Tables::T_0CUST_COMPC_ATTR" columnName="REMIT"/>
+      </attribute>
+      <attribute id="DATLZ" order="38" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="DATLZ"/>
+        <keyMapping schemaName="CDA_4_HANA" columnObjectName="CDA_4_HANA.ETL.Tables::T_0CUST_COMPC_ATTR" columnName="DATLZ"/>
+      </attribute>
+      <attribute id="XZVER" order="39" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="XZVER"/>
+        <keyMapping schemaName="CDA_4_HANA" columnObjectName="CDA_4_HANA.ETL.Tables::T_0CUST_COMPC_ATTR" columnName="XZVER"/>
+      </attribute>
+      <attribute id="TOGRU" order="40" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="TOGRU"/>
+        <keyMapping schemaName="CDA_4_HANA" columnObjectName="CDA_4_HANA.ETL.Tables::T_0CUST_COMPC_ATTR" columnName="TOGRU"/>
+      </attribute>
+      <attribute id="KULTG" order="41" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="KULTG"/>
+        <keyMapping schemaName="CDA_4_HANA" columnObjectName="CDA_4_HANA.ETL.Tables::T_0CUST_COMPC_ATTR" columnName="KULTG"/>
+      </attribute>
+      <attribute id="HBKID" order="42" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="HBKID"/>
+        <keyMapping schemaName="CDA_4_HANA" columnObjectName="CDA_4_HANA.ETL.Tables::T_0CUST_COMPC_ATTR" columnName="HBKID"/>
+      </attribute>
+      <attribute id="XPORE" order="43" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="XPORE"/>
+        <keyMapping schemaName="CDA_4_HANA" columnObjectName="CDA_4_HANA.ETL.Tables::T_0CUST_COMPC_ATTR" columnName="XPORE"/>
+      </attribute>
+      <attribute id="BLNKZ" order="44" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="BLNKZ"/>
+        <keyMapping schemaName="CDA_4_HANA" columnObjectName="CDA_4_HANA.ETL.Tables::T_0CUST_COMPC_ATTR" columnName="BLNKZ"/>
+      </attribute>
+      <attribute id="ALTKN" order="45" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="ALTKN"/>
+        <keyMapping schemaName="CDA_4_HANA" columnObjectName="CDA_4_HANA.ETL.Tables::T_0CUST_COMPC_ATTR" columnName="ALTKN"/>
+      </attribute>
+      <attribute id="ZGRUP" order="46" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="ZGRUP"/>
+        <keyMapping schemaName="CDA_4_HANA" columnObjectName="CDA_4_HANA.ETL.Tables::T_0CUST_COMPC_ATTR" columnName="ZGRUP"/>
+      </attribute>
+      <attribute id="URLID" order="47" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="URLID"/>
+        <keyMapping schemaName="CDA_4_HANA" columnObjectName="CDA_4_HANA.ETL.Tables::T_0CUST_COMPC_ATTR" columnName="URLID"/>
+      </attribute>
+      <attribute id="MGRUP" order="48" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="MGRUP"/>
+        <keyMapping schemaName="CDA_4_HANA" columnObjectName="CDA_4_HANA.ETL.Tables::T_0CUST_COMPC_ATTR" columnName="MGRUP"/>
+      </attribute>
+      <attribute id="LOCKB" order="49" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="LOCKB"/>
+        <keyMapping schemaName="CDA_4_HANA" columnObjectName="CDA_4_HANA.ETL.Tables::T_0CUST_COMPC_ATTR" columnName="LOCKB"/>
+      </attribute>
+      <attribute id="UZAWE" order="50" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="UZAWE"/>
+        <keyMapping schemaName="CDA_4_HANA" columnObjectName="CDA_4_HANA.ETL.Tables::T_0CUST_COMPC_ATTR" columnName="UZAWE"/>
+      </attribute>
+      <attribute id="EKVBD" order="51" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="EKVBD"/>
+        <keyMapping schemaName="CDA_4_HANA" columnObjectName="CDA_4_HANA.ETL.Tables::T_0CUST_COMPC_ATTR" columnName="EKVBD"/>
+      </attribute>
+      <attribute id="SREGL" order="52" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="SREGL"/>
+        <keyMapping schemaName="CDA_4_HANA" columnObjectName="CDA_4_HANA.ETL.Tables::T_0CUST_COMPC_ATTR" columnName="SREGL"/>
+      </attribute>
+      <attribute id="XEDIP" order="53" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="XEDIP"/>
+        <keyMapping schemaName="CDA_4_HANA" columnObjectName="CDA_4_HANA.ETL.Tables::T_0CUST_COMPC_ATTR" columnName="XEDIP"/>
+      </attribute>
+      <attribute id="FRGRP" order="54" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="FRGRP"/>
+        <keyMapping schemaName="CDA_4_HANA" columnObjectName="CDA_4_HANA.ETL.Tables::T_0CUST_COMPC_ATTR" columnName="FRGRP"/>
+      </attribute>
+      <attribute id="VRSDG" order="55" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="VRSDG"/>
+        <keyMapping schemaName="CDA_4_HANA" columnObjectName="CDA_4_HANA.ETL.Tables::T_0CUST_COMPC_ATTR" columnName="VRSDG"/>
+      </attribute>
+      <attribute id="TLFXS" order="56" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="TLFXS"/>
+        <keyMapping schemaName="CDA_4_HANA" columnObjectName="CDA_4_HANA.ETL.Tables::T_0CUST_COMPC_ATTR" columnName="TLFXS"/>
+      </attribute>
+      <attribute id="INTAD" order="57" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="INTAD"/>
+        <keyMapping schemaName="CDA_4_HANA" columnObjectName="CDA_4_HANA.ETL.Tables::T_0CUST_COMPC_ATTR" columnName="INTAD"/>
+      </attribute>
+      <attribute id="XKNZB" order="58" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="XKNZB"/>
+        <keyMapping schemaName="CDA_4_HANA" columnObjectName="CDA_4_HANA.ETL.Tables::T_0CUST_COMPC_ATTR" columnName="XKNZB"/>
+      </attribute>
+      <attribute id="GUZTE" order="59" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="GUZTE"/>
+        <keyMapping schemaName="CDA_4_HANA" columnObjectName="CDA_4_HANA.ETL.Tables::T_0CUST_COMPC_ATTR" columnName="GUZTE"/>
+      </attribute>
+      <attribute id="GRICD" order="60" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="GRICD"/>
+        <keyMapping schemaName="CDA_4_HANA" columnObjectName="CDA_4_HANA.ETL.Tables::T_0CUST_COMPC_ATTR" columnName="GRICD"/>
+      </attribute>
+      <attribute id="GRIDT" order="61" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="GRIDT"/>
+        <keyMapping schemaName="CDA_4_HANA" columnObjectName="CDA_4_HANA.ETL.Tables::T_0CUST_COMPC_ATTR" columnName="GRIDT"/>
+      </attribute>
+      <attribute id="WBRSL" order="62" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="WBRSL"/>
+        <keyMapping schemaName="CDA_4_HANA" columnObjectName="CDA_4_HANA.ETL.Tables::T_0CUST_COMPC_ATTR" columnName="WBRSL"/>
+      </attribute>
+      <attribute id="CONFS" order="63" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="CONFS"/>
+        <keyMapping schemaName="CDA_4_HANA" columnObjectName="CDA_4_HANA.ETL.Tables::T_0CUST_COMPC_ATTR" columnName="CONFS"/>
+      </attribute>
+      <attribute id="UPDAT" order="64" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="UPDAT"/>
+        <keyMapping schemaName="CDA_4_HANA" columnObjectName="CDA_4_HANA.ETL.Tables::T_0CUST_COMPC_ATTR" columnName="UPDAT"/>
+      </attribute>
+      <attribute id="UPTIM" order="65" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="UPTIM"/>
+        <keyMapping schemaName="CDA_4_HANA" columnObjectName="CDA_4_HANA.ETL.Tables::T_0CUST_COMPC_ATTR" columnName="UPTIM"/>
+      </attribute>
+      <attribute id="NODEL" order="66" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="NODEL"/>
+        <keyMapping schemaName="CDA_4_HANA" columnObjectName="CDA_4_HANA.ETL.Tables::T_0CUST_COMPC_ATTR" columnName="NODEL"/>
+      </attribute>
+      <attribute id="TLFNS" order="67" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="TLFNS"/>
+        <keyMapping schemaName="CDA_4_HANA" columnObjectName="CDA_4_HANA.ETL.Tables::T_0CUST_COMPC_ATTR" columnName="TLFNS"/>
+      </attribute>
+      <attribute id="CESSION_KZ" order="68" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="CESSION_KZ"/>
+        <keyMapping schemaName="CDA_4_HANA" columnObjectName="CDA_4_HANA.ETL.Tables::T_0CUST_COMPC_ATTR" columnName="CESSION_KZ"/>
+      </attribute>
+    </attributes>
+    <calculatedAttributes/>
+    <privateDataFoundation>
+      <tableProxies/>
+      <joins/>
+      <layout>
+        <shapes/>
+      </layout>
+    </privateDataFoundation>
+    <baseMeasures/>
+    <calculatedMeasures/>
+    <restrictedMeasures/>
+    <localDimensions/>
+  </logicalModel>
+  <layout>
+    <shapes>
+      <shape expanded="true" modelObjectName="Output" modelObjectNameSpace="MeasureGroup">
+        <upperLeftCorner x="40" y="85"/>
+        <rectangleSize height="0" width="0"/>
+      </shape>
+    </shapes>
+  </layout>
+</Calculation:scenario>

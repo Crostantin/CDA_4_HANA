@@ -1,0 +1,10 @@
+import = [
+{
+ table = "CDA_4_HANA.Data.M_TABLES::M_MANDANTE";
+ schema = "CDA_4_HANA";
+ file = "CDA_4_HANA.Data.M_TABLES:CSV_M_MANDANTE.csv";
+ header = false;
+ delimField = ",";
+ delimEnclosing="\"";
+ distinguishEmptyFromNull = true;
+}];

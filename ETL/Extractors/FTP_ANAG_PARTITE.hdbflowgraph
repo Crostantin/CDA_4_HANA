@@ -1,0 +1,1145 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<flowgraph:ContainerNode xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:flowgraph="http://www.sap.com/ndb/flowgraph/1.0" xmi:id="_u11EEC1kEeah8uIQECWRYg" name="FG_ANAG_PARTITE" generateProcedure="false" generateTask="true" targetSchema="CDA_4_HANA">
+  <annotations xmi:id="_u11EES1kEeah8uIQECWRYg" key="sap.afm.layout">
+    <annotations xmi:id="_u11EEi1kEeah8uIQECWRYg" key="x" value="10"/>
+    <annotations xmi:id="_u11EEy1kEeah8uIQECWRYg" key="y" value="10"/>
+  </annotations>
+  <annotations xmi:id="_u11EFC1kEeah8uIQECWRYg" key="sap.afm.palette" value="">
+    <annotations xmi:id="_u11EFS1kEeah8uIQECWRYg" key="additions" value=""/>
+  </annotations>
+  <annotations xmi:id="_DuZ1cC1lEeah8uIQECWRYg" key="sap.afm.nodeType" value="ContainerNode"/>
+  <annotations xmi:id="_Du0sMC1lEeah8uIQECWRYg" key="sap.afm.nodeInputs"/>
+  <annotations xmi:id="_DvFK4C1lEeah8uIQECWRYg" key="sap.afm.nodeOutputs"/>
+  <tableMappings xmi:id="_2iw6oy1kEeah8uIQECWRYg" source="_yNm4OC1kEeah8uIQECWRYg" target="_2BahCC1kEeah8uIQECWRYg">
+    <attributeMappings xmi:id="_EC0u0S18EeafJr4P8UnnOg" source="_EC0HwC18EeafJr4P8UnnOg" target="_EC0u0C18EeafJr4P8UnnOg"/>
+    <attributeMappings xmi:id="_EC0u1S18EeafJr4P8UnnOg" source="_EC0u0y18EeafJr4P8UnnOg" target="_EC0u1C18EeafJr4P8UnnOg"/>
+    <attributeMappings xmi:id="_EC1V4y18EeafJr4P8UnnOg" source="_EC1V4S18EeafJr4P8UnnOg" target="_EC1V4i18EeafJr4P8UnnOg"/>
+    <attributeMappings xmi:id="_EC1V7i18EeafJr4P8UnnOg" source="_EC1V7C18EeafJr4P8UnnOg" target="_EC1V7S18EeafJr4P8UnnOg"/>
+    <attributeMappings xmi:id="_EC18-i18EeafJr4P8UnnOg" source="_EC18-C18EeafJr4P8UnnOg" target="_EC18-S18EeafJr4P8UnnOg"/>
+    <attributeMappings xmi:id="_EC19BS18EeafJr4P8UnnOg" source="_EC19Ay18EeafJr4P8UnnOg" target="_EC19BC18EeafJr4P8UnnOg"/>
+    <attributeMappings xmi:id="_EC2kAi18EeafJr4P8UnnOg" source="_EC2kAC18EeafJr4P8UnnOg" target="_EC2kAS18EeafJr4P8UnnOg"/>
+    <attributeMappings xmi:id="_EC2kDS18EeafJr4P8UnnOg" source="_EC2kCy18EeafJr4P8UnnOg" target="_EC2kDC18EeafJr4P8UnnOg"/>
+    <attributeMappings xmi:id="_EC2kGC18EeafJr4P8UnnOg" source="_EC2kFi18EeafJr4P8UnnOg" target="_EC2kFy18EeafJr4P8UnnOg"/>
+    <attributeMappings xmi:id="_EC2kIy18EeafJr4P8UnnOg" source="_EC2kIS18EeafJr4P8UnnOg" target="_EC2kIi18EeafJr4P8UnnOg"/>
+    <attributeMappings xmi:id="_EC3LGS18EeafJr4P8UnnOg" source="_EC3LFy18EeafJr4P8UnnOg" target="_EC3LGC18EeafJr4P8UnnOg"/>
+    <attributeMappings xmi:id="_EC3LJC18EeafJr4P8UnnOg" source="_EC3LIi18EeafJr4P8UnnOg" target="_EC3LIy18EeafJr4P8UnnOg"/>
+    <attributeMappings xmi:id="_EC3LLy18EeafJr4P8UnnOg" source="_EC3LLS18EeafJr4P8UnnOg" target="_EC3LLi18EeafJr4P8UnnOg"/>
+    <attributeMappings xmi:id="_EC3yJi18EeafJr4P8UnnOg" source="_EC3yJC18EeafJr4P8UnnOg" target="_EC3yJS18EeafJr4P8UnnOg"/>
+    <attributeMappings xmi:id="_EC3yMS18EeafJr4P8UnnOg" source="_EC3yLy18EeafJr4P8UnnOg" target="_EC3yMC18EeafJr4P8UnnOg"/>
+    <attributeMappings xmi:id="_EC3yPC18EeafJr4P8UnnOg" source="_EC3yOi18EeafJr4P8UnnOg" target="_EC3yOy18EeafJr4P8UnnOg"/>
+    <attributeMappings xmi:id="_EC4ZNC18EeafJr4P8UnnOg" source="_EC4ZMi18EeafJr4P8UnnOg" target="_EC4ZMy18EeafJr4P8UnnOg"/>
+    <attributeMappings xmi:id="_EC4ZPy18EeafJr4P8UnnOg" source="_EC4ZPS18EeafJr4P8UnnOg" target="_EC4ZPi18EeafJr4P8UnnOg"/>
+    <attributeMappings xmi:id="_EC5AQS18EeafJr4P8UnnOg" source="_EC4ZSC18EeafJr4P8UnnOg" target="_EC5AQC18EeafJr4P8UnnOg"/>
+    <attributeMappings xmi:id="_EC5ATC18EeafJr4P8UnnOg" source="_EC5ASi18EeafJr4P8UnnOg" target="_EC5ASy18EeafJr4P8UnnOg"/>
+    <attributeMappings xmi:id="_EC5nUC18EeafJr4P8UnnOg" source="_EC5AVS18EeafJr4P8UnnOg" target="_EC5AVi18EeafJr4P8UnnOg"/>
+    <attributeMappings xmi:id="_EC5nWy18EeafJr4P8UnnOg" source="_EC5nWS18EeafJr4P8UnnOg" target="_EC5nWi18EeafJr4P8UnnOg"/>
+    <attributeMappings xmi:id="_EC5nZi18EeafJr4P8UnnOg" source="_EC5nZC18EeafJr4P8UnnOg" target="_EC5nZS18EeafJr4P8UnnOg"/>
+    <attributeMappings xmi:id="_EC5ncS18EeafJr4P8UnnOg" source="_EC5nby18EeafJr4P8UnnOg" target="_EC5ncC18EeafJr4P8UnnOg"/>
+    <attributeMappings xmi:id="_EC6OZi18EeafJr4P8UnnOg" source="_EC6OZC18EeafJr4P8UnnOg" target="_EC6OZS18EeafJr4P8UnnOg"/>
+    <attributeMappings xmi:id="_EC6OcS18EeafJr4P8UnnOg" source="_EC6Oby18EeafJr4P8UnnOg" target="_EC6OcC18EeafJr4P8UnnOg"/>
+    <attributeMappings xmi:id="_EC6OfC18EeafJr4P8UnnOg" source="_EC6Oei18EeafJr4P8UnnOg" target="_EC6Oey18EeafJr4P8UnnOg"/>
+    <attributeMappings xmi:id="_EC61eC18EeafJr4P8UnnOg" source="_EC61di18EeafJr4P8UnnOg" target="_EC61dy18EeafJr4P8UnnOg"/>
+    <attributeMappings xmi:id="_EC61gy18EeafJr4P8UnnOg" source="_EC61gS18EeafJr4P8UnnOg" target="_EC61gi18EeafJr4P8UnnOg"/>
+    <attributeMappings xmi:id="_EC7cgy18EeafJr4P8UnnOg" source="_EC7cgS18EeafJr4P8UnnOg" target="_EC7cgi18EeafJr4P8UnnOg"/>
+    <attributeMappings xmi:id="_EC7cji18EeafJr4P8UnnOg" source="_EC7cjC18EeafJr4P8UnnOg" target="_EC7cjS18EeafJr4P8UnnOg"/>
+    <attributeMappings xmi:id="_EC8DkC18EeafJr4P8UnnOg" source="_EC7cly18EeafJr4P8UnnOg" target="_EC7cmC18EeafJr4P8UnnOg"/>
+    <attributeMappings xmi:id="_EC8Dmy18EeafJr4P8UnnOg" source="_EC8DmS18EeafJr4P8UnnOg" target="_EC8Dmi18EeafJr4P8UnnOg"/>
+    <attributeMappings xmi:id="_EC8Dpi18EeafJr4P8UnnOg" source="_EC8DpC18EeafJr4P8UnnOg" target="_EC8DpS18EeafJr4P8UnnOg"/>
+    <attributeMappings xmi:id="_EC8qqC18EeafJr4P8UnnOg" source="_EC8qpi18EeafJr4P8UnnOg" target="_EC8qpy18EeafJr4P8UnnOg"/>
+    <attributeMappings xmi:id="_EC8qsy18EeafJr4P8UnnOg" source="_EC8qsS18EeafJr4P8UnnOg" target="_EC8qsi18EeafJr4P8UnnOg"/>
+    <attributeMappings xmi:id="_EC9Rsy18EeafJr4P8UnnOg" source="_EC9RsS18EeafJr4P8UnnOg" target="_EC9Rsi18EeafJr4P8UnnOg"/>
+    <attributeMappings xmi:id="_EC9Rvi18EeafJr4P8UnnOg" source="_EC9RvC18EeafJr4P8UnnOg" target="_EC9RvS18EeafJr4P8UnnOg"/>
+    <attributeMappings xmi:id="_EC9RyS18EeafJr4P8UnnOg" source="_EC9Rxy18EeafJr4P8UnnOg" target="_EC9RyC18EeafJr4P8UnnOg"/>
+    <attributeMappings xmi:id="_EC94yC18EeafJr4P8UnnOg" source="_EC94xi18EeafJr4P8UnnOg" target="_EC94xy18EeafJr4P8UnnOg"/>
+    <attributeMappings xmi:id="_EC940y18EeafJr4P8UnnOg" source="_EC940S18EeafJr4P8UnnOg" target="_EC940i18EeafJr4P8UnnOg"/>
+    <attributeMappings xmi:id="_EC-f0y18EeafJr4P8UnnOg" source="_EC-f0S18EeafJr4P8UnnOg" target="_EC-f0i18EeafJr4P8UnnOg"/>
+    <attributeMappings xmi:id="_EC-f3i18EeafJr4P8UnnOg" source="_EC-f3C18EeafJr4P8UnnOg" target="_EC-f3S18EeafJr4P8UnnOg"/>
+    <attributeMappings xmi:id="_EC_G5y18EeafJr4P8UnnOg" source="_EC_G5S18EeafJr4P8UnnOg" target="_EC_G5i18EeafJr4P8UnnOg"/>
+    <attributeMappings xmi:id="_EC_G8i18EeafJr4P8UnnOg" source="_EC_G8C18EeafJr4P8UnnOg" target="_EC_G8S18EeafJr4P8UnnOg"/>
+    <attributeMappings xmi:id="_EC_G_S18EeafJr4P8UnnOg" source="_EC_G-y18EeafJr4P8UnnOg" target="_EC_G_C18EeafJr4P8UnnOg"/>
+    <attributeMappings xmi:id="_EC_HCC18EeafJr4P8UnnOg" source="_EC_HBi18EeafJr4P8UnnOg" target="_EC_HBy18EeafJr4P8UnnOg"/>
+    <attributeMappings xmi:id="_EDAVCC18EeafJr4P8UnnOg" source="_EDAVBi18EeafJr4P8UnnOg" target="_EDAVBy18EeafJr4P8UnnOg"/>
+    <attributeMappings xmi:id="_EDAVEy18EeafJr4P8UnnOg" source="_EDAVES18EeafJr4P8UnnOg" target="_EDAVEi18EeafJr4P8UnnOg"/>
+    <attributeMappings xmi:id="_EDA8GC18EeafJr4P8UnnOg" source="_EDA8Fi18EeafJr4P8UnnOg" target="_EDA8Fy18EeafJr4P8UnnOg"/>
+    <attributeMappings xmi:id="_EDA8Iy18EeafJr4P8UnnOg" source="_EDA8IS18EeafJr4P8UnnOg" target="_EDA8Ii18EeafJr4P8UnnOg"/>
+    <attributeMappings xmi:id="_EDBjKC18EeafJr4P8UnnOg" source="_EDBjJi18EeafJr4P8UnnOg" target="_EDBjJy18EeafJr4P8UnnOg"/>
+    <attributeMappings xmi:id="_EDBjMy18EeafJr4P8UnnOg" source="_EDBjMS18EeafJr4P8UnnOg" target="_EDBjMi18EeafJr4P8UnnOg"/>
+    <attributeMappings xmi:id="_EDCKOC18EeafJr4P8UnnOg" source="_EDCKNi18EeafJr4P8UnnOg" target="_EDCKNy18EeafJr4P8UnnOg"/>
+    <attributeMappings xmi:id="_EDCKQy18EeafJr4P8UnnOg" source="_EDCKQS18EeafJr4P8UnnOg" target="_EDCKQi18EeafJr4P8UnnOg"/>
+    <attributeMappings xmi:id="_EDCxSC18EeafJr4P8UnnOg" source="_EDCxRi18EeafJr4P8UnnOg" target="_EDCxRy18EeafJr4P8UnnOg"/>
+    <attributeMappings xmi:id="_EDCxUy18EeafJr4P8UnnOg" source="_EDCxUS18EeafJr4P8UnnOg" target="_EDCxUi18EeafJr4P8UnnOg"/>
+    <attributeMappings xmi:id="_EDDYWC18EeafJr4P8UnnOg" source="_EDDYVi18EeafJr4P8UnnOg" target="_EDDYVy18EeafJr4P8UnnOg"/>
+    <attributeMappings xmi:id="_EDDYYy18EeafJr4P8UnnOg" source="_EDDYYS18EeafJr4P8UnnOg" target="_EDDYYi18EeafJr4P8UnnOg"/>
+    <attributeMappings xmi:id="_EDD_aS18EeafJr4P8UnnOg" source="_EDD_Zy18EeafJr4P8UnnOg" target="_EDD_aC18EeafJr4P8UnnOg"/>
+    <attributeMappings xmi:id="_EDEmcC18EeafJr4P8UnnOg" source="_EDD_ci18EeafJr4P8UnnOg" target="_EDD_cy18EeafJr4P8UnnOg"/>
+    <attributeMappings xmi:id="_EDEmey18EeafJr4P8UnnOg" source="_EDEmeS18EeafJr4P8UnnOg" target="_EDEmei18EeafJr4P8UnnOg"/>
+    <attributeMappings xmi:id="_EDFNhS18EeafJr4P8UnnOg" source="_EDFNgy18EeafJr4P8UnnOg" target="_EDFNhC18EeafJr4P8UnnOg"/>
+    <attributeMappings xmi:id="_EDFNkC18EeafJr4P8UnnOg" source="_EDFNji18EeafJr4P8UnnOg" target="_EDFNjy18EeafJr4P8UnnOg"/>
+    <attributeMappings xmi:id="_EDF0mS18EeafJr4P8UnnOg" source="_EDF0ly18EeafJr4P8UnnOg" target="_EDF0mC18EeafJr4P8UnnOg"/>
+    <attributeMappings xmi:id="_EDGbpS18EeafJr4P8UnnOg" source="_EDGboy18EeafJr4P8UnnOg" target="_EDGbpC18EeafJr4P8UnnOg"/>
+    <attributeMappings xmi:id="_EDGbsC18EeafJr4P8UnnOg" source="_EDGbri18EeafJr4P8UnnOg" target="_EDGbry18EeafJr4P8UnnOg"/>
+    <attributeMappings xmi:id="_EDHCuC18EeafJr4P8UnnOg" source="_EDHCti18EeafJr4P8UnnOg" target="_EDHCty18EeafJr4P8UnnOg"/>
+    <attributeMappings xmi:id="_EDHpwS18EeafJr4P8UnnOg" source="_EDHCwS18EeafJr4P8UnnOg" target="_EDHpwC18EeafJr4P8UnnOg"/>
+    <attributeMappings xmi:id="_EDHpzC18EeafJr4P8UnnOg" source="_EDHpyi18EeafJr4P8UnnOg" target="_EDHpyy18EeafJr4P8UnnOg"/>
+    <attributeMappings xmi:id="_EDIQ2C18EeafJr4P8UnnOg" source="_EDIQ1i18EeafJr4P8UnnOg" target="_EDIQ1y18EeafJr4P8UnnOg"/>
+    <attributeMappings xmi:id="_EDI36C18EeafJr4P8UnnOg" source="_EDI35i18EeafJr4P8UnnOg" target="_EDI35y18EeafJr4P8UnnOg"/>
+    <attributeMappings xmi:id="_EDJe8S18EeafJr4P8UnnOg" source="_EDI38S18EeafJr4P8UnnOg" target="_EDJe8C18EeafJr4P8UnnOg"/>
+    <attributeMappings xmi:id="_EDJe_C18EeafJr4P8UnnOg" source="_EDJe-i18EeafJr4P8UnnOg" target="_EDJe-y18EeafJr4P8UnnOg"/>
+    <attributeMappings xmi:id="_EDKGBy18EeafJr4P8UnnOg" source="_EDKGBS18EeafJr4P8UnnOg" target="_EDKGBi18EeafJr4P8UnnOg"/>
+    <attributeMappings xmi:id="_EDKtES18EeafJr4P8UnnOg" source="_EDKGEC18EeafJr4P8UnnOg" target="_EDKtEC18EeafJr4P8UnnOg"/>
+    <attributeMappings xmi:id="_EDLUIC18EeafJr4P8UnnOg" source="_EDKtGi18EeafJr4P8UnnOg" target="_EDKtGy18EeafJr4P8UnnOg"/>
+    <attributeMappings xmi:id="_EDL7MS18EeafJr4P8UnnOg" source="_EDLUKS18EeafJr4P8UnnOg" target="_EDL7MC18EeafJr4P8UnnOg"/>
+    <attributeMappings xmi:id="_EDL7PC18EeafJr4P8UnnOg" source="_EDL7Oi18EeafJr4P8UnnOg" target="_EDL7Oy18EeafJr4P8UnnOg"/>
+    <attributeMappings xmi:id="_EDNJVC18EeafJr4P8UnnOg" source="_EDNJUi18EeafJr4P8UnnOg" target="_EDNJUy18EeafJr4P8UnnOg"/>
+    <attributeMappings xmi:id="_EDNwaC18EeafJr4P8UnnOg" source="_EDNwZi18EeafJr4P8UnnOg" target="_EDNwZy18EeafJr4P8UnnOg"/>
+  </tableMappings>
+  <tableMappings xmi:id="__o9DEy1kEeah8uIQECWRYg" source="_2BahCS1kEeah8uIQECWRYg" target="__H912C1kEeah8uIQECWRYg">
+    <attributeMappings xmi:id="__o9DFC1kEeah8uIQECWRYg" source="_2it3QC1kEeah8uIQECWRYg" target="__o1uQC1kEeah8uIQECWRYg"/>
+    <attributeMappings xmi:id="__o9DFS1kEeah8uIQECWRYg" source="_2it3QS1kEeah8uIQECWRYg" target="__o1uQS1kEeah8uIQECWRYg"/>
+    <attributeMappings xmi:id="_EC1V5y18EeafJr4P8UnnOg" source="_EC1V5C18EeafJr4P8UnnOg" target="_EC1V5i18EeafJr4P8UnnOg"/>
+    <attributeMappings xmi:id="_EC188y18EeafJr4P8UnnOg" source="_EC188C18EeafJr4P8UnnOg" target="_EC188i18EeafJr4P8UnnOg"/>
+    <attributeMappings xmi:id="_EC18_i18EeafJr4P8UnnOg" source="_EC18-y18EeafJr4P8UnnOg" target="_EC18_S18EeafJr4P8UnnOg"/>
+    <attributeMappings xmi:id="_EC19CS18EeafJr4P8UnnOg" source="_EC19Bi18EeafJr4P8UnnOg" target="_EC19CC18EeafJr4P8UnnOg"/>
+    <attributeMappings xmi:id="_EC2kBi18EeafJr4P8UnnOg" source="_EC2kAy18EeafJr4P8UnnOg" target="_EC2kBS18EeafJr4P8UnnOg"/>
+    <attributeMappings xmi:id="_EC2kES18EeafJr4P8UnnOg" source="_EC2kDi18EeafJr4P8UnnOg" target="_EC2kEC18EeafJr4P8UnnOg"/>
+    <attributeMappings xmi:id="_EC2kHC18EeafJr4P8UnnOg" source="_EC2kGS18EeafJr4P8UnnOg" target="_EC2kGy18EeafJr4P8UnnOg"/>
+    <attributeMappings xmi:id="_EC3LEi18EeafJr4P8UnnOg" source="_EC2kJC18EeafJr4P8UnnOg" target="_EC3LES18EeafJr4P8UnnOg"/>
+    <attributeMappings xmi:id="_EC3LHS18EeafJr4P8UnnOg" source="_EC3LGi18EeafJr4P8UnnOg" target="_EC3LHC18EeafJr4P8UnnOg"/>
+    <attributeMappings xmi:id="_EC3LKC18EeafJr4P8UnnOg" source="_EC3LJS18EeafJr4P8UnnOg" target="_EC3LJy18EeafJr4P8UnnOg"/>
+    <attributeMappings xmi:id="_EC3LMy18EeafJr4P8UnnOg" source="_EC3LMC18EeafJr4P8UnnOg" target="_EC3LMi18EeafJr4P8UnnOg"/>
+    <attributeMappings xmi:id="_EC3yKi18EeafJr4P8UnnOg" source="_EC3yJy18EeafJr4P8UnnOg" target="_EC3yKS18EeafJr4P8UnnOg"/>
+    <attributeMappings xmi:id="_EC3yNS18EeafJr4P8UnnOg" source="_EC3yMi18EeafJr4P8UnnOg" target="_EC3yNC18EeafJr4P8UnnOg"/>
+    <attributeMappings xmi:id="_EC3yQC18EeafJr4P8UnnOg" source="_EC3yPS18EeafJr4P8UnnOg" target="_EC3yPy18EeafJr4P8UnnOg"/>
+    <attributeMappings xmi:id="_EC4ZOC18EeafJr4P8UnnOg" source="_EC4ZNS18EeafJr4P8UnnOg" target="_EC4ZNy18EeafJr4P8UnnOg"/>
+    <attributeMappings xmi:id="_EC4ZQy18EeafJr4P8UnnOg" source="_EC4ZQC18EeafJr4P8UnnOg" target="_EC4ZQi18EeafJr4P8UnnOg"/>
+    <attributeMappings xmi:id="_EC5ARS18EeafJr4P8UnnOg" source="_EC5AQi18EeafJr4P8UnnOg" target="_EC5ARC18EeafJr4P8UnnOg"/>
+    <attributeMappings xmi:id="_EC5AUC18EeafJr4P8UnnOg" source="_EC5ATS18EeafJr4P8UnnOg" target="_EC5ATy18EeafJr4P8UnnOg"/>
+    <attributeMappings xmi:id="_EC5nVC18EeafJr4P8UnnOg" source="_EC5nUS18EeafJr4P8UnnOg" target="_EC5nUy18EeafJr4P8UnnOg"/>
+    <attributeMappings xmi:id="_EC5nXy18EeafJr4P8UnnOg" source="_EC5nXC18EeafJr4P8UnnOg" target="_EC5nXi18EeafJr4P8UnnOg"/>
+    <attributeMappings xmi:id="_EC5nai18EeafJr4P8UnnOg" source="_EC5nZy18EeafJr4P8UnnOg" target="_EC5naS18EeafJr4P8UnnOg"/>
+    <attributeMappings xmi:id="_EC5ndS18EeafJr4P8UnnOg" source="_EC5nci18EeafJr4P8UnnOg" target="_EC5ndC18EeafJr4P8UnnOg"/>
+    <attributeMappings xmi:id="_EC6Oai18EeafJr4P8UnnOg" source="_EC6OZy18EeafJr4P8UnnOg" target="_EC6OaS18EeafJr4P8UnnOg"/>
+    <attributeMappings xmi:id="_EC6OdS18EeafJr4P8UnnOg" source="_EC6Oci18EeafJr4P8UnnOg" target="_EC6OdC18EeafJr4P8UnnOg"/>
+    <attributeMappings xmi:id="_EC61cS18EeafJr4P8UnnOg" source="_EC6OfS18EeafJr4P8UnnOg" target="_EC61cC18EeafJr4P8UnnOg"/>
+    <attributeMappings xmi:id="_EC61fC18EeafJr4P8UnnOg" source="_EC61eS18EeafJr4P8UnnOg" target="_EC61ey18EeafJr4P8UnnOg"/>
+    <attributeMappings xmi:id="_EC61hy18EeafJr4P8UnnOg" source="_EC61hC18EeafJr4P8UnnOg" target="_EC61hi18EeafJr4P8UnnOg"/>
+    <attributeMappings xmi:id="_EC7chy18EeafJr4P8UnnOg" source="_EC7chC18EeafJr4P8UnnOg" target="_EC7chi18EeafJr4P8UnnOg"/>
+    <attributeMappings xmi:id="_EC7cki18EeafJr4P8UnnOg" source="_EC7cjy18EeafJr4P8UnnOg" target="_EC7ckS18EeafJr4P8UnnOg"/>
+    <attributeMappings xmi:id="_EC8DlC18EeafJr4P8UnnOg" source="_EC8DkS18EeafJr4P8UnnOg" target="_EC8Dky18EeafJr4P8UnnOg"/>
+    <attributeMappings xmi:id="_EC8Dny18EeafJr4P8UnnOg" source="_EC8DnC18EeafJr4P8UnnOg" target="_EC8Dni18EeafJr4P8UnnOg"/>
+    <attributeMappings xmi:id="_EC8qoS18EeafJr4P8UnnOg" source="_EC8Dpy18EeafJr4P8UnnOg" target="_EC8qoC18EeafJr4P8UnnOg"/>
+    <attributeMappings xmi:id="_EC8qrC18EeafJr4P8UnnOg" source="_EC8qqS18EeafJr4P8UnnOg" target="_EC8qqy18EeafJr4P8UnnOg"/>
+    <attributeMappings xmi:id="_EC8qty18EeafJr4P8UnnOg" source="_EC8qtC18EeafJr4P8UnnOg" target="_EC8qti18EeafJr4P8UnnOg"/>
+    <attributeMappings xmi:id="_EC9Rty18EeafJr4P8UnnOg" source="_EC9RtC18EeafJr4P8UnnOg" target="_EC9Rti18EeafJr4P8UnnOg"/>
+    <attributeMappings xmi:id="_EC9Rwi18EeafJr4P8UnnOg" source="_EC9Rvy18EeafJr4P8UnnOg" target="_EC9RwS18EeafJr4P8UnnOg"/>
+    <attributeMappings xmi:id="_EC94wS18EeafJr4P8UnnOg" source="_EC9Ryi18EeafJr4P8UnnOg" target="_EC94wC18EeafJr4P8UnnOg"/>
+    <attributeMappings xmi:id="_EC94zC18EeafJr4P8UnnOg" source="_EC94yS18EeafJr4P8UnnOg" target="_EC94yy18EeafJr4P8UnnOg"/>
+    <attributeMappings xmi:id="_EC941y18EeafJr4P8UnnOg" source="_EC941C18EeafJr4P8UnnOg" target="_EC941i18EeafJr4P8UnnOg"/>
+    <attributeMappings xmi:id="_EC-f1y18EeafJr4P8UnnOg" source="_EC-f1C18EeafJr4P8UnnOg" target="_EC-f1i18EeafJr4P8UnnOg"/>
+    <attributeMappings xmi:id="_EC_G4C18EeafJr4P8UnnOg" source="_EC-f3y18EeafJr4P8UnnOg" target="_EC-f4S18EeafJr4P8UnnOg"/>
+    <attributeMappings xmi:id="_EC_G6y18EeafJr4P8UnnOg" source="_EC_G6C18EeafJr4P8UnnOg" target="_EC_G6i18EeafJr4P8UnnOg"/>
+    <attributeMappings xmi:id="_EC_G9i18EeafJr4P8UnnOg" source="_EC_G8y18EeafJr4P8UnnOg" target="_EC_G9S18EeafJr4P8UnnOg"/>
+    <attributeMappings xmi:id="_EC_HAS18EeafJr4P8UnnOg" source="_EC_G_i18EeafJr4P8UnnOg" target="_EC_HAC18EeafJr4P8UnnOg"/>
+    <attributeMappings xmi:id="_EDAVAS18EeafJr4P8UnnOg" source="_EC_HCS18EeafJr4P8UnnOg" target="_EDAVAC18EeafJr4P8UnnOg"/>
+    <attributeMappings xmi:id="_EDAVDC18EeafJr4P8UnnOg" source="_EDAVCS18EeafJr4P8UnnOg" target="_EDAVCy18EeafJr4P8UnnOg"/>
+    <attributeMappings xmi:id="_EDA8ES18EeafJr4P8UnnOg" source="_EDAVFC18EeafJr4P8UnnOg" target="_EDA8EC18EeafJr4P8UnnOg"/>
+    <attributeMappings xmi:id="_EDA8HC18EeafJr4P8UnnOg" source="_EDA8GS18EeafJr4P8UnnOg" target="_EDA8Gy18EeafJr4P8UnnOg"/>
+    <attributeMappings xmi:id="_EDBjIS18EeafJr4P8UnnOg" source="_EDA8JC18EeafJr4P8UnnOg" target="_EDBjIC18EeafJr4P8UnnOg"/>
+    <attributeMappings xmi:id="_EDBjLC18EeafJr4P8UnnOg" source="_EDBjKS18EeafJr4P8UnnOg" target="_EDBjKy18EeafJr4P8UnnOg"/>
+    <attributeMappings xmi:id="_EDCKMS18EeafJr4P8UnnOg" source="_EDBjNC18EeafJr4P8UnnOg" target="_EDCKMC18EeafJr4P8UnnOg"/>
+    <attributeMappings xmi:id="_EDCKPC18EeafJr4P8UnnOg" source="_EDCKOS18EeafJr4P8UnnOg" target="_EDCKOy18EeafJr4P8UnnOg"/>
+    <attributeMappings xmi:id="_EDCxQS18EeafJr4P8UnnOg" source="_EDCKRC18EeafJr4P8UnnOg" target="_EDCxQC18EeafJr4P8UnnOg"/>
+    <attributeMappings xmi:id="_EDCxTC18EeafJr4P8UnnOg" source="_EDCxSS18EeafJr4P8UnnOg" target="_EDCxSy18EeafJr4P8UnnOg"/>
+    <attributeMappings xmi:id="_EDDYUS18EeafJr4P8UnnOg" source="_EDCxVC18EeafJr4P8UnnOg" target="_EDDYUC18EeafJr4P8UnnOg"/>
+    <attributeMappings xmi:id="_EDDYXC18EeafJr4P8UnnOg" source="_EDDYWS18EeafJr4P8UnnOg" target="_EDDYWy18EeafJr4P8UnnOg"/>
+    <attributeMappings xmi:id="_EDD_Yi18EeafJr4P8UnnOg" source="_EDDYZC18EeafJr4P8UnnOg" target="_EDD_YS18EeafJr4P8UnnOg"/>
+    <attributeMappings xmi:id="_EDD_bS18EeafJr4P8UnnOg" source="_EDD_ai18EeafJr4P8UnnOg" target="_EDD_bC18EeafJr4P8UnnOg"/>
+    <attributeMappings xmi:id="_EDEmdC18EeafJr4P8UnnOg" source="_EDEmcS18EeafJr4P8UnnOg" target="_EDEmcy18EeafJr4P8UnnOg"/>
+    <attributeMappings xmi:id="_EDEmfy18EeafJr4P8UnnOg" source="_EDEmfC18EeafJr4P8UnnOg" target="_EDEmfi18EeafJr4P8UnnOg"/>
+    <attributeMappings xmi:id="_EDFNiS18EeafJr4P8UnnOg" source="_EDFNhi18EeafJr4P8UnnOg" target="_EDFNiC18EeafJr4P8UnnOg"/>
+    <attributeMappings xmi:id="_EDF0ki18EeafJr4P8UnnOg" source="_EDFNkS18EeafJr4P8UnnOg" target="_EDF0kS18EeafJr4P8UnnOg"/>
+    <attributeMappings xmi:id="_EDF0nS18EeafJr4P8UnnOg" source="_EDF0mi18EeafJr4P8UnnOg" target="_EDF0nC18EeafJr4P8UnnOg"/>
+    <attributeMappings xmi:id="_EDGbqS18EeafJr4P8UnnOg" source="_EDGbpi18EeafJr4P8UnnOg" target="_EDGbqC18EeafJr4P8UnnOg"/>
+    <attributeMappings xmi:id="_EDHCsS18EeafJr4P8UnnOg" source="_EDGbsS18EeafJr4P8UnnOg" target="_EDHCsC18EeafJr4P8UnnOg"/>
+    <attributeMappings xmi:id="_EDHCvC18EeafJr4P8UnnOg" source="_EDHCuS18EeafJr4P8UnnOg" target="_EDHCuy18EeafJr4P8UnnOg"/>
+    <attributeMappings xmi:id="_EDHpxS18EeafJr4P8UnnOg" source="_EDHpwi18EeafJr4P8UnnOg" target="_EDHpxC18EeafJr4P8UnnOg"/>
+    <attributeMappings xmi:id="_EDIQ0S18EeafJr4P8UnnOg" source="_EDHpzS18EeafJr4P8UnnOg" target="_EDIQ0C18EeafJr4P8UnnOg"/>
+    <attributeMappings xmi:id="_EDI34S18EeafJr4P8UnnOg" source="_EDIQ2S18EeafJr4P8UnnOg" target="_EDI34C18EeafJr4P8UnnOg"/>
+    <attributeMappings xmi:id="_EDI37C18EeafJr4P8UnnOg" source="_EDI36S18EeafJr4P8UnnOg" target="_EDI36y18EeafJr4P8UnnOg"/>
+    <attributeMappings xmi:id="_EDJe9S18EeafJr4P8UnnOg" source="_EDJe8i18EeafJr4P8UnnOg" target="_EDJe9C18EeafJr4P8UnnOg"/>
+    <attributeMappings xmi:id="_EDKGAC18EeafJr4P8UnnOg" source="_EDJe_S18EeafJr4P8UnnOg" target="_EDJe_y18EeafJr4P8UnnOg"/>
+    <attributeMappings xmi:id="_EDKGCy18EeafJr4P8UnnOg" source="_EDKGCC18EeafJr4P8UnnOg" target="_EDKGCi18EeafJr4P8UnnOg"/>
+    <attributeMappings xmi:id="_EDKtFS18EeafJr4P8UnnOg" source="_EDKtEi18EeafJr4P8UnnOg" target="_EDKtFC18EeafJr4P8UnnOg"/>
+    <attributeMappings xmi:id="_EDLUJC18EeafJr4P8UnnOg" source="_EDLUIS18EeafJr4P8UnnOg" target="_EDLUIy18EeafJr4P8UnnOg"/>
+    <attributeMappings xmi:id="_EDL7NS18EeafJr4P8UnnOg" source="_EDL7Mi18EeafJr4P8UnnOg" target="_EDL7NC18EeafJr4P8UnnOg"/>
+    <attributeMappings xmi:id="_EDMiQy18EeafJr4P8UnnOg" source="_EDMiQC18EeafJr4P8UnnOg" target="_EDMiQi18EeafJr4P8UnnOg"/>
+    <attributeMappings xmi:id="_EDNwYS18EeafJr4P8UnnOg" source="_EDNJVS18EeafJr4P8UnnOg" target="_EDNwYC18EeafJr4P8UnnOg"/>
+    <attributeMappings xmi:id="_EDOXci18EeafJr4P8UnnOg" source="_EDNwaS18EeafJr4P8UnnOg" target="_EDOXcS18EeafJr4P8UnnOg"/>
+  </tableMappings>
+  <tableMappings xmi:id="d91c864740c9d0c0a0093bbb82caedb3" source="__H912S1kEeah8uIQECWRYg" target="f77ca8b53d2abae5fbc0ee7cb1978fec">
+    <attributeMappings xmi:id="09414e61d0d7889c6127ef40ee537cb2" source="__o4xkC1kEeah8uIQECWRYg" target="8b15d483cafb6edf7f64af0c850c858e"/>
+    <attributeMappings xmi:id="92dd684502eba2e6f3f191b4770785a3" source="__o4xkS1kEeah8uIQECWRYg" target="aebc449e76bb76e7a248a5819d0b94a9"/>
+    <attributeMappings xmi:id="_EC1V6y18EeafJr4P8UnnOg" source="_EC1V6C18EeafJr4P8UnnOg" target="_EC1V6i18EeafJr4P8UnnOg"/>
+    <attributeMappings xmi:id="_EC189y18EeafJr4P8UnnOg" source="_EC189C18EeafJr4P8UnnOg" target="_EC189i18EeafJr4P8UnnOg"/>
+    <attributeMappings xmi:id="_EC19Ai18EeafJr4P8UnnOg" source="_EC18_y18EeafJr4P8UnnOg" target="_EC19AS18EeafJr4P8UnnOg"/>
+    <attributeMappings xmi:id="_EC19DS18EeafJr4P8UnnOg" source="_EC19Ci18EeafJr4P8UnnOg" target="_EC19DC18EeafJr4P8UnnOg"/>
+    <attributeMappings xmi:id="_EC2kCi18EeafJr4P8UnnOg" source="_EC2kBy18EeafJr4P8UnnOg" target="_EC2kCS18EeafJr4P8UnnOg"/>
+    <attributeMappings xmi:id="_EC2kFS18EeafJr4P8UnnOg" source="_EC2kEi18EeafJr4P8UnnOg" target="_EC2kFC18EeafJr4P8UnnOg"/>
+    <attributeMappings xmi:id="_EC2kIC18EeafJr4P8UnnOg" source="_EC2kHS18EeafJr4P8UnnOg" target="_EC2kHy18EeafJr4P8UnnOg"/>
+    <attributeMappings xmi:id="_EC3LFi18EeafJr4P8UnnOg" source="_EC3LEy18EeafJr4P8UnnOg" target="_EC3LFS18EeafJr4P8UnnOg"/>
+    <attributeMappings xmi:id="_EC3LIS18EeafJr4P8UnnOg" source="_EC3LHi18EeafJr4P8UnnOg" target="_EC3LIC18EeafJr4P8UnnOg"/>
+    <attributeMappings xmi:id="_EC3LLC18EeafJr4P8UnnOg" source="_EC3LKS18EeafJr4P8UnnOg" target="_EC3LKy18EeafJr4P8UnnOg"/>
+    <attributeMappings xmi:id="_EC3yIy18EeafJr4P8UnnOg" source="_EC3yIC18EeafJr4P8UnnOg" target="_EC3yIi18EeafJr4P8UnnOg"/>
+    <attributeMappings xmi:id="_EC3yLi18EeafJr4P8UnnOg" source="_EC3yKy18EeafJr4P8UnnOg" target="_EC3yLS18EeafJr4P8UnnOg"/>
+    <attributeMappings xmi:id="_EC3yOS18EeafJr4P8UnnOg" source="_EC3yNi18EeafJr4P8UnnOg" target="_EC3yOC18EeafJr4P8UnnOg"/>
+    <attributeMappings xmi:id="_EC4ZMS18EeafJr4P8UnnOg" source="_EC3yQS18EeafJr4P8UnnOg" target="_EC4ZMC18EeafJr4P8UnnOg"/>
+    <attributeMappings xmi:id="_EC4ZPC18EeafJr4P8UnnOg" source="_EC4ZOS18EeafJr4P8UnnOg" target="_EC4ZOy18EeafJr4P8UnnOg"/>
+    <attributeMappings xmi:id="_EC4ZRy18EeafJr4P8UnnOg" source="_EC4ZRC18EeafJr4P8UnnOg" target="_EC4ZRi18EeafJr4P8UnnOg"/>
+    <attributeMappings xmi:id="_EC5ASS18EeafJr4P8UnnOg" source="_EC5ARi18EeafJr4P8UnnOg" target="_EC5ASC18EeafJr4P8UnnOg"/>
+    <attributeMappings xmi:id="_EC5AVC18EeafJr4P8UnnOg" source="_EC5AUS18EeafJr4P8UnnOg" target="_EC5AUy18EeafJr4P8UnnOg"/>
+    <attributeMappings xmi:id="_EC5nWC18EeafJr4P8UnnOg" source="_EC5nVS18EeafJr4P8UnnOg" target="_EC5nVy18EeafJr4P8UnnOg"/>
+    <attributeMappings xmi:id="_EC5nYy18EeafJr4P8UnnOg" source="_EC5nYC18EeafJr4P8UnnOg" target="_EC5nYi18EeafJr4P8UnnOg"/>
+    <attributeMappings xmi:id="_EC5nbi18EeafJr4P8UnnOg" source="_EC5nay18EeafJr4P8UnnOg" target="_EC5nbS18EeafJr4P8UnnOg"/>
+    <attributeMappings xmi:id="_EC6OYy18EeafJr4P8UnnOg" source="_EC6OYC18EeafJr4P8UnnOg" target="_EC6OYi18EeafJr4P8UnnOg"/>
+    <attributeMappings xmi:id="_EC6Obi18EeafJr4P8UnnOg" source="_EC6Oay18EeafJr4P8UnnOg" target="_EC6ObS18EeafJr4P8UnnOg"/>
+    <attributeMappings xmi:id="_EC6OeS18EeafJr4P8UnnOg" source="_EC6Odi18EeafJr4P8UnnOg" target="_EC6OeC18EeafJr4P8UnnOg"/>
+    <attributeMappings xmi:id="_EC61dS18EeafJr4P8UnnOg" source="_EC61ci18EeafJr4P8UnnOg" target="_EC61dC18EeafJr4P8UnnOg"/>
+    <attributeMappings xmi:id="_EC61gC18EeafJr4P8UnnOg" source="_EC61fS18EeafJr4P8UnnOg" target="_EC61fy18EeafJr4P8UnnOg"/>
+    <attributeMappings xmi:id="_EC7cgC18EeafJr4P8UnnOg" source="_EC61iC18EeafJr4P8UnnOg" target="_EC61ii18EeafJr4P8UnnOg"/>
+    <attributeMappings xmi:id="_EC7ciy18EeafJr4P8UnnOg" source="_EC7ciC18EeafJr4P8UnnOg" target="_EC7cii18EeafJr4P8UnnOg"/>
+    <attributeMappings xmi:id="_EC7cli18EeafJr4P8UnnOg" source="_EC7cky18EeafJr4P8UnnOg" target="_EC7clS18EeafJr4P8UnnOg"/>
+    <attributeMappings xmi:id="_EC8DmC18EeafJr4P8UnnOg" source="_EC8DlS18EeafJr4P8UnnOg" target="_EC8Dly18EeafJr4P8UnnOg"/>
+    <attributeMappings xmi:id="_EC8Doy18EeafJr4P8UnnOg" source="_EC8DoC18EeafJr4P8UnnOg" target="_EC8Doi18EeafJr4P8UnnOg"/>
+    <attributeMappings xmi:id="_EC8qpS18EeafJr4P8UnnOg" source="_EC8qoi18EeafJr4P8UnnOg" target="_EC8qpC18EeafJr4P8UnnOg"/>
+    <attributeMappings xmi:id="_EC8qsC18EeafJr4P8UnnOg" source="_EC8qrS18EeafJr4P8UnnOg" target="_EC8qry18EeafJr4P8UnnOg"/>
+    <attributeMappings xmi:id="_EC9RsC18EeafJr4P8UnnOg" source="_EC8quC18EeafJr4P8UnnOg" target="_EC8qui18EeafJr4P8UnnOg"/>
+    <attributeMappings xmi:id="_EC9Ruy18EeafJr4P8UnnOg" source="_EC9RuC18EeafJr4P8UnnOg" target="_EC9Rui18EeafJr4P8UnnOg"/>
+    <attributeMappings xmi:id="_EC9Rxi18EeafJr4P8UnnOg" source="_EC9Rwy18EeafJr4P8UnnOg" target="_EC9RxS18EeafJr4P8UnnOg"/>
+    <attributeMappings xmi:id="_EC94xS18EeafJr4P8UnnOg" source="_EC94wi18EeafJr4P8UnnOg" target="_EC94xC18EeafJr4P8UnnOg"/>
+    <attributeMappings xmi:id="_EC940C18EeafJr4P8UnnOg" source="_EC94zS18EeafJr4P8UnnOg" target="_EC94zy18EeafJr4P8UnnOg"/>
+    <attributeMappings xmi:id="_EC-f0C18EeafJr4P8UnnOg" source="_EC942C18EeafJr4P8UnnOg" target="_EC942i18EeafJr4P8UnnOg"/>
+    <attributeMappings xmi:id="_EC-f2y18EeafJr4P8UnnOg" source="_EC-f2C18EeafJr4P8UnnOg" target="_EC-f2i18EeafJr4P8UnnOg"/>
+    <attributeMappings xmi:id="_EC_G5C18EeafJr4P8UnnOg" source="_EC_G4S18EeafJr4P8UnnOg" target="_EC_G4y18EeafJr4P8UnnOg"/>
+    <attributeMappings xmi:id="_EC_G7y18EeafJr4P8UnnOg" source="_EC_G7C18EeafJr4P8UnnOg" target="_EC_G7i18EeafJr4P8UnnOg"/>
+    <attributeMappings xmi:id="_EC_G-i18EeafJr4P8UnnOg" source="_EC_G9y18EeafJr4P8UnnOg" target="_EC_G-S18EeafJr4P8UnnOg"/>
+    <attributeMappings xmi:id="_EC_HBS18EeafJr4P8UnnOg" source="_EC_HAi18EeafJr4P8UnnOg" target="_EC_HBC18EeafJr4P8UnnOg"/>
+    <attributeMappings xmi:id="_EDAVBS18EeafJr4P8UnnOg" source="_EDAVAi18EeafJr4P8UnnOg" target="_EDAVBC18EeafJr4P8UnnOg"/>
+    <attributeMappings xmi:id="_EDAVEC18EeafJr4P8UnnOg" source="_EDAVDS18EeafJr4P8UnnOg" target="_EDAVDy18EeafJr4P8UnnOg"/>
+    <attributeMappings xmi:id="_EDA8FS18EeafJr4P8UnnOg" source="_EDA8Ei18EeafJr4P8UnnOg" target="_EDA8FC18EeafJr4P8UnnOg"/>
+    <attributeMappings xmi:id="_EDA8IC18EeafJr4P8UnnOg" source="_EDA8HS18EeafJr4P8UnnOg" target="_EDA8Hy18EeafJr4P8UnnOg"/>
+    <attributeMappings xmi:id="_EDBjJS18EeafJr4P8UnnOg" source="_EDBjIi18EeafJr4P8UnnOg" target="_EDBjJC18EeafJr4P8UnnOg"/>
+    <attributeMappings xmi:id="_EDBjMC18EeafJr4P8UnnOg" source="_EDBjLS18EeafJr4P8UnnOg" target="_EDBjLy18EeafJr4P8UnnOg"/>
+    <attributeMappings xmi:id="_EDCKNS18EeafJr4P8UnnOg" source="_EDCKMi18EeafJr4P8UnnOg" target="_EDCKNC18EeafJr4P8UnnOg"/>
+    <attributeMappings xmi:id="_EDCKQC18EeafJr4P8UnnOg" source="_EDCKPS18EeafJr4P8UnnOg" target="_EDCKPy18EeafJr4P8UnnOg"/>
+    <attributeMappings xmi:id="_EDCxRS18EeafJr4P8UnnOg" source="_EDCxQi18EeafJr4P8UnnOg" target="_EDCxRC18EeafJr4P8UnnOg"/>
+    <attributeMappings xmi:id="_EDCxUC18EeafJr4P8UnnOg" source="_EDCxTS18EeafJr4P8UnnOg" target="_EDCxTy18EeafJr4P8UnnOg"/>
+    <attributeMappings xmi:id="_EDDYVS18EeafJr4P8UnnOg" source="_EDDYUi18EeafJr4P8UnnOg" target="_EDDYVC18EeafJr4P8UnnOg"/>
+    <attributeMappings xmi:id="_EDDYYC18EeafJr4P8UnnOg" source="_EDDYXS18EeafJr4P8UnnOg" target="_EDDYXy18EeafJr4P8UnnOg"/>
+    <attributeMappings xmi:id="_EDD_Zi18EeafJr4P8UnnOg" source="_EDD_Yy18EeafJr4P8UnnOg" target="_EDD_ZS18EeafJr4P8UnnOg"/>
+    <attributeMappings xmi:id="_EDD_cS18EeafJr4P8UnnOg" source="_EDD_bi18EeafJr4P8UnnOg" target="_EDD_cC18EeafJr4P8UnnOg"/>
+    <attributeMappings xmi:id="_EDEmeC18EeafJr4P8UnnOg" source="_EDEmdS18EeafJr4P8UnnOg" target="_EDEmdy18EeafJr4P8UnnOg"/>
+    <attributeMappings xmi:id="_EDFNgi18EeafJr4P8UnnOg" source="_EDEmgC18EeafJr4P8UnnOg" target="_EDFNgS18EeafJr4P8UnnOg"/>
+    <attributeMappings xmi:id="_EDFNjS18EeafJr4P8UnnOg" source="_EDFNii18EeafJr4P8UnnOg" target="_EDFNjC18EeafJr4P8UnnOg"/>
+    <attributeMappings xmi:id="_EDF0li18EeafJr4P8UnnOg" source="_EDF0ky18EeafJr4P8UnnOg" target="_EDF0lS18EeafJr4P8UnnOg"/>
+    <attributeMappings xmi:id="_EDGboi18EeafJr4P8UnnOg" source="_EDF0ni18EeafJr4P8UnnOg" target="_EDGboS18EeafJr4P8UnnOg"/>
+    <attributeMappings xmi:id="_EDGbrS18EeafJr4P8UnnOg" source="_EDGbqi18EeafJr4P8UnnOg" target="_EDGbrC18EeafJr4P8UnnOg"/>
+    <attributeMappings xmi:id="_EDHCtS18EeafJr4P8UnnOg" source="_EDHCsi18EeafJr4P8UnnOg" target="_EDHCtC18EeafJr4P8UnnOg"/>
+    <attributeMappings xmi:id="_EDHCwC18EeafJr4P8UnnOg" source="_EDHCvS18EeafJr4P8UnnOg" target="_EDHCvy18EeafJr4P8UnnOg"/>
+    <attributeMappings xmi:id="_EDHpyS18EeafJr4P8UnnOg" source="_EDHpxi18EeafJr4P8UnnOg" target="_EDHpyC18EeafJr4P8UnnOg"/>
+    <attributeMappings xmi:id="_EDIQ1S18EeafJr4P8UnnOg" source="_EDIQ0i18EeafJr4P8UnnOg" target="_EDIQ1C18EeafJr4P8UnnOg"/>
+    <attributeMappings xmi:id="_EDI35S18EeafJr4P8UnnOg" source="_EDI34i18EeafJr4P8UnnOg" target="_EDI35C18EeafJr4P8UnnOg"/>
+    <attributeMappings xmi:id="_EDI38C18EeafJr4P8UnnOg" source="_EDI37S18EeafJr4P8UnnOg" target="_EDI37y18EeafJr4P8UnnOg"/>
+    <attributeMappings xmi:id="_EDJe-S18EeafJr4P8UnnOg" source="_EDJe9i18EeafJr4P8UnnOg" target="_EDJe-C18EeafJr4P8UnnOg"/>
+    <attributeMappings xmi:id="_EDKGBC18EeafJr4P8UnnOg" source="_EDKGAS18EeafJr4P8UnnOg" target="_EDKGAy18EeafJr4P8UnnOg"/>
+    <attributeMappings xmi:id="_EDKGDy18EeafJr4P8UnnOg" source="_EDKGDC18EeafJr4P8UnnOg" target="_EDKGDi18EeafJr4P8UnnOg"/>
+    <attributeMappings xmi:id="_EDKtGS18EeafJr4P8UnnOg" source="_EDKtFi18EeafJr4P8UnnOg" target="_EDKtGC18EeafJr4P8UnnOg"/>
+    <attributeMappings xmi:id="_EDLUKC18EeafJr4P8UnnOg" source="_EDLUJS18EeafJr4P8UnnOg" target="_EDLUJy18EeafJr4P8UnnOg"/>
+    <attributeMappings xmi:id="_EDL7OS18EeafJr4P8UnnOg" source="_EDL7Ni18EeafJr4P8UnnOg" target="_EDL7OC18EeafJr4P8UnnOg"/>
+    <attributeMappings xmi:id="_EDNJUS18EeafJr4P8UnnOg" source="_EDMiRC18EeafJr4P8UnnOg" target="_EDNJUC18EeafJr4P8UnnOg"/>
+    <attributeMappings xmi:id="_EDNwZS18EeafJr4P8UnnOg" source="_EDNwYi18EeafJr4P8UnnOg" target="_EDNwZC18EeafJr4P8UnnOg"/>
+    <attributeMappings xmi:id="_EDOXdi18EeafJr4P8UnnOg" source="_EDOXcy18EeafJr4P8UnnOg" target="_EDOXdS18EeafJr4P8UnnOg"/>
+  </tableMappings>
+  <tableMappings xmi:id="_cAx1YC1_EeafJr4P8UnnOg" source="a0fcd1ad371c2c3fad1d45ccc1da7996" target="_UoF5-C1mEeah8uIQECWRYg">
+    <attributeMappings xmi:id="_cAx1YS1_EeafJr4P8UnnOg" source="_Wa-qgC1_EeafJr4P8UnnOg" target="_ZlmzcC1_EeafJr4P8UnnOg"/>
+    <attributeMappings xmi:id="_cAx1Yi1_EeafJr4P8UnnOg" source="_Wa-qgi1_EeafJr4P8UnnOg" target="_ZlmzcS1_EeafJr4P8UnnOg"/>
+    <attributeMappings xmi:id="_cAx1Yy1_EeafJr4P8UnnOg" source="_Wa-qhC1_EeafJr4P8UnnOg" target="_Zlmzci1_EeafJr4P8UnnOg"/>
+    <attributeMappings xmi:id="_cAx1ZC1_EeafJr4P8UnnOg" source="_Wa-qhi1_EeafJr4P8UnnOg" target="_Zlmzcy1_EeafJr4P8UnnOg"/>
+    <attributeMappings xmi:id="_cAx1ZS1_EeafJr4P8UnnOg" source="_Wa-qiC1_EeafJr4P8UnnOg" target="_ZlmzdC1_EeafJr4P8UnnOg"/>
+    <attributeMappings xmi:id="_cAx1Zi1_EeafJr4P8UnnOg" source="_Wa-qii1_EeafJr4P8UnnOg" target="_ZlmzdS1_EeafJr4P8UnnOg"/>
+    <attributeMappings xmi:id="_cAx1Zy1_EeafJr4P8UnnOg" source="_Wa-qjC1_EeafJr4P8UnnOg" target="_Zlmzdi1_EeafJr4P8UnnOg"/>
+    <attributeMappings xmi:id="_cAx1aC1_EeafJr4P8UnnOg" source="_Wa-qji1_EeafJr4P8UnnOg" target="_Zlmzdy1_EeafJr4P8UnnOg"/>
+    <attributeMappings xmi:id="_cAx1aS1_EeafJr4P8UnnOg" source="_Wa_RkC1_EeafJr4P8UnnOg" target="_ZlmzeC1_EeafJr4P8UnnOg"/>
+    <attributeMappings xmi:id="_cAx1ai1_EeafJr4P8UnnOg" source="_Wa_Rki1_EeafJr4P8UnnOg" target="_ZlmzeS1_EeafJr4P8UnnOg"/>
+    <attributeMappings xmi:id="_cAx1ay1_EeafJr4P8UnnOg" source="_Wa_RlC1_EeafJr4P8UnnOg" target="_ZlnagC1_EeafJr4P8UnnOg"/>
+    <attributeMappings xmi:id="_cAx1bC1_EeafJr4P8UnnOg" source="_Wa_Rli1_EeafJr4P8UnnOg" target="_ZlnagS1_EeafJr4P8UnnOg"/>
+    <attributeMappings xmi:id="_cAx1bS1_EeafJr4P8UnnOg" source="_Wa_RmC1_EeafJr4P8UnnOg" target="_Zlnagi1_EeafJr4P8UnnOg"/>
+    <attributeMappings xmi:id="_cAx1bi1_EeafJr4P8UnnOg" source="_Wa_Rmi1_EeafJr4P8UnnOg" target="_Zlnagy1_EeafJr4P8UnnOg"/>
+    <attributeMappings xmi:id="_cAx1by1_EeafJr4P8UnnOg" source="_Wa_RnC1_EeafJr4P8UnnOg" target="_ZlnahC1_EeafJr4P8UnnOg"/>
+    <attributeMappings xmi:id="_cAx1cC1_EeafJr4P8UnnOg" source="_Wa_Rni1_EeafJr4P8UnnOg" target="_ZlnahS1_EeafJr4P8UnnOg"/>
+    <attributeMappings xmi:id="_cAx1cS1_EeafJr4P8UnnOg" source="_Wa_RoC1_EeafJr4P8UnnOg" target="_Zlnahi1_EeafJr4P8UnnOg"/>
+    <attributeMappings xmi:id="_cAx1ci1_EeafJr4P8UnnOg" source="_Wa_Roi1_EeafJr4P8UnnOg" target="_Zlnahy1_EeafJr4P8UnnOg"/>
+    <attributeMappings xmi:id="_cAx1cy1_EeafJr4P8UnnOg" source="_Wa_RpC1_EeafJr4P8UnnOg" target="_ZlnaiC1_EeafJr4P8UnnOg"/>
+    <attributeMappings xmi:id="_cAx1dC1_EeafJr4P8UnnOg" source="_Wa_Rpi1_EeafJr4P8UnnOg" target="_ZlnaiS1_EeafJr4P8UnnOg"/>
+    <attributeMappings xmi:id="_cAx1dS1_EeafJr4P8UnnOg" source="_Wa_RqC1_EeafJr4P8UnnOg" target="_Zlnaii1_EeafJr4P8UnnOg"/>
+    <attributeMappings xmi:id="_cAx1di1_EeafJr4P8UnnOg" source="_Wa_Rqi1_EeafJr4P8UnnOg" target="_Zlnaiy1_EeafJr4P8UnnOg"/>
+    <attributeMappings xmi:id="_cAx1dy1_EeafJr4P8UnnOg" source="_Wa_RrC1_EeafJr4P8UnnOg" target="_ZlnajC1_EeafJr4P8UnnOg"/>
+    <attributeMappings xmi:id="_cAx1eC1_EeafJr4P8UnnOg" source="_Wa_Rri1_EeafJr4P8UnnOg" target="_ZlnajS1_EeafJr4P8UnnOg"/>
+    <attributeMappings xmi:id="_cAx1eS1_EeafJr4P8UnnOg" source="_Wa_RsC1_EeafJr4P8UnnOg" target="_Zlnaji1_EeafJr4P8UnnOg"/>
+    <attributeMappings xmi:id="_cAx1ei1_EeafJr4P8UnnOg" source="_Wa_Rsi1_EeafJr4P8UnnOg" target="_Zlnajy1_EeafJr4P8UnnOg"/>
+    <attributeMappings xmi:id="_cAx1ey1_EeafJr4P8UnnOg" source="_Wa_RtC1_EeafJr4P8UnnOg" target="_ZlnakC1_EeafJr4P8UnnOg"/>
+    <attributeMappings xmi:id="_cAx1fC1_EeafJr4P8UnnOg" source="_Wa_Rti1_EeafJr4P8UnnOg" target="_ZlnakS1_EeafJr4P8UnnOg"/>
+    <attributeMappings xmi:id="_cAx1fS1_EeafJr4P8UnnOg" source="_Wa_RuC1_EeafJr4P8UnnOg" target="_Zlnaki1_EeafJr4P8UnnOg"/>
+    <attributeMappings xmi:id="_cAx1fi1_EeafJr4P8UnnOg" source="_Wa_4oC1_EeafJr4P8UnnOg" target="_Zlnaky1_EeafJr4P8UnnOg"/>
+    <attributeMappings xmi:id="_cAx1fy1_EeafJr4P8UnnOg" source="_Wa_4oi1_EeafJr4P8UnnOg" target="_ZlnalC1_EeafJr4P8UnnOg"/>
+    <attributeMappings xmi:id="_cAx1gC1_EeafJr4P8UnnOg" source="_Wa_4pC1_EeafJr4P8UnnOg" target="_ZlnalS1_EeafJr4P8UnnOg"/>
+    <attributeMappings xmi:id="_cAx1gS1_EeafJr4P8UnnOg" source="_Wa_4pi1_EeafJr4P8UnnOg" target="_Zlnali1_EeafJr4P8UnnOg"/>
+    <attributeMappings xmi:id="_cAx1gi1_EeafJr4P8UnnOg" source="_Wa_4qC1_EeafJr4P8UnnOg" target="_ZloBkC1_EeafJr4P8UnnOg"/>
+    <attributeMappings xmi:id="_cAx1gy1_EeafJr4P8UnnOg" source="_Wa_4qi1_EeafJr4P8UnnOg" target="_ZloBkS1_EeafJr4P8UnnOg"/>
+    <attributeMappings xmi:id="_cAx1hC1_EeafJr4P8UnnOg" source="_Wa_4rC1_EeafJr4P8UnnOg" target="_ZloBki1_EeafJr4P8UnnOg"/>
+    <attributeMappings xmi:id="_cAx1hS1_EeafJr4P8UnnOg" source="_Wa_4ri1_EeafJr4P8UnnOg" target="_ZloBky1_EeafJr4P8UnnOg"/>
+    <attributeMappings xmi:id="_cAx1hi1_EeafJr4P8UnnOg" source="_Wa_4sC1_EeafJr4P8UnnOg" target="_ZloBlC1_EeafJr4P8UnnOg"/>
+  </tableMappings>
+  <nodes xsi:type="flowgraph:DataNode" xmi:id="_yNm4MC1kEeah8uIQECWRYg" name="T_0FI_AR" type="DATABASE_TABLE" authoringSchemaName="CDA_TMP" catalogObjectName="T_0FI_AR_4" dataLayout="COLUMN" truncateTable="false">
+    <annotations xmi:id="_yNm4MS1kEeah8uIQECWRYg" key="sap.afm.description" value="Read data from a catalog or repository object"/>
+    <annotations xmi:id="_yNm4Mi1kEeah8uIQECWRYg" key="sap.afm.displayName" value="Data Source"/>
+    <annotations xmi:id="_yNm4My1kEeah8uIQECWRYg" key="sap.afm.layout">
+      <annotations xmi:id="_yNm4NC1kEeah8uIQECWRYg" key="x" value="20"/>
+      <annotations xmi:id="_yNm4NS1kEeah8uIQECWRYg" key="y" value="10"/>
+      <annotations xmi:id="_yNm4Ni1kEeah8uIQECWRYg" key="width" value="100"/>
+      <annotations xmi:id="_yNm4Ny1kEeah8uIQECWRYg" key="height" value="64"/>
+    </annotations>
+    <annotations xmi:id="_DvSmQC1lEeah8uIQECWRYg" key="sap.afm.nodeType" value="DataNode"/>
+    <annotations xmi:id="_DvurIC1lEeah8uIQECWRYg" key="sap.afm.nodeInputs"/>
+    <annotations xmi:id="_Dv7fcC1lEeah8uIQECWRYg" key="sap.afm.nodeOutputs">
+      <annotations xmi:id="_DwHssC1lEeah8uIQECWRYg" key="DATA" value="INPUT"/>
+    </annotations>
+    <outputs xmi:id="_yNm4OC1kEeah8uIQECWRYg" name="DATA" kind="TABLE">
+      <attributes xmi:id="_EC0HwC18EeafJr4P8UnnOg" name="BUKRS" type="VARCHAR" nullable="false" length="4" scale="0"/>
+      <attributes xmi:id="_EC0u0y18EeafJr4P8UnnOg" name="FISCPER" type="DECIMAL" nullable="false" length="7" scale="0"/>
+      <attributes xmi:id="_EC1V4S18EeafJr4P8UnnOg" name="BELNR" type="VARCHAR" nullable="false" length="10" scale="0"/>
+      <attributes xmi:id="_EC1V7C18EeafJr4P8UnnOg" name="BUZEI" type="DECIMAL" nullable="false" length="3" scale="0"/>
+      <attributes xmi:id="_EC18-C18EeafJr4P8UnnOg" name="UPOSZ" type="VARCHAR" nullable="false" length="4" scale="0"/>
+      <attributes xmi:id="_EC19Ay18EeafJr4P8UnnOg" name="STATUSPS" type="VARCHAR" nullable="true" length="1" scale="0"/>
+      <attributes xmi:id="_EC2kAC18EeafJr4P8UnnOg" name="KUNNR" type="VARCHAR" nullable="true" length="10" scale="0"/>
+      <attributes xmi:id="_EC2kCy18EeafJr4P8UnnOg" name="KKBER" type="VARCHAR" nullable="true" length="4" scale="0"/>
+      <attributes xmi:id="_EC2kFi18EeafJr4P8UnnOg" name="MABER" type="VARCHAR" nullable="true" length="2" scale="0"/>
+      <attributes xmi:id="_EC2kIS18EeafJr4P8UnnOg" name="KOART" type="VARCHAR" nullable="true" length="1" scale="0"/>
+      <attributes xmi:id="_EC3LFy18EeafJr4P8UnnOg" name="UMSKZ" type="VARCHAR" nullable="true" length="1" scale="0"/>
+      <attributes xmi:id="_EC3LIi18EeafJr4P8UnnOg" name="BLART" type="VARCHAR" nullable="true" length="2" scale="0"/>
+      <attributes xmi:id="_EC3LLS18EeafJr4P8UnnOg" name="BSCHL" type="VARCHAR" nullable="true" length="2" scale="0"/>
+      <attributes xmi:id="_EC3yJC18EeafJr4P8UnnOg" name="FISCVAR" type="VARCHAR" nullable="true" length="2" scale="0"/>
+      <attributes xmi:id="_EC3yLy18EeafJr4P8UnnOg" name="BLDAT" type="DATE" nullable="true" length="0" scale="0"/>
+      <attributes xmi:id="_EC3yOi18EeafJr4P8UnnOg" name="BUDAT" type="DATE" nullable="true" length="0" scale="0"/>
+      <attributes xmi:id="_EC4ZMi18EeafJr4P8UnnOg" name="CPUDT" type="DATE" nullable="true" length="0" scale="0"/>
+      <attributes xmi:id="_EC4ZPS18EeafJr4P8UnnOg" name="AUGDT" type="DATE" nullable="true" length="0" scale="0"/>
+      <attributes xmi:id="_EC4ZSC18EeafJr4P8UnnOg" name="MADAT" type="DATE" nullable="true" length="0" scale="0"/>
+      <attributes xmi:id="_EC5ASi18EeafJr4P8UnnOg" name="NETDT" type="DATE" nullable="true" length="0" scale="0"/>
+      <attributes xmi:id="_EC5AVS18EeafJr4P8UnnOg" name="SK1DT" type="DATE" nullable="true" length="0" scale="0"/>
+      <attributes xmi:id="_EC5nWS18EeafJr4P8UnnOg" name="SK2DT" type="DATE" nullable="true" length="0" scale="0"/>
+      <attributes xmi:id="_EC5nZC18EeafJr4P8UnnOg" name="ZFBDT" type="DATE" nullable="true" length="0" scale="0"/>
+      <attributes xmi:id="_EC5nby18EeafJr4P8UnnOg" name="ZBD1T" type="DECIMAL" nullable="true" length="3" scale="0"/>
+      <attributes xmi:id="_EC6OZC18EeafJr4P8UnnOg" name="ZBD2T" type="DECIMAL" nullable="true" length="3" scale="0"/>
+      <attributes xmi:id="_EC6Oby18EeafJr4P8UnnOg" name="ZBD3T" type="DECIMAL" nullable="true" length="3" scale="0"/>
+      <attributes xmi:id="_EC6Oei18EeafJr4P8UnnOg" name="ZBD1P" type="DECIMAL" nullable="true" length="5" scale="3"/>
+      <attributes xmi:id="_EC61di18EeafJr4P8UnnOg" name="ZBD2P" type="DECIMAL" nullable="true" length="5" scale="3"/>
+      <attributes xmi:id="_EC61gS18EeafJr4P8UnnOg" name="LAND1" type="VARCHAR" nullable="true" length="3" scale="0"/>
+      <attributes xmi:id="_EC7cgS18EeafJr4P8UnnOg" name="ZLSCH" type="VARCHAR" nullable="true" length="1" scale="0"/>
+      <attributes xmi:id="_EC7cjC18EeafJr4P8UnnOg" name="ZTERM" type="VARCHAR" nullable="true" length="4" scale="0"/>
+      <attributes xmi:id="_EC7cly18EeafJr4P8UnnOg" name="ZLSPR" type="VARCHAR" nullable="true" length="1" scale="0"/>
+      <attributes xmi:id="_EC8DmS18EeafJr4P8UnnOg" name="RSTGR" type="VARCHAR" nullable="true" length="3" scale="0"/>
+      <attributes xmi:id="_EC8DpC18EeafJr4P8UnnOg" name="MANSP" type="VARCHAR" nullable="true" length="1" scale="0"/>
+      <attributes xmi:id="_EC8qpi18EeafJr4P8UnnOg" name="MSCHL" type="VARCHAR" nullable="true" length="1" scale="0"/>
+      <attributes xmi:id="_EC8qsS18EeafJr4P8UnnOg" name="MANST" type="DECIMAL" nullable="true" length="1" scale="0"/>
+      <attributes xmi:id="_EC9RsS18EeafJr4P8UnnOg" name="LCURR" type="VARCHAR" nullable="true" length="5" scale="0"/>
+      <attributes xmi:id="_EC9RvC18EeafJr4P8UnnOg" name="DMSOL" type="DECIMAL" nullable="true" length="13" scale="2"/>
+      <attributes xmi:id="_EC9Rxy18EeafJr4P8UnnOg" name="DMHAB" type="DECIMAL" nullable="true" length="13" scale="2"/>
+      <attributes xmi:id="_EC94xi18EeafJr4P8UnnOg" name="DMSHB" type="DECIMAL" nullable="true" length="13" scale="2"/>
+      <attributes xmi:id="_EC940S18EeafJr4P8UnnOg" name="SKNTO" type="DECIMAL" nullable="true" length="13" scale="2"/>
+      <attributes xmi:id="_EC-f0S18EeafJr4P8UnnOg" name="WAERS" type="VARCHAR" nullable="true" length="5" scale="0"/>
+      <attributes xmi:id="_EC-f3C18EeafJr4P8UnnOg" name="WRSOL" type="DECIMAL" nullable="true" length="13" scale="2"/>
+      <attributes xmi:id="_EC_G5S18EeafJr4P8UnnOg" name="WRHAB" type="DECIMAL" nullable="true" length="13" scale="2"/>
+      <attributes xmi:id="_EC_G8C18EeafJr4P8UnnOg" name="WRSHB" type="DECIMAL" nullable="true" length="13" scale="2"/>
+      <attributes xmi:id="_EC_G-y18EeafJr4P8UnnOg" name="SKFBT" type="DECIMAL" nullable="true" length="13" scale="2"/>
+      <attributes xmi:id="_EC_HBi18EeafJr4P8UnnOg" name="WSKTO" type="DECIMAL" nullable="true" length="13" scale="2"/>
+      <attributes xmi:id="_EDAVBi18EeafJr4P8UnnOg" name="KTOPL" type="VARCHAR" nullable="true" length="4" scale="0"/>
+      <attributes xmi:id="_EDAVES18EeafJr4P8UnnOg" name="HKONT" type="VARCHAR" nullable="true" length="10" scale="0"/>
+      <attributes xmi:id="_EDA8Fi18EeafJr4P8UnnOg" name="SAKNR" type="VARCHAR" nullable="true" length="10" scale="0"/>
+      <attributes xmi:id="_EDA8IS18EeafJr4P8UnnOg" name="FILKD" type="VARCHAR" nullable="true" length="10" scale="0"/>
+      <attributes xmi:id="_EDBjJi18EeafJr4P8UnnOg" name="AUGBL" type="VARCHAR" nullable="true" length="10" scale="0"/>
+      <attributes xmi:id="_EDBjMS18EeafJr4P8UnnOg" name="XBLNR" type="VARCHAR" nullable="true" length="16" scale="0"/>
+      <attributes xmi:id="_EDCKNi18EeafJr4P8UnnOg" name="REBZG" type="VARCHAR" nullable="true" length="10" scale="0"/>
+      <attributes xmi:id="_EDCKQS18EeafJr4P8UnnOg" name="REBZJ" type="DECIMAL" nullable="true" length="4" scale="0"/>
+      <attributes xmi:id="_EDCxRi18EeafJr4P8UnnOg" name="REBZZ" type="DECIMAL" nullable="true" length="3" scale="0"/>
+      <attributes xmi:id="_EDCxUS18EeafJr4P8UnnOg" name="VBELN" type="VARCHAR" nullable="true" length="10" scale="0"/>
+      <attributes xmi:id="_EDDYVi18EeafJr4P8UnnOg" name="XREF1" type="VARCHAR" nullable="true" length="12" scale="0"/>
+      <attributes xmi:id="_EDDYYS18EeafJr4P8UnnOg" name="XREF2" type="VARCHAR" nullable="true" length="12" scale="0"/>
+      <attributes xmi:id="_EDD_Zy18EeafJr4P8UnnOg" name="XREF3" type="VARCHAR" nullable="true" length="20" scale="0"/>
+      <attributes xmi:id="_EDD_ci18EeafJr4P8UnnOg" name="SGTXT" type="VARCHAR" nullable="true" length="50" scale="0"/>
+      <attributes xmi:id="_EDEmeS18EeafJr4P8UnnOg" name="XNEGP" type="VARCHAR" nullable="true" length="1" scale="0"/>
+      <attributes xmi:id="_EDFNgy18EeafJr4P8UnnOg" name="XARCH" type="VARCHAR" nullable="true" length="1" scale="0"/>
+      <attributes xmi:id="_EDFNji18EeafJr4P8UnnOg" name="UMSKS" type="VARCHAR" nullable="true" length="1" scale="0"/>
+      <attributes xmi:id="_EDF0ly18EeafJr4P8UnnOg" name="UPDMOD" type="VARCHAR" nullable="true" length="1" scale="0"/>
+      <attributes xmi:id="_EDGboy18EeafJr4P8UnnOg" name="ZUONR" type="VARCHAR" nullable="true" length="18" scale="0"/>
+      <attributes xmi:id="_EDGbri18EeafJr4P8UnnOg" name="AWTYP" type="VARCHAR" nullable="true" length="5" scale="0"/>
+      <attributes xmi:id="_EDHCti18EeafJr4P8UnnOg" name="AWKEY" type="VARCHAR" nullable="true" length="20" scale="0"/>
+      <attributes xmi:id="_EDHCwS18EeafJr4P8UnnOg" name="BSTAT" type="VARCHAR" nullable="true" length="1" scale="0"/>
+      <attributes xmi:id="_EDHpyi18EeafJr4P8UnnOg" name="DMBTR" type="DECIMAL" nullable="true" length="13" scale="2"/>
+      <attributes xmi:id="_EDIQ1i18EeafJr4P8UnnOg" name="DMBE2" type="DECIMAL" nullable="true" length="13" scale="2"/>
+      <attributes xmi:id="_EDI35i18EeafJr4P8UnnOg" name="DMBE3" type="DECIMAL" nullable="true" length="13" scale="2"/>
+      <attributes xmi:id="_EDI38S18EeafJr4P8UnnOg" name="GJAHR" type="DECIMAL" nullable="true" length="4" scale="0"/>
+      <attributes xmi:id="_EDJe-i18EeafJr4P8UnnOg" name="HWAE2" type="VARCHAR" nullable="true" length="5" scale="0"/>
+      <attributes xmi:id="_EDKGBS18EeafJr4P8UnnOg" name="HWAE3" type="VARCHAR" nullable="true" length="5" scale="0"/>
+      <attributes xmi:id="_EDKGEC18EeafJr4P8UnnOg" name="MONAT" type="DECIMAL" nullable="true" length="2" scale="0"/>
+      <attributes xmi:id="_EDKtGi18EeafJr4P8UnnOg" name="PROJK" type="DECIMAL" nullable="true" length="8" scale="0"/>
+      <attributes xmi:id="_EDLUKS18EeafJr4P8UnnOg" name="SHKZG" type="VARCHAR" nullable="true" length="1" scale="0"/>
+      <attributes xmi:id="_EDL7Oi18EeafJr4P8UnnOg" name="WRBTR" type="DECIMAL" nullable="true" length="13" scale="2"/>
+      <attributes xmi:id="_EDNJUi18EeafJr4P8UnnOg" name="ODQ_CHANGEMODE" type="VARCHAR" nullable="true" length="1" scale="0"/>
+      <attributes xmi:id="_EDNwZi18EeafJr4P8UnnOg" name="ODQ_ENTITYCNTR" type="DECIMAL" nullable="true" length="19" scale="0"/>
+    </outputs>
+  </nodes>
+  <nodes xsi:type="flowgraph:FilterNode" xmi:id="_2BahAC1kEeah8uIQECWRYg" name="FILTER" expression="&quot;INPUT&quot;.&quot;UPOSZ&quot;='0001'">
+    <annotations xmi:id="_2BahAS1kEeah8uIQECWRYg" key="sap.afm.description" value="Filter the data"/>
+    <annotations xmi:id="_2BahAi1kEeah8uIQECWRYg" key="sap.afm.displayName" value="Filter"/>
+    <annotations xmi:id="_2BahAy1kEeah8uIQECWRYg" key="sap.afm.layout">
+      <annotations xmi:id="_2BahBC1kEeah8uIQECWRYg" key="x" value="215"/>
+      <annotations xmi:id="_2BahBS1kEeah8uIQECWRYg" key="y" value="56"/>
+      <annotations xmi:id="_2BahBi1kEeah8uIQECWRYg" key="width" value="100"/>
+      <annotations xmi:id="_2BahBy1kEeah8uIQECWRYg" key="height" value="84"/>
+    </annotations>
+    <annotations xmi:id="_DwxM8C1lEeah8uIQECWRYg" key="sap.afm.nodeType" value="FilterNode"/>
+    <annotations xmi:id="_DxNR0C1lEeah8uIQECWRYg" key="sap.afm.nodeInputs">
+      <annotations xmi:id="_DxdJcC1lEeah8uIQECWRYg" key="INPUT" value="DATA"/>
+    </annotations>
+    <annotations xmi:id="_DyPzoC1lEeah8uIQECWRYg" key="sap.afm.nodeOutputs">
+      <annotations xmi:id="_DyfrQC1lEeah8uIQECWRYg" key="OUTPUT" value="INPUT_2"/>
+    </annotations>
+    <inputs xmi:id="_2BahCC1kEeah8uIQECWRYg" name="INPUT" kind="TABLE">
+      <attributes xmi:id="_EC0u0C18EeafJr4P8UnnOg" name="BUKRS" type="VARCHAR" nullable="false" length="4" scale="0"/>
+      <attributes xmi:id="_EC0u1C18EeafJr4P8UnnOg" name="FISCPER" type="DECIMAL" nullable="false" length="7" scale="0"/>
+      <attributes xmi:id="_EC1V4i18EeafJr4P8UnnOg" name="BELNR" type="VARCHAR" nullable="false" length="10" scale="0"/>
+      <attributes xmi:id="_EC1V7S18EeafJr4P8UnnOg" name="BUZEI" type="DECIMAL" nullable="false" length="3" scale="0"/>
+      <attributes xmi:id="_EC18-S18EeafJr4P8UnnOg" name="UPOSZ" type="VARCHAR" nullable="false" length="4" scale="0"/>
+      <attributes xmi:id="_EC19BC18EeafJr4P8UnnOg" name="STATUSPS" type="VARCHAR" nullable="true" length="1" scale="0"/>
+      <attributes xmi:id="_EC2kAS18EeafJr4P8UnnOg" name="KUNNR" type="VARCHAR" nullable="true" length="10" scale="0"/>
+      <attributes xmi:id="_EC2kDC18EeafJr4P8UnnOg" name="KKBER" type="VARCHAR" nullable="true" length="4" scale="0"/>
+      <attributes xmi:id="_EC2kFy18EeafJr4P8UnnOg" name="MABER" type="VARCHAR" nullable="true" length="2" scale="0"/>
+      <attributes xmi:id="_EC2kIi18EeafJr4P8UnnOg" name="KOART" type="VARCHAR" nullable="true" length="1" scale="0"/>
+      <attributes xmi:id="_EC3LGC18EeafJr4P8UnnOg" name="UMSKZ" type="VARCHAR" nullable="true" length="1" scale="0"/>
+      <attributes xmi:id="_EC3LIy18EeafJr4P8UnnOg" name="BLART" type="VARCHAR" nullable="true" length="2" scale="0"/>
+      <attributes xmi:id="_EC3LLi18EeafJr4P8UnnOg" name="BSCHL" type="VARCHAR" nullable="true" length="2" scale="0"/>
+      <attributes xmi:id="_EC3yJS18EeafJr4P8UnnOg" name="FISCVAR" type="VARCHAR" nullable="true" length="2" scale="0"/>
+      <attributes xmi:id="_EC3yMC18EeafJr4P8UnnOg" name="BLDAT" type="DATE" nullable="true" length="0" scale="0"/>
+      <attributes xmi:id="_EC3yOy18EeafJr4P8UnnOg" name="BUDAT" type="DATE" nullable="true" length="0" scale="0"/>
+      <attributes xmi:id="_EC4ZMy18EeafJr4P8UnnOg" name="CPUDT" type="DATE" nullable="true" length="0" scale="0"/>
+      <attributes xmi:id="_EC4ZPi18EeafJr4P8UnnOg" name="AUGDT" type="DATE" nullable="true" length="0" scale="0"/>
+      <attributes xmi:id="_EC5AQC18EeafJr4P8UnnOg" name="MADAT" type="DATE" nullable="true" length="0" scale="0"/>
+      <attributes xmi:id="_EC5ASy18EeafJr4P8UnnOg" name="NETDT" type="DATE" nullable="true" length="0" scale="0"/>
+      <attributes xmi:id="_EC5AVi18EeafJr4P8UnnOg" name="SK1DT" type="DATE" nullable="true" length="0" scale="0"/>
+      <attributes xmi:id="_EC5nWi18EeafJr4P8UnnOg" name="SK2DT" type="DATE" nullable="true" length="0" scale="0"/>
+      <attributes xmi:id="_EC5nZS18EeafJr4P8UnnOg" name="ZFBDT" type="DATE" nullable="true" length="0" scale="0"/>
+      <attributes xmi:id="_EC5ncC18EeafJr4P8UnnOg" name="ZBD1T" type="DECIMAL" nullable="true" length="3" scale="0"/>
+      <attributes xmi:id="_EC6OZS18EeafJr4P8UnnOg" name="ZBD2T" type="DECIMAL" nullable="true" length="3" scale="0"/>
+      <attributes xmi:id="_EC6OcC18EeafJr4P8UnnOg" name="ZBD3T" type="DECIMAL" nullable="true" length="3" scale="0"/>
+      <attributes xmi:id="_EC6Oey18EeafJr4P8UnnOg" name="ZBD1P" type="DECIMAL" nullable="true" length="5" scale="3"/>
+      <attributes xmi:id="_EC61dy18EeafJr4P8UnnOg" name="ZBD2P" type="DECIMAL" nullable="true" length="5" scale="3"/>
+      <attributes xmi:id="_EC61gi18EeafJr4P8UnnOg" name="LAND1" type="VARCHAR" nullable="true" length="3" scale="0"/>
+      <attributes xmi:id="_EC7cgi18EeafJr4P8UnnOg" name="ZLSCH" type="VARCHAR" nullable="true" length="1" scale="0"/>
+      <attributes xmi:id="_EC7cjS18EeafJr4P8UnnOg" name="ZTERM" type="VARCHAR" nullable="true" length="4" scale="0"/>
+      <attributes xmi:id="_EC7cmC18EeafJr4P8UnnOg" name="ZLSPR" type="VARCHAR" nullable="true" length="1" scale="0"/>
+      <attributes xmi:id="_EC8Dmi18EeafJr4P8UnnOg" name="RSTGR" type="VARCHAR" nullable="true" length="3" scale="0"/>
+      <attributes xmi:id="_EC8DpS18EeafJr4P8UnnOg" name="MANSP" type="VARCHAR" nullable="true" length="1" scale="0"/>
+      <attributes xmi:id="_EC8qpy18EeafJr4P8UnnOg" name="MSCHL" type="VARCHAR" nullable="true" length="1" scale="0"/>
+      <attributes xmi:id="_EC8qsi18EeafJr4P8UnnOg" name="MANST" type="DECIMAL" nullable="true" length="1" scale="0"/>
+      <attributes xmi:id="_EC9Rsi18EeafJr4P8UnnOg" name="LCURR" type="VARCHAR" nullable="true" length="5" scale="0"/>
+      <attributes xmi:id="_EC9RvS18EeafJr4P8UnnOg" name="DMSOL" type="DECIMAL" nullable="true" length="13" scale="2"/>
+      <attributes xmi:id="_EC9RyC18EeafJr4P8UnnOg" name="DMHAB" type="DECIMAL" nullable="true" length="13" scale="2"/>
+      <attributes xmi:id="_EC94xy18EeafJr4P8UnnOg" name="DMSHB" type="DECIMAL" nullable="true" length="13" scale="2"/>
+      <attributes xmi:id="_EC940i18EeafJr4P8UnnOg" name="SKNTO" type="DECIMAL" nullable="true" length="13" scale="2"/>
+      <attributes xmi:id="_EC-f0i18EeafJr4P8UnnOg" name="WAERS" type="VARCHAR" nullable="true" length="5" scale="0"/>
+      <attributes xmi:id="_EC-f3S18EeafJr4P8UnnOg" name="WRSOL" type="DECIMAL" nullable="true" length="13" scale="2"/>
+      <attributes xmi:id="_EC_G5i18EeafJr4P8UnnOg" name="WRHAB" type="DECIMAL" nullable="true" length="13" scale="2"/>
+      <attributes xmi:id="_EC_G8S18EeafJr4P8UnnOg" name="WRSHB" type="DECIMAL" nullable="true" length="13" scale="2"/>
+      <attributes xmi:id="_EC_G_C18EeafJr4P8UnnOg" name="SKFBT" type="DECIMAL" nullable="true" length="13" scale="2"/>
+      <attributes xmi:id="_EC_HBy18EeafJr4P8UnnOg" name="WSKTO" type="DECIMAL" nullable="true" length="13" scale="2"/>
+      <attributes xmi:id="_EDAVBy18EeafJr4P8UnnOg" name="KTOPL" type="VARCHAR" nullable="true" length="4" scale="0"/>
+      <attributes xmi:id="_EDAVEi18EeafJr4P8UnnOg" name="HKONT" type="VARCHAR" nullable="true" length="10" scale="0"/>
+      <attributes xmi:id="_EDA8Fy18EeafJr4P8UnnOg" name="SAKNR" type="VARCHAR" nullable="true" length="10" scale="0"/>
+      <attributes xmi:id="_EDA8Ii18EeafJr4P8UnnOg" name="FILKD" type="VARCHAR" nullable="true" length="10" scale="0"/>
+      <attributes xmi:id="_EDBjJy18EeafJr4P8UnnOg" name="AUGBL" type="VARCHAR" nullable="true" length="10" scale="0"/>
+      <attributes xmi:id="_EDBjMi18EeafJr4P8UnnOg" name="XBLNR" type="VARCHAR" nullable="true" length="16" scale="0"/>
+      <attributes xmi:id="_EDCKNy18EeafJr4P8UnnOg" name="REBZG" type="VARCHAR" nullable="true" length="10" scale="0"/>
+      <attributes xmi:id="_EDCKQi18EeafJr4P8UnnOg" name="REBZJ" type="DECIMAL" nullable="true" length="4" scale="0"/>
+      <attributes xmi:id="_EDCxRy18EeafJr4P8UnnOg" name="REBZZ" type="DECIMAL" nullable="true" length="3" scale="0"/>
+      <attributes xmi:id="_EDCxUi18EeafJr4P8UnnOg" name="VBELN" type="VARCHAR" nullable="true" length="10" scale="0"/>
+      <attributes xmi:id="_EDDYVy18EeafJr4P8UnnOg" name="XREF1" type="VARCHAR" nullable="true" length="12" scale="0"/>
+      <attributes xmi:id="_EDDYYi18EeafJr4P8UnnOg" name="XREF2" type="VARCHAR" nullable="true" length="12" scale="0"/>
+      <attributes xmi:id="_EDD_aC18EeafJr4P8UnnOg" name="XREF3" type="VARCHAR" nullable="true" length="20" scale="0"/>
+      <attributes xmi:id="_EDD_cy18EeafJr4P8UnnOg" name="SGTXT" type="VARCHAR" nullable="true" length="50" scale="0"/>
+      <attributes xmi:id="_EDEmei18EeafJr4P8UnnOg" name="XNEGP" type="VARCHAR" nullable="true" length="1" scale="0"/>
+      <attributes xmi:id="_EDFNhC18EeafJr4P8UnnOg" name="XARCH" type="VARCHAR" nullable="true" length="1" scale="0"/>
+      <attributes xmi:id="_EDFNjy18EeafJr4P8UnnOg" name="UMSKS" type="VARCHAR" nullable="true" length="1" scale="0"/>
+      <attributes xmi:id="_EDF0mC18EeafJr4P8UnnOg" name="UPDMOD" type="VARCHAR" nullable="true" length="1" scale="0"/>
+      <attributes xmi:id="_EDGbpC18EeafJr4P8UnnOg" name="ZUONR" type="VARCHAR" nullable="true" length="18" scale="0"/>
+      <attributes xmi:id="_EDGbry18EeafJr4P8UnnOg" name="AWTYP" type="VARCHAR" nullable="true" length="5" scale="0"/>
+      <attributes xmi:id="_EDHCty18EeafJr4P8UnnOg" name="AWKEY" type="VARCHAR" nullable="true" length="20" scale="0"/>
+      <attributes xmi:id="_EDHpwC18EeafJr4P8UnnOg" name="BSTAT" type="VARCHAR" nullable="true" length="1" scale="0"/>
+      <attributes xmi:id="_EDHpyy18EeafJr4P8UnnOg" name="DMBTR" type="DECIMAL" nullable="true" length="13" scale="2"/>
+      <attributes xmi:id="_EDIQ1y18EeafJr4P8UnnOg" name="DMBE2" type="DECIMAL" nullable="true" length="13" scale="2"/>
+      <attributes xmi:id="_EDI35y18EeafJr4P8UnnOg" name="DMBE3" type="DECIMAL" nullable="true" length="13" scale="2"/>
+      <attributes xmi:id="_EDJe8C18EeafJr4P8UnnOg" name="GJAHR" type="DECIMAL" nullable="true" length="4" scale="0"/>
+      <attributes xmi:id="_EDJe-y18EeafJr4P8UnnOg" name="HWAE2" type="VARCHAR" nullable="true" length="5" scale="0"/>
+      <attributes xmi:id="_EDKGBi18EeafJr4P8UnnOg" name="HWAE3" type="VARCHAR" nullable="true" length="5" scale="0"/>
+      <attributes xmi:id="_EDKtEC18EeafJr4P8UnnOg" name="MONAT" type="DECIMAL" nullable="true" length="2" scale="0"/>
+      <attributes xmi:id="_EDKtGy18EeafJr4P8UnnOg" name="PROJK" type="DECIMAL" nullable="true" length="8" scale="0"/>
+      <attributes xmi:id="_EDL7MC18EeafJr4P8UnnOg" name="SHKZG" type="VARCHAR" nullable="true" length="1" scale="0"/>
+      <attributes xmi:id="_EDL7Oy18EeafJr4P8UnnOg" name="WRBTR" type="DECIMAL" nullable="true" length="13" scale="2"/>
+      <attributes xmi:id="_EDNJUy18EeafJr4P8UnnOg" name="ODQ_CHANGEMODE" type="VARCHAR" nullable="true" length="1" scale="0"/>
+      <attributes xmi:id="_EDNwZy18EeafJr4P8UnnOg" name="ODQ_ENTITYCNTR" type="DECIMAL" nullable="true" length="19" scale="0"/>
+    </inputs>
+    <outputs xmi:id="_2BahCS1kEeah8uIQECWRYg" name="OUTPUT" kind="TABLE">
+      <attributes xmi:id="_2it3QC1kEeah8uIQECWRYg" name="BUKRS" type="VARCHAR" nullable="false" length="4" scale="0"/>
+      <attributes xmi:id="_2it3QS1kEeah8uIQECWRYg" name="FISCPER" type="DECIMAL" nullable="false" length="7" scale="0"/>
+      <attributes xmi:id="_EC1V5C18EeafJr4P8UnnOg" name="BELNR" type="VARCHAR" nullable="false" length="10" scale="0"/>
+      <attributes xmi:id="_EC188C18EeafJr4P8UnnOg" name="BUZEI" type="DECIMAL" nullable="false" length="3" scale="0"/>
+      <attributes xmi:id="_EC18-y18EeafJr4P8UnnOg" name="UPOSZ" type="VARCHAR" nullable="false" length="4" scale="0"/>
+      <attributes xmi:id="_EC19Bi18EeafJr4P8UnnOg" name="STATUSPS" type="VARCHAR" nullable="true" length="1" scale="0"/>
+      <attributes xmi:id="_EC2kAy18EeafJr4P8UnnOg" name="KUNNR" type="VARCHAR" nullable="true" length="10" scale="0"/>
+      <attributes xmi:id="_EC2kDi18EeafJr4P8UnnOg" name="KKBER" type="VARCHAR" nullable="true" length="4" scale="0"/>
+      <attributes xmi:id="_EC2kGS18EeafJr4P8UnnOg" name="MABER" type="VARCHAR" nullable="true" length="2" scale="0"/>
+      <attributes xmi:id="_EC2kJC18EeafJr4P8UnnOg" name="KOART" type="VARCHAR" nullable="true" length="1" scale="0"/>
+      <attributes xmi:id="_EC3LGi18EeafJr4P8UnnOg" name="UMSKZ" type="VARCHAR" nullable="true" length="1" scale="0"/>
+      <attributes xmi:id="_EC3LJS18EeafJr4P8UnnOg" name="BLART" type="VARCHAR" nullable="true" length="2" scale="0"/>
+      <attributes xmi:id="_EC3LMC18EeafJr4P8UnnOg" name="BSCHL" type="VARCHAR" nullable="true" length="2" scale="0"/>
+      <attributes xmi:id="_EC3yJy18EeafJr4P8UnnOg" name="FISCVAR" type="VARCHAR" nullable="true" length="2" scale="0"/>
+      <attributes xmi:id="_EC3yMi18EeafJr4P8UnnOg" name="BLDAT" type="DATE" nullable="true" length="0" scale="0"/>
+      <attributes xmi:id="_EC3yPS18EeafJr4P8UnnOg" name="BUDAT" type="DATE" nullable="true" length="0" scale="0"/>
+      <attributes xmi:id="_EC4ZNS18EeafJr4P8UnnOg" name="CPUDT" type="DATE" nullable="true" length="0" scale="0"/>
+      <attributes xmi:id="_EC4ZQC18EeafJr4P8UnnOg" name="AUGDT" type="DATE" nullable="true" length="0" scale="0"/>
+      <attributes xmi:id="_EC5AQi18EeafJr4P8UnnOg" name="MADAT" type="DATE" nullable="true" length="0" scale="0"/>
+      <attributes xmi:id="_EC5ATS18EeafJr4P8UnnOg" name="NETDT" type="DATE" nullable="true" length="0" scale="0"/>
+      <attributes xmi:id="_EC5nUS18EeafJr4P8UnnOg" name="SK1DT" type="DATE" nullable="true" length="0" scale="0"/>
+      <attributes xmi:id="_EC5nXC18EeafJr4P8UnnOg" name="SK2DT" type="DATE" nullable="true" length="0" scale="0"/>
+      <attributes xmi:id="_EC5nZy18EeafJr4P8UnnOg" name="ZFBDT" type="DATE" nullable="true" length="0" scale="0"/>
+      <attributes xmi:id="_EC5nci18EeafJr4P8UnnOg" name="ZBD1T" type="DECIMAL" nullable="true" length="3" scale="0"/>
+      <attributes xmi:id="_EC6OZy18EeafJr4P8UnnOg" name="ZBD2T" type="DECIMAL" nullable="true" length="3" scale="0"/>
+      <attributes xmi:id="_EC6Oci18EeafJr4P8UnnOg" name="ZBD3T" type="DECIMAL" nullable="true" length="3" scale="0"/>
+      <attributes xmi:id="_EC6OfS18EeafJr4P8UnnOg" name="ZBD1P" type="DECIMAL" nullable="true" length="5" scale="3"/>
+      <attributes xmi:id="_EC61eS18EeafJr4P8UnnOg" name="ZBD2P" type="DECIMAL" nullable="true" length="5" scale="3"/>
+      <attributes xmi:id="_EC61hC18EeafJr4P8UnnOg" name="LAND1" type="VARCHAR" nullable="true" length="3" scale="0"/>
+      <attributes xmi:id="_EC7chC18EeafJr4P8UnnOg" name="ZLSCH" type="VARCHAR" nullable="true" length="1" scale="0"/>
+      <attributes xmi:id="_EC7cjy18EeafJr4P8UnnOg" name="ZTERM" type="VARCHAR" nullable="true" length="4" scale="0"/>
+      <attributes xmi:id="_EC8DkS18EeafJr4P8UnnOg" name="ZLSPR" type="VARCHAR" nullable="true" length="1" scale="0"/>
+      <attributes xmi:id="_EC8DnC18EeafJr4P8UnnOg" name="RSTGR" type="VARCHAR" nullable="true" length="3" scale="0"/>
+      <attributes xmi:id="_EC8Dpy18EeafJr4P8UnnOg" name="MANSP" type="VARCHAR" nullable="true" length="1" scale="0"/>
+      <attributes xmi:id="_EC8qqS18EeafJr4P8UnnOg" name="MSCHL" type="VARCHAR" nullable="true" length="1" scale="0"/>
+      <attributes xmi:id="_EC8qtC18EeafJr4P8UnnOg" name="MANST" type="DECIMAL" nullable="true" length="1" scale="0"/>
+      <attributes xmi:id="_EC9RtC18EeafJr4P8UnnOg" name="LCURR" type="VARCHAR" nullable="true" length="5" scale="0"/>
+      <attributes xmi:id="_EC9Rvy18EeafJr4P8UnnOg" name="DMSOL" type="DECIMAL" nullable="true" length="13" scale="2"/>
+      <attributes xmi:id="_EC9Ryi18EeafJr4P8UnnOg" name="DMHAB" type="DECIMAL" nullable="true" length="13" scale="2"/>
+      <attributes xmi:id="_EC94yS18EeafJr4P8UnnOg" name="DMSHB" type="DECIMAL" nullable="true" length="13" scale="2"/>
+      <attributes xmi:id="_EC941C18EeafJr4P8UnnOg" name="SKNTO" type="DECIMAL" nullable="true" length="13" scale="2"/>
+      <attributes xmi:id="_EC-f1C18EeafJr4P8UnnOg" name="WAERS" type="VARCHAR" nullable="true" length="5" scale="0"/>
+      <attributes xmi:id="_EC-f3y18EeafJr4P8UnnOg" name="WRSOL" type="DECIMAL" nullable="true" length="13" scale="2"/>
+      <attributes xmi:id="_EC_G6C18EeafJr4P8UnnOg" name="WRHAB" type="DECIMAL" nullable="true" length="13" scale="2"/>
+      <attributes xmi:id="_EC_G8y18EeafJr4P8UnnOg" name="WRSHB" type="DECIMAL" nullable="true" length="13" scale="2"/>
+      <attributes xmi:id="_EC_G_i18EeafJr4P8UnnOg" name="SKFBT" type="DECIMAL" nullable="true" length="13" scale="2"/>
+      <attributes xmi:id="_EC_HCS18EeafJr4P8UnnOg" name="WSKTO" type="DECIMAL" nullable="true" length="13" scale="2"/>
+      <attributes xmi:id="_EDAVCS18EeafJr4P8UnnOg" name="KTOPL" type="VARCHAR" nullable="true" length="4" scale="0"/>
+      <attributes xmi:id="_EDAVFC18EeafJr4P8UnnOg" name="HKONT" type="VARCHAR" nullable="true" length="10" scale="0"/>
+      <attributes xmi:id="_EDA8GS18EeafJr4P8UnnOg" name="SAKNR" type="VARCHAR" nullable="true" length="10" scale="0"/>
+      <attributes xmi:id="_EDA8JC18EeafJr4P8UnnOg" name="FILKD" type="VARCHAR" nullable="true" length="10" scale="0"/>
+      <attributes xmi:id="_EDBjKS18EeafJr4P8UnnOg" name="AUGBL" type="VARCHAR" nullable="true" length="10" scale="0"/>
+      <attributes xmi:id="_EDBjNC18EeafJr4P8UnnOg" name="XBLNR" type="VARCHAR" nullable="true" length="16" scale="0"/>
+      <attributes xmi:id="_EDCKOS18EeafJr4P8UnnOg" name="REBZG" type="VARCHAR" nullable="true" length="10" scale="0"/>
+      <attributes xmi:id="_EDCKRC18EeafJr4P8UnnOg" name="REBZJ" type="DECIMAL" nullable="true" length="4" scale="0"/>
+      <attributes xmi:id="_EDCxSS18EeafJr4P8UnnOg" name="REBZZ" type="DECIMAL" nullable="true" length="3" scale="0"/>
+      <attributes xmi:id="_EDCxVC18EeafJr4P8UnnOg" name="VBELN" type="VARCHAR" nullable="true" length="10" scale="0"/>
+      <attributes xmi:id="_EDDYWS18EeafJr4P8UnnOg" name="XREF1" type="VARCHAR" nullable="true" length="12" scale="0"/>
+      <attributes xmi:id="_EDDYZC18EeafJr4P8UnnOg" name="XREF2" type="VARCHAR" nullable="true" length="12" scale="0"/>
+      <attributes xmi:id="_EDD_ai18EeafJr4P8UnnOg" name="XREF3" type="VARCHAR" nullable="true" length="20" scale="0"/>
+      <attributes xmi:id="_EDEmcS18EeafJr4P8UnnOg" name="SGTXT" type="VARCHAR" nullable="true" length="50" scale="0"/>
+      <attributes xmi:id="_EDEmfC18EeafJr4P8UnnOg" name="XNEGP" type="VARCHAR" nullable="true" length="1" scale="0"/>
+      <attributes xmi:id="_EDFNhi18EeafJr4P8UnnOg" name="XARCH" type="VARCHAR" nullable="true" length="1" scale="0"/>
+      <attributes xmi:id="_EDFNkS18EeafJr4P8UnnOg" name="UMSKS" type="VARCHAR" nullable="true" length="1" scale="0"/>
+      <attributes xmi:id="_EDF0mi18EeafJr4P8UnnOg" name="UPDMOD" type="VARCHAR" nullable="true" length="1" scale="0"/>
+      <attributes xmi:id="_EDGbpi18EeafJr4P8UnnOg" name="ZUONR" type="VARCHAR" nullable="true" length="18" scale="0"/>
+      <attributes xmi:id="_EDGbsS18EeafJr4P8UnnOg" name="AWTYP" type="VARCHAR" nullable="true" length="5" scale="0"/>
+      <attributes xmi:id="_EDHCuS18EeafJr4P8UnnOg" name="AWKEY" type="VARCHAR" nullable="true" length="20" scale="0"/>
+      <attributes xmi:id="_EDHpwi18EeafJr4P8UnnOg" name="BSTAT" type="VARCHAR" nullable="true" length="1" scale="0"/>
+      <attributes xmi:id="_EDHpzS18EeafJr4P8UnnOg" name="DMBTR" type="DECIMAL" nullable="true" length="13" scale="2"/>
+      <attributes xmi:id="_EDIQ2S18EeafJr4P8UnnOg" name="DMBE2" type="DECIMAL" nullable="true" length="13" scale="2"/>
+      <attributes xmi:id="_EDI36S18EeafJr4P8UnnOg" name="DMBE3" type="DECIMAL" nullable="true" length="13" scale="2"/>
+      <attributes xmi:id="_EDJe8i18EeafJr4P8UnnOg" name="GJAHR" type="DECIMAL" nullable="true" length="4" scale="0"/>
+      <attributes xmi:id="_EDJe_S18EeafJr4P8UnnOg" name="HWAE2" type="VARCHAR" nullable="true" length="5" scale="0"/>
+      <attributes xmi:id="_EDKGCC18EeafJr4P8UnnOg" name="HWAE3" type="VARCHAR" nullable="true" length="5" scale="0"/>
+      <attributes xmi:id="_EDKtEi18EeafJr4P8UnnOg" name="MONAT" type="DECIMAL" nullable="true" length="2" scale="0"/>
+      <attributes xmi:id="_EDLUIS18EeafJr4P8UnnOg" name="PROJK" type="DECIMAL" nullable="true" length="8" scale="0"/>
+      <attributes xmi:id="_EDL7Mi18EeafJr4P8UnnOg" name="SHKZG" type="VARCHAR" nullable="true" length="1" scale="0"/>
+      <attributes xmi:id="_EDMiQC18EeafJr4P8UnnOg" name="WRBTR" type="DECIMAL" nullable="true" length="13" scale="2"/>
+      <attributes xmi:id="_EDNJVS18EeafJr4P8UnnOg" name="ODQ_CHANGEMODE" type="VARCHAR" nullable="true" length="1" scale="0"/>
+      <attributes xmi:id="_EDNwaS18EeafJr4P8UnnOg" name="ODQ_ENTITYCNTR" type="DECIMAL" nullable="true" length="19" scale="0"/>
+    </outputs>
+    <tableMappings xmi:id="_2ivFhC1kEeah8uIQECWRYg" source="_2BahCC1kEeah8uIQECWRYg" target="_2BahCS1kEeah8uIQECWRYg">
+      <attributeMappings xmi:id="_EC0u0i18EeafJr4P8UnnOg" source="_EC0u0C18EeafJr4P8UnnOg" target="_2it3QC1kEeah8uIQECWRYg"/>
+      <attributeMappings xmi:id="_EC1V4C18EeafJr4P8UnnOg" source="_EC0u1C18EeafJr4P8UnnOg" target="_2it3QS1kEeah8uIQECWRYg"/>
+      <attributeMappings xmi:id="_EC1V5S18EeafJr4P8UnnOg" source="_EC1V4i18EeafJr4P8UnnOg" target="_EC1V5C18EeafJr4P8UnnOg"/>
+      <attributeMappings xmi:id="_EC188S18EeafJr4P8UnnOg" source="_EC1V7S18EeafJr4P8UnnOg" target="_EC188C18EeafJr4P8UnnOg"/>
+      <attributeMappings xmi:id="_EC18_C18EeafJr4P8UnnOg" source="_EC18-S18EeafJr4P8UnnOg" target="_EC18-y18EeafJr4P8UnnOg"/>
+      <attributeMappings xmi:id="_EC19By18EeafJr4P8UnnOg" source="_EC19BC18EeafJr4P8UnnOg" target="_EC19Bi18EeafJr4P8UnnOg"/>
+      <attributeMappings xmi:id="_EC2kBC18EeafJr4P8UnnOg" source="_EC2kAS18EeafJr4P8UnnOg" target="_EC2kAy18EeafJr4P8UnnOg"/>
+      <attributeMappings xmi:id="_EC2kDy18EeafJr4P8UnnOg" source="_EC2kDC18EeafJr4P8UnnOg" target="_EC2kDi18EeafJr4P8UnnOg"/>
+      <attributeMappings xmi:id="_EC2kGi18EeafJr4P8UnnOg" source="_EC2kFy18EeafJr4P8UnnOg" target="_EC2kGS18EeafJr4P8UnnOg"/>
+      <attributeMappings xmi:id="_EC3LEC18EeafJr4P8UnnOg" source="_EC2kIi18EeafJr4P8UnnOg" target="_EC2kJC18EeafJr4P8UnnOg"/>
+      <attributeMappings xmi:id="_EC3LGy18EeafJr4P8UnnOg" source="_EC3LGC18EeafJr4P8UnnOg" target="_EC3LGi18EeafJr4P8UnnOg"/>
+      <attributeMappings xmi:id="_EC3LJi18EeafJr4P8UnnOg" source="_EC3LIy18EeafJr4P8UnnOg" target="_EC3LJS18EeafJr4P8UnnOg"/>
+      <attributeMappings xmi:id="_EC3LMS18EeafJr4P8UnnOg" source="_EC3LLi18EeafJr4P8UnnOg" target="_EC3LMC18EeafJr4P8UnnOg"/>
+      <attributeMappings xmi:id="_EC3yKC18EeafJr4P8UnnOg" source="_EC3yJS18EeafJr4P8UnnOg" target="_EC3yJy18EeafJr4P8UnnOg"/>
+      <attributeMappings xmi:id="_EC3yMy18EeafJr4P8UnnOg" source="_EC3yMC18EeafJr4P8UnnOg" target="_EC3yMi18EeafJr4P8UnnOg"/>
+      <attributeMappings xmi:id="_EC3yPi18EeafJr4P8UnnOg" source="_EC3yOy18EeafJr4P8UnnOg" target="_EC3yPS18EeafJr4P8UnnOg"/>
+      <attributeMappings xmi:id="_EC4ZNi18EeafJr4P8UnnOg" source="_EC4ZMy18EeafJr4P8UnnOg" target="_EC4ZNS18EeafJr4P8UnnOg"/>
+      <attributeMappings xmi:id="_EC4ZQS18EeafJr4P8UnnOg" source="_EC4ZPi18EeafJr4P8UnnOg" target="_EC4ZQC18EeafJr4P8UnnOg"/>
+      <attributeMappings xmi:id="_EC5AQy18EeafJr4P8UnnOg" source="_EC5AQC18EeafJr4P8UnnOg" target="_EC5AQi18EeafJr4P8UnnOg"/>
+      <attributeMappings xmi:id="_EC5ATi18EeafJr4P8UnnOg" source="_EC5ASy18EeafJr4P8UnnOg" target="_EC5ATS18EeafJr4P8UnnOg"/>
+      <attributeMappings xmi:id="_EC5nUi18EeafJr4P8UnnOg" source="_EC5AVi18EeafJr4P8UnnOg" target="_EC5nUS18EeafJr4P8UnnOg"/>
+      <attributeMappings xmi:id="_EC5nXS18EeafJr4P8UnnOg" source="_EC5nWi18EeafJr4P8UnnOg" target="_EC5nXC18EeafJr4P8UnnOg"/>
+      <attributeMappings xmi:id="_EC5naC18EeafJr4P8UnnOg" source="_EC5nZS18EeafJr4P8UnnOg" target="_EC5nZy18EeafJr4P8UnnOg"/>
+      <attributeMappings xmi:id="_EC5ncy18EeafJr4P8UnnOg" source="_EC5ncC18EeafJr4P8UnnOg" target="_EC5nci18EeafJr4P8UnnOg"/>
+      <attributeMappings xmi:id="_EC6OaC18EeafJr4P8UnnOg" source="_EC6OZS18EeafJr4P8UnnOg" target="_EC6OZy18EeafJr4P8UnnOg"/>
+      <attributeMappings xmi:id="_EC6Ocy18EeafJr4P8UnnOg" source="_EC6OcC18EeafJr4P8UnnOg" target="_EC6Oci18EeafJr4P8UnnOg"/>
+      <attributeMappings xmi:id="_EC6Ofi18EeafJr4P8UnnOg" source="_EC6Oey18EeafJr4P8UnnOg" target="_EC6OfS18EeafJr4P8UnnOg"/>
+      <attributeMappings xmi:id="_EC61ei18EeafJr4P8UnnOg" source="_EC61dy18EeafJr4P8UnnOg" target="_EC61eS18EeafJr4P8UnnOg"/>
+      <attributeMappings xmi:id="_EC61hS18EeafJr4P8UnnOg" source="_EC61gi18EeafJr4P8UnnOg" target="_EC61hC18EeafJr4P8UnnOg"/>
+      <attributeMappings xmi:id="_EC7chS18EeafJr4P8UnnOg" source="_EC7cgi18EeafJr4P8UnnOg" target="_EC7chC18EeafJr4P8UnnOg"/>
+      <attributeMappings xmi:id="_EC7ckC18EeafJr4P8UnnOg" source="_EC7cjS18EeafJr4P8UnnOg" target="_EC7cjy18EeafJr4P8UnnOg"/>
+      <attributeMappings xmi:id="_EC8Dki18EeafJr4P8UnnOg" source="_EC7cmC18EeafJr4P8UnnOg" target="_EC8DkS18EeafJr4P8UnnOg"/>
+      <attributeMappings xmi:id="_EC8DnS18EeafJr4P8UnnOg" source="_EC8Dmi18EeafJr4P8UnnOg" target="_EC8DnC18EeafJr4P8UnnOg"/>
+      <attributeMappings xmi:id="_EC8DqC18EeafJr4P8UnnOg" source="_EC8DpS18EeafJr4P8UnnOg" target="_EC8Dpy18EeafJr4P8UnnOg"/>
+      <attributeMappings xmi:id="_EC8qqi18EeafJr4P8UnnOg" source="_EC8qpy18EeafJr4P8UnnOg" target="_EC8qqS18EeafJr4P8UnnOg"/>
+      <attributeMappings xmi:id="_EC8qtS18EeafJr4P8UnnOg" source="_EC8qsi18EeafJr4P8UnnOg" target="_EC8qtC18EeafJr4P8UnnOg"/>
+      <attributeMappings xmi:id="_EC9RtS18EeafJr4P8UnnOg" source="_EC9Rsi18EeafJr4P8UnnOg" target="_EC9RtC18EeafJr4P8UnnOg"/>
+      <attributeMappings xmi:id="_EC9RwC18EeafJr4P8UnnOg" source="_EC9RvS18EeafJr4P8UnnOg" target="_EC9Rvy18EeafJr4P8UnnOg"/>
+      <attributeMappings xmi:id="_EC9Ryy18EeafJr4P8UnnOg" source="_EC9RyC18EeafJr4P8UnnOg" target="_EC9Ryi18EeafJr4P8UnnOg"/>
+      <attributeMappings xmi:id="_EC94yi18EeafJr4P8UnnOg" source="_EC94xy18EeafJr4P8UnnOg" target="_EC94yS18EeafJr4P8UnnOg"/>
+      <attributeMappings xmi:id="_EC941S18EeafJr4P8UnnOg" source="_EC940i18EeafJr4P8UnnOg" target="_EC941C18EeafJr4P8UnnOg"/>
+      <attributeMappings xmi:id="_EC-f1S18EeafJr4P8UnnOg" source="_EC-f0i18EeafJr4P8UnnOg" target="_EC-f1C18EeafJr4P8UnnOg"/>
+      <attributeMappings xmi:id="_EC-f4C18EeafJr4P8UnnOg" source="_EC-f3S18EeafJr4P8UnnOg" target="_EC-f3y18EeafJr4P8UnnOg"/>
+      <attributeMappings xmi:id="_EC_G6S18EeafJr4P8UnnOg" source="_EC_G5i18EeafJr4P8UnnOg" target="_EC_G6C18EeafJr4P8UnnOg"/>
+      <attributeMappings xmi:id="_EC_G9C18EeafJr4P8UnnOg" source="_EC_G8S18EeafJr4P8UnnOg" target="_EC_G8y18EeafJr4P8UnnOg"/>
+      <attributeMappings xmi:id="_EC_G_y18EeafJr4P8UnnOg" source="_EC_G_C18EeafJr4P8UnnOg" target="_EC_G_i18EeafJr4P8UnnOg"/>
+      <attributeMappings xmi:id="_EC_HCi18EeafJr4P8UnnOg" source="_EC_HBy18EeafJr4P8UnnOg" target="_EC_HCS18EeafJr4P8UnnOg"/>
+      <attributeMappings xmi:id="_EDAVCi18EeafJr4P8UnnOg" source="_EDAVBy18EeafJr4P8UnnOg" target="_EDAVCS18EeafJr4P8UnnOg"/>
+      <attributeMappings xmi:id="_EDAVFS18EeafJr4P8UnnOg" source="_EDAVEi18EeafJr4P8UnnOg" target="_EDAVFC18EeafJr4P8UnnOg"/>
+      <attributeMappings xmi:id="_EDA8Gi18EeafJr4P8UnnOg" source="_EDA8Fy18EeafJr4P8UnnOg" target="_EDA8GS18EeafJr4P8UnnOg"/>
+      <attributeMappings xmi:id="_EDA8JS18EeafJr4P8UnnOg" source="_EDA8Ii18EeafJr4P8UnnOg" target="_EDA8JC18EeafJr4P8UnnOg"/>
+      <attributeMappings xmi:id="_EDBjKi18EeafJr4P8UnnOg" source="_EDBjJy18EeafJr4P8UnnOg" target="_EDBjKS18EeafJr4P8UnnOg"/>
+      <attributeMappings xmi:id="_EDBjNS18EeafJr4P8UnnOg" source="_EDBjMi18EeafJr4P8UnnOg" target="_EDBjNC18EeafJr4P8UnnOg"/>
+      <attributeMappings xmi:id="_EDCKOi18EeafJr4P8UnnOg" source="_EDCKNy18EeafJr4P8UnnOg" target="_EDCKOS18EeafJr4P8UnnOg"/>
+      <attributeMappings xmi:id="_EDCKRS18EeafJr4P8UnnOg" source="_EDCKQi18EeafJr4P8UnnOg" target="_EDCKRC18EeafJr4P8UnnOg"/>
+      <attributeMappings xmi:id="_EDCxSi18EeafJr4P8UnnOg" source="_EDCxRy18EeafJr4P8UnnOg" target="_EDCxSS18EeafJr4P8UnnOg"/>
+      <attributeMappings xmi:id="_EDCxVS18EeafJr4P8UnnOg" source="_EDCxUi18EeafJr4P8UnnOg" target="_EDCxVC18EeafJr4P8UnnOg"/>
+      <attributeMappings xmi:id="_EDDYWi18EeafJr4P8UnnOg" source="_EDDYVy18EeafJr4P8UnnOg" target="_EDDYWS18EeafJr4P8UnnOg"/>
+      <attributeMappings xmi:id="_EDD_YC18EeafJr4P8UnnOg" source="_EDDYYi18EeafJr4P8UnnOg" target="_EDDYZC18EeafJr4P8UnnOg"/>
+      <attributeMappings xmi:id="_EDD_ay18EeafJr4P8UnnOg" source="_EDD_aC18EeafJr4P8UnnOg" target="_EDD_ai18EeafJr4P8UnnOg"/>
+      <attributeMappings xmi:id="_EDEmci18EeafJr4P8UnnOg" source="_EDD_cy18EeafJr4P8UnnOg" target="_EDEmcS18EeafJr4P8UnnOg"/>
+      <attributeMappings xmi:id="_EDEmfS18EeafJr4P8UnnOg" source="_EDEmei18EeafJr4P8UnnOg" target="_EDEmfC18EeafJr4P8UnnOg"/>
+      <attributeMappings xmi:id="_EDFNhy18EeafJr4P8UnnOg" source="_EDFNhC18EeafJr4P8UnnOg" target="_EDFNhi18EeafJr4P8UnnOg"/>
+      <attributeMappings xmi:id="_EDF0kC18EeafJr4P8UnnOg" source="_EDFNjy18EeafJr4P8UnnOg" target="_EDFNkS18EeafJr4P8UnnOg"/>
+      <attributeMappings xmi:id="_EDF0my18EeafJr4P8UnnOg" source="_EDF0mC18EeafJr4P8UnnOg" target="_EDF0mi18EeafJr4P8UnnOg"/>
+      <attributeMappings xmi:id="_EDGbpy18EeafJr4P8UnnOg" source="_EDGbpC18EeafJr4P8UnnOg" target="_EDGbpi18EeafJr4P8UnnOg"/>
+      <attributeMappings xmi:id="_EDGbsi18EeafJr4P8UnnOg" source="_EDGbry18EeafJr4P8UnnOg" target="_EDGbsS18EeafJr4P8UnnOg"/>
+      <attributeMappings xmi:id="_EDHCui18EeafJr4P8UnnOg" source="_EDHCty18EeafJr4P8UnnOg" target="_EDHCuS18EeafJr4P8UnnOg"/>
+      <attributeMappings xmi:id="_EDHpwy18EeafJr4P8UnnOg" source="_EDHpwC18EeafJr4P8UnnOg" target="_EDHpwi18EeafJr4P8UnnOg"/>
+      <attributeMappings xmi:id="_EDHpzi18EeafJr4P8UnnOg" source="_EDHpyy18EeafJr4P8UnnOg" target="_EDHpzS18EeafJr4P8UnnOg"/>
+      <attributeMappings xmi:id="_EDIQ2i18EeafJr4P8UnnOg" source="_EDIQ1y18EeafJr4P8UnnOg" target="_EDIQ2S18EeafJr4P8UnnOg"/>
+      <attributeMappings xmi:id="_EDI36i18EeafJr4P8UnnOg" source="_EDI35y18EeafJr4P8UnnOg" target="_EDI36S18EeafJr4P8UnnOg"/>
+      <attributeMappings xmi:id="_EDJe8y18EeafJr4P8UnnOg" source="_EDJe8C18EeafJr4P8UnnOg" target="_EDJe8i18EeafJr4P8UnnOg"/>
+      <attributeMappings xmi:id="_EDJe_i18EeafJr4P8UnnOg" source="_EDJe-y18EeafJr4P8UnnOg" target="_EDJe_S18EeafJr4P8UnnOg"/>
+      <attributeMappings xmi:id="_EDKGCS18EeafJr4P8UnnOg" source="_EDKGBi18EeafJr4P8UnnOg" target="_EDKGCC18EeafJr4P8UnnOg"/>
+      <attributeMappings xmi:id="_EDKtEy18EeafJr4P8UnnOg" source="_EDKtEC18EeafJr4P8UnnOg" target="_EDKtEi18EeafJr4P8UnnOg"/>
+      <attributeMappings xmi:id="_EDLUIi18EeafJr4P8UnnOg" source="_EDKtGy18EeafJr4P8UnnOg" target="_EDLUIS18EeafJr4P8UnnOg"/>
+      <attributeMappings xmi:id="_EDL7My18EeafJr4P8UnnOg" source="_EDL7MC18EeafJr4P8UnnOg" target="_EDL7Mi18EeafJr4P8UnnOg"/>
+      <attributeMappings xmi:id="_EDMiQS18EeafJr4P8UnnOg" source="_EDL7Oy18EeafJr4P8UnnOg" target="_EDMiQC18EeafJr4P8UnnOg"/>
+      <attributeMappings xmi:id="_EDNJVi18EeafJr4P8UnnOg" source="_EDNJUy18EeafJr4P8UnnOg" target="_EDNJVS18EeafJr4P8UnnOg"/>
+      <attributeMappings xmi:id="_EDOXcC18EeafJr4P8UnnOg" source="_EDNwZy18EeafJr4P8UnnOg" target="_EDNwaS18EeafJr4P8UnnOg"/>
+    </tableMappings>
+  </nodes>
+  <nodes xsi:type="flowgraph:SortNode" xmi:id="__H910C1kEeah8uIQECWRYg" name="SORT" sortAttributes="__o1uQC1kEeah8uIQECWRYg __o1uQS1kEeah8uIQECWRYg _EC1V5i18EeafJr4P8UnnOg _EC188i18EeafJr4P8UnnOg">
+    <annotations xmi:id="__H910S1kEeah8uIQECWRYg" key="sap.afm.description" value="Sort the data"/>
+    <annotations xmi:id="__H910i1kEeah8uIQECWRYg" key="sap.afm.displayName" value="Sort"/>
+    <annotations xmi:id="__H910y1kEeah8uIQECWRYg" key="sap.afm.layout">
+      <annotations xmi:id="__H911C1kEeah8uIQECWRYg" key="x" value="385"/>
+      <annotations xmi:id="__H911S1kEeah8uIQECWRYg" key="y" value="31"/>
+      <annotations xmi:id="__H911i1kEeah8uIQECWRYg" key="width" value="100"/>
+      <annotations xmi:id="__H911y1kEeah8uIQECWRYg" key="height" value="84"/>
+    </annotations>
+    <annotations xmi:id="_Dy8-QC1lEeah8uIQECWRYg" key="sap.afm.nodeType" value="SortNode"/>
+    <annotations xmi:id="_DzQgQC1lEeah8uIQECWRYg" key="sap.afm.nodeInputs">
+      <annotations xmi:id="_DzZqMC1lEeah8uIQECWRYg" key="INPUT_2" value="OUTPUT"/>
+    </annotations>
+    <annotations xmi:id="_Dz0g8C1lEeah8uIQECWRYg" key="sap.afm.nodeOutputs">
+      <annotations xmi:id="_Dz9q4C1lEeah8uIQECWRYg" key="OUTPUT_2" value="TableComparison1_Input"/>
+    </annotations>
+    <inputs xmi:id="__H912C1kEeah8uIQECWRYg" name="INPUT_2" kind="TABLE">
+      <attributes xmi:id="__o1uQC1kEeah8uIQECWRYg" name="BUKRS" type="VARCHAR" nullable="false" length="4" scale="0"/>
+      <attributes xmi:id="__o1uQS1kEeah8uIQECWRYg" name="FISCPER" type="DECIMAL" nullable="false" length="7" scale="0"/>
+      <attributes xmi:id="_EC1V5i18EeafJr4P8UnnOg" name="BELNR" type="VARCHAR" nullable="false" length="10" scale="0"/>
+      <attributes xmi:id="_EC188i18EeafJr4P8UnnOg" name="BUZEI" type="DECIMAL" nullable="false" length="3" scale="0"/>
+      <attributes xmi:id="_EC18_S18EeafJr4P8UnnOg" name="UPOSZ" type="VARCHAR" nullable="false" length="4" scale="0"/>
+      <attributes xmi:id="_EC19CC18EeafJr4P8UnnOg" name="STATUSPS" type="VARCHAR" nullable="true" length="1" scale="0"/>
+      <attributes xmi:id="_EC2kBS18EeafJr4P8UnnOg" name="KUNNR" type="VARCHAR" nullable="true" length="10" scale="0"/>
+      <attributes xmi:id="_EC2kEC18EeafJr4P8UnnOg" name="KKBER" type="VARCHAR" nullable="true" length="4" scale="0"/>
+      <attributes xmi:id="_EC2kGy18EeafJr4P8UnnOg" name="MABER" type="VARCHAR" nullable="true" length="2" scale="0"/>
+      <attributes xmi:id="_EC3LES18EeafJr4P8UnnOg" name="KOART" type="VARCHAR" nullable="true" length="1" scale="0"/>
+      <attributes xmi:id="_EC3LHC18EeafJr4P8UnnOg" name="UMSKZ" type="VARCHAR" nullable="true" length="1" scale="0"/>
+      <attributes xmi:id="_EC3LJy18EeafJr4P8UnnOg" name="BLART" type="VARCHAR" nullable="true" length="2" scale="0"/>
+      <attributes xmi:id="_EC3LMi18EeafJr4P8UnnOg" name="BSCHL" type="VARCHAR" nullable="true" length="2" scale="0"/>
+      <attributes xmi:id="_EC3yKS18EeafJr4P8UnnOg" name="FISCVAR" type="VARCHAR" nullable="true" length="2" scale="0"/>
+      <attributes xmi:id="_EC3yNC18EeafJr4P8UnnOg" name="BLDAT" type="DATE" nullable="true" length="0" scale="0"/>
+      <attributes xmi:id="_EC3yPy18EeafJr4P8UnnOg" name="BUDAT" type="DATE" nullable="true" length="0" scale="0"/>
+      <attributes xmi:id="_EC4ZNy18EeafJr4P8UnnOg" name="CPUDT" type="DATE" nullable="true" length="0" scale="0"/>
+      <attributes xmi:id="_EC4ZQi18EeafJr4P8UnnOg" name="AUGDT" type="DATE" nullable="true" length="0" scale="0"/>
+      <attributes xmi:id="_EC5ARC18EeafJr4P8UnnOg" name="MADAT" type="DATE" nullable="true" length="0" scale="0"/>
+      <attributes xmi:id="_EC5ATy18EeafJr4P8UnnOg" name="NETDT" type="DATE" nullable="true" length="0" scale="0"/>
+      <attributes xmi:id="_EC5nUy18EeafJr4P8UnnOg" name="SK1DT" type="DATE" nullable="true" length="0" scale="0"/>
+      <attributes xmi:id="_EC5nXi18EeafJr4P8UnnOg" name="SK2DT" type="DATE" nullable="true" length="0" scale="0"/>
+      <attributes xmi:id="_EC5naS18EeafJr4P8UnnOg" name="ZFBDT" type="DATE" nullable="true" length="0" scale="0"/>
+      <attributes xmi:id="_EC5ndC18EeafJr4P8UnnOg" name="ZBD1T" type="DECIMAL" nullable="true" length="3" scale="0"/>
+      <attributes xmi:id="_EC6OaS18EeafJr4P8UnnOg" name="ZBD2T" type="DECIMAL" nullable="true" length="3" scale="0"/>
+      <attributes xmi:id="_EC6OdC18EeafJr4P8UnnOg" name="ZBD3T" type="DECIMAL" nullable="true" length="3" scale="0"/>
+      <attributes xmi:id="_EC61cC18EeafJr4P8UnnOg" name="ZBD1P" type="DECIMAL" nullable="true" length="5" scale="3"/>
+      <attributes xmi:id="_EC61ey18EeafJr4P8UnnOg" name="ZBD2P" type="DECIMAL" nullable="true" length="5" scale="3"/>
+      <attributes xmi:id="_EC61hi18EeafJr4P8UnnOg" name="LAND1" type="VARCHAR" nullable="true" length="3" scale="0"/>
+      <attributes xmi:id="_EC7chi18EeafJr4P8UnnOg" name="ZLSCH" type="VARCHAR" nullable="true" length="1" scale="0"/>
+      <attributes xmi:id="_EC7ckS18EeafJr4P8UnnOg" name="ZTERM" type="VARCHAR" nullable="true" length="4" scale="0"/>
+      <attributes xmi:id="_EC8Dky18EeafJr4P8UnnOg" name="ZLSPR" type="VARCHAR" nullable="true" length="1" scale="0"/>
+      <attributes xmi:id="_EC8Dni18EeafJr4P8UnnOg" name="RSTGR" type="VARCHAR" nullable="true" length="3" scale="0"/>
+      <attributes xmi:id="_EC8qoC18EeafJr4P8UnnOg" name="MANSP" type="VARCHAR" nullable="true" length="1" scale="0"/>
+      <attributes xmi:id="_EC8qqy18EeafJr4P8UnnOg" name="MSCHL" type="VARCHAR" nullable="true" length="1" scale="0"/>
+      <attributes xmi:id="_EC8qti18EeafJr4P8UnnOg" name="MANST" type="DECIMAL" nullable="true" length="1" scale="0"/>
+      <attributes xmi:id="_EC9Rti18EeafJr4P8UnnOg" name="LCURR" type="VARCHAR" nullable="true" length="5" scale="0"/>
+      <attributes xmi:id="_EC9RwS18EeafJr4P8UnnOg" name="DMSOL" type="DECIMAL" nullable="true" length="13" scale="2"/>
+      <attributes xmi:id="_EC94wC18EeafJr4P8UnnOg" name="DMHAB" type="DECIMAL" nullable="true" length="13" scale="2"/>
+      <attributes xmi:id="_EC94yy18EeafJr4P8UnnOg" name="DMSHB" type="DECIMAL" nullable="true" length="13" scale="2"/>
+      <attributes xmi:id="_EC941i18EeafJr4P8UnnOg" name="SKNTO" type="DECIMAL" nullable="true" length="13" scale="2"/>
+      <attributes xmi:id="_EC-f1i18EeafJr4P8UnnOg" name="WAERS" type="VARCHAR" nullable="true" length="5" scale="0"/>
+      <attributes xmi:id="_EC-f4S18EeafJr4P8UnnOg" name="WRSOL" type="DECIMAL" nullable="true" length="13" scale="2"/>
+      <attributes xmi:id="_EC_G6i18EeafJr4P8UnnOg" name="WRHAB" type="DECIMAL" nullable="true" length="13" scale="2"/>
+      <attributes xmi:id="_EC_G9S18EeafJr4P8UnnOg" name="WRSHB" type="DECIMAL" nullable="true" length="13" scale="2"/>
+      <attributes xmi:id="_EC_HAC18EeafJr4P8UnnOg" name="SKFBT" type="DECIMAL" nullable="true" length="13" scale="2"/>
+      <attributes xmi:id="_EDAVAC18EeafJr4P8UnnOg" name="WSKTO" type="DECIMAL" nullable="true" length="13" scale="2"/>
+      <attributes xmi:id="_EDAVCy18EeafJr4P8UnnOg" name="KTOPL" type="VARCHAR" nullable="true" length="4" scale="0"/>
+      <attributes xmi:id="_EDA8EC18EeafJr4P8UnnOg" name="HKONT" type="VARCHAR" nullable="true" length="10" scale="0"/>
+      <attributes xmi:id="_EDA8Gy18EeafJr4P8UnnOg" name="SAKNR" type="VARCHAR" nullable="true" length="10" scale="0"/>
+      <attributes xmi:id="_EDBjIC18EeafJr4P8UnnOg" name="FILKD" type="VARCHAR" nullable="true" length="10" scale="0"/>
+      <attributes xmi:id="_EDBjKy18EeafJr4P8UnnOg" name="AUGBL" type="VARCHAR" nullable="true" length="10" scale="0"/>
+      <attributes xmi:id="_EDCKMC18EeafJr4P8UnnOg" name="XBLNR" type="VARCHAR" nullable="true" length="16" scale="0"/>
+      <attributes xmi:id="_EDCKOy18EeafJr4P8UnnOg" name="REBZG" type="VARCHAR" nullable="true" length="10" scale="0"/>
+      <attributes xmi:id="_EDCxQC18EeafJr4P8UnnOg" name="REBZJ" type="DECIMAL" nullable="true" length="4" scale="0"/>
+      <attributes xmi:id="_EDCxSy18EeafJr4P8UnnOg" name="REBZZ" type="DECIMAL" nullable="true" length="3" scale="0"/>
+      <attributes xmi:id="_EDDYUC18EeafJr4P8UnnOg" name="VBELN" type="VARCHAR" nullable="true" length="10" scale="0"/>
+      <attributes xmi:id="_EDDYWy18EeafJr4P8UnnOg" name="XREF1" type="VARCHAR" nullable="true" length="12" scale="0"/>
+      <attributes xmi:id="_EDD_YS18EeafJr4P8UnnOg" name="XREF2" type="VARCHAR" nullable="true" length="12" scale="0"/>
+      <attributes xmi:id="_EDD_bC18EeafJr4P8UnnOg" name="XREF3" type="VARCHAR" nullable="true" length="20" scale="0"/>
+      <attributes xmi:id="_EDEmcy18EeafJr4P8UnnOg" name="SGTXT" type="VARCHAR" nullable="true" length="50" scale="0"/>
+      <attributes xmi:id="_EDEmfi18EeafJr4P8UnnOg" name="XNEGP" type="VARCHAR" nullable="true" length="1" scale="0"/>
+      <attributes xmi:id="_EDFNiC18EeafJr4P8UnnOg" name="XARCH" type="VARCHAR" nullable="true" length="1" scale="0"/>
+      <attributes xmi:id="_EDF0kS18EeafJr4P8UnnOg" name="UMSKS" type="VARCHAR" nullable="true" length="1" scale="0"/>
+      <attributes xmi:id="_EDF0nC18EeafJr4P8UnnOg" name="UPDMOD" type="VARCHAR" nullable="true" length="1" scale="0"/>
+      <attributes xmi:id="_EDGbqC18EeafJr4P8UnnOg" name="ZUONR" type="VARCHAR" nullable="true" length="18" scale="0"/>
+      <attributes xmi:id="_EDHCsC18EeafJr4P8UnnOg" name="AWTYP" type="VARCHAR" nullable="true" length="5" scale="0"/>
+      <attributes xmi:id="_EDHCuy18EeafJr4P8UnnOg" name="AWKEY" type="VARCHAR" nullable="true" length="20" scale="0"/>
+      <attributes xmi:id="_EDHpxC18EeafJr4P8UnnOg" name="BSTAT" type="VARCHAR" nullable="true" length="1" scale="0"/>
+      <attributes xmi:id="_EDIQ0C18EeafJr4P8UnnOg" name="DMBTR" type="DECIMAL" nullable="true" length="13" scale="2"/>
+      <attributes xmi:id="_EDI34C18EeafJr4P8UnnOg" name="DMBE2" type="DECIMAL" nullable="true" length="13" scale="2"/>
+      <attributes xmi:id="_EDI36y18EeafJr4P8UnnOg" name="DMBE3" type="DECIMAL" nullable="true" length="13" scale="2"/>
+      <attributes xmi:id="_EDJe9C18EeafJr4P8UnnOg" name="GJAHR" type="DECIMAL" nullable="true" length="4" scale="0"/>
+      <attributes xmi:id="_EDJe_y18EeafJr4P8UnnOg" name="HWAE2" type="VARCHAR" nullable="true" length="5" scale="0"/>
+      <attributes xmi:id="_EDKGCi18EeafJr4P8UnnOg" name="HWAE3" type="VARCHAR" nullable="true" length="5" scale="0"/>
+      <attributes xmi:id="_EDKtFC18EeafJr4P8UnnOg" name="MONAT" type="DECIMAL" nullable="true" length="2" scale="0"/>
+      <attributes xmi:id="_EDLUIy18EeafJr4P8UnnOg" name="PROJK" type="DECIMAL" nullable="true" length="8" scale="0"/>
+      <attributes xmi:id="_EDL7NC18EeafJr4P8UnnOg" name="SHKZG" type="VARCHAR" nullable="true" length="1" scale="0"/>
+      <attributes xmi:id="_EDMiQi18EeafJr4P8UnnOg" name="WRBTR" type="DECIMAL" nullable="true" length="13" scale="2"/>
+      <attributes xmi:id="_EDNwYC18EeafJr4P8UnnOg" name="ODQ_CHANGEMODE" type="VARCHAR" nullable="true" length="1" scale="0"/>
+      <attributes xmi:id="_EDOXcS18EeafJr4P8UnnOg" name="ODQ_ENTITYCNTR" type="DECIMAL" nullable="true" length="19" scale="0"/>
+    </inputs>
+    <outputs xmi:id="__H912S1kEeah8uIQECWRYg" name="OUTPUT_2" kind="TABLE">
+      <attributes xmi:id="__o4xkC1kEeah8uIQECWRYg" name="BUKRS" type="VARCHAR" nullable="false" length="4" scale="0"/>
+      <attributes xmi:id="__o4xkS1kEeah8uIQECWRYg" name="FISCPER" type="DECIMAL" nullable="false" length="7" scale="0"/>
+      <attributes xmi:id="_EC1V6C18EeafJr4P8UnnOg" name="BELNR" type="VARCHAR" nullable="false" length="10" scale="0"/>
+      <attributes xmi:id="_EC189C18EeafJr4P8UnnOg" name="BUZEI" type="DECIMAL" nullable="false" length="3" scale="0"/>
+      <attributes xmi:id="_EC18_y18EeafJr4P8UnnOg" name="UPOSZ" type="VARCHAR" nullable="false" length="4" scale="0"/>
+      <attributes xmi:id="_EC19Ci18EeafJr4P8UnnOg" name="STATUSPS" type="VARCHAR" nullable="true" length="1" scale="0"/>
+      <attributes xmi:id="_EC2kBy18EeafJr4P8UnnOg" name="KUNNR" type="VARCHAR" nullable="true" length="10" scale="0"/>
+      <attributes xmi:id="_EC2kEi18EeafJr4P8UnnOg" name="KKBER" type="VARCHAR" nullable="true" length="4" scale="0"/>
+      <attributes xmi:id="_EC2kHS18EeafJr4P8UnnOg" name="MABER" type="VARCHAR" nullable="true" length="2" scale="0"/>
+      <attributes xmi:id="_EC3LEy18EeafJr4P8UnnOg" name="KOART" type="VARCHAR" nullable="true" length="1" scale="0"/>
+      <attributes xmi:id="_EC3LHi18EeafJr4P8UnnOg" name="UMSKZ" type="VARCHAR" nullable="true" length="1" scale="0"/>
+      <attributes xmi:id="_EC3LKS18EeafJr4P8UnnOg" name="BLART" type="VARCHAR" nullable="true" length="2" scale="0"/>
+      <attributes xmi:id="_EC3yIC18EeafJr4P8UnnOg" name="BSCHL" type="VARCHAR" nullable="true" length="2" scale="0"/>
+      <attributes xmi:id="_EC3yKy18EeafJr4P8UnnOg" name="FISCVAR" type="VARCHAR" nullable="true" length="2" scale="0"/>
+      <attributes xmi:id="_EC3yNi18EeafJr4P8UnnOg" name="BLDAT" type="DATE" nullable="true" length="0" scale="0"/>
+      <attributes xmi:id="_EC3yQS18EeafJr4P8UnnOg" name="BUDAT" type="DATE" nullable="true" length="0" scale="0"/>
+      <attributes xmi:id="_EC4ZOS18EeafJr4P8UnnOg" name="CPUDT" type="DATE" nullable="true" length="0" scale="0"/>
+      <attributes xmi:id="_EC4ZRC18EeafJr4P8UnnOg" name="AUGDT" type="DATE" nullable="true" length="0" scale="0"/>
+      <attributes xmi:id="_EC5ARi18EeafJr4P8UnnOg" name="MADAT" type="DATE" nullable="true" length="0" scale="0"/>
+      <attributes xmi:id="_EC5AUS18EeafJr4P8UnnOg" name="NETDT" type="DATE" nullable="true" length="0" scale="0"/>
+      <attributes xmi:id="_EC5nVS18EeafJr4P8UnnOg" name="SK1DT" type="DATE" nullable="true" length="0" scale="0"/>
+      <attributes xmi:id="_EC5nYC18EeafJr4P8UnnOg" name="SK2DT" type="DATE" nullable="true" length="0" scale="0"/>
+      <attributes xmi:id="_EC5nay18EeafJr4P8UnnOg" name="ZFBDT" type="DATE" nullable="true" length="0" scale="0"/>
+      <attributes xmi:id="_EC6OYC18EeafJr4P8UnnOg" name="ZBD1T" type="DECIMAL" nullable="true" length="3" scale="0"/>
+      <attributes xmi:id="_EC6Oay18EeafJr4P8UnnOg" name="ZBD2T" type="DECIMAL" nullable="true" length="3" scale="0"/>
+      <attributes xmi:id="_EC6Odi18EeafJr4P8UnnOg" name="ZBD3T" type="DECIMAL" nullable="true" length="3" scale="0"/>
+      <attributes xmi:id="_EC61ci18EeafJr4P8UnnOg" name="ZBD1P" type="DECIMAL" nullable="true" length="5" scale="3"/>
+      <attributes xmi:id="_EC61fS18EeafJr4P8UnnOg" name="ZBD2P" type="DECIMAL" nullable="true" length="5" scale="3"/>
+      <attributes xmi:id="_EC61iC18EeafJr4P8UnnOg" name="LAND1" type="VARCHAR" nullable="true" length="3" scale="0"/>
+      <attributes xmi:id="_EC7ciC18EeafJr4P8UnnOg" name="ZLSCH" type="VARCHAR" nullable="true" length="1" scale="0"/>
+      <attributes xmi:id="_EC7cky18EeafJr4P8UnnOg" name="ZTERM" type="VARCHAR" nullable="true" length="4" scale="0"/>
+      <attributes xmi:id="_EC8DlS18EeafJr4P8UnnOg" name="ZLSPR" type="VARCHAR" nullable="true" length="1" scale="0"/>
+      <attributes xmi:id="_EC8DoC18EeafJr4P8UnnOg" name="RSTGR" type="VARCHAR" nullable="true" length="3" scale="0"/>
+      <attributes xmi:id="_EC8qoi18EeafJr4P8UnnOg" name="MANSP" type="VARCHAR" nullable="true" length="1" scale="0"/>
+      <attributes xmi:id="_EC8qrS18EeafJr4P8UnnOg" name="MSCHL" type="VARCHAR" nullable="true" length="1" scale="0"/>
+      <attributes xmi:id="_EC8quC18EeafJr4P8UnnOg" name="MANST" type="DECIMAL" nullable="true" length="1" scale="0"/>
+      <attributes xmi:id="_EC9RuC18EeafJr4P8UnnOg" name="LCURR" type="VARCHAR" nullable="true" length="5" scale="0"/>
+      <attributes xmi:id="_EC9Rwy18EeafJr4P8UnnOg" name="DMSOL" type="DECIMAL" nullable="true" length="13" scale="2"/>
+      <attributes xmi:id="_EC94wi18EeafJr4P8UnnOg" name="DMHAB" type="DECIMAL" nullable="true" length="13" scale="2"/>
+      <attributes xmi:id="_EC94zS18EeafJr4P8UnnOg" name="DMSHB" type="DECIMAL" nullable="true" length="13" scale="2"/>
+      <attributes xmi:id="_EC942C18EeafJr4P8UnnOg" name="SKNTO" type="DECIMAL" nullable="true" length="13" scale="2"/>
+      <attributes xmi:id="_EC-f2C18EeafJr4P8UnnOg" name="WAERS" type="VARCHAR" nullable="true" length="5" scale="0"/>
+      <attributes xmi:id="_EC_G4S18EeafJr4P8UnnOg" name="WRSOL" type="DECIMAL" nullable="true" length="13" scale="2"/>
+      <attributes xmi:id="_EC_G7C18EeafJr4P8UnnOg" name="WRHAB" type="DECIMAL" nullable="true" length="13" scale="2"/>
+      <attributes xmi:id="_EC_G9y18EeafJr4P8UnnOg" name="WRSHB" type="DECIMAL" nullable="true" length="13" scale="2"/>
+      <attributes xmi:id="_EC_HAi18EeafJr4P8UnnOg" name="SKFBT" type="DECIMAL" nullable="true" length="13" scale="2"/>
+      <attributes xmi:id="_EDAVAi18EeafJr4P8UnnOg" name="WSKTO" type="DECIMAL" nullable="true" length="13" scale="2"/>
+      <attributes xmi:id="_EDAVDS18EeafJr4P8UnnOg" name="KTOPL" type="VARCHAR" nullable="true" length="4" scale="0"/>
+      <attributes xmi:id="_EDA8Ei18EeafJr4P8UnnOg" name="HKONT" type="VARCHAR" nullable="true" length="10" scale="0"/>
+      <attributes xmi:id="_EDA8HS18EeafJr4P8UnnOg" name="SAKNR" type="VARCHAR" nullable="true" length="10" scale="0"/>
+      <attributes xmi:id="_EDBjIi18EeafJr4P8UnnOg" name="FILKD" type="VARCHAR" nullable="true" length="10" scale="0"/>
+      <attributes xmi:id="_EDBjLS18EeafJr4P8UnnOg" name="AUGBL" type="VARCHAR" nullable="true" length="10" scale="0"/>
+      <attributes xmi:id="_EDCKMi18EeafJr4P8UnnOg" name="XBLNR" type="VARCHAR" nullable="true" length="16" scale="0"/>
+      <attributes xmi:id="_EDCKPS18EeafJr4P8UnnOg" name="REBZG" type="VARCHAR" nullable="true" length="10" scale="0"/>
+      <attributes xmi:id="_EDCxQi18EeafJr4P8UnnOg" name="REBZJ" type="DECIMAL" nullable="true" length="4" scale="0"/>
+      <attributes xmi:id="_EDCxTS18EeafJr4P8UnnOg" name="REBZZ" type="DECIMAL" nullable="true" length="3" scale="0"/>
+      <attributes xmi:id="_EDDYUi18EeafJr4P8UnnOg" name="VBELN" type="VARCHAR" nullable="true" length="10" scale="0"/>
+      <attributes xmi:id="_EDDYXS18EeafJr4P8UnnOg" name="XREF1" type="VARCHAR" nullable="true" length="12" scale="0"/>
+      <attributes xmi:id="_EDD_Yy18EeafJr4P8UnnOg" name="XREF2" type="VARCHAR" nullable="true" length="12" scale="0"/>
+      <attributes xmi:id="_EDD_bi18EeafJr4P8UnnOg" name="XREF3" type="VARCHAR" nullable="true" length="20" scale="0"/>
+      <attributes xmi:id="_EDEmdS18EeafJr4P8UnnOg" name="SGTXT" type="VARCHAR" nullable="true" length="50" scale="0"/>
+      <attributes xmi:id="_EDEmgC18EeafJr4P8UnnOg" name="XNEGP" type="VARCHAR" nullable="true" length="1" scale="0"/>
+      <attributes xmi:id="_EDFNii18EeafJr4P8UnnOg" name="XARCH" type="VARCHAR" nullable="true" length="1" scale="0"/>
+      <attributes xmi:id="_EDF0ky18EeafJr4P8UnnOg" name="UMSKS" type="VARCHAR" nullable="true" length="1" scale="0"/>
+      <attributes xmi:id="_EDF0ni18EeafJr4P8UnnOg" name="UPDMOD" type="VARCHAR" nullable="true" length="1" scale="0"/>
+      <attributes xmi:id="_EDGbqi18EeafJr4P8UnnOg" name="ZUONR" type="VARCHAR" nullable="true" length="18" scale="0"/>
+      <attributes xmi:id="_EDHCsi18EeafJr4P8UnnOg" name="AWTYP" type="VARCHAR" nullable="true" length="5" scale="0"/>
+      <attributes xmi:id="_EDHCvS18EeafJr4P8UnnOg" name="AWKEY" type="VARCHAR" nullable="true" length="20" scale="0"/>
+      <attributes xmi:id="_EDHpxi18EeafJr4P8UnnOg" name="BSTAT" type="VARCHAR" nullable="true" length="1" scale="0"/>
+      <attributes xmi:id="_EDIQ0i18EeafJr4P8UnnOg" name="DMBTR" type="DECIMAL" nullable="true" length="13" scale="2"/>
+      <attributes xmi:id="_EDI34i18EeafJr4P8UnnOg" name="DMBE2" type="DECIMAL" nullable="true" length="13" scale="2"/>
+      <attributes xmi:id="_EDI37S18EeafJr4P8UnnOg" name="DMBE3" type="DECIMAL" nullable="true" length="13" scale="2"/>
+      <attributes xmi:id="_EDJe9i18EeafJr4P8UnnOg" name="GJAHR" type="DECIMAL" nullable="true" length="4" scale="0"/>
+      <attributes xmi:id="_EDKGAS18EeafJr4P8UnnOg" name="HWAE2" type="VARCHAR" nullable="true" length="5" scale="0"/>
+      <attributes xmi:id="_EDKGDC18EeafJr4P8UnnOg" name="HWAE3" type="VARCHAR" nullable="true" length="5" scale="0"/>
+      <attributes xmi:id="_EDKtFi18EeafJr4P8UnnOg" name="MONAT" type="DECIMAL" nullable="true" length="2" scale="0"/>
+      <attributes xmi:id="_EDLUJS18EeafJr4P8UnnOg" name="PROJK" type="DECIMAL" nullable="true" length="8" scale="0"/>
+      <attributes xmi:id="_EDL7Ni18EeafJr4P8UnnOg" name="SHKZG" type="VARCHAR" nullable="true" length="1" scale="0"/>
+      <attributes xmi:id="_EDMiRC18EeafJr4P8UnnOg" name="WRBTR" type="DECIMAL" nullable="true" length="13" scale="2"/>
+      <attributes xmi:id="_EDNwYi18EeafJr4P8UnnOg" name="ODQ_CHANGEMODE" type="VARCHAR" nullable="true" length="1" scale="0"/>
+      <attributes xmi:id="_EDOXcy18EeafJr4P8UnnOg" name="ODQ_ENTITYCNTR" type="DECIMAL" nullable="true" length="19" scale="0"/>
+    </outputs>
+    <tableMappings xmi:id="__o6mwC1kEeah8uIQECWRYg" source="__H912C1kEeah8uIQECWRYg" target="__H912S1kEeah8uIQECWRYg">
+      <attributeMappings xmi:id="__o7N0C1kEeah8uIQECWRYg" source="__o1uQC1kEeah8uIQECWRYg" target="__o4xkC1kEeah8uIQECWRYg"/>
+      <attributeMappings xmi:id="__o7N0S1kEeah8uIQECWRYg" source="__o1uQS1kEeah8uIQECWRYg" target="__o4xkS1kEeah8uIQECWRYg"/>
+      <attributeMappings xmi:id="_EC1V6S18EeafJr4P8UnnOg" source="_EC1V5i18EeafJr4P8UnnOg" target="_EC1V6C18EeafJr4P8UnnOg"/>
+      <attributeMappings xmi:id="_EC189S18EeafJr4P8UnnOg" source="_EC188i18EeafJr4P8UnnOg" target="_EC189C18EeafJr4P8UnnOg"/>
+      <attributeMappings xmi:id="_EC19AC18EeafJr4P8UnnOg" source="_EC18_S18EeafJr4P8UnnOg" target="_EC18_y18EeafJr4P8UnnOg"/>
+      <attributeMappings xmi:id="_EC19Cy18EeafJr4P8UnnOg" source="_EC19CC18EeafJr4P8UnnOg" target="_EC19Ci18EeafJr4P8UnnOg"/>
+      <attributeMappings xmi:id="_EC2kCC18EeafJr4P8UnnOg" source="_EC2kBS18EeafJr4P8UnnOg" target="_EC2kBy18EeafJr4P8UnnOg"/>
+      <attributeMappings xmi:id="_EC2kEy18EeafJr4P8UnnOg" source="_EC2kEC18EeafJr4P8UnnOg" target="_EC2kEi18EeafJr4P8UnnOg"/>
+      <attributeMappings xmi:id="_EC2kHi18EeafJr4P8UnnOg" source="_EC2kGy18EeafJr4P8UnnOg" target="_EC2kHS18EeafJr4P8UnnOg"/>
+      <attributeMappings xmi:id="_EC3LFC18EeafJr4P8UnnOg" source="_EC3LES18EeafJr4P8UnnOg" target="_EC3LEy18EeafJr4P8UnnOg"/>
+      <attributeMappings xmi:id="_EC3LHy18EeafJr4P8UnnOg" source="_EC3LHC18EeafJr4P8UnnOg" target="_EC3LHi18EeafJr4P8UnnOg"/>
+      <attributeMappings xmi:id="_EC3LKi18EeafJr4P8UnnOg" source="_EC3LJy18EeafJr4P8UnnOg" target="_EC3LKS18EeafJr4P8UnnOg"/>
+      <attributeMappings xmi:id="_EC3yIS18EeafJr4P8UnnOg" source="_EC3LMi18EeafJr4P8UnnOg" target="_EC3yIC18EeafJr4P8UnnOg"/>
+      <attributeMappings xmi:id="_EC3yLC18EeafJr4P8UnnOg" source="_EC3yKS18EeafJr4P8UnnOg" target="_EC3yKy18EeafJr4P8UnnOg"/>
+      <attributeMappings xmi:id="_EC3yNy18EeafJr4P8UnnOg" source="_EC3yNC18EeafJr4P8UnnOg" target="_EC3yNi18EeafJr4P8UnnOg"/>
+      <attributeMappings xmi:id="_EC3yQi18EeafJr4P8UnnOg" source="_EC3yPy18EeafJr4P8UnnOg" target="_EC3yQS18EeafJr4P8UnnOg"/>
+      <attributeMappings xmi:id="_EC4ZOi18EeafJr4P8UnnOg" source="_EC4ZNy18EeafJr4P8UnnOg" target="_EC4ZOS18EeafJr4P8UnnOg"/>
+      <attributeMappings xmi:id="_EC4ZRS18EeafJr4P8UnnOg" source="_EC4ZQi18EeafJr4P8UnnOg" target="_EC4ZRC18EeafJr4P8UnnOg"/>
+      <attributeMappings xmi:id="_EC5ARy18EeafJr4P8UnnOg" source="_EC5ARC18EeafJr4P8UnnOg" target="_EC5ARi18EeafJr4P8UnnOg"/>
+      <attributeMappings xmi:id="_EC5AUi18EeafJr4P8UnnOg" source="_EC5ATy18EeafJr4P8UnnOg" target="_EC5AUS18EeafJr4P8UnnOg"/>
+      <attributeMappings xmi:id="_EC5nVi18EeafJr4P8UnnOg" source="_EC5nUy18EeafJr4P8UnnOg" target="_EC5nVS18EeafJr4P8UnnOg"/>
+      <attributeMappings xmi:id="_EC5nYS18EeafJr4P8UnnOg" source="_EC5nXi18EeafJr4P8UnnOg" target="_EC5nYC18EeafJr4P8UnnOg"/>
+      <attributeMappings xmi:id="_EC5nbC18EeafJr4P8UnnOg" source="_EC5naS18EeafJr4P8UnnOg" target="_EC5nay18EeafJr4P8UnnOg"/>
+      <attributeMappings xmi:id="_EC6OYS18EeafJr4P8UnnOg" source="_EC5ndC18EeafJr4P8UnnOg" target="_EC6OYC18EeafJr4P8UnnOg"/>
+      <attributeMappings xmi:id="_EC6ObC18EeafJr4P8UnnOg" source="_EC6OaS18EeafJr4P8UnnOg" target="_EC6Oay18EeafJr4P8UnnOg"/>
+      <attributeMappings xmi:id="_EC6Ody18EeafJr4P8UnnOg" source="_EC6OdC18EeafJr4P8UnnOg" target="_EC6Odi18EeafJr4P8UnnOg"/>
+      <attributeMappings xmi:id="_EC61cy18EeafJr4P8UnnOg" source="_EC61cC18EeafJr4P8UnnOg" target="_EC61ci18EeafJr4P8UnnOg"/>
+      <attributeMappings xmi:id="_EC61fi18EeafJr4P8UnnOg" source="_EC61ey18EeafJr4P8UnnOg" target="_EC61fS18EeafJr4P8UnnOg"/>
+      <attributeMappings xmi:id="_EC61iS18EeafJr4P8UnnOg" source="_EC61hi18EeafJr4P8UnnOg" target="_EC61iC18EeafJr4P8UnnOg"/>
+      <attributeMappings xmi:id="_EC7ciS18EeafJr4P8UnnOg" source="_EC7chi18EeafJr4P8UnnOg" target="_EC7ciC18EeafJr4P8UnnOg"/>
+      <attributeMappings xmi:id="_EC7clC18EeafJr4P8UnnOg" source="_EC7ckS18EeafJr4P8UnnOg" target="_EC7cky18EeafJr4P8UnnOg"/>
+      <attributeMappings xmi:id="_EC8Dli18EeafJr4P8UnnOg" source="_EC8Dky18EeafJr4P8UnnOg" target="_EC8DlS18EeafJr4P8UnnOg"/>
+      <attributeMappings xmi:id="_EC8DoS18EeafJr4P8UnnOg" source="_EC8Dni18EeafJr4P8UnnOg" target="_EC8DoC18EeafJr4P8UnnOg"/>
+      <attributeMappings xmi:id="_EC8qoy18EeafJr4P8UnnOg" source="_EC8qoC18EeafJr4P8UnnOg" target="_EC8qoi18EeafJr4P8UnnOg"/>
+      <attributeMappings xmi:id="_EC8qri18EeafJr4P8UnnOg" source="_EC8qqy18EeafJr4P8UnnOg" target="_EC8qrS18EeafJr4P8UnnOg"/>
+      <attributeMappings xmi:id="_EC8quS18EeafJr4P8UnnOg" source="_EC8qti18EeafJr4P8UnnOg" target="_EC8quC18EeafJr4P8UnnOg"/>
+      <attributeMappings xmi:id="_EC9RuS18EeafJr4P8UnnOg" source="_EC9Rti18EeafJr4P8UnnOg" target="_EC9RuC18EeafJr4P8UnnOg"/>
+      <attributeMappings xmi:id="_EC9RxC18EeafJr4P8UnnOg" source="_EC9RwS18EeafJr4P8UnnOg" target="_EC9Rwy18EeafJr4P8UnnOg"/>
+      <attributeMappings xmi:id="_EC94wy18EeafJr4P8UnnOg" source="_EC94wC18EeafJr4P8UnnOg" target="_EC94wi18EeafJr4P8UnnOg"/>
+      <attributeMappings xmi:id="_EC94zi18EeafJr4P8UnnOg" source="_EC94yy18EeafJr4P8UnnOg" target="_EC94zS18EeafJr4P8UnnOg"/>
+      <attributeMappings xmi:id="_EC942S18EeafJr4P8UnnOg" source="_EC941i18EeafJr4P8UnnOg" target="_EC942C18EeafJr4P8UnnOg"/>
+      <attributeMappings xmi:id="_EC-f2S18EeafJr4P8UnnOg" source="_EC-f1i18EeafJr4P8UnnOg" target="_EC-f2C18EeafJr4P8UnnOg"/>
+      <attributeMappings xmi:id="_EC_G4i18EeafJr4P8UnnOg" source="_EC-f4S18EeafJr4P8UnnOg" target="_EC_G4S18EeafJr4P8UnnOg"/>
+      <attributeMappings xmi:id="_EC_G7S18EeafJr4P8UnnOg" source="_EC_G6i18EeafJr4P8UnnOg" target="_EC_G7C18EeafJr4P8UnnOg"/>
+      <attributeMappings xmi:id="_EC_G-C18EeafJr4P8UnnOg" source="_EC_G9S18EeafJr4P8UnnOg" target="_EC_G9y18EeafJr4P8UnnOg"/>
+      <attributeMappings xmi:id="_EC_HAy18EeafJr4P8UnnOg" source="_EC_HAC18EeafJr4P8UnnOg" target="_EC_HAi18EeafJr4P8UnnOg"/>
+      <attributeMappings xmi:id="_EDAVAy18EeafJr4P8UnnOg" source="_EDAVAC18EeafJr4P8UnnOg" target="_EDAVAi18EeafJr4P8UnnOg"/>
+      <attributeMappings xmi:id="_EDAVDi18EeafJr4P8UnnOg" source="_EDAVCy18EeafJr4P8UnnOg" target="_EDAVDS18EeafJr4P8UnnOg"/>
+      <attributeMappings xmi:id="_EDA8Ey18EeafJr4P8UnnOg" source="_EDA8EC18EeafJr4P8UnnOg" target="_EDA8Ei18EeafJr4P8UnnOg"/>
+      <attributeMappings xmi:id="_EDA8Hi18EeafJr4P8UnnOg" source="_EDA8Gy18EeafJr4P8UnnOg" target="_EDA8HS18EeafJr4P8UnnOg"/>
+      <attributeMappings xmi:id="_EDBjIy18EeafJr4P8UnnOg" source="_EDBjIC18EeafJr4P8UnnOg" target="_EDBjIi18EeafJr4P8UnnOg"/>
+      <attributeMappings xmi:id="_EDBjLi18EeafJr4P8UnnOg" source="_EDBjKy18EeafJr4P8UnnOg" target="_EDBjLS18EeafJr4P8UnnOg"/>
+      <attributeMappings xmi:id="_EDCKMy18EeafJr4P8UnnOg" source="_EDCKMC18EeafJr4P8UnnOg" target="_EDCKMi18EeafJr4P8UnnOg"/>
+      <attributeMappings xmi:id="_EDCKPi18EeafJr4P8UnnOg" source="_EDCKOy18EeafJr4P8UnnOg" target="_EDCKPS18EeafJr4P8UnnOg"/>
+      <attributeMappings xmi:id="_EDCxQy18EeafJr4P8UnnOg" source="_EDCxQC18EeafJr4P8UnnOg" target="_EDCxQi18EeafJr4P8UnnOg"/>
+      <attributeMappings xmi:id="_EDCxTi18EeafJr4P8UnnOg" source="_EDCxSy18EeafJr4P8UnnOg" target="_EDCxTS18EeafJr4P8UnnOg"/>
+      <attributeMappings xmi:id="_EDDYUy18EeafJr4P8UnnOg" source="_EDDYUC18EeafJr4P8UnnOg" target="_EDDYUi18EeafJr4P8UnnOg"/>
+      <attributeMappings xmi:id="_EDDYXi18EeafJr4P8UnnOg" source="_EDDYWy18EeafJr4P8UnnOg" target="_EDDYXS18EeafJr4P8UnnOg"/>
+      <attributeMappings xmi:id="_EDD_ZC18EeafJr4P8UnnOg" source="_EDD_YS18EeafJr4P8UnnOg" target="_EDD_Yy18EeafJr4P8UnnOg"/>
+      <attributeMappings xmi:id="_EDD_by18EeafJr4P8UnnOg" source="_EDD_bC18EeafJr4P8UnnOg" target="_EDD_bi18EeafJr4P8UnnOg"/>
+      <attributeMappings xmi:id="_EDEmdi18EeafJr4P8UnnOg" source="_EDEmcy18EeafJr4P8UnnOg" target="_EDEmdS18EeafJr4P8UnnOg"/>
+      <attributeMappings xmi:id="_EDFNgC18EeafJr4P8UnnOg" source="_EDEmfi18EeafJr4P8UnnOg" target="_EDEmgC18EeafJr4P8UnnOg"/>
+      <attributeMappings xmi:id="_EDFNiy18EeafJr4P8UnnOg" source="_EDFNiC18EeafJr4P8UnnOg" target="_EDFNii18EeafJr4P8UnnOg"/>
+      <attributeMappings xmi:id="_EDF0lC18EeafJr4P8UnnOg" source="_EDF0kS18EeafJr4P8UnnOg" target="_EDF0ky18EeafJr4P8UnnOg"/>
+      <attributeMappings xmi:id="_EDGboC18EeafJr4P8UnnOg" source="_EDF0nC18EeafJr4P8UnnOg" target="_EDF0ni18EeafJr4P8UnnOg"/>
+      <attributeMappings xmi:id="_EDGbqy18EeafJr4P8UnnOg" source="_EDGbqC18EeafJr4P8UnnOg" target="_EDGbqi18EeafJr4P8UnnOg"/>
+      <attributeMappings xmi:id="_EDHCsy18EeafJr4P8UnnOg" source="_EDHCsC18EeafJr4P8UnnOg" target="_EDHCsi18EeafJr4P8UnnOg"/>
+      <attributeMappings xmi:id="_EDHCvi18EeafJr4P8UnnOg" source="_EDHCuy18EeafJr4P8UnnOg" target="_EDHCvS18EeafJr4P8UnnOg"/>
+      <attributeMappings xmi:id="_EDHpxy18EeafJr4P8UnnOg" source="_EDHpxC18EeafJr4P8UnnOg" target="_EDHpxi18EeafJr4P8UnnOg"/>
+      <attributeMappings xmi:id="_EDIQ0y18EeafJr4P8UnnOg" source="_EDIQ0C18EeafJr4P8UnnOg" target="_EDIQ0i18EeafJr4P8UnnOg"/>
+      <attributeMappings xmi:id="_EDI34y18EeafJr4P8UnnOg" source="_EDI34C18EeafJr4P8UnnOg" target="_EDI34i18EeafJr4P8UnnOg"/>
+      <attributeMappings xmi:id="_EDI37i18EeafJr4P8UnnOg" source="_EDI36y18EeafJr4P8UnnOg" target="_EDI37S18EeafJr4P8UnnOg"/>
+      <attributeMappings xmi:id="_EDJe9y18EeafJr4P8UnnOg" source="_EDJe9C18EeafJr4P8UnnOg" target="_EDJe9i18EeafJr4P8UnnOg"/>
+      <attributeMappings xmi:id="_EDKGAi18EeafJr4P8UnnOg" source="_EDJe_y18EeafJr4P8UnnOg" target="_EDKGAS18EeafJr4P8UnnOg"/>
+      <attributeMappings xmi:id="_EDKGDS18EeafJr4P8UnnOg" source="_EDKGCi18EeafJr4P8UnnOg" target="_EDKGDC18EeafJr4P8UnnOg"/>
+      <attributeMappings xmi:id="_EDKtFy18EeafJr4P8UnnOg" source="_EDKtFC18EeafJr4P8UnnOg" target="_EDKtFi18EeafJr4P8UnnOg"/>
+      <attributeMappings xmi:id="_EDLUJi18EeafJr4P8UnnOg" source="_EDLUIy18EeafJr4P8UnnOg" target="_EDLUJS18EeafJr4P8UnnOg"/>
+      <attributeMappings xmi:id="_EDL7Ny18EeafJr4P8UnnOg" source="_EDL7NC18EeafJr4P8UnnOg" target="_EDL7Ni18EeafJr4P8UnnOg"/>
+      <attributeMappings xmi:id="_EDMiRS18EeafJr4P8UnnOg" source="_EDMiQi18EeafJr4P8UnnOg" target="_EDMiRC18EeafJr4P8UnnOg"/>
+      <attributeMappings xmi:id="_EDNwYy18EeafJr4P8UnnOg" source="_EDNwYC18EeafJr4P8UnnOg" target="_EDNwYi18EeafJr4P8UnnOg"/>
+      <attributeMappings xmi:id="_EDOXdC18EeafJr4P8UnnOg" source="_EDOXcS18EeafJr4P8UnnOg" target="_EDOXcy18EeafJr4P8UnnOg"/>
+    </tableMappings>
+    <sortOrders>ASCENDING</sortOrders>
+    <sortOrders>ASCENDING</sortOrders>
+    <sortOrders>ASCENDING</sortOrders>
+    <sortOrders>ASCENDING</sortOrders>
+  </nodes>
+  <nodes xsi:type="flowgraph:TableComparisonNode" xmi:id="e57f5d98bc72e6fbfeda43b645f47215" name="COMPARISON" detectDeletedRows="false" compareTableName="CDA_4_HANA.Data.Tables::S_CDA_DOCUMENTO" compareTableSchema="CDA_4_HANA" compareTableType="DATABASE_TABLE" compareTableLayout="COLUMN" generatedKeyAttribute="_Wa-qgC1_EeafJr4P8UnnOg" compareAttributes="8b15d483cafb6edf7f64af0c850c858e aebc449e76bb76e7a248a5819d0b94a9 _EC1V6i18EeafJr4P8UnnOg _EC189i18EeafJr4P8UnnOg _EC19AS18EeafJr4P8UnnOg _EC19DC18EeafJr4P8UnnOg _EDBjLy18EeafJr4P8UnnOg _EC3yIi18EeafJr4P8UnnOg _EC2kFC18EeafJr4P8UnnOg _EC2kHy18EeafJr4P8UnnOg _EC3LFS18EeafJr4P8UnnOg _EC3LIC18EeafJr4P8UnnOg _EC3yLS18EeafJr4P8UnnOg _EC3yOC18EeafJr4P8UnnOg _EC4ZMC18EeafJr4P8UnnOg _EC4ZOy18EeafJr4P8UnnOg _EC4ZRi18EeafJr4P8UnnOg _EC5ASC18EeafJr4P8UnnOg _EC5AUy18EeafJr4P8UnnOg _EC5nbS18EeafJr4P8UnnOg _EC8qpC18EeafJr4P8UnnOg _EC8qry18EeafJr4P8UnnOg _EC8qui18EeafJr4P8UnnOg _EC9Rui18EeafJr4P8UnnOg _EC-f2i18EeafJr4P8UnnOg _EDAVDy18EeafJr4P8UnnOg _EDA8FC18EeafJr4P8UnnOg _EDA8Hy18EeafJr4P8UnnOg _EDCKNC18EeafJr4P8UnnOg _EDCKPy18EeafJr4P8UnnOg _EDCxRC18EeafJr4P8UnnOg _EDCxTy18EeafJr4P8UnnOg _EDDYVC18EeafJr4P8UnnOg _EDF0lS18EeafJr4P8UnnOg _EDHpyC18EeafJr4P8UnnOg _EDJe-C18EeafJr4P8UnnOg _EDKtGC18EeafJr4P8UnnOg">
+    <annotations xmi:id="0739ebdde4d61703655f17de2b38802d" key="sap.afm.displayName" value="Table Comparison"/>
+    <annotations xmi:id="a465c5d204bccc68b93c8aef5d034bd6" key="sap.im.tableComparisonGenDelKey" value="allRows"/>
+    <annotations xmi:id="40be22efcd65254cf9d0019f9fff80d7" key="sap.afm.layout">
+      <annotations xmi:id="6ce832f46eb1c4b7488eaf918454626d" key="x" value="541"/>
+      <annotations xmi:id="4430662cd35bb1aee2d340064bad4fd5" key="y" value="168"/>
+      <annotations xmi:id="f230c41582aed724866913466982f320" key="width" value="100"/>
+      <annotations xmi:id="5f61d120f461f12dc239955f72ed25c5" key="height" value="84"/>
+    </annotations>
+    <annotations xmi:id="aab41ee6852295b73dbf5b805eb139d9" key="sap.afm.nodeType" value="TableComparisonNode"/>
+    <annotations xmi:id="1dc980f5e8d2e135fe904a17d680e88e" key="sap.afm.nodeInputs">
+      <annotations xmi:id="51c6ca1a64b8149c98a15785f55dd031" key="TableComparison1_Input" value="OUTPUT_2"/>
+    </annotations>
+    <annotations xmi:id="52693c41a12ac0d217b6273e0ddc092e" key="sap.afm.nodeOutputs">
+      <annotations xmi:id="_QUFHEC1mEeah8uIQECWRYg" key="TableComparison1_Output" value="DATA_2"/>
+    </annotations>
+    <inputs xmi:id="f77ca8b53d2abae5fbc0ee7cb1978fec" name="TableComparison1_Input" kind="TABLE">
+      <attributes xmi:id="8b15d483cafb6edf7f64af0c850c858e" name="BUKRS" type="VARCHAR" nullable="false" length="4" scale="0">
+        <annotations xmi:id="_kK7yMC1lEeah8uIQECWRYg" key="sap.im.primaryKey" value="true"/>
+      </attributes>
+      <attributes xmi:id="aebc449e76bb76e7a248a5819d0b94a9" name="FISCPER" type="DECIMAL" nullable="false" length="7" scale="0">
+        <annotations xmi:id="_kK7yMS1lEeah8uIQECWRYg" key="sap.im.primaryKey" value="true"/>
+      </attributes>
+      <attributes xmi:id="_EC1V6i18EeafJr4P8UnnOg" name="BELNR" type="VARCHAR" nullable="false" length="10" scale="0">
+        <annotations xmi:id="_NPzbwC18EeafJr4P8UnnOg" key="sap.im.primaryKey" value="true"/>
+      </attributes>
+      <attributes xmi:id="_EC189i18EeafJr4P8UnnOg" name="BUZEI" type="DECIMAL" nullable="false" length="3" scale="0">
+        <annotations xmi:id="_NsA2oC18EeafJr4P8UnnOg" key="sap.im.primaryKey" value="true"/>
+      </attributes>
+      <attributes xmi:id="_EC19AS18EeafJr4P8UnnOg" name="UPOSZ" type="VARCHAR" nullable="false" length="4" scale="0">
+        <annotations xmi:id="_OBTxMC18EeafJr4P8UnnOg" key="sap.im.primaryKey" value="true"/>
+      </attributes>
+      <attributes xmi:id="_EC19DC18EeafJr4P8UnnOg" name="STATUSPS" type="VARCHAR" nullable="true" length="1" scale="0"/>
+      <attributes xmi:id="_EC2kCS18EeafJr4P8UnnOg" name="KUNNR" type="VARCHAR" nullable="true" length="10" scale="0"/>
+      <attributes xmi:id="_EC2kFC18EeafJr4P8UnnOg" name="KKBER" type="VARCHAR" nullable="true" length="4" scale="0"/>
+      <attributes xmi:id="_EC2kHy18EeafJr4P8UnnOg" name="MABER" type="VARCHAR" nullable="true" length="2" scale="0"/>
+      <attributes xmi:id="_EC3LFS18EeafJr4P8UnnOg" name="KOART" type="VARCHAR" nullable="true" length="1" scale="0"/>
+      <attributes xmi:id="_EC3LIC18EeafJr4P8UnnOg" name="UMSKZ" type="VARCHAR" nullable="true" length="1" scale="0"/>
+      <attributes xmi:id="_EC3LKy18EeafJr4P8UnnOg" name="BLART" type="VARCHAR" nullable="true" length="2" scale="0"/>
+      <attributes xmi:id="_EC3yIi18EeafJr4P8UnnOg" name="BSCHL" type="VARCHAR" nullable="true" length="2" scale="0"/>
+      <attributes xmi:id="_EC3yLS18EeafJr4P8UnnOg" name="FISCVAR" type="VARCHAR" nullable="true" length="2" scale="0"/>
+      <attributes xmi:id="_EC3yOC18EeafJr4P8UnnOg" name="BLDAT" type="DATE" nullable="true" length="0" scale="0"/>
+      <attributes xmi:id="_EC4ZMC18EeafJr4P8UnnOg" name="BUDAT" type="DATE" nullable="true" length="0" scale="0"/>
+      <attributes xmi:id="_EC4ZOy18EeafJr4P8UnnOg" name="CPUDT" type="DATE" nullable="true" length="0" scale="0"/>
+      <attributes xmi:id="_EC4ZRi18EeafJr4P8UnnOg" name="AUGDT" type="DATE" nullable="true" length="0" scale="0"/>
+      <attributes xmi:id="_EC5ASC18EeafJr4P8UnnOg" name="MADAT" type="DATE" nullable="true" length="0" scale="0"/>
+      <attributes xmi:id="_EC5AUy18EeafJr4P8UnnOg" name="NETDT" type="DATE" nullable="true" length="0" scale="0"/>
+      <attributes xmi:id="_EC5nVy18EeafJr4P8UnnOg" name="SK1DT" type="DATE" nullable="true" length="0" scale="0"/>
+      <attributes xmi:id="_EC5nYi18EeafJr4P8UnnOg" name="SK2DT" type="DATE" nullable="true" length="0" scale="0"/>
+      <attributes xmi:id="_EC5nbS18EeafJr4P8UnnOg" name="ZFBDT" type="DATE" nullable="true" length="0" scale="0"/>
+      <attributes xmi:id="_EC6OYi18EeafJr4P8UnnOg" name="ZBD1T" type="DECIMAL" nullable="true" length="3" scale="0"/>
+      <attributes xmi:id="_EC6ObS18EeafJr4P8UnnOg" name="ZBD2T" type="DECIMAL" nullable="true" length="3" scale="0"/>
+      <attributes xmi:id="_EC6OeC18EeafJr4P8UnnOg" name="ZBD3T" type="DECIMAL" nullable="true" length="3" scale="0"/>
+      <attributes xmi:id="_EC61dC18EeafJr4P8UnnOg" name="ZBD1P" type="DECIMAL" nullable="true" length="5" scale="3"/>
+      <attributes xmi:id="_EC61fy18EeafJr4P8UnnOg" name="ZBD2P" type="DECIMAL" nullable="true" length="5" scale="3"/>
+      <attributes xmi:id="_EC61ii18EeafJr4P8UnnOg" name="LAND1" type="VARCHAR" nullable="true" length="3" scale="0"/>
+      <attributes xmi:id="_EC7cii18EeafJr4P8UnnOg" name="ZLSCH" type="VARCHAR" nullable="true" length="1" scale="0"/>
+      <attributes xmi:id="_EC7clS18EeafJr4P8UnnOg" name="ZTERM" type="VARCHAR" nullable="true" length="4" scale="0"/>
+      <attributes xmi:id="_EC8Dly18EeafJr4P8UnnOg" name="ZLSPR" type="VARCHAR" nullable="true" length="1" scale="0"/>
+      <attributes xmi:id="_EC8Doi18EeafJr4P8UnnOg" name="RSTGR" type="VARCHAR" nullable="true" length="3" scale="0"/>
+      <attributes xmi:id="_EC8qpC18EeafJr4P8UnnOg" name="MANSP" type="VARCHAR" nullable="true" length="1" scale="0"/>
+      <attributes xmi:id="_EC8qry18EeafJr4P8UnnOg" name="MSCHL" type="VARCHAR" nullable="true" length="1" scale="0"/>
+      <attributes xmi:id="_EC8qui18EeafJr4P8UnnOg" name="MANST" type="DECIMAL" nullable="true" length="1" scale="0"/>
+      <attributes xmi:id="_EC9Rui18EeafJr4P8UnnOg" name="LCURR" type="VARCHAR" nullable="true" length="5" scale="0"/>
+      <attributes xmi:id="_EC9RxS18EeafJr4P8UnnOg" name="DMSOL" type="DECIMAL" nullable="true" length="13" scale="2"/>
+      <attributes xmi:id="_EC94xC18EeafJr4P8UnnOg" name="DMHAB" type="DECIMAL" nullable="true" length="13" scale="2"/>
+      <attributes xmi:id="_EC94zy18EeafJr4P8UnnOg" name="DMSHB" type="DECIMAL" nullable="true" length="13" scale="2"/>
+      <attributes xmi:id="_EC942i18EeafJr4P8UnnOg" name="SKNTO" type="DECIMAL" nullable="true" length="13" scale="2"/>
+      <attributes xmi:id="_EC-f2i18EeafJr4P8UnnOg" name="WAERS" type="VARCHAR" nullable="true" length="5" scale="0"/>
+      <attributes xmi:id="_EC_G4y18EeafJr4P8UnnOg" name="WRSOL" type="DECIMAL" nullable="true" length="13" scale="2"/>
+      <attributes xmi:id="_EC_G7i18EeafJr4P8UnnOg" name="WRHAB" type="DECIMAL" nullable="true" length="13" scale="2"/>
+      <attributes xmi:id="_EC_G-S18EeafJr4P8UnnOg" name="WRSHB" type="DECIMAL" nullable="true" length="13" scale="2"/>
+      <attributes xmi:id="_EC_HBC18EeafJr4P8UnnOg" name="SKFBT" type="DECIMAL" nullable="true" length="13" scale="2"/>
+      <attributes xmi:id="_EDAVBC18EeafJr4P8UnnOg" name="WSKTO" type="DECIMAL" nullable="true" length="13" scale="2"/>
+      <attributes xmi:id="_EDAVDy18EeafJr4P8UnnOg" name="KTOPL" type="VARCHAR" nullable="true" length="4" scale="0"/>
+      <attributes xmi:id="_EDA8FC18EeafJr4P8UnnOg" name="HKONT" type="VARCHAR" nullable="true" length="10" scale="0"/>
+      <attributes xmi:id="_EDA8Hy18EeafJr4P8UnnOg" name="SAKNR" type="VARCHAR" nullable="true" length="10" scale="0"/>
+      <attributes xmi:id="_EDBjJC18EeafJr4P8UnnOg" name="FILKD" type="VARCHAR" nullable="true" length="10" scale="0"/>
+      <attributes xmi:id="_EDBjLy18EeafJr4P8UnnOg" name="AUGBL" type="VARCHAR" nullable="true" length="10" scale="0"/>
+      <attributes xmi:id="_EDCKNC18EeafJr4P8UnnOg" name="XBLNR" type="VARCHAR" nullable="true" length="16" scale="0"/>
+      <attributes xmi:id="_EDCKPy18EeafJr4P8UnnOg" name="REBZG" type="VARCHAR" nullable="true" length="10" scale="0"/>
+      <attributes xmi:id="_EDCxRC18EeafJr4P8UnnOg" name="REBZJ" type="DECIMAL" nullable="true" length="4" scale="0"/>
+      <attributes xmi:id="_EDCxTy18EeafJr4P8UnnOg" name="REBZZ" type="DECIMAL" nullable="true" length="3" scale="0"/>
+      <attributes xmi:id="_EDDYVC18EeafJr4P8UnnOg" name="VBELN" type="VARCHAR" nullable="true" length="10" scale="0"/>
+      <attributes xmi:id="_EDDYXy18EeafJr4P8UnnOg" name="XREF1" type="VARCHAR" nullable="true" length="12" scale="0"/>
+      <attributes xmi:id="_EDD_ZS18EeafJr4P8UnnOg" name="XREF2" type="VARCHAR" nullable="true" length="12" scale="0"/>
+      <attributes xmi:id="_EDD_cC18EeafJr4P8UnnOg" name="XREF3" type="VARCHAR" nullable="true" length="20" scale="0"/>
+      <attributes xmi:id="_EDEmdy18EeafJr4P8UnnOg" name="SGTXT" type="VARCHAR" nullable="true" length="50" scale="0"/>
+      <attributes xmi:id="_EDFNgS18EeafJr4P8UnnOg" name="XNEGP" type="VARCHAR" nullable="true" length="1" scale="0"/>
+      <attributes xmi:id="_EDFNjC18EeafJr4P8UnnOg" name="XARCH" type="VARCHAR" nullable="true" length="1" scale="0"/>
+      <attributes xmi:id="_EDF0lS18EeafJr4P8UnnOg" name="UMSKS" type="VARCHAR" nullable="true" length="1" scale="0"/>
+      <attributes xmi:id="_EDGboS18EeafJr4P8UnnOg" name="UPDMOD" type="VARCHAR" nullable="true" length="1" scale="0"/>
+      <attributes xmi:id="_EDGbrC18EeafJr4P8UnnOg" name="ZUONR" type="VARCHAR" nullable="true" length="18" scale="0"/>
+      <attributes xmi:id="_EDHCtC18EeafJr4P8UnnOg" name="AWTYP" type="VARCHAR" nullable="true" length="5" scale="0"/>
+      <attributes xmi:id="_EDHCvy18EeafJr4P8UnnOg" name="AWKEY" type="VARCHAR" nullable="true" length="20" scale="0"/>
+      <attributes xmi:id="_EDHpyC18EeafJr4P8UnnOg" name="BSTAT" type="VARCHAR" nullable="true" length="1" scale="0"/>
+      <attributes xmi:id="_EDIQ1C18EeafJr4P8UnnOg" name="DMBTR" type="DECIMAL" nullable="true" length="13" scale="2"/>
+      <attributes xmi:id="_EDI35C18EeafJr4P8UnnOg" name="DMBE2" type="DECIMAL" nullable="true" length="13" scale="2"/>
+      <attributes xmi:id="_EDI37y18EeafJr4P8UnnOg" name="DMBE3" type="DECIMAL" nullable="true" length="13" scale="2"/>
+      <attributes xmi:id="_EDJe-C18EeafJr4P8UnnOg" name="GJAHR" type="DECIMAL" nullable="true" length="4" scale="0"/>
+      <attributes xmi:id="_EDKGAy18EeafJr4P8UnnOg" name="HWAE2" type="VARCHAR" nullable="true" length="5" scale="0"/>
+      <attributes xmi:id="_EDKGDi18EeafJr4P8UnnOg" name="HWAE3" type="VARCHAR" nullable="true" length="5" scale="0"/>
+      <attributes xmi:id="_EDKtGC18EeafJr4P8UnnOg" name="MONAT" type="DECIMAL" nullable="true" length="2" scale="0"/>
+      <attributes xmi:id="_EDLUJy18EeafJr4P8UnnOg" name="PROJK" type="DECIMAL" nullable="true" length="8" scale="0"/>
+      <attributes xmi:id="_EDL7OC18EeafJr4P8UnnOg" name="SHKZG" type="VARCHAR" nullable="true" length="1" scale="0"/>
+      <attributes xmi:id="_EDNJUC18EeafJr4P8UnnOg" name="WRBTR" type="DECIMAL" nullable="true" length="13" scale="2"/>
+      <attributes xmi:id="_EDNwZC18EeafJr4P8UnnOg" name="ODQ_CHANGEMODE" type="VARCHAR" nullable="true" length="1" scale="0"/>
+      <attributes xmi:id="_EDOXdS18EeafJr4P8UnnOg" name="ODQ_ENTITYCNTR" type="DECIMAL" nullable="true" length="19" scale="0"/>
+    </inputs>
+    <outputs xmi:id="a0fcd1ad371c2c3fad1d45ccc1da7996" name="TableComparison1_Output" kind="TABLE">
+      <attributes xmi:id="_Wa-qgC1_EeafJr4P8UnnOg" name="PARTITA_ID" type="INTEGER" nullable="false" length="0" scale="0" mappedName="PARTITA_ID"/>
+      <attributes xmi:id="_Wa-qgi1_EeafJr4P8UnnOg" name="BUKRS" type="VARCHAR" nullable="false" length="4" scale="0" mappedName="BUKRS"/>
+      <attributes xmi:id="_Wa-qhC1_EeafJr4P8UnnOg" name="FISCPER" type="DECIMAL" nullable="false" length="7" scale="0" mappedName="FISCPER"/>
+      <attributes xmi:id="_Wa-qhi1_EeafJr4P8UnnOg" name="BELNR" type="VARCHAR" nullable="false" length="10" scale="0" mappedName="BELNR"/>
+      <attributes xmi:id="_Wa-qiC1_EeafJr4P8UnnOg" name="BUZEI" type="DECIMAL" nullable="false" length="3" scale="0" mappedName="BUZEI"/>
+      <attributes xmi:id="_Wa-qii1_EeafJr4P8UnnOg" name="UPOSZ" type="VARCHAR" nullable="false" length="4" scale="0" mappedName="UPOSZ"/>
+      <attributes xmi:id="_Wa-qjC1_EeafJr4P8UnnOg" name="STATUSPS" type="VARCHAR" nullable="true" length="1" scale="0" mappedName="STATUSPS"/>
+      <attributes xmi:id="_Wa-qji1_EeafJr4P8UnnOg" name="AUGBL" type="VARCHAR" nullable="true" length="10" scale="0" mappedName="AUGBL"/>
+      <attributes xmi:id="_Wa_RkC1_EeafJr4P8UnnOg" name="AUGDT" type="DATE" nullable="true" length="0" scale="0" mappedName="AUGDT"/>
+      <attributes xmi:id="_Wa_Rki1_EeafJr4P8UnnOg" name="BSCHL" type="VARCHAR" nullable="true" length="2" scale="0" mappedName="BSCHL"/>
+      <attributes xmi:id="_Wa_RlC1_EeafJr4P8UnnOg" name="KKBER" type="VARCHAR" nullable="true" length="4" scale="0" mappedName="KKBER"/>
+      <attributes xmi:id="_Wa_Rli1_EeafJr4P8UnnOg" name="MABER" type="VARCHAR" nullable="true" length="2" scale="0" mappedName="MABER"/>
+      <attributes xmi:id="_Wa_RmC1_EeafJr4P8UnnOg" name="KOART" type="VARCHAR" nullable="true" length="1" scale="0" mappedName="KOART"/>
+      <attributes xmi:id="_Wa_Rmi1_EeafJr4P8UnnOg" name="UMSKZ" type="VARCHAR" nullable="true" length="1" scale="0" mappedName="UMSKZ"/>
+      <attributes xmi:id="_Wa_RnC1_EeafJr4P8UnnOg" name="FISCVAR" type="VARCHAR" nullable="true" length="2" scale="0" mappedName="FISCVAR"/>
+      <attributes xmi:id="_Wa_Rni1_EeafJr4P8UnnOg" name="BLDAT" type="DATE" nullable="true" length="0" scale="0" mappedName="BLDAT"/>
+      <attributes xmi:id="_Wa_RoC1_EeafJr4P8UnnOg" name="BUDAT" type="DATE" nullable="true" length="0" scale="0" mappedName="BUDAT"/>
+      <attributes xmi:id="_Wa_Roi1_EeafJr4P8UnnOg" name="CPUDT" type="DATE" nullable="true" length="0" scale="0" mappedName="CPUDT"/>
+      <attributes xmi:id="_Wa_RpC1_EeafJr4P8UnnOg" name="MADAT" type="DATE" nullable="true" length="0" scale="0" mappedName="MADAT"/>
+      <attributes xmi:id="_Wa_Rpi1_EeafJr4P8UnnOg" name="NETDT" type="DATE" nullable="true" length="0" scale="0" mappedName="NETDT"/>
+      <attributes xmi:id="_Wa_RqC1_EeafJr4P8UnnOg" name="ZFBDT" type="DATE" nullable="true" length="0" scale="0" mappedName="ZFBDT"/>
+      <attributes xmi:id="_Wa_Rqi1_EeafJr4P8UnnOg" name="MANSP" type="VARCHAR" nullable="true" length="1" scale="0" mappedName="MANSP"/>
+      <attributes xmi:id="_Wa_RrC1_EeafJr4P8UnnOg" name="MSCHL" type="VARCHAR" nullable="true" length="1" scale="0" mappedName="MSCHL"/>
+      <attributes xmi:id="_Wa_Rri1_EeafJr4P8UnnOg" name="MANST" type="DECIMAL" nullable="true" length="1" scale="0" mappedName="MANST"/>
+      <attributes xmi:id="_Wa_RsC1_EeafJr4P8UnnOg" name="LCURR" type="VARCHAR" nullable="true" length="5" scale="0" mappedName="LCURR"/>
+      <attributes xmi:id="_Wa_Rsi1_EeafJr4P8UnnOg" name="WAERS" type="VARCHAR" nullable="true" length="5" scale="0" mappedName="WAERS"/>
+      <attributes xmi:id="_Wa_RtC1_EeafJr4P8UnnOg" name="KTOPL" type="VARCHAR" nullable="true" length="4" scale="0" mappedName="KTOPL"/>
+      <attributes xmi:id="_Wa_Rti1_EeafJr4P8UnnOg" name="HKONT" type="VARCHAR" nullable="true" length="10" scale="0" mappedName="HKONT"/>
+      <attributes xmi:id="_Wa_RuC1_EeafJr4P8UnnOg" name="SAKNR" type="VARCHAR" nullable="true" length="10" scale="0" mappedName="SAKNR"/>
+      <attributes xmi:id="_Wa_4oC1_EeafJr4P8UnnOg" name="XBLNR" type="VARCHAR" nullable="true" length="16" scale="0" mappedName="XBLNR"/>
+      <attributes xmi:id="_Wa_4oi1_EeafJr4P8UnnOg" name="REBZG" type="VARCHAR" nullable="true" length="10" scale="0" mappedName="REBZG"/>
+      <attributes xmi:id="_Wa_4pC1_EeafJr4P8UnnOg" name="REBZJ" type="DECIMAL" nullable="true" length="4" scale="0" mappedName="REBZJ"/>
+      <attributes xmi:id="_Wa_4pi1_EeafJr4P8UnnOg" name="REBZZ" type="DECIMAL" nullable="true" length="3" scale="0" mappedName="REBZZ"/>
+      <attributes xmi:id="_Wa_4qC1_EeafJr4P8UnnOg" name="VBELN" type="VARCHAR" nullable="true" length="10" scale="0" mappedName="VBELN"/>
+      <attributes xmi:id="_Wa_4qi1_EeafJr4P8UnnOg" name="UMSKS" type="VARCHAR" nullable="true" length="1" scale="0" mappedName="UMSKS"/>
+      <attributes xmi:id="_Wa_4rC1_EeafJr4P8UnnOg" name="BSTAT" type="VARCHAR" nullable="true" length="1" scale="0" mappedName="BSTAT"/>
+      <attributes xmi:id="_Wa_4ri1_EeafJr4P8UnnOg" name="GJAHR" type="DECIMAL" nullable="true" length="4" scale="0" mappedName="GJAHR"/>
+      <attributes xmi:id="_Wa_4sC1_EeafJr4P8UnnOg" name="MONAT" type="DECIMAL" nullable="true" length="2" scale="0" mappedName="MONAT"/>
+    </outputs>
+  </nodes>
+  <nodes xsi:type="flowgraph:DataNode" xmi:id="_UoF58C1mEeah8uIQECWRYg" name="CDA_4_HANA_DATA_TABLES__S_CDA_DOCUMENTO_2" type="DATABASE_TABLE" authoringSchemaName="CDA_4_HANA" catalogObjectName="CDA_4_HANA.Data.Tables::S_CDA_DOCUMENTO" dataLayout="COLUMN" truncateTable="false">
+    <annotations xmi:id="_UoF58S1mEeah8uIQECWRYg" key="sap.afm.description" value="Write data to a catalog object"/>
+    <annotations xmi:id="_UoF58i1mEeah8uIQECWRYg" key="sap.afm.displayName" value="Data Sink"/>
+    <annotations xmi:id="_UoF58y1mEeah8uIQECWRYg" key="sap.afm.layout">
+      <annotations xmi:id="_UoF59C1mEeah8uIQECWRYg" key="x" value="721"/>
+      <annotations xmi:id="_UoF59S1mEeah8uIQECWRYg" key="y" value="198"/>
+      <annotations xmi:id="_UoF59i1mEeah8uIQECWRYg" key="width" value="100"/>
+      <annotations xmi:id="_UoF59y1mEeah8uIQECWRYg" key="height" value="64"/>
+    </annotations>
+    <annotations xmi:id="_Wl6RgC1mEeah8uIQECWRYg" key="sap.afm.nodeType" value="DataNode"/>
+    <annotations xmi:id="_WmwmEC1mEeah8uIQECWRYg" key="sap.afm.nodeInputs">
+      <annotations xmi:id="_WnN5EC1mEeah8uIQECWRYg" key="DATA_2" value="TableComparison1_Output"/>
+    </annotations>
+    <annotations xmi:id="_WofrcC1mEeah8uIQECWRYg" key="sap.afm.nodeOutputs"/>
+    <annotations xmi:id="353905d22432f977c0b27a7ba6e454b4" key="sap.im.writerType" value="insert"/>
+    <annotations xmi:id="c8e0daaaa072c755d0fe9bf0c82fceee" key="sap.im.keyGenerationAttribute" value="PARTITA_ID"/>
+    <annotations xmi:id="84e3983214edebaae98e6b1ef6b859a1" key="sap.im.sequenceSchema" value="CDA_4_HANA"/>
+    <annotations xmi:id="0ef4db0228430bc519bda31fa525174b" key="sap.im.sequenceName" value="CDA_4_HANA.ETL.Sequences::SEQ_S_CDA_DOCUMENTO"/>
+    <inputs xmi:id="_UoF5-C1mEeah8uIQECWRYg" name="DATA_2" kind="TABLE">
+      <attributes xmi:id="_ZlmzcC1_EeafJr4P8UnnOg" name="PARTITA_ID" type="INTEGER" nullable="false" length="0" scale="0"/>
+      <attributes xmi:id="_ZlmzcS1_EeafJr4P8UnnOg" name="BUKRS" type="VARCHAR" nullable="false" length="4" scale="0"/>
+      <attributes xmi:id="_Zlmzci1_EeafJr4P8UnnOg" name="FISCPER" type="DECIMAL" nullable="false" length="7" scale="0"/>
+      <attributes xmi:id="_Zlmzcy1_EeafJr4P8UnnOg" name="BELNR" type="VARCHAR" nullable="false" length="10" scale="0"/>
+      <attributes xmi:id="_ZlmzdC1_EeafJr4P8UnnOg" name="BUZEI" type="DECIMAL" nullable="false" length="3" scale="0"/>
+      <attributes xmi:id="_ZlmzdS1_EeafJr4P8UnnOg" name="UPOSZ" type="VARCHAR" nullable="false" length="4" scale="0"/>
+      <attributes xmi:id="_Zlmzdi1_EeafJr4P8UnnOg" name="STATUSPS" type="VARCHAR" nullable="true" length="1" scale="0"/>
+      <attributes xmi:id="_Zlmzdy1_EeafJr4P8UnnOg" name="AUGBL" type="VARCHAR" nullable="true" length="10" scale="0"/>
+      <attributes xmi:id="_ZlmzeC1_EeafJr4P8UnnOg" name="AUGDT" type="DATE" nullable="true" length="0" scale="0"/>
+      <attributes xmi:id="_ZlmzeS1_EeafJr4P8UnnOg" name="BSCHL" type="VARCHAR" nullable="true" length="2" scale="0"/>
+      <attributes xmi:id="_ZlnagC1_EeafJr4P8UnnOg" name="KKBER" type="VARCHAR" nullable="true" length="4" scale="0"/>
+      <attributes xmi:id="_ZlnagS1_EeafJr4P8UnnOg" name="MABER" type="VARCHAR" nullable="true" length="2" scale="0"/>
+      <attributes xmi:id="_Zlnagi1_EeafJr4P8UnnOg" name="KOART" type="VARCHAR" nullable="true" length="1" scale="0"/>
+      <attributes xmi:id="_Zlnagy1_EeafJr4P8UnnOg" name="UMSKZ" type="VARCHAR" nullable="true" length="1" scale="0"/>
+      <attributes xmi:id="_ZlnahC1_EeafJr4P8UnnOg" name="FISCVAR" type="VARCHAR" nullable="true" length="2" scale="0"/>
+      <attributes xmi:id="_ZlnahS1_EeafJr4P8UnnOg" name="BLDAT" type="DATE" nullable="true" length="0" scale="0"/>
+      <attributes xmi:id="_Zlnahi1_EeafJr4P8UnnOg" name="BUDAT" type="DATE" nullable="true" length="0" scale="0"/>
+      <attributes xmi:id="_Zlnahy1_EeafJr4P8UnnOg" name="CPUDT" type="DATE" nullable="true" length="0" scale="0"/>
+      <attributes xmi:id="_ZlnaiC1_EeafJr4P8UnnOg" name="MADAT" type="DATE" nullable="true" length="0" scale="0"/>
+      <attributes xmi:id="_ZlnaiS1_EeafJr4P8UnnOg" name="NETDT" type="DATE" nullable="true" length="0" scale="0"/>
+      <attributes xmi:id="_Zlnaii1_EeafJr4P8UnnOg" name="ZFBDT" type="DATE" nullable="true" length="0" scale="0"/>
+      <attributes xmi:id="_Zlnaiy1_EeafJr4P8UnnOg" name="MANSP" type="VARCHAR" nullable="true" length="1" scale="0"/>
+      <attributes xmi:id="_ZlnajC1_EeafJr4P8UnnOg" name="MSCHL" type="VARCHAR" nullable="true" length="1" scale="0"/>
+      <attributes xmi:id="_ZlnajS1_EeafJr4P8UnnOg" name="MANST" type="DECIMAL" nullable="true" length="1" scale="0"/>
+      <attributes xmi:id="_Zlnaji1_EeafJr4P8UnnOg" name="LCURR" type="VARCHAR" nullable="true" length="5" scale="0"/>
+      <attributes xmi:id="_Zlnajy1_EeafJr4P8UnnOg" name="WAERS" type="VARCHAR" nullable="true" length="5" scale="0"/>
+      <attributes xmi:id="_ZlnakC1_EeafJr4P8UnnOg" name="KTOPL" type="VARCHAR" nullable="true" length="4" scale="0"/>
+      <attributes xmi:id="_ZlnakS1_EeafJr4P8UnnOg" name="HKONT" type="VARCHAR" nullable="true" length="10" scale="0"/>
+      <attributes xmi:id="_Zlnaki1_EeafJr4P8UnnOg" name="SAKNR" type="VARCHAR" nullable="true" length="10" scale="0"/>
+      <attributes xmi:id="_Zlnaky1_EeafJr4P8UnnOg" name="XBLNR" type="VARCHAR" nullable="true" length="16" scale="0"/>
+      <attributes xmi:id="_ZlnalC1_EeafJr4P8UnnOg" name="REBZG" type="VARCHAR" nullable="true" length="10" scale="0"/>
+      <attributes xmi:id="_ZlnalS1_EeafJr4P8UnnOg" name="REBZJ" type="DECIMAL" nullable="true" length="4" scale="0"/>
+      <attributes xmi:id="_Zlnali1_EeafJr4P8UnnOg" name="REBZZ" type="DECIMAL" nullable="true" length="3" scale="0"/>
+      <attributes xmi:id="_ZloBkC1_EeafJr4P8UnnOg" name="VBELN" type="VARCHAR" nullable="true" length="10" scale="0"/>
+      <attributes xmi:id="_ZloBkS1_EeafJr4P8UnnOg" name="UMSKS" type="VARCHAR" nullable="true" length="1" scale="0"/>
+      <attributes xmi:id="_ZloBki1_EeafJr4P8UnnOg" name="BSTAT" type="VARCHAR" nullable="true" length="1" scale="0"/>
+      <attributes xmi:id="_ZloBky1_EeafJr4P8UnnOg" name="GJAHR" type="DECIMAL" nullable="true" length="4" scale="0"/>
+      <attributes xmi:id="_ZloBlC1_EeafJr4P8UnnOg" name="MONAT" type="DECIMAL" nullable="true" length="2" scale="0"/>
+    </inputs>
+  </nodes>
+</flowgraph:ContainerNode>

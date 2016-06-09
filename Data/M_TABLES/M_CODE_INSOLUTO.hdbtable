@@ -1,0 +1,7 @@
+table.schemaName = "CDA_4_HANA";
+table.tableType = COLUMNSTORE;
+table.columns = [
+
+{name="BLART";sqlType=VARCHAR; length=2;}
+
+];

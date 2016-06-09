@@ -1,0 +1,10 @@
+import = [
+{
+ table = "CDA_4_HANA.Data.M_TABLES::M_TIME_ANALYSIS_PERIOD";
+ schema = "CDA_4_HANA";
+ file = "CDA_4_HANA.Data.M_TABLES:CSV_M_TIME_ANALYSYS_PERIOD.csv";
+ header = false;
+ delimField = ",";
+ delimEnclosing="\"";
+ distinguishEmptyFromNull = true;
+}];

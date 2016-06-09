@@ -1,0 +1,8 @@
+table.schemaName = "CDA_4_HANA";
+table.tableType = COLUMNSTORE;
+table.columns = [
+
+{name="UMSKZ";sqlType=VARCHAR; length=1;},
+{name="CODICE_COGE_SPECIALE_DES";sqlType=VARCHAR; length=255;}
+
+];

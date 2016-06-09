@@ -1,0 +1,7 @@
+table.schemaName = "CDA_4_HANA";
+table.tableType = COLUMNSTORE;
+table.columns = [
+
+{name="MONTH_FROM";sqlType=VARCHAR; length=6;},
+{name="MONTH_TO";sqlType=VARCHAR; length=6;}
+];

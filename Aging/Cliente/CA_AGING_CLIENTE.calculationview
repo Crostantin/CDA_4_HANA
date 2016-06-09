@@ -1,29 +1,29 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<Calculation:scenario xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:Calculation="http://www.sap.com/ndb/BiModelCalculation.ecore" schemaVersion="2.3" id="CA_AGING_CLIENTE_2" applyPrivilegeType="ANALYTIC_PRIVILEGE" checkAnalyticPrivileges="true" defaultClient="$$client$$" defaultLanguage="$$language$$" hierarchiesSQLEnabled="false" translationRelevant="true" visibility="internal" calculationScenarioType="TREE_BASED" dataCategory="DIMENSION" enforceSqlExecution="false" executionSemantic="UNDEFINED" outputViewType="Projection">
+<Calculation:scenario xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:Calculation="http://www.sap.com/ndb/BiModelCalculation.ecore" schemaVersion="2.3" id="CA_AGING_CLIENTE" applyPrivilegeType="ANALYTIC_PRIVILEGE" checkAnalyticPrivileges="true" defaultClient="$$client$$" defaultLanguage="$$language$$" hierarchiesSQLEnabled="false" translationRelevant="true" visibility="internal" calculationScenarioType="TREE_BASED" dataCategory="DIMENSION" enforceSqlExecution="false" executionSemantic="UNDEFINED" outputViewType="Projection">
   <descriptions defaultDescription="CA_CDA_AEGING_CLIENTE"/>
   <localVariables/>
   <variableMappings/>
   <informationModelLayout relativeWidthScenario="39"/>
   <dataSources>
-    <DataSource id="CDA_4_HANA.Data.Tables::T_0FI_AR_4" type="DATA_BASE_TABLE">
+    <DataSource id="CDA_4_HANA.ETL.Tables::T_0FI_AR_4" type="DATA_BASE_TABLE">
       <viewAttributes allViewAttributes="true"/>
-      <columnObject schemaName="CDA_4_HANA" columnObjectName="CDA_4_HANA.Data.Tables::T_0FI_AR_4"/>
+      <columnObject schemaName="CDA_4_HANA" columnObjectName="CDA_4_HANA.ETL.Tables::T_0FI_AR_4"/>
     </DataSource>
-    <DataSource id="CDA_4_HANA.Data.Tables::T_0CUSTOMER_ATTR" type="DATA_BASE_TABLE">
+    <DataSource id="CDA_4_HANA.ETL.Tables::T_0CUSTOMER_ATTR" type="DATA_BASE_TABLE">
       <viewAttributes allViewAttributes="true"/>
-      <columnObject schemaName="CDA_4_HANA" columnObjectName="CDA_4_HANA.Data.Tables::T_0CUSTOMER_ATTR"/>
+      <columnObject schemaName="CDA_4_HANA" columnObjectName="CDA_4_HANA.ETL.Tables::T_0CUSTOMER_ATTR"/>
     </DataSource>
-    <DataSource id="CDA_4_HANA.Data.M_TABLES::M_CHIAVE_CONTABILE" type="DATA_BASE_TABLE">
+    <DataSource id="CDA_4_HANA.ETL.M_Tables::M_CHIAVE_CONTABILE" type="DATA_BASE_TABLE">
       <viewAttributes allViewAttributes="true"/>
-      <columnObject schemaName="CDA_4_HANA" columnObjectName="CDA_4_HANA.Data.M_TABLES::M_CHIAVE_CONTABILE"/>
+      <columnObject schemaName="CDA_4_HANA" columnObjectName="CDA_4_HANA.ETL.M_Tables::M_CHIAVE_CONTABILE"/>
     </DataSource>
-    <DataSource id="CDA_4_HANA.Data.M_TABLES::M_COGE_SPECIALE" type="DATA_BASE_TABLE">
+    <DataSource id="CDA_4_HANA.ETL.M_Tables::M_COGE_SPECIALE" type="DATA_BASE_TABLE">
       <viewAttributes allViewAttributes="true"/>
-      <columnObject schemaName="CDA_4_HANA" columnObjectName="CDA_4_HANA.Data.M_TABLES::M_COGE_SPECIALE"/>
+      <columnObject schemaName="CDA_4_HANA" columnObjectName="CDA_4_HANA.ETL.M_Tables::M_COGE_SPECIALE"/>
     </DataSource>
-    <DataSource id="CDA_4_HANA.Data.Tables::S_CDA_DOCUMENTO" type="DATA_BASE_TABLE">
+    <DataSource id="CDA_4_HANA.ETL.Tables::S_CDA_DOCUMENTO" type="DATA_BASE_TABLE">
       <viewAttributes allViewAttributes="true"/>
-      <columnObject schemaName="CDA_4_HANA" columnObjectName="CDA_4_HANA.Data.Tables::S_CDA_DOCUMENTO"/>
+      <columnObject schemaName="CDA_4_HANA" columnObjectName="CDA_4_HANA.ETL.Tables::S_CDA_DOCUMENTO"/>
     </DataSource>
   </dataSources>
   <calculationViews>
@@ -121,7 +121,7 @@
           <formula>case(isnull(&quot;UMSKZ_TMP&quot;),' ')</formula>
         </calculatedViewAttribute>
       </calculatedViewAttributes>
-      <input node="#CDA_4_HANA.Data.Tables::T_0FI_AR_4">
+      <input node="#CDA_4_HANA.ETL.Tables::T_0FI_AR_4">
         <mapping xsi:type="Calculation:AttributeMapping" target="BUKRS" source="BUKRS"/>
         <mapping xsi:type="Calculation:AttributeMapping" target="FISCPER" source="FISCPER"/>
         <mapping xsi:type="Calculation:AttributeMapping" target="BELNR" source="BELNR"/>
@@ -204,7 +204,7 @@
         <mapping xsi:type="Calculation:AttributeMapping" target="ODQ_CHANGEMODE" source="ODQ_CHANGEMODE"/>
         <mapping xsi:type="Calculation:AttributeMapping" target="ODQ_ENTITYCNTR" source="ODQ_ENTITYCNTR"/>
       </input>
-      <input node="#CDA_4_HANA.Data.Tables::T_0CUSTOMER_ATTR">
+      <input node="#CDA_4_HANA.ETL.Tables::T_0CUSTOMER_ATTR">
         <mapping xsi:type="Calculation:AttributeMapping" target="LIFNR_TMP" source="LIFNR"/>
         <mapping xsi:type="Calculation:AttributeMapping" target="KUNNR" source="KUNNR"/>
       </input>
@@ -386,7 +386,7 @@
         <mapping xsi:type="Calculation:AttributeMapping" target="LIFNR_TMP" source="LIFNR_TMP"/>
         <mapping xsi:type="Calculation:AttributeMapping" target="LIFNR" source="LIFNR"/>
       </input>
-      <input node="#CDA_4_HANA.Data.M_TABLES::M_CHIAVE_CONTABILE">
+      <input node="#CDA_4_HANA.ETL.M_Tables::M_CHIAVE_CONTABILE">
         <mapping xsi:type="Calculation:AttributeMapping" target="CHIAVE_CONTABILE_DES" source="CHIAVE_CONTABILE_DES"/>
         <mapping xsi:type="Calculation:AttributeMapping" target="TIPO" source="TIPO"/>
         <mapping xsi:type="Calculation:AttributeMapping" target="TIPO_CHIAVE" source="TIPO_CHIAVE"/>
@@ -574,7 +574,7 @@
         <mapping xsi:type="Calculation:AttributeMapping" target="TIPO_CHIAVE" source="TIPO_CHIAVE"/>
         <mapping xsi:type="Calculation:AttributeMapping" target="UMSKZ" source="UMSKZ"/>
       </input>
-      <input node="#CDA_4_HANA.Data.M_TABLES::M_COGE_SPECIALE">
+      <input node="#CDA_4_HANA.ETL.M_Tables::M_COGE_SPECIALE">
         <mapping xsi:type="Calculation:AttributeMapping" target="CODICE_COGE_SPECIALE_DES" source="CODICE_COGE_SPECIALE_DES"/>
         <mapping xsi:type="Calculation:AttributeMapping" target="UMSKZ" source="UMSKZ"/>
       </input>
@@ -896,20 +896,20 @@
         <viewAttribute id="VAL_EFFETTI_LC"/>
         <viewAttribute id="VAL_INSOLUTO"/>
         <viewAttribute id="VAL_INSOLUTO_LC"/>
-        <viewAttribute hidden="true" id="JOIN$UPOSZ$UPOSZ"/>
-        <viewAttribute hidden="true" id="JOIN$BUZEI$BUZEI"/>
-        <viewAttribute hidden="true" id="JOIN$FISCPER$FISCPER"/>
-        <viewAttribute hidden="true" id="JOIN$BUKRS$BUKRS"/>
-        <viewAttribute hidden="true" id="JOIN$BELNR$BELNR"/>
+        <viewAttribute id="BUKRS_1"/>
+        <viewAttribute id="FISCPER_1"/>
+        <viewAttribute id="BELNR_1"/>
+        <viewAttribute id="BUZEI_1"/>
+        <viewAttribute id="UPOSZ_1"/>
       </viewAttributes>
       <calculatedViewAttributes/>
-      <input node="#CDA_4_HANA.Data.Tables::S_CDA_DOCUMENTO">
+      <input node="#CDA_4_HANA.ETL.Tables::S_CDA_DOCUMENTO">
         <mapping xsi:type="Calculation:AttributeMapping" target="PARTITA_ID" source="PARTITA_ID"/>
-        <mapping xsi:type="Calculation:AttributeMapping" target="JOIN$BUKRS$BUKRS" source="BUKRS"/>
-        <mapping xsi:type="Calculation:AttributeMapping" target="JOIN$FISCPER$FISCPER" source="FISCPER"/>
-        <mapping xsi:type="Calculation:AttributeMapping" target="JOIN$BELNR$BELNR" source="BELNR"/>
-        <mapping xsi:type="Calculation:AttributeMapping" target="JOIN$BUZEI$BUZEI" source="BUZEI"/>
-        <mapping xsi:type="Calculation:AttributeMapping" target="JOIN$UPOSZ$UPOSZ" source="UPOSZ"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="BUKRS_1" source="BUKRS"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="FISCPER_1" source="FISCPER"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="BELNR_1" source="BELNR"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="BUZEI_1" source="BUZEI"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="UPOSZ_1" source="UPOSZ"/>
       </input>
       <input node="#Projection_1">
         <mapping xsi:type="Calculation:AttributeMapping" target="BUKRS" source="BUKRS"/>
@@ -1009,17 +1009,17 @@
         <mapping xsi:type="Calculation:AttributeMapping" target="VAL_EFFETTI_LC" source="VAL_EFFETTI_LC"/>
         <mapping xsi:type="Calculation:AttributeMapping" target="VAL_INSOLUTO" source="VAL_INSOLUTO"/>
         <mapping xsi:type="Calculation:AttributeMapping" target="VAL_INSOLUTO_LC" source="VAL_INSOLUTO_LC"/>
-        <mapping xsi:type="Calculation:AttributeMapping" target="JOIN$BUKRS$BUKRS" source="BUKRS"/>
-        <mapping xsi:type="Calculation:AttributeMapping" target="JOIN$FISCPER$FISCPER" source="FISCPER"/>
-        <mapping xsi:type="Calculation:AttributeMapping" target="JOIN$BELNR$BELNR" source="BELNR"/>
-        <mapping xsi:type="Calculation:AttributeMapping" target="JOIN$BUZEI$BUZEI" source="BUZEI"/>
-        <mapping xsi:type="Calculation:AttributeMapping" target="JOIN$UPOSZ$UPOSZ" source="UPOSZ"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="BUKRS_1" source="BUKRS"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="FISCPER_1" source="FISCPER"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="BELNR_1" source="BELNR"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="BUZEI_1" source="BUZEI"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="UPOSZ_1" source="UPOSZ"/>
       </input>
-      <joinAttribute name="JOIN$BUKRS$BUKRS"/>
-      <joinAttribute name="JOIN$FISCPER$FISCPER"/>
-      <joinAttribute name="JOIN$BELNR$BELNR"/>
-      <joinAttribute name="JOIN$BUZEI$BUZEI"/>
-      <joinAttribute name="JOIN$UPOSZ$UPOSZ"/>
+      <joinAttribute name="BUKRS_1"/>
+      <joinAttribute name="FISCPER_1"/>
+      <joinAttribute name="BELNR_1"/>
+      <joinAttribute name="BUZEI_1"/>
+      <joinAttribute name="UPOSZ_1"/>
     </calculationView>
   </calculationViews>
   <logicalModel id="Join_1">

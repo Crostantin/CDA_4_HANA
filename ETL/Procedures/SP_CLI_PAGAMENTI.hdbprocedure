@@ -387,7 +387,7 @@ GROUP BY "BUKRS",
 		AUGDT,
 		null DATA_PAREGGIO
 		from :TMP_Partite_Elaborate a
-		join "CDA_4_HANA.Data.M_TABLES::M_CHIAVE_CONTABILE" b
+		join :M_CHIAVE_CONTABILE b
 		on (a.BSCHL=b.BSCHL)
 		union all
 		--Pagamento coinvolti in questo ciclo
@@ -484,7 +484,7 @@ GROUP BY "BUKRS",
    ;
  	 
  	var_out=
-	 	select 1 as "PARTITA_ID", a.BUKRS, a.GJAHR, a.BELNR, a.BUZEI, "ROWID", a.BSCHL, STATUS, 
+	 	select c.PARTITA_ID, a.BUKRS, a.GJAHR, a.BELNR, a.BUZEI, "ROWID", a.BSCHL, STATUS, 
 	a.KUNNR,
 	case
 		when ifnull(c.LIFNR, ' ')=' ' then ''
@@ -545,10 +545,10 @@ GROUP BY "BUKRS",
 	end VAL_DILAZIONE_TEORICA_INCASSATO_LC
 	--into dbo.SF_CDA_PAGAMENTI
 	from :WT_CLI_PASSO2 a
-	join "CDA_4_HANA.ETL.M_Tables::M_CHIAVE_CONTABILE" b
+	join :M_CHIAVE_CONTABILE b
 	on (a.BSCHL=b.BSCHL)
 	left join "CDA_4_HANA.Aging.Cliente::CA_AGING_CLIENTE" c
-	on (a.KUNNR=c.KUNNR)-- and a.belnr = c.belnr and a.buzei = c.buzei) -- MODDED (originale solo kunnr)
+	on (a.KUNNR=c.KUNNR and a.belnr = c.belnr and a.buzei = c.buzei) -- MODDED (originale solo kunnr)
 	join "CDA_4_HANA.ETL.Tables::T_0FI_AR_4" d
 	on (a.BUKRS=d.BUKRS and a.GJAHR=d.GJAHR and a.BELNR=d.BELNR and a.BUZEI=d.BUZEI)
 	where b.DESTINAZIONE='Cliente'

@@ -5,9 +5,9 @@
   <variableMappings/>
   <informationModelLayout relativeWidthScenario="27"/>
   <dataSources>
-    <DataSource id="M_MANDANTE" type="DATA_BASE_TABLE">
+    <DataSource id="CDA_4_HANA.ETL.M_Tables::M_MANDANTE" type="DATA_BASE_TABLE">
       <viewAttributes allViewAttributes="true"/>
-      <columnObject schemaName="CDA_TMP" columnObjectName="M_MANDANTE"/>
+      <columnObject schemaName="CDA_4_HANA" columnObjectName="CDA_4_HANA.ETL.M_Tables::M_MANDANTE"/>
     </DataSource>
     <DataSource id="TVZBT" type="DATA_BASE_TABLE">
       <viewAttributes allViewAttributes="true"/>
@@ -21,19 +21,19 @@
         <viewAttribute id="SPRAS"/>
         <viewAttribute id="ZTERM"/>
         <viewAttribute id="VTEXT"/>
-        <viewAttribute hidden="true" id="JOIN$MANDT$MANDT"/>
+        <viewAttribute id="MANDT"/>
       </viewAttributes>
       <calculatedViewAttributes/>
-      <input node="#M_MANDANTE">
-        <mapping xsi:type="Calculation:AttributeMapping" target="JOIN$MANDT$MANDT" source="MANDT"/>
+      <input node="#CDA_4_HANA.ETL.M_Tables::M_MANDANTE">
+        <mapping xsi:type="Calculation:AttributeMapping" target="MANDT" source="MANDT"/>
       </input>
       <input node="#TVZBT">
         <mapping xsi:type="Calculation:AttributeMapping" target="SPRAS" source="SPRAS"/>
         <mapping xsi:type="Calculation:AttributeMapping" target="ZTERM" source="ZTERM"/>
         <mapping xsi:type="Calculation:AttributeMapping" target="VTEXT" source="VTEXT"/>
-        <mapping xsi:type="Calculation:AttributeMapping" target="JOIN$MANDT$MANDT" source="MANDT"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="MANDT" source="MANDT"/>
       </input>
-      <joinAttribute name="JOIN$MANDT$MANDT"/>
+      <joinAttribute name="MANDT"/>
     </calculationView>
   </calculationViews>
   <logicalModel id="Join_1">

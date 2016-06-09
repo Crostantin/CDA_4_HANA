@@ -1,8 +1,8 @@
 import = [
 {
- table = "CDA_4_HANA.Data.M_TABLES::M_COGE_SPECIALE";
+ table = "CDA_4_HANA.ETL.M_Tables::M_COGE_SPECIALE";
  schema = "CDA_4_HANA";
- file = "CDA_4_HANA.Data.M_TABLES:CSV_M_COGE_SPECIALE.csv";
+ file = "CDA_4_HANA.ETL.M_Tables:CSV_M_COGE_SPECIALE.csv";
  header = false;
  delimField = ",";
  delimEnclosing="\"";

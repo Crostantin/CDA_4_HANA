@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Calculation:scenario xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:AccessControl="http://www.sap.com/ndb/SQLCoreModelAccessControl.ecore" xmlns:Calculation="http://www.sap.com/ndb/BiModelCalculation.ecore" schemaVersion="2.3" id="CA_S_TIME_DAY_2" applyPrivilegeType="ANALYTIC_PRIVILEGE" checkAnalyticPrivileges="true" defaultClient="$$client$$" defaultLanguage="$$language$$" hierarchiesSQLEnabled="false" translationRelevant="true" visibility="internal" calculationScenarioType="TREE_BASED" dataCategory="DIMENSION" enforceSqlExecution="false" executionSemantic="UNDEFINED" outputViewType="Aggregation">
+  <descriptions defaultDescription="CA_S_TIME_DAY"/>
+  <localVariables/>
+  <variableMappings/>
+  <informationModelLayout relativeWidthScenario="27"/>
+  <dataSources>
+    <DataSource id="M_TIME_DIMENSION" type="DATA_BASE_TABLE">
+      <viewAttributes allViewAttributes="true"/>
+      <columnObject schemaName="_SYS_BI" columnObjectName="M_TIME_DIMENSION"/>
+    </DataSource>
+  </dataSources>
+  <calculationViews>
+    <calculationView xsi:type="Calculation:ProjectionView" id="Projection_1">
+      <descriptions/>
+      <viewAttributes>
+        <viewAttribute id="DATE_SQL"/>
+        <viewAttribute id="DATE_SAP"/>
+        <viewAttribute id="CALMONTH"/>
+        <viewAttribute id="CALQUARTER"/>
+        <viewAttribute id="YEAR_INT"/>
+        <viewAttribute id="QUARTER"/>
+        <viewAttribute id="MONTH_INT"/>
+        <viewAttribute id="DAY_OF_WEEK"/>
+        <viewAttribute id="DAY"/>
+        <viewAttribute id="MONTH"/>
+        <viewAttribute id="YEAR">
+          <filter xsi:type="AccessControl:SingleValueFilter" operator="GE" including="true" value="2000"/>
+        </viewAttribute>
+      </viewAttributes>
+      <calculatedViewAttributes>
+        <calculatedViewAttribute datatype="INTEGER" id="DAY_IN_MONTH" expressionLanguage="COLUMN_ENGINE">
+          <formula>int(rightstr(string(&quot;DATE_SQL&quot;),2))</formula>
+        </calculatedViewAttribute>
+      </calculatedViewAttributes>
+      <input node="#M_TIME_DIMENSION">
+        <mapping xsi:type="Calculation:AttributeMapping" target="DATE_SQL" source="DATE_SQL"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="DATE_SAP" source="DATE_SAP"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="CALMONTH" source="CALMONTH"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="CALQUARTER" source="CALQUARTER"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="YEAR_INT" source="YEAR_INT"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="QUARTER" source="QUARTER"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="MONTH_INT" source="MONTH_INT"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="DAY_OF_WEEK" source="DAY_OF_WEEK"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="DAY" source="DAY"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="MONTH" source="MONTH"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="YEAR" source="YEAR"/>
+      </input>
+    </calculationView>
+  </calculationViews>
+  <logicalModel id="Projection_1">
+    <descriptions/>
+    <attributes>
+      <attribute id="DAY_ID" order="1" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="DAY_ID"/>
+        <keyMapping columnObjectName="Projection_1" columnName="DATE_SQL"/>
+      </attribute>
+      <attribute id="DATE_COD" order="2" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="DATE_COD"/>
+        <keyMapping columnObjectName="Projection_1" columnName="DATE_SAP"/>
+      </attribute>
+      <attribute id="MONTH_ID" order="3" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="MONTH_ID"/>
+        <keyMapping columnObjectName="Projection_1" columnName="CALMONTH"/>
+      </attribute>
+      <attribute id="QUARTER_ID" order="4" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="QUARTER_ID"/>
+        <keyMapping columnObjectName="Projection_1" columnName="CALQUARTER"/>
+      </attribute>
+      <attribute id="YEAR_ID" order="5" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="YEAR_ID"/>
+        <keyMapping columnObjectName="Projection_1" columnName="YEAR_INT"/>
+      </attribute>
+      <attribute id="NUM_QUARTER" order="6" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="NUM_QUARTER"/>
+        <keyMapping columnObjectName="Projection_1" columnName="QUARTER"/>
+      </attribute>
+      <attribute id="NUM_MONTH" order="7" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="NUM_MONTH"/>
+        <keyMapping columnObjectName="Projection_1" columnName="MONTH_INT"/>
+      </attribute>
+      <attribute id="DAY_OF_WEEK" order="8" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="DAY_OF_WEEK"/>
+        <keyMapping columnObjectName="Projection_1" columnName="DAY_OF_WEEK"/>
+      </attribute>
+      <attribute id="DAY" order="9" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="DAY"/>
+        <keyMapping columnObjectName="Projection_1" columnName="DAY"/>
+      </attribute>
+      <attribute id="MONTH_DES" order="10" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="MONTH_DES"/>
+        <keyMapping columnObjectName="Projection_1" columnName="MONTH"/>
+      </attribute>
+      <attribute id="DAY_IN_MONTH" hidden="false" order="11" semanticType="empty" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="DAY_IN_MONTH"/>
+        <keyMapping columnObjectName="Projection_1" columnName="DAY_IN_MONTH"/>
+      </attribute>
+    </attributes>
+    <calculatedAttributes/>
+    <privateDataFoundation>
+      <tableProxies/>
+      <joins/>
+      <layout>
+        <shapes/>
+      </layout>
+    </privateDataFoundation>
+    <baseMeasures/>
+    <calculatedMeasures/>
+    <restrictedMeasures/>
+    <localDimensions/>
+  </logicalModel>
+  <layout>
+    <shapes>
+      <shape expanded="true" modelObjectName="Output" modelObjectNameSpace="MeasureGroup">
+        <upperLeftCorner x="22" y="87"/>
+        <rectangleSize height="0" width="0"/>
+      </shape>
+      <shape expanded="true" modelObjectName="Projection_1" modelObjectNameSpace="CalculationView">
+        <upperLeftCorner x="22" y="165"/>
+        <rectangleSize height="-1" width="-1"/>
+      </shape>
+    </shapes>
+  </layout>
+</Calculation:scenario>

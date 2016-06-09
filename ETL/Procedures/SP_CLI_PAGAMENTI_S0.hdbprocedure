@@ -34,7 +34,7 @@ BEGIN
 	Write your procedure logic 
  *****************************/
  
- M_CHIAVE_CONTABILE = select * from "CDA_4_HANA.Data.M_TABLES::M_CHIAVE_CONTABILE";
+ M_CHIAVE_CONTABILE = select * from "CDA_4_HANA.ETL.M_Tables::M_CHIAVE_CONTABILE";
  T_0FI_AR_4 = select * from "CDA_4_HANA.ETL.Tables::T_0FI_AR_4";
  call "CDA_4_HANA"."CDA_4_HANA.ETL.Procedures::SP_CLI_RESI" (WT_CLI_RESI_PASSO2);
 
@@ -51,8 +51,8 @@ BEGIN
 	--Pagamenti con associazione a fatture diretta
 	Temp_Pagamenti =
 		select  BUKRS, REBZG, REBZJ, REBZZ, DMSHB, WRSHB, BLDAT
-		FROM "CDA_4_HANA.Data.Tables::T_0FI_AR_4" a
-		join "CDA_4_HANA.Data.M_TABLES::M_CHIAVE_CONTABILE" b
+		FROM :T_0FI_AR_4 a
+		join :M_CHIAVE_CONTABILE b
 		on (a.BSCHL=b.BSCHL)
 		where b.DESTINAZIONE='Cliente'
 		and b.TIPO_CHIAVE='Pagamenti'

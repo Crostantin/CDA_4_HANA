@@ -1,4 +1,4 @@
-role CDA_4_HANA.Data::cda_admin_role {
+role CDA_4_HANA.Security::cda_admin_role {
 	
        	catalog schema "CDA_4_HANA": SELECT, INSERT, UPDATE, DELETE, DROP, EXECUTE, CREATE ANY, ALTER, INDEX, TRIGGER, DEBUG;  
 		catalog analytic privilege: "_SYS_BI_CP_ALL";

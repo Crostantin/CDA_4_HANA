@@ -7,9 +7,9 @@
   <variableMappings/>
   <informationModelLayout relativeWidthScenario="25"/>
   <dataSources>
-    <DataSource id="M_MANDANTE" type="DATA_BASE_TABLE">
+    <DataSource id="CDA_4_HANA.ETL.M_Tables::M_MANDANTE" type="DATA_BASE_TABLE">
       <viewAttributes allViewAttributes="true"/>
-      <columnObject schemaName="CDA_TMP" columnObjectName="M_MANDANTE"/>
+      <columnObject schemaName="CDA_4_HANA" columnObjectName="CDA_4_HANA.ETL.M_Tables::M_MANDANTE"/>
     </DataSource>
     <DataSource id="T_T042Z" type="DATA_BASE_TABLE">
       <viewAttributes allViewAttributes="true"/>
@@ -30,7 +30,7 @@
         <viewAttribute id="MANDT"/>
       </viewAttributes>
       <calculatedViewAttributes/>
-      <input node="#M_MANDANTE">
+      <input node="#CDA_4_HANA.ETL.M_Tables::M_MANDANTE">
         <mapping xsi:type="Calculation:AttributeMapping" target="MANDT" source="MANDT"/>
       </input>
       <input node="#T_T042Z">

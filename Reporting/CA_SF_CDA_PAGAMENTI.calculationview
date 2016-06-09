@@ -5,9 +5,9 @@
   <variableMappings/>
   <informationModelLayout relativeWidthScenario="21"/>
   <dataSources>
-    <DataSource id="T_FC_CDA_PAGAMENTI_2" type="DATA_BASE_TABLE">
+    <DataSource id="CDA_4_HANA.ETL.Tables::T_FC_CLI_PAGAMENTI" type="DATA_BASE_TABLE">
       <viewAttributes allViewAttributes="true"/>
-      <columnObject schemaName="CDA_4_HANA" columnObjectName="T_FC_CDA_PAGAMENTI_2"/>
+      <columnObject schemaName="CDA_4_HANA" columnObjectName="CDA_4_HANA.ETL.Tables::T_FC_CLI_PAGAMENTI"/>
     </DataSource>
   </dataSources>
   <calculationViews>
@@ -52,9 +52,10 @@
         <viewAttribute id="VAL_DILAZIONE_TEORICA_INCASSATO"/>
         <viewAttribute id="VAL_DILAZIONE_TEORICA_INCASSATO_LC"/>
         <viewAttribute id="BUDAT"/>
+        <viewAttribute id="PARTITA_ID"/>
       </viewAttributes>
       <calculatedViewAttributes/>
-      <input node="#T_FC_CDA_PAGAMENTI_2">
+      <input node="#CDA_4_HANA.ETL.Tables::T_FC_CLI_PAGAMENTI">
         <mapping xsi:type="Calculation:AttributeMapping" target="BUKRS" source="BUKRS"/>
         <mapping xsi:type="Calculation:AttributeMapping" target="GJAHR" source="GJAHR"/>
         <mapping xsi:type="Calculation:AttributeMapping" target="BELNR" source="BELNR"/>
@@ -93,6 +94,7 @@
         <mapping xsi:type="Calculation:AttributeMapping" target="VAL_DILAZIONE_TEORICA_INCASSATO" source="VAL_DILAZIONE_TEORICA_INCASSATO"/>
         <mapping xsi:type="Calculation:AttributeMapping" target="VAL_DILAZIONE_TEORICA_INCASSATO_LC" source="VAL_DILAZIONE_TEORICA_INCASSATO_LC"/>
         <mapping xsi:type="Calculation:AttributeMapping" target="BUDAT" source="BUDAT"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="PARTITA_ID" source="PARTITA_ID"/>
       </input>
     </calculationView>
   </calculationViews>
@@ -103,8 +105,8 @@
         <descriptions defaultDescription="GJAHR"/>
         <keyMapping columnObjectName="Projection_1" columnName="GJAHR"/>
       </attribute>
-      <attribute id="BELNR" order="2" attributeHierarchyActive="false" displayAttribute="false">
-        <descriptions defaultDescription="BELNR"/>
+      <attribute id="CA_DOC_BELNR" order="2" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="CA_DOC_BELNR"/>
         <keyMapping columnObjectName="Projection_1" columnName="BELNR"/>
       </attribute>
       <attribute id="BUZEI" order="3" attributeHierarchyActive="false" displayAttribute="false">
@@ -127,37 +129,29 @@
         <descriptions defaultDescription="STATUS"/>
         <keyMapping columnObjectName="Projection_1" columnName="STATUS"/>
       </attribute>
-      <attribute id="NETDT" order="8" attributeHierarchyActive="false" displayAttribute="false">
-        <descriptions defaultDescription="NETDT"/>
-        <keyMapping columnObjectName="Projection_1" columnName="NETDT"/>
-      </attribute>
-      <attribute id="DATA_PAGAMENTO" order="9" attributeHierarchyActive="false" displayAttribute="false">
+      <attribute id="DATA_PAGAMENTO" order="8" attributeHierarchyActive="false" displayAttribute="false">
         <descriptions defaultDescription="DATA_PAGAMENTO"/>
         <keyMapping columnObjectName="Projection_1" columnName="DATA_PAGAMENTO"/>
       </attribute>
-      <attribute id="ESERCIZIO_PAGAMENTO" order="10" attributeHierarchyActive="false" displayAttribute="false">
+      <attribute id="ESERCIZIO_PAGAMENTO" order="9" attributeHierarchyActive="false" displayAttribute="false">
         <descriptions defaultDescription="ESERCIZIO_PAGAMENTO"/>
         <keyMapping columnObjectName="Projection_1" columnName="ESERCIZIO_PAGAMENTO"/>
       </attribute>
-      <attribute id="DOCUMENTO_PAGAMENTO" order="11" attributeHierarchyActive="false" displayAttribute="false">
+      <attribute id="DOCUMENTO_PAGAMENTO" order="10" attributeHierarchyActive="false" displayAttribute="false">
         <descriptions defaultDescription="DOCUMENTO_PAGAMENTO"/>
         <keyMapping columnObjectName="Projection_1" columnName="DOCUMENTO_PAGAMENTO"/>
       </attribute>
-      <attribute id="NUM_RIGA_PAGAMENTO" order="12" attributeHierarchyActive="false" displayAttribute="false">
+      <attribute id="NUM_RIGA_PAGAMENTO" order="11" attributeHierarchyActive="false" displayAttribute="false">
         <descriptions defaultDescription="NUM_RIGA_PAGAMENTO"/>
         <keyMapping columnObjectName="Projection_1" columnName="NUM_RIGA_PAGAMENTO"/>
       </attribute>
-      <attribute id="GG_TEORICI" order="22" attributeHierarchyActive="false" displayAttribute="false">
+      <attribute id="GG_TEORICI" order="21" attributeHierarchyActive="false" displayAttribute="false">
         <descriptions defaultDescription="GG_TEORICI"/>
         <keyMapping columnObjectName="Projection_1" columnName="GG_TEORICI"/>
       </attribute>
-      <attribute id="GG_REALI" order="27" attributeHierarchyActive="false" displayAttribute="false">
+      <attribute id="GG_REALI" order="26" attributeHierarchyActive="false" displayAttribute="false">
         <descriptions defaultDescription="GG_REALI"/>
         <keyMapping columnObjectName="Projection_1" columnName="GG_REALI"/>
-      </attribute>
-      <attribute id="LIFNR" order="33" attributeHierarchyActive="false" displayAttribute="false">
-        <descriptions/>
-        <keyMapping columnObjectName="Projection_1" columnName="LIFNR"/>
       </attribute>
       <attribute id="BUKRS$local">
         <descriptions/>
@@ -175,6 +169,14 @@
         <descriptions/>
         <keyMapping columnObjectName="Projection_1" columnName="ZTERM"/>
       </attribute>
+      <attribute id="LIFNR$local">
+        <descriptions/>
+        <keyMapping columnObjectName="Projection_1" columnName="LIFNR"/>
+      </attribute>
+      <attribute id="NETDT$local">
+        <descriptions/>
+        <keyMapping columnObjectName="Projection_1" columnName="NETDT"/>
+      </attribute>
     </attributes>
     <calculatedAttributes/>
     <privateDataFoundation>
@@ -185,81 +187,85 @@
       </layout>
     </privateDataFoundation>
     <baseMeasures>
-      <measure id="AUGBL" order="13" aggregationType="max" measureType="simple">
+      <measure id="AUGBL" order="12" aggregationType="max" measureType="simple">
         <descriptions defaultDescription="AUGBL"/>
         <measureMapping columnObjectName="Projection_1" columnName="AUGBL"/>
       </measure>
-      <measure id="AUGDT" order="14" aggregationType="min" measureType="simple">
+      <measure id="AUGDT" order="13" aggregationType="min" measureType="simple">
         <descriptions defaultDescription="AUGDT"/>
         <measureMapping columnObjectName="Projection_1" columnName="AUGDT"/>
       </measure>
-      <measure id="DATA_PAREGGIO" order="15" aggregationType="min" measureType="simple">
+      <measure id="DATA_PAREGGIO" order="14" aggregationType="min" measureType="simple">
         <descriptions defaultDescription="DATA_PAREGGIO"/>
         <measureMapping columnObjectName="Projection_1" columnName="DATA_PAREGGIO"/>
       </measure>
-      <measure id="DMSHB" order="16" aggregationType="sum" measureType="simple">
+      <measure id="DMSHB" order="15" aggregationType="sum" measureType="simple">
         <descriptions defaultDescription="DMSHB"/>
         <measureMapping columnObjectName="Projection_1" columnName="DMSHB"/>
       </measure>
-      <measure id="WRSHB" order="17" aggregationType="sum" measureType="simple">
+      <measure id="WRSHB" order="16" aggregationType="sum" measureType="simple">
         <descriptions defaultDescription="WRSHB"/>
         <measureMapping columnObjectName="Projection_1" columnName="WRSHB"/>
       </measure>
-      <measure id="VAL_PAGATO_ALLOCATO" order="18" aggregationType="sum" measureType="simple">
+      <measure id="VAL_PAGATO_ALLOCATO" order="17" aggregationType="sum" measureType="simple">
         <descriptions defaultDescription="VAL_PAGATO_ALLOCATO"/>
         <measureMapping columnObjectName="Projection_1" columnName="VAL_PAGATO_ALLOCATO"/>
       </measure>
-      <measure id="VAL_PAGATO_ALLOCATO_GMP" order="19" aggregationType="sum" measureType="simple">
+      <measure id="VAL_PAGATO_ALLOCATO_GMP" order="18" aggregationType="sum" measureType="simple">
         <descriptions defaultDescription="VAL_PAGATO_ALLOCATO_GMP"/>
         <measureMapping columnObjectName="Projection_1" columnName="VAL_PAGATO_ALLOCATO_GMP"/>
       </measure>
-      <measure id="VAL_PAGATO_ALLOCATO_LC" order="20" aggregationType="sum" measureType="simple">
+      <measure id="VAL_PAGATO_ALLOCATO_LC" order="19" aggregationType="sum" measureType="simple">
         <descriptions defaultDescription="VAL_PAGATO_ALLOCATO_LC"/>
         <measureMapping columnObjectName="Projection_1" columnName="VAL_PAGATO_ALLOCATO_LC"/>
       </measure>
-      <measure id="VAL_PAGATO_ALLOCATO_GMP_LC" order="21" aggregationType="sum" measureType="simple">
+      <measure id="VAL_PAGATO_ALLOCATO_GMP_LC" order="20" aggregationType="sum" measureType="simple">
         <descriptions defaultDescription="VAL_PAGATO_ALLOCATO_GMP_LC"/>
         <measureMapping columnObjectName="Projection_1" columnName="VAL_PAGATO_ALLOCATO_GMP_LC"/>
       </measure>
-      <measure id="VAL_DILAZIONE_TEORICA" order="23" aggregationType="sum" measureType="simple">
+      <measure id="VAL_DILAZIONE_TEORICA" order="22" aggregationType="sum" measureType="simple">
         <descriptions defaultDescription="VAL_DILAZIONE_TEORICA"/>
         <measureMapping columnObjectName="Projection_1" columnName="VAL_DILAZIONE_TEORICA"/>
       </measure>
-      <measure id="VAL_DILAZIONE_TEORICA_LC" order="24" aggregationType="sum" measureType="simple">
+      <measure id="VAL_DILAZIONE_TEORICA_LC" order="23" aggregationType="sum" measureType="simple">
         <descriptions defaultDescription="VAL_DILAZIONE_TEORICA_LC"/>
         <measureMapping columnObjectName="Projection_1" columnName="VAL_DILAZIONE_TEORICA_LC"/>
       </measure>
-      <measure id="VAL_FATTURATO" order="25" aggregationType="sum" measureType="simple">
+      <measure id="VAL_FATTURATO" order="24" aggregationType="sum" measureType="simple">
         <descriptions defaultDescription="VAL_FATTURATO"/>
         <measureMapping columnObjectName="Projection_1" columnName="VAL_FATTURATO"/>
       </measure>
-      <measure id="VAL_FATTURATO_LC" order="26" aggregationType="sum" measureType="simple">
+      <measure id="VAL_FATTURATO_LC" order="25" aggregationType="sum" measureType="simple">
         <descriptions defaultDescription="VAL_FATTURATO_LC"/>
         <measureMapping columnObjectName="Projection_1" columnName="VAL_FATTURATO_LC"/>
       </measure>
-      <measure id="VAL_DILAZIONE_REALE" order="28" aggregationType="sum" measureType="simple">
+      <measure id="VAL_DILAZIONE_REALE" order="27" aggregationType="sum" measureType="simple">
         <descriptions defaultDescription="VAL_DILAZIONE_REALE"/>
         <measureMapping columnObjectName="Projection_1" columnName="VAL_DILAZIONE_REALE"/>
       </measure>
-      <measure id="VAL_DILAZIONE_REALE_LC" order="29" aggregationType="sum" measureType="simple">
+      <measure id="VAL_DILAZIONE_REALE_LC" order="28" aggregationType="sum" measureType="simple">
         <descriptions defaultDescription="VAL_DILAZIONE_REALE_LC"/>
         <measureMapping columnObjectName="Projection_1" columnName="VAL_DILAZIONE_REALE_LC"/>
       </measure>
-      <measure id="VAL_DILAZIONE_TEORICA_INCASSATO" order="30" aggregationType="sum" measureType="simple">
+      <measure id="VAL_DILAZIONE_TEORICA_INCASSATO" order="29" aggregationType="sum" measureType="simple">
         <descriptions defaultDescription="VAL_DILAZIONE_TEORICA_INCASSATO"/>
         <measureMapping columnObjectName="Projection_1" columnName="VAL_DILAZIONE_TEORICA_INCASSATO"/>
       </measure>
-      <measure id="VAL_DILAZIONE_TEORICA_INCASSATO_LC" order="31" aggregationType="sum" measureType="simple">
+      <measure id="VAL_DILAZIONE_TEORICA_INCASSATO_LC" order="30" aggregationType="sum" measureType="simple">
         <descriptions defaultDescription="VAL_DILAZIONE_TEORICA_INCASSATO_LC"/>
         <measureMapping columnObjectName="Projection_1" columnName="VAL_DILAZIONE_TEORICA_INCASSATO_LC"/>
       </measure>
-      <measure id="BUDAT" order="32" aggregationType="min" measureType="simple">
+      <measure id="BUDAT" order="31" aggregationType="min" measureType="simple">
         <descriptions defaultDescription="BUDAT"/>
         <measureMapping columnObjectName="Projection_1" columnName="BUDAT"/>
       </measure>
-      <measure id="BLDAT" order="34" aggregationType="min" measureType="simple">
+      <measure id="BLDAT" order="32" aggregationType="min" measureType="simple">
         <descriptions/>
         <measureMapping columnObjectName="Projection_1" columnName="BLDAT"/>
+      </measure>
+      <measure id="PARTITA_ID" order="33" aggregationType="sum" measureType="simple">
+        <descriptions/>
+        <measureMapping columnObjectName="Projection_1" columnName="PARTITA_ID"/>
       </measure>
     </baseMeasures>
     <calculatedMeasures/>
@@ -306,6 +312,28 @@
         <properties cardinality="C1_1" joinOperator="Equal" joinType="textTable"/>
         <associatedAttributeFeatures/>
       </logicalJoin>
+      <logicalJoin associatedObjectUri="/CDA_4_HANA.Views.Fornitori/calculationviews/CA_FORNITORI_SOCIETA">
+        <attributes>
+          <attributeRef>#LIFNR$local</attributeRef>
+          <attributeRef>#BUKRS$local</attributeRef>
+        </attributes>
+        <associatedAttributeNames>
+          <attributeName>LIFNR</attributeName>
+          <attributeName>BUKRS</attributeName>
+        </associatedAttributeNames>
+        <properties joinOperator="Equal" joinType="leftOuter"/>
+        <associatedAttributeFeatures/>
+      </logicalJoin>
+      <logicalJoin associatedObjectUri="/CDA_4_HANA.Views/calculationviews/CA_S_TIME_DAY_SCADENZA">
+        <attributes>
+          <attributeRef>#NETDT$local</attributeRef>
+        </attributes>
+        <associatedAttributeNames>
+          <attributeName>DAY_ID</attributeName>
+        </associatedAttributeNames>
+        <properties joinOperator="Equal" joinType="referential"/>
+        <associatedAttributeFeatures/>
+      </logicalJoin>
     </sharedDimensions>
   </logicalModel>
   <layout>
@@ -319,19 +347,25 @@
         <rectangleSize height="-1" width="-1"/>
       </shape>
       <shape modelObjectName="Projection_1" modelObjectNameSpace="StarJoinViewNodeInput" modelObjectType="repository">
-        <upperLeftCorner x="458" y="16"/>
+        <upperLeftCorner x="516" y="336"/>
       </shape>
       <shape modelObjectName="/CDA_4_HANA.Views.Societa/calculationviews/CA_CDA_SOCIETA" modelObjectNameSpace="StarJoinViewNodeSharedCV" modelObjectType="repository">
-        <upperLeftCorner x="842" y="176"/>
+        <upperLeftCorner x="900" y="512"/>
       </shape>
       <shape modelObjectName="/CDA_4_HANA.Views.Pagamenti/calculationviews/S_CDA_CLI_MODALITA_PAGAMENTO" modelObjectNameSpace="StarJoinViewNodeSharedCV" modelObjectType="repository">
-        <upperLeftCorner x="842" y="289"/>
+        <upperLeftCorner x="16" y="1025"/>
       </shape>
       <shape modelObjectName="/CDA_4_HANA.Views.Pagamenti/calculationviews/S_CDA_TIPO_PAGAMENTO" modelObjectNameSpace="StarJoinViewNodeSharedCV" modelObjectType="repository">
-        <upperLeftCorner x="16" y="401"/>
+        <upperLeftCorner x="16" y="1251"/>
       </shape>
       <shape modelObjectName="/CDA_4_HANA.Views.Pagamenti/calculationviews/S_CDA_CLI_CONDIZIONI_PAGAMENTO" modelObjectNameSpace="StarJoinViewNodeSharedCV" modelObjectType="repository">
-        <upperLeftCorner x="842" y="402"/>
+        <upperLeftCorner x="16" y="1138"/>
+      </shape>
+      <shape modelObjectName="/CDA_4_HANA.Views.Fornitori/calculationviews/CA_FORNITORI_SOCIETA" modelObjectNameSpace="StarJoinViewNodeSharedCV" modelObjectType="repository">
+        <upperLeftCorner x="16" y="16"/>
+      </shape>
+      <shape modelObjectName="/CDA_4_HANA.Views/calculationviews/CA_S_TIME_DAY_SCADENZA" modelObjectNameSpace="StarJoinViewNodeSharedCV" modelObjectType="repository">
+        <upperLeftCorner x="900" y="625"/>
       </shape>
     </shapes>
   </layout>

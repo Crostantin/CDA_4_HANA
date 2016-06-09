@@ -5,13 +5,13 @@
   <variableMappings/>
   <informationModelLayout relativeWidthScenario="27"/>
   <dataSources>
-    <DataSource id="CDA_4_HANA.Data.Tables::T_T001" type="DATA_BASE_TABLE">
+    <DataSource id="CDA_4_HANA.ETL.Tables::T_T001" type="DATA_BASE_TABLE">
       <viewAttributes allViewAttributes="true"/>
-      <columnObject schemaName="CDA_4_HANA" columnObjectName="CDA_4_HANA.Data.Tables::T_T001"/>
+      <columnObject schemaName="CDA_4_HANA" columnObjectName="CDA_4_HANA.ETL.Tables::T_T001"/>
     </DataSource>
-    <DataSource id="CDA_4_HANA.Data.M_TABLES::M_MANDANTE" type="DATA_BASE_TABLE">
+    <DataSource id="CDA_4_HANA.ETL.M_Tables::M_MANDANTE" type="DATA_BASE_TABLE">
       <viewAttributes allViewAttributes="true"/>
-      <columnObject schemaName="CDA_4_HANA" columnObjectName="CDA_4_HANA.Data.M_TABLES::M_MANDANTE"/>
+      <columnObject schemaName="CDA_4_HANA" columnObjectName="CDA_4_HANA.ETL.M_Tables::M_MANDANTE"/>
     </DataSource>
   </dataSources>
   <calculationViews>
@@ -24,13 +24,13 @@
         <viewAttribute id="MANDT"/>
       </viewAttributes>
       <calculatedViewAttributes/>
-      <input node="#CDA_4_HANA.Data.Tables::T_T001">
+      <input node="#CDA_4_HANA.ETL.Tables::T_T001">
         <mapping xsi:type="Calculation:AttributeMapping" target="BUKRS" source="BUKRS"/>
         <mapping xsi:type="Calculation:AttributeMapping" target="BUTXT" source="BUTXT"/>
         <mapping xsi:type="Calculation:AttributeMapping" target="WAERS" source="WAERS"/>
         <mapping xsi:type="Calculation:AttributeMapping" target="MANDT" source="MANDT"/>
       </input>
-      <input node="#CDA_4_HANA.Data.M_TABLES::M_MANDANTE">
+      <input node="#CDA_4_HANA.ETL.M_Tables::M_MANDANTE">
         <mapping xsi:type="Calculation:AttributeMapping" target="MANDT" source="MANDT"/>
       </input>
       <joinAttribute name="MANDT"/>

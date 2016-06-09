@@ -41,4 +41,3 @@ table.columns = [
 	 {name="VAL_DILAZIONE_TEORICA_INCASSATO"; sqlType=DECIMAL; precision=38; scale=2; },
 	 {name="VAL_DILAZIONE_TEORICA_INCASSATO_LC"; sqlType=DECIMAL; precision=38; scale=2; }
 ];
-table.primaryKey.pkcolumns=["PARTITA_ID"];

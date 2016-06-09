@@ -1,0 +1,10 @@
+import = [
+{
+ table = "CDA_4_HANA.ETL.M_Tables::M_CHIAVE_CONTABILE";
+ schema = "CDA_4_HANA";
+ file = "CDA_4_HANA.ETL.M_Tables:CSV_M_CHIAVE_CONTABILE.csv";
+ header = false;
+ delimField = ",";
+ delimEnclosing="\"";
+ distinguishEmptyFromNull = true;
+}];

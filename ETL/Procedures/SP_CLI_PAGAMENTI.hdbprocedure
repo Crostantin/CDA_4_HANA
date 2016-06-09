@@ -1,5 +1,5 @@
-PROCEDURE "CDA_4_HANA"."CDA_4_HANA.Fact_Tables.Procedure::SP_CLI_PAGAMENTI" ( 
-		OUT var_out "CDA_4_HANA"."CDA_4_HANA.Data.Types::TT_CLI_PAGAMENTI"
+PROCEDURE "CDA_4_HANA"."CDA_4_HANA.ETL.Procedures::SP_CLI_PAGAMENTI" ( 
+		OUT var_out "CDA_4_HANA"."CDA_4_HANA.ETL.Types::TT_FC_CLI_PAGAMENTI"
 	) 
 	LANGUAGE SQLSCRIPT
 	SQL SECURITY INVOKER 
@@ -36,10 +36,10 @@ DECLARE WT_CLI_PASSO1 TABLE (
 	NUM_RIGA_PAGAMENTO DECIMAL(3,0)
 	);
 
-call "CDA_4_HANA"."CDA_4_HANA.Fact_Tables.Procedure::SP_CLI_PAGAMENTI_S0" (WT_CLI_PASSO1);
+call "CDA_4_HANA"."CDA_4_HANA.ETL.Procedures::SP_CLI_PAGAMENTI_S0" (WT_CLI_PASSO1);
 --  = select * from "CDA_4_HANA.Fact_Tables.Functions::TB_CLI_PAGAMENTI_PASSO1"();
-M_CHIAVE_CONTABILE = select * from "CDA_4_HANA.Data.M_TABLES::M_CHIAVE_CONTABILE" ;
-call "CDA_4_HANA"."CDA_4_HANA.Fact_Tables.Procedure::SP_CLI_RESI"(WT_CLI_RESI_PASSO2);
+M_CHIAVE_CONTABILE = select * from "CDA_4_HANA.ETL.M_Tables::M_CHIAVE_CONTABILE" ;
+call "CDA_4_HANA"."CDA_4_HANA.ETL.Procedures::SP_CLI_RESI"(WT_CLI_RESI_PASSO2);
 /*WT_CLI_RESI_PASSO2 = 
 	 SELECT
 	 "BUKRS",
@@ -413,8 +413,7 @@ GROUP BY "BUKRS",
 		from :TMP_Passo2_Pagamenti
 	);
 	
-	
-	var_out = 
+   WT_CLI_PASSO2 =
 		select 
 		a.BUKRS, a.GJAHR, a.BELNR, a.BUZEI, a."ROWID", 
 		a.KUNNR,
@@ -481,10 +480,82 @@ GROUP BY "BUKRS",
 		on (a.BUKRS=d.BUKRS and a.GJAHR=d.GJAHR and a.BELNR=d.BELNR and a.BUZEI=d.BUZEI)
 		where c.DESTINAZIONE='Cliente'
 		and c.TIPO_CHIAVE='Fatture'
-		and d.BUKRS is null
-		;
-   
- 	drop table #TMP_Passo2_P5;  
+		and d.BUKRS is null   
+   ;
+ 	 
+ 	var_out=
+	 	select 1 as "PARTITA_ID", a.BUKRS, a.GJAHR, a.BELNR, a.BUZEI, "ROWID", a.BSCHL, STATUS, 
+	a.KUNNR,
+	case
+		when ifnull(c.LIFNR, ' ')=' ' then ''
+		else c.LIFNR	
+	end LIFNR,
+	d.ZLSCH,
+	d.ZTERM,
+	d.BLART,
+	a.BLDAT, d.BUDAT, a.NETDT, a.DMSHB, a.WRSHB, 
+	case 
+		when b.TIPO_CHIAVE='Fatture' then DAYS_BETWEEN (a.BLDAT, a.NETDT)
+		else null
+	end GG_TEORICI,
+	case 
+		when b.TIPO_CHIAVE='Fatture' then a.DMSHB*DAYS_BETWEEN (a.BLDAT, a.NETDT)
+		else null
+	end VAL_DILAZIONE_TEORICA,
+	case 
+		when b.TIPO_CHIAVE='Fatture' then a.WRSHB*DAYS_BETWEEN (a.BLDAT, a.NETDT)
+		else null
+	end VAL_DILAZIONE_TEORICA_LC,
+	case 
+		when b.TIPO_CHIAVE='Fatture' then a.DMSHB
+		else null
+	end VAL_FATTURATO,
+	case 
+		when b.TIPO_CHIAVE='Fatture' then a.WRSHB
+		else null
+	end VAL_FATTURATO_LC,
+	VAL_PAGATO_ALLOCATO, VAL_PAGATO_ALLOCATO_GMP, 
+	VAL_PAGATO_ALLOCATO_LC, VAL_PAGATO_ALLOCATO_GMP_LC, 
+	DATA_PAGAMENTO, 
+	ESERCIZIO_PAGAMENTO,
+	DOCUMENTO_PAGAMENTO,
+	NUM_RIGA_PAGAMENTO,
+	a.AUGBL,
+	a.AUGDT,
+	DATA_PAREGGIO,
+	case 							
+		when b.TIPO_CHIAVE='Fatture' then DAYS_BETWEEN(a.BLDAT, ifnull(a.DATA_PAGAMENTO, now()))
+		else null
+	end GG_REALI,
+	case 
+		when b.TIPO_CHIAVE='Fatture' then a.VAL_PAGATO_ALLOCATO_GMP*DAYS_BETWEEN(a.BLDAT, ifnull(a.DATA_PAGAMENTO, current_date))
+		else null
+	end VAL_DILAZIONE_REALE,
+	case 
+		when b.TIPO_CHIAVE='Fatture' then a.VAL_PAGATO_ALLOCATO_GMP_LC*DAYS_BETWEEN(a.BLDAT, ifnull(a.DATA_PAGAMENTO, current_date))
+		else null
+	end VAL_DILAZIONE_REALE_LC,
+	case 
+		when b.TIPO_CHIAVE='Fatture' then a.VAL_PAGATO_ALLOCATO_GMP*DAYS_BETWEEN(a.BLDAT, ifnull(a.DATA_PAGAMENTO, current_date))
+		else null
+	end VAL_DILAZIONE_TEORICA_INCASSATO,
+	case 
+		when b.TIPO_CHIAVE='Fatture' then a.VAL_PAGATO_ALLOCATO_GMP_LC*DAYS_BETWEEN(a.BLDAT, ifnull(a.DATA_PAGAMENTO, current_date))
+		else null
+	end VAL_DILAZIONE_TEORICA_INCASSATO_LC
+	--into dbo.SF_CDA_PAGAMENTI
+	from :WT_CLI_PASSO2 a
+	join "CDA_4_HANA.ETL.M_Tables::M_CHIAVE_CONTABILE" b
+	on (a.BSCHL=b.BSCHL)
+	left join "CDA_4_HANA.Aging.Cliente::CA_AGING_CLIENTE" c
+	on (a.KUNNR=c.KUNNR)-- and a.belnr = c.belnr and a.buzei = c.buzei) -- MODDED (originale solo kunnr)
+	join "CDA_4_HANA.ETL.Tables::T_0FI_AR_4" d
+	on (a.BUKRS=d.BUKRS and a.GJAHR=d.GJAHR and a.BELNR=d.BELNR and a.BUZEI=d.BUZEI)
+	where b.DESTINAZIONE='Cliente'
+	and b.TIPO_CHIAVE='Fatture'	
+;	
+ 
+drop table #TMP_Passo2_P5;  
 
  
 END;

@@ -266,7 +266,7 @@
     <restrictedMeasures/>
     <localDimensions/>
     <sharedDimensions>
-      <logicalJoin associatedObjectUri="/CDA_4_HANA.Societa.Views/calculationviews/CA_CDA_SOCIETA">
+      <logicalJoin associatedObjectUri="/CDA_4_HANA.Views.Societa/calculationviews/CA_CDA_SOCIETA">
         <attributes>
           <attributeRef>#BUKRS$local</attributeRef>
         </attributes>
@@ -276,7 +276,7 @@
         <properties joinOperator="Equal" joinType="inner"/>
         <associatedAttributeFeatures/>
       </logicalJoin>
-      <logicalJoin associatedObjectUri="/CDA_4_HANA.Pagamenti.Views/calculationviews/S_CDA_CLI_MODALITA_PAGAMENTO" languageAttributeName="MOD_PAG_LANG_ID">
+      <logicalJoin associatedObjectUri="/CDA_4_HANA.Views.Pagamenti/calculationviews/S_CDA_CLI_MODALITA_PAGAMENTO" languageAttributeName="MOD_PAG_LANG_ID">
         <attributes>
           <attributeRef>#ZLSCH$local</attributeRef>
         </attributes>
@@ -286,7 +286,7 @@
         <properties cardinality="C1_1" joinOperator="Equal" joinType="textTable"/>
         <associatedAttributeFeatures/>
       </logicalJoin>
-      <logicalJoin associatedObjectUri="/CDA_4_HANA.Pagamenti.Views/calculationviews/S_CDA_TIPO_PAGAMENTO" languageAttributeName="TIPO_DOC_LANG_ID">
+      <logicalJoin associatedObjectUri="/CDA_4_HANA.Views.Pagamenti/calculationviews/S_CDA_TIPO_PAGAMENTO" languageAttributeName="TIPO_DOC_LANG_ID">
         <attributes>
           <attributeRef>#BLART$local</attributeRef>
         </attributes>
@@ -296,7 +296,7 @@
         <properties cardinality="C1_1" joinOperator="Equal" joinType="textTable"/>
         <associatedAttributeFeatures/>
       </logicalJoin>
-      <logicalJoin associatedObjectUri="/CDA_4_HANA.Pagamenti.Views/calculationviews/S_CDA_CLI_CONDIZIONI_PAGAMENTO" languageAttributeName="COND_PAG_LANG_ID">
+      <logicalJoin associatedObjectUri="/CDA_4_HANA.Views.Pagamenti/calculationviews/S_CDA_CLI_CONDIZIONI_PAGAMENTO" languageAttributeName="COND_PAG_LANG_ID">
         <attributes>
           <attributeRef>#ZTERM$local</attributeRef>
         </attributes>
@@ -321,16 +321,16 @@
       <shape modelObjectName="Projection_1" modelObjectNameSpace="StarJoinViewNodeInput" modelObjectType="repository">
         <upperLeftCorner x="458" y="16"/>
       </shape>
-      <shape modelObjectName="/CDA_4_HANA.Societa.Views/calculationviews/CA_CDA_SOCIETA" modelObjectNameSpace="StarJoinViewNodeSharedCV" modelObjectType="repository">
+      <shape modelObjectName="/CDA_4_HANA.Views.Societa/calculationviews/CA_CDA_SOCIETA" modelObjectNameSpace="StarJoinViewNodeSharedCV" modelObjectType="repository">
         <upperLeftCorner x="842" y="176"/>
       </shape>
-      <shape modelObjectName="/CDA_4_HANA.Pagamenti.Views/calculationviews/S_CDA_CLI_MODALITA_PAGAMENTO" modelObjectNameSpace="StarJoinViewNodeSharedCV" modelObjectType="repository">
+      <shape modelObjectName="/CDA_4_HANA.Views.Pagamenti/calculationviews/S_CDA_CLI_MODALITA_PAGAMENTO" modelObjectNameSpace="StarJoinViewNodeSharedCV" modelObjectType="repository">
         <upperLeftCorner x="842" y="289"/>
       </shape>
-      <shape modelObjectName="/CDA_4_HANA.Pagamenti.Views/calculationviews/S_CDA_TIPO_PAGAMENTO" modelObjectNameSpace="StarJoinViewNodeSharedCV" modelObjectType="repository">
+      <shape modelObjectName="/CDA_4_HANA.Views.Pagamenti/calculationviews/S_CDA_TIPO_PAGAMENTO" modelObjectNameSpace="StarJoinViewNodeSharedCV" modelObjectType="repository">
         <upperLeftCorner x="16" y="401"/>
       </shape>
-      <shape modelObjectName="/CDA_4_HANA.Pagamenti.Views/calculationviews/S_CDA_CLI_CONDIZIONI_PAGAMENTO" modelObjectNameSpace="StarJoinViewNodeSharedCV" modelObjectType="repository">
+      <shape modelObjectName="/CDA_4_HANA.Views.Pagamenti/calculationviews/S_CDA_CLI_CONDIZIONI_PAGAMENTO" modelObjectNameSpace="StarJoinViewNodeSharedCV" modelObjectType="repository">
         <upperLeftCorner x="842" y="402"/>
       </shape>
     </shapes>

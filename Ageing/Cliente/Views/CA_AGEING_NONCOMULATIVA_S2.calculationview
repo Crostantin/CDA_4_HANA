@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<Calculation:scenario xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:AccessControl="http://www.sap.com/ndb/SQLCoreModelAccessControl.ecore" xmlns:Calculation="http://www.sap.com/ndb/BiModelCalculation.ecore" schemaVersion="2.3" id="CA_AGING_NONCOMULATIVA_S2" applyPrivilegeType="ANALYTIC_PRIVILEGE" checkAnalyticPrivileges="true" defaultClient="$$client$$" defaultLanguage="$$language$$" hierarchiesSQLEnabled="false" translationRelevant="true" visibility="reportingEnabled" calculationScenarioType="TREE_BASED" dataCategory="CUBE" enforceSqlExecution="false" executionSemantic="UNDEFINED" outputViewType="Aggregation">
+<Calculation:scenario xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:AccessControl="http://www.sap.com/ndb/SQLCoreModelAccessControl.ecore" xmlns:Calculation="http://www.sap.com/ndb/BiModelCalculation.ecore" schemaVersion="2.3" id="CA_AGEING_NONCOMULATIVA_S2" applyPrivilegeType="ANALYTIC_PRIVILEGE" checkAnalyticPrivileges="true" defaultClient="$$client$$" defaultLanguage="$$language$$" hierarchiesSQLEnabled="false" translationRelevant="true" visibility="reportingEnabled" calculationScenarioType="TREE_BASED" dataCategory="CUBE" enforceSqlExecution="false" executionSemantic="UNDEFINED" outputViewType="Aggregation">
   <descriptions defaultDescription="CA_AGING_NONCOMULATIVA_S2"/>
   <localVariables/>
   <variableMappings/>
   <informationModelLayout relativeWidthScenario="33"/>
   <dataSources>
-    <DataSource id="CA_AGING_CLIENTE" type="CALCULATION_VIEW">
+    <DataSource id="CA_AGEING_CLIENTE_S1" type="CALCULATION_VIEW">
       <viewAttributes allViewAttributes="true"/>
-      <resourceUri>/CDA_4_HANA.Aging.Cliente/calculationviews/CA_AGING_CLIENTE</resourceUri>
+      <resourceUri>/CDA_4_HANA.Ageing.Cliente.Views/calculationviews/CA_AGEING_CLIENTE_S1</resourceUri>
     </DataSource>
-    <DataSource id="CA_AGING_NONCOMULATIVA_S1" type="CALCULATION_VIEW">
+    <DataSource id="CA_AGEING_NONCOMULATIVA_S1" type="CALCULATION_VIEW">
       <viewAttributes allViewAttributes="true"/>
-      <resourceUri>/CDA_4_HANA.Aging.Cliente/calculationviews/CA_AGING_NONCOMULATIVA_S1</resourceUri>
+      <resourceUri>/CDA_4_HANA.Ageing.Cliente.Views/calculationviews/CA_AGEING_NONCOMULATIVA_S1</resourceUri>
     </DataSource>
     <DataSource id="CA_S_TIME_DAY" type="CALCULATION_VIEW">
       <viewAttributes allViewAttributes="true"/>
@@ -22,28 +22,24 @@
     <calculationView xsi:type="Calculation:ProjectionView" id="Projection_1">
       <descriptions/>
       <viewAttributes>
+        <viewAttribute id="PARTITA_ID"/>
         <viewAttribute id="BUKRS"/>
-        <viewAttribute id="FISCPER"/>
-        <viewAttribute id="BELNR"/>
-        <viewAttribute id="BUZEI"/>
-        <viewAttribute id="UPOSZ"/>
         <viewAttribute id="KUNNR"/>
-        <viewAttribute id="BLART"/>
-        <viewAttribute id="BUDAT"/>
-        <viewAttribute id="NETDT"/>
+        <viewAttribute id="LIFNR"/>
         <viewAttribute id="ZLSCH"/>
         <viewAttribute id="ZTERM"/>
+        <viewAttribute id="BLART"/>
+        <viewAttribute id="BLDAT"/>
+        <viewAttribute id="BUDAT"/>
+        <viewAttribute id="NETDT"/>
         <viewAttribute id="XBLNR"/>
         <viewAttribute id="AUGDT"/>
-        <viewAttribute id="BLDAT"/>
         <viewAttribute id="VAL_FATTURATO">
           <filter xsi:type="AccessControl:SingleValueFilter" operator="NL" including="false"/>
         </viewAttribute>
         <viewAttribute id="VAL_FATTURATO_LC">
           <filter xsi:type="AccessControl:SingleValueFilter" operator="NL" including="false"/>
         </viewAttribute>
-        <viewAttribute id="LIFNR"/>
-        <viewAttribute id="PARTITA_ID"/>
       </viewAttributes>
       <calculatedViewAttributes>
         <calculatedViewAttribute datatype="DECIMAL" id="DMSOL" length="13" scale="2" expressionLanguage="COLUMN_ENGINE">
@@ -65,46 +61,39 @@
           <formula>NULL</formula>
         </calculatedViewAttribute>
       </calculatedViewAttributes>
-      <input node="#CA_AGING_CLIENTE">
+      <input node="#CA_AGEING_CLIENTE_S1">
+        <mapping xsi:type="Calculation:AttributeMapping" target="PARTITA_ID" source="PARTITA_ID"/>
         <mapping xsi:type="Calculation:AttributeMapping" target="BUKRS" source="BUKRS"/>
-        <mapping xsi:type="Calculation:AttributeMapping" target="FISCPER" source="FISCPER"/>
-        <mapping xsi:type="Calculation:AttributeMapping" target="BELNR" source="BELNR"/>
-        <mapping xsi:type="Calculation:AttributeMapping" target="BUZEI" source="BUZEI"/>
-        <mapping xsi:type="Calculation:AttributeMapping" target="UPOSZ" source="UPOSZ"/>
         <mapping xsi:type="Calculation:AttributeMapping" target="KUNNR" source="KUNNR"/>
-        <mapping xsi:type="Calculation:AttributeMapping" target="BLART" source="BLART"/>
-        <mapping xsi:type="Calculation:AttributeMapping" target="BUDAT" source="BUDAT"/>
-        <mapping xsi:type="Calculation:AttributeMapping" target="NETDT" source="NETDT"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="LIFNR" source="LIFNR"/>
         <mapping xsi:type="Calculation:AttributeMapping" target="ZLSCH" source="ZLSCH"/>
         <mapping xsi:type="Calculation:AttributeMapping" target="ZTERM" source="ZTERM"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="BLART" source="BLART"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="BLDAT" source="BLDAT"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="BUDAT" source="BUDAT"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="NETDT" source="NETDT"/>
         <mapping xsi:type="Calculation:AttributeMapping" target="XBLNR" source="XBLNR"/>
         <mapping xsi:type="Calculation:AttributeMapping" target="AUGDT" source="AUGDT"/>
-        <mapping xsi:type="Calculation:AttributeMapping" target="BLDAT" source="BLDAT"/>
         <mapping xsi:type="Calculation:AttributeMapping" target="VAL_FATTURATO" source="VAL_FATTURATO"/>
         <mapping xsi:type="Calculation:AttributeMapping" target="VAL_FATTURATO_LC" source="VAL_FATTURATO_LC"/>
-        <mapping xsi:type="Calculation:AttributeMapping" target="LIFNR" source="LIFNR"/>
-        <mapping xsi:type="Calculation:AttributeMapping" target="PARTITA_ID" source="PARTITA_ID"/>
       </input>
     </calculationView>
     <calculationView xsi:type="Calculation:ProjectionView" id="Projection_2">
       <descriptions/>
       <viewAttributes>
+        <viewAttribute id="PARTITA_ID"/>
         <viewAttribute id="BUKRS"/>
-        <viewAttribute id="FISCPER"/>
-        <viewAttribute id="BELNR"/>
-        <viewAttribute id="BUZEI"/>
-        <viewAttribute id="UPOSZ"/>
-        <viewAttribute id="LIFNR"/>
         <viewAttribute id="KUNNR"/>
+        <viewAttribute id="LIFNR"/>
+        <viewAttribute id="ZLSCH"/>
+        <viewAttribute id="ZTERM"/>
         <viewAttribute id="BLART"/>
         <viewAttribute id="BLDAT"/>
         <viewAttribute id="BUDAT"/>
         <viewAttribute id="NETDT"/>
-        <viewAttribute id="ZLSCH"/>
-        <viewAttribute id="ZTERM"/>
+        <viewAttribute id="AUGDT"/>
         <viewAttribute id="XBLNR"/>
         <viewAttribute id="MONTH_ID"/>
-        <viewAttribute id="AUGDT"/>
         <viewAttribute id="DMSOL">
           <filter xsi:type="AccessControl:SingleValueFilter" operator="NL" including="false"/>
         </viewAttribute>
@@ -129,26 +118,22 @@
         <viewAttribute id="VAL_A_SCADERE_LC">
           <filter xsi:type="AccessControl:SingleValueFilter" operator="NL" including="false"/>
         </viewAttribute>
-        <viewAttribute id="PARTITA_ID"/>
       </viewAttributes>
       <calculatedViewAttributes/>
-      <input node="#CA_AGING_NONCOMULATIVA_S1">
+      <input node="#CA_AGEING_NONCOMULATIVA_S1">
+        <mapping xsi:type="Calculation:AttributeMapping" target="PARTITA_ID" source="PARTITA_ID"/>
         <mapping xsi:type="Calculation:AttributeMapping" target="BUKRS" source="BUKRS"/>
-        <mapping xsi:type="Calculation:AttributeMapping" target="FISCPER" source="FISCPER"/>
-        <mapping xsi:type="Calculation:AttributeMapping" target="BELNR" source="BELNR"/>
-        <mapping xsi:type="Calculation:AttributeMapping" target="BUZEI" source="BUZEI"/>
-        <mapping xsi:type="Calculation:AttributeMapping" target="UPOSZ" source="UPOSZ"/>
-        <mapping xsi:type="Calculation:AttributeMapping" target="LIFNR" source="LIFNR"/>
         <mapping xsi:type="Calculation:AttributeMapping" target="KUNNR" source="KUNNR"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="LIFNR" source="LIFNR"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="ZLSCH" source="ZLSCH"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="ZTERM" source="ZTERM"/>
         <mapping xsi:type="Calculation:AttributeMapping" target="BLART" source="BLART"/>
         <mapping xsi:type="Calculation:AttributeMapping" target="BLDAT" source="BLDAT"/>
         <mapping xsi:type="Calculation:AttributeMapping" target="BUDAT" source="BUDAT"/>
         <mapping xsi:type="Calculation:AttributeMapping" target="NETDT" source="NETDT"/>
-        <mapping xsi:type="Calculation:AttributeMapping" target="ZLSCH" source="ZLSCH"/>
-        <mapping xsi:type="Calculation:AttributeMapping" target="ZTERM" source="ZTERM"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="AUGDT" source="AUGDT"/>
         <mapping xsi:type="Calculation:AttributeMapping" target="XBLNR" source="XBLNR"/>
         <mapping xsi:type="Calculation:AttributeMapping" target="MONTH_ID" source="MONTH_ID"/>
-        <mapping xsi:type="Calculation:AttributeMapping" target="AUGDT" source="AUGDT"/>
         <mapping xsi:type="Calculation:AttributeMapping" target="DMSOL" source="DMSOL"/>
         <mapping xsi:type="Calculation:AttributeMapping" target="WRSHB" source="WRSHB"/>
         <mapping xsi:type="Calculation:AttributeMapping" target="VAL_FATTURATO" source="VAL_FATTURATO"/>
@@ -157,17 +142,12 @@
         <mapping xsi:type="Calculation:AttributeMapping" target="VAL_SCADUTO_LC" source="VAL_SCADUTO_LC"/>
         <mapping xsi:type="Calculation:AttributeMapping" target="VAL_A_SCADERE" source="VAL_A_SCADERE"/>
         <mapping xsi:type="Calculation:AttributeMapping" target="VAL_A_SCADERE_LC" source="VAL_A_SCADERE_LC"/>
-        <mapping xsi:type="Calculation:AttributeMapping" target="PARTITA_ID" source="PARTITA_ID"/>
       </input>
     </calculationView>
-    <calculationView xsi:type="Calculation:JoinView" id="Join_1" joinType="inner">
+    <calculationView xsi:type="Calculation:JoinView" id="Fatturato" joinType="inner">
       <descriptions/>
       <viewAttributes>
         <viewAttribute id="BUKRS"/>
-        <viewAttribute id="FISCPER"/>
-        <viewAttribute id="BELNR"/>
-        <viewAttribute id="BUZEI"/>
-        <viewAttribute id="UPOSZ"/>
         <viewAttribute id="KUNNR"/>
         <viewAttribute id="BLART"/>
         <viewAttribute id="BUDAT"/>
@@ -192,10 +172,6 @@
       <calculatedViewAttributes/>
       <input node="#Projection_1">
         <mapping xsi:type="Calculation:AttributeMapping" target="BUKRS" source="BUKRS"/>
-        <mapping xsi:type="Calculation:AttributeMapping" target="FISCPER" source="FISCPER"/>
-        <mapping xsi:type="Calculation:AttributeMapping" target="BELNR" source="BELNR"/>
-        <mapping xsi:type="Calculation:AttributeMapping" target="BUZEI" source="BUZEI"/>
-        <mapping xsi:type="Calculation:AttributeMapping" target="UPOSZ" source="UPOSZ"/>
         <mapping xsi:type="Calculation:AttributeMapping" target="KUNNR" source="KUNNR"/>
         <mapping xsi:type="Calculation:AttributeMapping" target="BLART" source="BLART"/>
         <mapping xsi:type="Calculation:AttributeMapping" target="BUDAT" source="BUDAT"/>
@@ -225,11 +201,10 @@
     <calculationView xsi:type="Calculation:AggregationView" id="Aggregation_1">
       <descriptions/>
       <viewAttributes>
+        <viewAttribute id="PARTITA_ID"/>
         <viewAttribute id="BUKRS"/>
-        <viewAttribute id="FISCPER"/>
-        <viewAttribute id="BELNR"/>
-        <viewAttribute id="BUZEI"/>
-        <viewAttribute id="UPOSZ"/>
+        <viewAttribute id="LIFNR"/>
+        <viewAttribute id="MONTH_ID"/>
         <viewAttribute id="KUNNR"/>
         <viewAttribute id="BLART"/>
         <viewAttribute id="BUDAT"/>
@@ -247,17 +222,13 @@
         <viewAttribute aggregationType="sum" id="VAL_SCADUTO_LC"/>
         <viewAttribute aggregationType="sum" id="VAL_A_SCADERE"/>
         <viewAttribute aggregationType="sum" id="VAL_A_SCADERE_LC"/>
-        <viewAttribute id="LIFNR"/>
-        <viewAttribute id="PARTITA_ID"/>
-        <viewAttribute id="MONTH_ID"/>
       </viewAttributes>
       <calculatedViewAttributes/>
-      <input node="#Join_1">
+      <input node="#Fatturato">
+        <mapping xsi:type="Calculation:AttributeMapping" target="PARTITA_ID" source="PARTITA_ID"/>
         <mapping xsi:type="Calculation:AttributeMapping" target="BUKRS" source="BUKRS"/>
-        <mapping xsi:type="Calculation:AttributeMapping" target="FISCPER" source="FISCPER"/>
-        <mapping xsi:type="Calculation:AttributeMapping" target="BELNR" source="BELNR"/>
-        <mapping xsi:type="Calculation:AttributeMapping" target="BUZEI" source="BUZEI"/>
-        <mapping xsi:type="Calculation:AttributeMapping" target="UPOSZ" source="UPOSZ"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="LIFNR" source="LIFNR"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="MONTH_ID" source="MONTH_ID"/>
         <mapping xsi:type="Calculation:AttributeMapping" target="KUNNR" source="KUNNR"/>
         <mapping xsi:type="Calculation:AttributeMapping" target="BLART" source="BLART"/>
         <mapping xsi:type="Calculation:AttributeMapping" target="BUDAT" source="BUDAT"/>
@@ -275,19 +246,15 @@
         <mapping xsi:type="Calculation:AttributeMapping" target="VAL_SCADUTO_LC" source="VAL_SCADUTO_LC"/>
         <mapping xsi:type="Calculation:AttributeMapping" target="VAL_A_SCADERE" source="VAL_A_SCADERE"/>
         <mapping xsi:type="Calculation:AttributeMapping" target="VAL_A_SCADERE_LC" source="VAL_A_SCADERE_LC"/>
-        <mapping xsi:type="Calculation:AttributeMapping" target="LIFNR" source="LIFNR"/>
-        <mapping xsi:type="Calculation:AttributeMapping" target="PARTITA_ID" source="PARTITA_ID"/>
-        <mapping xsi:type="Calculation:AttributeMapping" target="MONTH_ID" source="MONTH_ID"/>
       </input>
     </calculationView>
     <calculationView xsi:type="Calculation:UnionView" id="Union_1">
       <descriptions/>
       <viewAttributes>
+        <viewAttribute id="PARTITA_ID"/>
         <viewAttribute id="BUKRS"/>
-        <viewAttribute id="FISCPER"/>
-        <viewAttribute id="BELNR"/>
-        <viewAttribute id="BUZEI"/>
-        <viewAttribute id="UPOSZ"/>
+        <viewAttribute id="LIFNR"/>
+        <viewAttribute id="MONTH_ID"/>
         <viewAttribute id="KUNNR"/>
         <viewAttribute id="BLART"/>
         <viewAttribute id="BUDAT"/>
@@ -305,17 +272,13 @@
         <viewAttribute id="VAL_SCADUTO_LC"/>
         <viewAttribute id="VAL_A_SCADERE"/>
         <viewAttribute id="VAL_A_SCADERE_LC"/>
-        <viewAttribute id="LIFNR"/>
-        <viewAttribute id="PARTITA_ID"/>
-        <viewAttribute id="MONTH_ID"/>
       </viewAttributes>
       <calculatedViewAttributes/>
       <input emptyUnionBehavior="NO_ROW" node="#Aggregation_1">
+        <mapping xsi:type="Calculation:AttributeMapping" target="PARTITA_ID" source="PARTITA_ID"/>
         <mapping xsi:type="Calculation:AttributeMapping" target="BUKRS" source="BUKRS"/>
-        <mapping xsi:type="Calculation:AttributeMapping" target="FISCPER" source="FISCPER"/>
-        <mapping xsi:type="Calculation:AttributeMapping" target="BELNR" source="BELNR"/>
-        <mapping xsi:type="Calculation:AttributeMapping" target="BUZEI" source="BUZEI"/>
-        <mapping xsi:type="Calculation:AttributeMapping" target="UPOSZ" source="UPOSZ"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="LIFNR" source="LIFNR"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="MONTH_ID" source="MONTH_ID"/>
         <mapping xsi:type="Calculation:AttributeMapping" target="KUNNR" source="KUNNR"/>
         <mapping xsi:type="Calculation:AttributeMapping" target="BLART" source="BLART"/>
         <mapping xsi:type="Calculation:AttributeMapping" target="BUDAT" source="BUDAT"/>
@@ -333,16 +296,12 @@
         <mapping xsi:type="Calculation:AttributeMapping" target="VAL_SCADUTO_LC" source="VAL_SCADUTO_LC"/>
         <mapping xsi:type="Calculation:AttributeMapping" target="VAL_A_SCADERE" source="VAL_A_SCADERE"/>
         <mapping xsi:type="Calculation:AttributeMapping" target="VAL_A_SCADERE_LC" source="VAL_A_SCADERE_LC"/>
-        <mapping xsi:type="Calculation:AttributeMapping" target="LIFNR" source="LIFNR"/>
-        <mapping xsi:type="Calculation:AttributeMapping" target="PARTITA_ID" source="PARTITA_ID"/>
-        <mapping xsi:type="Calculation:AttributeMapping" target="MONTH_ID" source="MONTH_ID"/>
       </input>
       <input emptyUnionBehavior="NO_ROW" node="#Projection_2">
+        <mapping xsi:type="Calculation:AttributeMapping" target="PARTITA_ID" source="PARTITA_ID"/>
         <mapping xsi:type="Calculation:AttributeMapping" target="BUKRS" source="BUKRS"/>
-        <mapping xsi:type="Calculation:AttributeMapping" target="FISCPER" source="FISCPER"/>
-        <mapping xsi:type="Calculation:AttributeMapping" target="BELNR" source="BELNR"/>
-        <mapping xsi:type="Calculation:AttributeMapping" target="BUZEI" source="BUZEI"/>
-        <mapping xsi:type="Calculation:AttributeMapping" target="UPOSZ" source="UPOSZ"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="LIFNR" source="LIFNR"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="MONTH_ID" source="MONTH_ID"/>
         <mapping xsi:type="Calculation:AttributeMapping" target="KUNNR" source="KUNNR"/>
         <mapping xsi:type="Calculation:AttributeMapping" target="BLART" source="BLART"/>
         <mapping xsi:type="Calculation:AttributeMapping" target="BUDAT" source="BUDAT"/>
@@ -360,82 +319,63 @@
         <mapping xsi:type="Calculation:AttributeMapping" target="VAL_SCADUTO_LC" source="VAL_SCADUTO_LC"/>
         <mapping xsi:type="Calculation:AttributeMapping" target="VAL_A_SCADERE" source="VAL_A_SCADERE"/>
         <mapping xsi:type="Calculation:AttributeMapping" target="VAL_A_SCADERE_LC" source="VAL_A_SCADERE_LC"/>
-        <mapping xsi:type="Calculation:AttributeMapping" target="LIFNR" source="LIFNR"/>
-        <mapping xsi:type="Calculation:AttributeMapping" target="PARTITA_ID" source="PARTITA_ID"/>
-        <mapping xsi:type="Calculation:AttributeMapping" target="MONTH_ID" source="MONTH_ID"/>
       </input>
     </calculationView>
   </calculationViews>
   <logicalModel id="Union_1">
     <descriptions/>
     <attributes>
-      <attribute id="PARTITA_ID" order="1" semanticType="empty" attributeHierarchyActive="false" displayAttribute="false">
+      <attribute id="PARTITA_ID" order="1" attributeHierarchyActive="false" displayAttribute="false">
         <descriptions defaultDescription="PARTITA_ID"/>
         <keyMapping columnObjectName="Union_1" columnName="PARTITA_ID"/>
       </attribute>
-      <attribute id="MONTH_ID" order="2" attributeHierarchyActive="false" displayAttribute="false">
-        <descriptions defaultDescription="MONTH_ID"/>
-        <keyMapping columnObjectName="Union_1" columnName="MONTH_ID"/>
-      </attribute>
-      <attribute id="BUKRS" order="3" attributeHierarchyActive="false" displayAttribute="false">
+      <attribute id="BUKRS" order="2" attributeHierarchyActive="false" displayAttribute="false">
         <descriptions defaultDescription="BUKRS"/>
         <keyMapping columnObjectName="Union_1" columnName="BUKRS"/>
       </attribute>
-      <attribute id="FISCPER" order="4" attributeHierarchyActive="false" displayAttribute="false">
-        <descriptions defaultDescription="FISCPER"/>
-        <keyMapping columnObjectName="Union_1" columnName="FISCPER"/>
+      <attribute id="LIFNR" order="3" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="LIFNR"/>
+        <keyMapping columnObjectName="Union_1" columnName="LIFNR"/>
       </attribute>
-      <attribute id="BELNR" order="5" attributeHierarchyActive="false" displayAttribute="false">
-        <descriptions defaultDescription="BELNR"/>
-        <keyMapping columnObjectName="Union_1" columnName="BELNR"/>
+      <attribute id="MONTH_ID" order="4" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="MONTH_ID"/>
+        <keyMapping columnObjectName="Union_1" columnName="MONTH_ID"/>
       </attribute>
-      <attribute id="BUZEI" order="6" attributeHierarchyActive="false" displayAttribute="false">
-        <descriptions defaultDescription="BUZEI"/>
-        <keyMapping columnObjectName="Union_1" columnName="BUZEI"/>
-      </attribute>
-      <attribute id="UPOSZ" order="7" attributeHierarchyActive="false" displayAttribute="false">
-        <descriptions defaultDescription="UPOSZ"/>
-        <keyMapping columnObjectName="Union_1" columnName="UPOSZ"/>
-      </attribute>
-      <attribute id="KUNNR" order="8" attributeHierarchyActive="false" displayAttribute="false">
+      <attribute id="KUNNR" order="5" attributeHierarchyActive="false" displayAttribute="false">
         <descriptions defaultDescription="KUNNR"/>
         <keyMapping columnObjectName="Union_1" columnName="KUNNR"/>
       </attribute>
-      <attribute id="BLART" order="9" attributeHierarchyActive="false" displayAttribute="false">
+      <attribute id="BLART" order="6" attributeHierarchyActive="false" displayAttribute="false">
         <descriptions defaultDescription="BLART"/>
         <keyMapping columnObjectName="Union_1" columnName="BLART"/>
       </attribute>
-      <attribute id="BUDAT" order="10" attributeHierarchyActive="false" displayAttribute="false">
+      <attribute id="BUDAT" order="7" attributeHierarchyActive="false" displayAttribute="false">
         <descriptions defaultDescription="BUDAT"/>
         <keyMapping columnObjectName="Union_1" columnName="BUDAT"/>
       </attribute>
-      <attribute id="NETDT" order="11" attributeHierarchyActive="false" displayAttribute="false">
+      <attribute id="NETDT" order="8" attributeHierarchyActive="false" displayAttribute="false">
         <descriptions defaultDescription="NETDT"/>
         <keyMapping columnObjectName="Union_1" columnName="NETDT"/>
       </attribute>
-      <attribute id="ZLSCH" order="12" attributeHierarchyActive="false" displayAttribute="false">
+      <attribute id="ZLSCH" order="9" attributeHierarchyActive="false" displayAttribute="false">
         <descriptions defaultDescription="ZLSCH"/>
         <keyMapping columnObjectName="Union_1" columnName="ZLSCH"/>
       </attribute>
-      <attribute id="ZTERM" order="13" attributeHierarchyActive="false" displayAttribute="false">
+      <attribute id="ZTERM" order="10" attributeHierarchyActive="false" displayAttribute="false">
         <descriptions defaultDescription="ZTERM"/>
         <keyMapping columnObjectName="Union_1" columnName="ZTERM"/>
       </attribute>
-      <attribute id="XBLNR" order="14" attributeHierarchyActive="false" displayAttribute="false">
+      <attribute id="XBLNR" order="11" attributeHierarchyActive="false" displayAttribute="false">
         <descriptions defaultDescription="XBLNR"/>
         <keyMapping columnObjectName="Union_1" columnName="XBLNR"/>
       </attribute>
-      <attribute id="AUGDT" order="15" attributeHierarchyActive="false" displayAttribute="false">
+      <attribute id="AUGDT" order="12" attributeHierarchyActive="false" displayAttribute="false">
         <descriptions defaultDescription="AUGDT"/>
         <keyMapping columnObjectName="Union_1" columnName="AUGDT"/>
       </attribute>
-      <attribute id="BLDAT" order="16" attributeHierarchyActive="false" displayAttribute="false">
+      <attribute id="BLDAT" order="13" attributeHierarchyActive="false" displayAttribute="false">
         <descriptions defaultDescription="BLDAT"/>
         <keyMapping columnObjectName="Union_1" columnName="BLDAT"/>
-      </attribute>
-      <attribute id="LIFNR" order="17" attributeHierarchyActive="false" displayAttribute="false">
-        <descriptions defaultDescription="LIFNR"/>
-        <keyMapping columnObjectName="Union_1" columnName="LIFNR"/>
       </attribute>
     </attributes>
     <calculatedAttributes/>
@@ -447,35 +387,35 @@
       </layout>
     </privateDataFoundation>
     <baseMeasures>
-      <measure id="DMSOL" order="18" aggregationType="sum" measureType="simple">
+      <measure id="DMSOL" order="14" aggregationType="sum" measureType="simple">
         <descriptions defaultDescription="DMSOL"/>
         <measureMapping columnObjectName="Union_1" columnName="DMSOL"/>
       </measure>
-      <measure id="WRSHB" order="19" aggregationType="sum" measureType="simple">
+      <measure id="WRSHB" order="15" aggregationType="sum" measureType="simple">
         <descriptions defaultDescription="WRSHB"/>
         <measureMapping columnObjectName="Union_1" columnName="WRSHB"/>
       </measure>
-      <measure id="VAL_FATTURATO" order="20" aggregationType="sum" measureType="simple">
+      <measure id="VAL_FATTURATO" order="16" aggregationType="sum" measureType="simple">
         <descriptions defaultDescription="VAL_FATTURATO"/>
         <measureMapping columnObjectName="Union_1" columnName="VAL_FATTURATO"/>
       </measure>
-      <measure id="VAL_FATTURATO_LC" order="21" aggregationType="sum" measureType="simple">
+      <measure id="VAL_FATTURATO_LC" order="17" aggregationType="sum" measureType="simple">
         <descriptions defaultDescription="VAL_FATTURATO_LC"/>
         <measureMapping columnObjectName="Union_1" columnName="VAL_FATTURATO_LC"/>
       </measure>
-      <measure id="VAL_SCADUTO" order="22" aggregationType="sum" measureType="simple">
+      <measure id="VAL_SCADUTO" order="18" aggregationType="sum" measureType="simple">
         <descriptions defaultDescription="VAL_SCADUTO"/>
         <measureMapping columnObjectName="Union_1" columnName="VAL_SCADUTO"/>
       </measure>
-      <measure id="VAL_SCADUTO_LC" order="23" aggregationType="sum" measureType="simple">
+      <measure id="VAL_SCADUTO_LC" order="19" aggregationType="sum" measureType="simple">
         <descriptions defaultDescription="VAL_SCADUTO_LC"/>
         <measureMapping columnObjectName="Union_1" columnName="VAL_SCADUTO_LC"/>
       </measure>
-      <measure id="VAL_A_SCADERE" order="24" aggregationType="sum" measureType="simple">
+      <measure id="VAL_A_SCADERE" order="20" aggregationType="sum" measureType="simple">
         <descriptions defaultDescription="VAL_A_SCADERE"/>
         <measureMapping columnObjectName="Union_1" columnName="VAL_A_SCADERE"/>
       </measure>
-      <measure id="VAL_A_SCADERE_LC" order="25" aggregationType="sum" measureType="simple">
+      <measure id="VAL_A_SCADERE_LC" order="21" aggregationType="sum" measureType="simple">
         <descriptions defaultDescription="VAL_A_SCADERE_LC"/>
         <measureMapping columnObjectName="Union_1" columnName="VAL_A_SCADERE_LC"/>
       </measure>
@@ -498,11 +438,11 @@
         <upperLeftCorner x="176" y="281"/>
         <rectangleSize height="-1" width="-1"/>
       </shape>
-      <shape expanded="true" modelObjectName="Join_1" modelObjectNameSpace="CalculationView">
+      <shape expanded="true" modelObjectName="Fatturato" modelObjectNameSpace="CalculationView">
         <upperLeftCorner x="22" y="359"/>
         <rectangleSize height="-1" width="-1"/>
       </shape>
-      <shape expanded="true" modelObjectName="Aggregation_1" modelObjectNameSpace="CalculationView">
+      <shape expanded="false" modelObjectName="Aggregation_1" modelObjectNameSpace="CalculationView">
         <upperLeftCorner x="22" y="281"/>
         <rectangleSize height="-1" width="-1"/>
       </shape>

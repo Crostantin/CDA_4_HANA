@@ -5,13 +5,13 @@
   <variableMappings/>
   <informationModelLayout relativeWidthScenario="39"/>
   <dataSources>
-    <DataSource id="CA_AGING_NONCOMULATIVA_S2" type="CALCULATION_VIEW">
+    <DataSource id="CA_AGEING_NONCOMULATIVA_S2" type="CALCULATION_VIEW">
       <viewAttributes allViewAttributes="true"/>
-      <resourceUri>/CDA_4_HANA.Aging.Cliente/calculationviews/CA_AGING_NONCOMULATIVA_S2</resourceUri>
+      <resourceUri>/CDA_4_HANA.Ageing.Cliente.Views/calculationviews/CA_AGEING_NONCOMULATIVA_S2</resourceUri>
     </DataSource>
-    <DataSource id="CA_AGING_NONCOMULATIVA_S3_ROLLING" type="CALCULATION_VIEW">
+    <DataSource id="CA_AGEING_NONCOMULATIVA_S3_ROLLING" type="CALCULATION_VIEW">
       <viewAttributes allViewAttributes="true"/>
-      <resourceUri>/CDA_4_HANA.Aging.Cliente/calculationviews/CA_AGING_NONCOMULATIVA_S3_ROLLING</resourceUri>
+      <resourceUri>/CDA_4_HANA.Ageing.Cliente.Views/calculationviews/CA_AGEING_NONCOMULATIVA_S3_ROLLING</resourceUri>
     </DataSource>
   </dataSources>
   <calculationViews>
@@ -19,10 +19,6 @@
       <descriptions/>
       <viewAttributes>
         <viewAttribute id="BUKRS"/>
-        <viewAttribute id="FISCPER"/>
-        <viewAttribute id="BELNR"/>
-        <viewAttribute id="BUZEI"/>
-        <viewAttribute id="UPOSZ"/>
         <viewAttribute id="KUNNR"/>
         <viewAttribute id="BLART"/>
         <viewAttribute id="BUDAT"/>
@@ -52,12 +48,8 @@
           <formula>null</formula>
         </calculatedViewAttribute>
       </calculatedViewAttributes>
-      <input node="#CA_AGING_NONCOMULATIVA_S2">
+      <input node="#CA_AGEING_NONCOMULATIVA_S2">
         <mapping xsi:type="Calculation:AttributeMapping" target="BUKRS" source="BUKRS"/>
-        <mapping xsi:type="Calculation:AttributeMapping" target="FISCPER" source="FISCPER"/>
-        <mapping xsi:type="Calculation:AttributeMapping" target="BELNR" source="BELNR"/>
-        <mapping xsi:type="Calculation:AttributeMapping" target="BUZEI" source="BUZEI"/>
-        <mapping xsi:type="Calculation:AttributeMapping" target="UPOSZ" source="UPOSZ"/>
         <mapping xsi:type="Calculation:AttributeMapping" target="KUNNR" source="KUNNR"/>
         <mapping xsi:type="Calculation:AttributeMapping" target="BLART" source="BLART"/>
         <mapping xsi:type="Calculation:AttributeMapping" target="BUDAT" source="BUDAT"/>
@@ -84,10 +76,6 @@
       <descriptions/>
       <viewAttributes>
         <viewAttribute id="BUKRS"/>
-        <viewAttribute id="FISCPER"/>
-        <viewAttribute id="BELNR"/>
-        <viewAttribute id="BUZEI"/>
-        <viewAttribute id="UPOSZ"/>
         <viewAttribute id="KUNNR"/>
         <viewAttribute id="BLART"/>
         <viewAttribute id="BUDAT"/>
@@ -117,12 +105,8 @@
           <formula>null</formula>
         </calculatedViewAttribute>
       </calculatedViewAttributes>
-      <input node="#CA_AGING_NONCOMULATIVA_S3_ROLLING">
+      <input node="#CA_AGEING_NONCOMULATIVA_S3_ROLLING">
         <mapping xsi:type="Calculation:AttributeMapping" target="BUKRS" source="BUKRS"/>
-        <mapping xsi:type="Calculation:AttributeMapping" target="FISCPER" source="FISCPER"/>
-        <mapping xsi:type="Calculation:AttributeMapping" target="BELNR" source="BELNR"/>
-        <mapping xsi:type="Calculation:AttributeMapping" target="BUZEI" source="BUZEI"/>
-        <mapping xsi:type="Calculation:AttributeMapping" target="UPOSZ" source="UPOSZ"/>
         <mapping xsi:type="Calculation:AttributeMapping" target="KUNNR" source="KUNNR"/>
         <mapping xsi:type="Calculation:AttributeMapping" target="BLART" source="BLART"/>
         <mapping xsi:type="Calculation:AttributeMapping" target="BUDAT" source="BUDAT"/>
@@ -149,10 +133,6 @@
       <descriptions/>
       <viewAttributes>
         <viewAttribute id="BUKRS"/>
-        <viewAttribute id="FISCPER"/>
-        <viewAttribute id="BELNR"/>
-        <viewAttribute id="BUZEI"/>
-        <viewAttribute id="UPOSZ"/>
         <viewAttribute id="KUNNR"/>
         <viewAttribute id="BLART"/>
         <viewAttribute id="BUDAT"/>
@@ -179,10 +159,6 @@
       <calculatedViewAttributes/>
       <input emptyUnionBehavior="NO_ROW" node="#Projection_1">
         <mapping xsi:type="Calculation:AttributeMapping" target="BUKRS" source="BUKRS"/>
-        <mapping xsi:type="Calculation:AttributeMapping" target="FISCPER" source="FISCPER"/>
-        <mapping xsi:type="Calculation:AttributeMapping" target="BELNR" source="BELNR"/>
-        <mapping xsi:type="Calculation:AttributeMapping" target="BUZEI" source="BUZEI"/>
-        <mapping xsi:type="Calculation:AttributeMapping" target="UPOSZ" source="UPOSZ"/>
         <mapping xsi:type="Calculation:AttributeMapping" target="KUNNR" source="KUNNR"/>
         <mapping xsi:type="Calculation:AttributeMapping" target="BLART" source="BLART"/>
         <mapping xsi:type="Calculation:AttributeMapping" target="BUDAT" source="BUDAT"/>
@@ -208,10 +184,6 @@
       </input>
       <input emptyUnionBehavior="NO_ROW" node="#Projection_2">
         <mapping xsi:type="Calculation:AttributeMapping" target="BUKRS" source="BUKRS"/>
-        <mapping xsi:type="Calculation:AttributeMapping" target="FISCPER" source="FISCPER"/>
-        <mapping xsi:type="Calculation:AttributeMapping" target="BELNR" source="BELNR"/>
-        <mapping xsi:type="Calculation:AttributeMapping" target="BUZEI" source="BUZEI"/>
-        <mapping xsi:type="Calculation:AttributeMapping" target="UPOSZ" source="UPOSZ"/>
         <mapping xsi:type="Calculation:AttributeMapping" target="KUNNR" source="KUNNR"/>
         <mapping xsi:type="Calculation:AttributeMapping" target="BLART" source="BLART"/>
         <mapping xsi:type="Calculation:AttributeMapping" target="BUDAT" source="BUDAT"/>
@@ -248,63 +220,47 @@
         <descriptions defaultDescription="BUKRS"/>
         <keyMapping columnObjectName="Union_1" columnName="BUKRS"/>
       </attribute>
-      <attribute id="FISCPER" order="3" attributeHierarchyActive="false" displayAttribute="false">
-        <descriptions defaultDescription="FISCPER"/>
-        <keyMapping columnObjectName="Union_1" columnName="FISCPER"/>
-      </attribute>
-      <attribute id="BELNR" order="4" attributeHierarchyActive="false" displayAttribute="false">
-        <descriptions defaultDescription="BELNR"/>
-        <keyMapping columnObjectName="Union_1" columnName="BELNR"/>
-      </attribute>
-      <attribute id="BUZEI" order="5" attributeHierarchyActive="false" displayAttribute="false">
-        <descriptions defaultDescription="BUZEI"/>
-        <keyMapping columnObjectName="Union_1" columnName="BUZEI"/>
-      </attribute>
-      <attribute id="UPOSZ" order="6" attributeHierarchyActive="false" displayAttribute="false">
-        <descriptions defaultDescription="UPOSZ"/>
-        <keyMapping columnObjectName="Union_1" columnName="UPOSZ"/>
-      </attribute>
-      <attribute id="KUNNR" order="7" attributeHierarchyActive="false" displayAttribute="false">
+      <attribute id="KUNNR" order="3" attributeHierarchyActive="false" displayAttribute="false">
         <descriptions defaultDescription="KUNNR"/>
         <keyMapping columnObjectName="Union_1" columnName="KUNNR"/>
       </attribute>
-      <attribute id="BLART" order="8" attributeHierarchyActive="false" displayAttribute="false">
+      <attribute id="BLART" order="4" attributeHierarchyActive="false" displayAttribute="false">
         <descriptions defaultDescription="BLART"/>
         <keyMapping columnObjectName="Union_1" columnName="BLART"/>
       </attribute>
-      <attribute id="BUDAT" order="9" attributeHierarchyActive="false" displayAttribute="false">
+      <attribute id="BUDAT" order="5" attributeHierarchyActive="false" displayAttribute="false">
         <descriptions defaultDescription="BUDAT"/>
         <keyMapping columnObjectName="Union_1" columnName="BUDAT"/>
       </attribute>
-      <attribute id="NETDT" order="10" attributeHierarchyActive="false" displayAttribute="false">
+      <attribute id="NETDT" order="6" attributeHierarchyActive="false" displayAttribute="false">
         <descriptions defaultDescription="NETDT"/>
         <keyMapping columnObjectName="Union_1" columnName="NETDT"/>
       </attribute>
-      <attribute id="ZLSCH" order="11" attributeHierarchyActive="false" displayAttribute="false">
+      <attribute id="ZLSCH" order="7" attributeHierarchyActive="false" displayAttribute="false">
         <descriptions defaultDescription="ZLSCH"/>
         <keyMapping columnObjectName="Union_1" columnName="ZLSCH"/>
       </attribute>
-      <attribute id="ZTERM" order="12" attributeHierarchyActive="false" displayAttribute="false">
+      <attribute id="ZTERM" order="8" attributeHierarchyActive="false" displayAttribute="false">
         <descriptions defaultDescription="ZTERM"/>
         <keyMapping columnObjectName="Union_1" columnName="ZTERM"/>
       </attribute>
-      <attribute id="XBLNR" order="13" attributeHierarchyActive="false" displayAttribute="false">
+      <attribute id="XBLNR" order="9" attributeHierarchyActive="false" displayAttribute="false">
         <descriptions defaultDescription="XBLNR"/>
         <keyMapping columnObjectName="Union_1" columnName="XBLNR"/>
       </attribute>
-      <attribute id="AUGDT" order="14" attributeHierarchyActive="false" displayAttribute="false">
+      <attribute id="AUGDT" order="10" attributeHierarchyActive="false" displayAttribute="false">
         <descriptions defaultDescription="AUGDT"/>
         <keyMapping columnObjectName="Union_1" columnName="AUGDT"/>
       </attribute>
-      <attribute id="BLDAT" order="15" attributeHierarchyActive="false" displayAttribute="false">
+      <attribute id="BLDAT" order="11" attributeHierarchyActive="false" displayAttribute="false">
         <descriptions defaultDescription="BLDAT"/>
         <keyMapping columnObjectName="Union_1" columnName="BLDAT"/>
       </attribute>
-      <attribute id="LIFNR" order="16" attributeHierarchyActive="false" displayAttribute="false">
+      <attribute id="LIFNR" order="12" attributeHierarchyActive="false" displayAttribute="false">
         <descriptions defaultDescription="LIFNR"/>
         <keyMapping columnObjectName="Union_1" columnName="LIFNR"/>
       </attribute>
-      <attribute id="MONTH_ID" order="17" attributeHierarchyActive="false" displayAttribute="false">
+      <attribute id="MONTH_ID" order="13" attributeHierarchyActive="false" displayAttribute="false">
         <descriptions defaultDescription="MONTH_ID"/>
         <keyMapping columnObjectName="Union_1" columnName="MONTH_ID"/>
       </attribute>
@@ -318,43 +274,43 @@
       </layout>
     </privateDataFoundation>
     <baseMeasures>
-      <measure id="DMSOL" order="18" aggregationType="sum" engineAggregation="count" measureType="simple">
+      <measure id="DMSOL" order="14" aggregationType="sum" engineAggregation="count" measureType="simple">
         <descriptions defaultDescription="DMSOL"/>
         <measureMapping columnObjectName="Union_1" columnName="DMSOL"/>
       </measure>
-      <measure id="WRSHB" order="19" aggregationType="sum" engineAggregation="count" measureType="simple">
+      <measure id="WRSHB" order="15" aggregationType="sum" engineAggregation="count" measureType="simple">
         <descriptions defaultDescription="WRSHB"/>
         <measureMapping columnObjectName="Union_1" columnName="WRSHB"/>
       </measure>
-      <measure id="VAL_SCADUTO" order="20" aggregationType="sum" engineAggregation="count" measureType="simple">
+      <measure id="VAL_SCADUTO" order="16" aggregationType="sum" engineAggregation="count" measureType="simple">
         <descriptions defaultDescription="VAL_SCADUTO"/>
         <measureMapping columnObjectName="Union_1" columnName="VAL_SCADUTO"/>
       </measure>
-      <measure id="VAL_SCADUTO_LC" order="21" aggregationType="sum" engineAggregation="count" measureType="simple">
+      <measure id="VAL_SCADUTO_LC" order="17" aggregationType="sum" engineAggregation="count" measureType="simple">
         <descriptions defaultDescription="VAL_SCADUTO_LC"/>
         <measureMapping columnObjectName="Union_1" columnName="VAL_SCADUTO_LC"/>
       </measure>
-      <measure id="VAL_A_SCADERE" order="22" aggregationType="sum" engineAggregation="count" measureType="simple">
+      <measure id="VAL_A_SCADERE" order="18" aggregationType="sum" engineAggregation="count" measureType="simple">
         <descriptions defaultDescription="VAL_A_SCADERE"/>
         <measureMapping columnObjectName="Union_1" columnName="VAL_A_SCADERE"/>
       </measure>
-      <measure id="VAL_A_SCADERE_LC" order="23" aggregationType="sum" engineAggregation="count" measureType="simple">
+      <measure id="VAL_A_SCADERE_LC" order="19" aggregationType="sum" engineAggregation="count" measureType="simple">
         <descriptions defaultDescription="VAL_A_SCADERE_LC"/>
         <measureMapping columnObjectName="Union_1" columnName="VAL_A_SCADERE_LC"/>
       </measure>
-      <measure id="VAL_FATTURATO" order="24" aggregationType="sum" engineAggregation="count" measureType="simple">
+      <measure id="VAL_FATTURATO" order="20" aggregationType="sum" engineAggregation="count" measureType="simple">
         <descriptions defaultDescription="VAL_FATTURATO"/>
         <measureMapping columnObjectName="Union_1" columnName="VAL_FATTURATO"/>
       </measure>
-      <measure id="VAL_FATTURATO_LC" order="25" aggregationType="sum" engineAggregation="count" measureType="simple">
+      <measure id="VAL_FATTURATO_LC" order="21" aggregationType="sum" engineAggregation="count" measureType="simple">
         <descriptions defaultDescription="VAL_FATTURATO_LC"/>
         <measureMapping columnObjectName="Union_1" columnName="VAL_FATTURATO_LC"/>
       </measure>
-      <measure id="VAL_FATTURATO_12M" order="26" aggregationType="sum" engineAggregation="count" measureType="simple">
+      <measure id="VAL_FATTURATO_12M" order="22" aggregationType="sum" engineAggregation="count" measureType="simple">
         <descriptions defaultDescription="VAL_FATTURATO_12M"/>
         <measureMapping columnObjectName="Union_1" columnName="VAL_FATTURATO_12M"/>
       </measure>
-      <measure id="VAL_FATTURATO_LC_12M" order="27" aggregationType="sum" engineAggregation="count" measureType="simple">
+      <measure id="VAL_FATTURATO_LC_12M" order="23" aggregationType="sum" engineAggregation="count" measureType="simple">
         <descriptions defaultDescription="VAL_FATTURATO_LC_12M"/>
         <measureMapping columnObjectName="Union_1" columnName="VAL_FATTURATO_LC_12M"/>
       </measure>

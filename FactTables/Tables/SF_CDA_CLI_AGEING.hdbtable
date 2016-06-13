@@ -64,4 +64,4 @@ table.columns = [
 	 {name="VAL_INSOLUTI"; sqlType=DECIMAL; precision=13; scale=2;  },
 	 {name="VAL_INSOLUTI_LC"; sqlType=DECIMAL; precision=13; scale=2;  }
 ];
-table.primaryKey.pkcolumns=["BUKRS", "FISCPER", "BELNR", "BUZEI", "UPOSZ" ];
+table.primaryKey.pkcolumns=["PARTITA_ID", "BUKRS", "FISCPER", "BELNR", "BUZEI", "UPOSZ" ];

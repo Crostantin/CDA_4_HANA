@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<Calculation:scenario xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:Calculation="http://www.sap.com/ndb/BiModelCalculation.ecore" schemaVersion="2.3" id="CA_SF_CDA_AGEING_CLI" applyPrivilegeType="ANALYTIC_PRIVILEGE" checkAnalyticPrivileges="true" defaultClient="$$client$$" defaultLanguage="$$language$$" hierarchiesSQLEnabled="false" translationRelevant="true" visibility="reportingEnabled" calculationScenarioType="TREE_BASED" dataCategory="CUBE" enforceSqlExecution="false" executionSemantic="UNDEFINED">
+<Calculation:scenario xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:Calculation="http://www.sap.com/ndb/BiModelCalculation.ecore" schemaVersion="2.3" id="CA_SF_CDA_CLI_AGEING" applyPrivilegeType="ANALYTIC_PRIVILEGE" checkAnalyticPrivileges="true" defaultClient="$$client$$" defaultLanguage="$$language$$" hierarchiesSQLEnabled="false" translationRelevant="true" visibility="reportingEnabled" calculationScenarioType="TREE_BASED" dataCategory="CUBE" enforceSqlExecution="false" executionSemantic="UNDEFINED">
   <descriptions defaultDescription="CA_SF_CDA_AGEING_CLI"/>
+  <defaultSchema schemaName="CDA_4_HANA"/>
   <localVariables/>
   <variableMappings/>
   <informationModelLayout relativeWidthScenario="27"/>
@@ -259,33 +260,41 @@
         <descriptions defaultDescription="BELNR"/>
         <keyMapping columnObjectName="Projection_1" columnName="BELNR"/>
       </attribute>
+      <attribute id="FISCPER" order="54" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="FISCPER"/>
+        <keyMapping columnObjectName="Projection_1" columnName="FISCPER"/>
+      </attribute>
       <attribute id="BUDAT$local">
-        <descriptions defaultDescription="BUDAT"/>
+        <descriptions/>
         <keyMapping columnObjectName="Projection_1" columnName="BUDAT"/>
       </attribute>
       <attribute id="ZLSPR$local">
-        <descriptions defaultDescription="ZLSPR"/>
+        <descriptions/>
         <keyMapping columnObjectName="Projection_1" columnName="ZLSPR"/>
       </attribute>
       <attribute id="ZTERM$local">
-        <descriptions defaultDescription="ZTERM"/>
+        <descriptions/>
         <keyMapping columnObjectName="Projection_1" columnName="ZTERM"/>
       </attribute>
       <attribute id="KUNNR$local">
-        <descriptions defaultDescription="KUNNR"/>
+        <descriptions/>
         <keyMapping columnObjectName="Projection_1" columnName="KUNNR"/>
       </attribute>
       <attribute id="BUKRS$local">
-        <descriptions defaultDescription="BUKRS"/>
+        <descriptions/>
         <keyMapping columnObjectName="Projection_1" columnName="BUKRS"/>
       </attribute>
       <attribute id="LIFNR$local">
-        <descriptions defaultDescription="LIFNR"/>
+        <descriptions/>
         <keyMapping columnObjectName="Projection_1" columnName="LIFNR"/>
       </attribute>
       <attribute id="NETDT$local">
-        <descriptions defaultDescription="NETDT"/>
+        <descriptions/>
         <keyMapping columnObjectName="Projection_1" columnName="NETDT"/>
+      </attribute>
+      <attribute id="PARTITA_ID$local">
+        <descriptions/>
+        <keyMapping columnObjectName="Projection_1" columnName="PARTITA_ID"/>
       </attribute>
     </attributes>
     <calculatedAttributes/>
@@ -397,14 +406,6 @@
         <descriptions defaultDescription="BUZEI"/>
         <measureMapping columnObjectName="Projection_1" columnName="BUZEI"/>
       </measure>
-      <measure id="FISCPER" order="54" aggregationType="sum" measureType="simple">
-        <descriptions defaultDescription="FISCPER"/>
-        <measureMapping columnObjectName="Projection_1" columnName="FISCPER"/>
-      </measure>
-      <measure id="PARTITA_ID" order="55" aggregationType="sum" measureType="simple">
-        <descriptions defaultDescription="PARTITA_ID"/>
-        <measureMapping columnObjectName="Projection_1" columnName="PARTITA_ID"/>
-      </measure>
     </baseMeasures>
     <calculatedMeasures/>
     <restrictedMeasures/>
@@ -417,7 +418,7 @@
         <associatedAttributeNames>
           <attributeName>DAY_ID</attributeName>
         </associatedAttributeNames>
-        <properties joinOperator="Equal" joinType="inner"/>
+        <properties joinOperator="Equal" joinType="leftOuter"/>
         <associatedAttributeFeatures/>
       </logicalJoin>
       <logicalJoin associatedObjectUri="/CDA_4_HANA.Views.Pagamenti/calculationviews/S_CDA_CLI_MODALITA_PAGAMENTO" languageAttributeName="MOD_PAG_LANG_ID">
@@ -530,38 +531,64 @@
           <attributeReference alias="CA_S_TIME_DAY_SCADENZA_DAY_IN_MONTH" attributeName="DAY_IN_MONTH"/>
         </associatedAttributeFeatures>
       </logicalJoin>
+      <logicalJoin associatedObjectUri="/CDA_4_HANA.Views.Societa/calculationviews/CA_CDA_SOCIETA">
+        <attributes>
+          <attributeRef>#BUKRS$local</attributeRef>
+        </attributes>
+        <associatedAttributeNames>
+          <attributeName>SOCIETA_ID</attributeName>
+        </associatedAttributeNames>
+        <properties joinOperator="Equal" joinType="referential"/>
+        <associatedAttributeFeatures/>
+      </logicalJoin>
+      <logicalJoin associatedObjectUri="/CDA_4_HANA.Views.Documento/calculationviews/CA_CDA_DOCUMENTO_REP">
+        <attributes>
+          <attributeRef>#PARTITA_ID$local</attributeRef>
+        </attributes>
+        <associatedAttributeNames>
+          <attributeName>PARTITA_ID</attributeName>
+        </associatedAttributeNames>
+        <properties cardinality="CN_1" joinOperator="Equal" joinType="referential"/>
+        <associatedAttributeFeatures/>
+      </logicalJoin>
     </sharedDimensions>
   </logicalModel>
   <layout>
     <shapes>
       <shape expanded="true" modelObjectName="Output" modelObjectNameSpace="MeasureGroup">
-        <upperLeftCorner x="40" y="85"/>
+        <upperLeftCorner x="22" y="87"/>
         <rectangleSize height="0" width="0"/>
       </shape>
+      <shape expanded="true" modelObjectName="Projection_1" modelObjectNameSpace="CalculationView">
+        <upperLeftCorner x="22" y="329"/>
+        <rectangleSize height="-1" width="-1"/>
+      </shape>
       <shape modelObjectName="Projection_1" modelObjectNameSpace="StarJoinViewNodeInput" modelObjectType="repository">
-        <upperLeftCorner x="429" y="224"/>
+        <upperLeftCorner x="427" y="144"/>
       </shape>
       <shape modelObjectName="/CDA_4_HANA.Views.Time/calculationviews/CA_S_TIME_DAY" modelObjectNameSpace="StarJoinViewNodeSharedCV" modelObjectType="repository">
-        <upperLeftCorner x="16" y="1025"/>
+        <upperLeftCorner x="742" y="196"/>
       </shape>
       <shape modelObjectName="/CDA_4_HANA.Views.Pagamenti/calculationviews/S_CDA_CLI_MODALITA_PAGAMENTO" modelObjectNameSpace="StarJoinViewNodeSharedCV" modelObjectType="repository">
-        <upperLeftCorner x="868" y="1330"/>
+        <upperLeftCorner x="742" y="360"/>
       </shape>
       <shape modelObjectName="/CDA_4_HANA.Views.Pagamenti/calculationviews/S_CDA_CLI_CONDIZIONI_PAGAMENTO" modelObjectNameSpace="StarJoinViewNodeSharedCV" modelObjectType="repository">
-        <upperLeftCorner x="868" y="1217"/>
+        <upperLeftCorner x="742" y="278"/>
       </shape>
       <shape modelObjectName="/CDA_4_HANA.Views.Clienti/calculationviews/CA_S_CLIENTE_SOCIETA" modelObjectNameSpace="StarJoinViewNodeSharedCV" modelObjectType="repository">
-        <upperLeftCorner x="868" y="64"/>
+        <upperLeftCorner x="16" y="32"/>
       </shape>
       <shape modelObjectName="/CDA_4_HANA.Views.Fornitori/calculationviews/CA_FORNITORI_SOCIETA" modelObjectNameSpace="StarJoinViewNodeSharedCV" modelObjectType="repository">
-        <upperLeftCorner x="16" y="16"/>
+        <upperLeftCorner x="742" y="98"/>
       </shape>
       <shape modelObjectName="/CDA_4_HANA.Views.Time/calculationviews/CA_S_TIME_DAY_SCADENZA" modelObjectNameSpace="StarJoinViewNodeSharedCV" modelObjectType="repository">
-        <upperLeftCorner x="16" y="1266"/>
+        <upperLeftCorner x="16" y="212"/>
       </shape>
-      <shape expanded="true" modelObjectName="Projection_1" modelObjectNameSpace="CalculationView">
-        <upperLeftCorner x="40" y="310"/>
-        <rectangleSize height="-1" width="-1"/>
+      <shape modelObjectName="/CDA_4_HANA.Views.Societa/calculationviews/CA_CDA_SOCIETA" modelObjectNameSpace="StarJoinViewNodeSharedCV" modelObjectType="repository">
+        <upperLeftCorner x="16" y="130"/>
+      </shape>
+      <shape modelObjectName="/CDA_4_HANA.Views.Documento/calculationviews/CA_CDA_DOCUMENTO_REP" modelObjectNameSpace="StarJoinViewNodeSharedCV" modelObjectType="repository">
+        <upperLeftCorner x="742" y="16"/>
       </shape>
     </shapes>
   </layout>

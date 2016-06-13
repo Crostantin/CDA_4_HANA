@@ -5,9 +5,9 @@
   <variableMappings/>
   <informationModelLayout relativeWidthScenario="21"/>
   <dataSources>
-    <DataSource id="CDA_4_HANA.ETL.Tables::T_FC_CLI_PAGAMENTI" type="DATA_BASE_TABLE">
+    <DataSource id="CDA_4_HANA.FactTables.Tables::SF_CDA_CLI_PAGAMENTI" type="DATA_BASE_TABLE">
       <viewAttributes allViewAttributes="true"/>
-      <columnObject schemaName="CDA_4_HANA" columnObjectName="CDA_4_HANA.ETL.Tables::T_FC_CLI_PAGAMENTI"/>
+      <columnObject schemaName="CDA_4_HANA" columnObjectName="CDA_4_HANA.FactTables.Tables::SF_CDA_CLI_PAGAMENTI"/>
     </DataSource>
   </dataSources>
   <calculationViews>
@@ -55,7 +55,7 @@
         <viewAttribute id="PARTITA_ID"/>
       </viewAttributes>
       <calculatedViewAttributes/>
-      <input node="#CDA_4_HANA.ETL.Tables::T_FC_CLI_PAGAMENTI">
+      <input node="#CDA_4_HANA.FactTables.Tables::SF_CDA_CLI_PAGAMENTI">
         <mapping xsi:type="Calculation:AttributeMapping" target="BUKRS" source="BUKRS"/>
         <mapping xsi:type="Calculation:AttributeMapping" target="GJAHR" source="GJAHR"/>
         <mapping xsi:type="Calculation:AttributeMapping" target="BELNR" source="BELNR"/>
@@ -324,7 +324,7 @@
         <properties joinOperator="Equal" joinType="leftOuter"/>
         <associatedAttributeFeatures/>
       </logicalJoin>
-      <logicalJoin associatedObjectUri="/CDA_4_HANA.Views/calculationviews/CA_S_TIME_DAY_SCADENZA">
+      <logicalJoin associatedObjectUri="/CDA_4_HANA.Views.Time/calculationviews/CA_S_TIME_DAY_SCADENZA">
         <attributes>
           <attributeRef>#NETDT$local</attributeRef>
         </attributes>
@@ -364,7 +364,7 @@
       <shape modelObjectName="/CDA_4_HANA.Views.Fornitori/calculationviews/CA_FORNITORI_SOCIETA" modelObjectNameSpace="StarJoinViewNodeSharedCV" modelObjectType="repository">
         <upperLeftCorner x="16" y="16"/>
       </shape>
-      <shape modelObjectName="/CDA_4_HANA.Views/calculationviews/CA_S_TIME_DAY_SCADENZA" modelObjectNameSpace="StarJoinViewNodeSharedCV" modelObjectType="repository">
+      <shape modelObjectName="/CDA_4_HANA.Views.Time/calculationviews/CA_S_TIME_DAY_SCADENZA" modelObjectNameSpace="StarJoinViewNodeSharedCV" modelObjectType="repository">
         <upperLeftCorner x="900" y="625"/>
       </shape>
     </shapes>

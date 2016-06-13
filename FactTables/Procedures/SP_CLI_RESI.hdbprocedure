@@ -1,5 +1,5 @@
-PROCEDURE "CDA_4_HANA"."CDA_4_HANA.ETL.Procedures::SP_CLI_RESI" (
-		OUT var_out "CDA_4_HANA"."CDA_4_HANA.ETL.Types::TT_CLI_RESI"
+PROCEDURE "CDA_4_HANA"."CDA_4_HANA.FactTables.Procedures::SP_CLI_RESI" (
+		OUT var_out "CDA_4_HANA.FactTables.Types::TT_CLI_RESI"
 	) 
 	LANGUAGE SQLSCRIPT
 	SQL SECURITY INVOKER 
@@ -10,6 +10,9 @@ BEGIN
 /***************************** 
 	Write your procedure logic 
  *****************************/
+ 
+ WT_RESI_PASSO1 = select * from "CDA_4_HANA.FactTables.Functions::TB_CLI_RESI_PASSO1" ();
+ M_CHIAVE_CONTABILE = select * from "CDA_4_HANA.ETL.M_Tables::M_CHIAVE_CONTABILE";
  
 	--PASSO2: Gestione delle righe di Pareggio
 
@@ -30,8 +33,8 @@ BEGIN
 		SUM(A.WRSHB) OVER (PARTITION BY  a.BUKRS, a.AUGBL, a.AUGDT, a.KUNNR ORDER BY a.BLDAT, a.BELNR, a.BUZEI) RUNNINGSUM_PAGAMENTO_LC,
 		BLDAT
 		--into #TMP_Passo2_Pagamenti
-		FROM "CDA_4_HANA.ETL.Functions::TB_CLI_RESI_PASSO1" ()  a
-		inner join "CDA_4_HANA"."CDA_4_HANA.ETL.M_Tables::M_CHIAVE_CONTABILE" b
+		FROM :WT_RESI_PASSO1  a
+		inner join :M_CHIAVE_CONTABILE b
 		on (a.BSCHL=b.BSCHL)
 		where b.DESTINAZIONE='Cliente'
 		and b.TIPO_CHIAVE='Fatture'
@@ -56,8 +59,8 @@ BEGIN
 		SUM(A.WRSHB + ifnull(a.VAL_PAGATO_ALLOCATO_LC, 0)) OVER (PARTITION BY  a.BUKRS, a.AUGBL, a.AUGDT, a.KUNNR ORDER BY a.BLDAT, a.BELNR, a.BUZEI) RUNNINGSUM_FATTURA_LC,
 		BLDAT, NETDT
 		--into #TMP_Passo2_Fatture
-		FROM "CDA_4_HANA.ETL.Functions::TB_CLI_RESI_PASSO1" () a
-		join "CDA_4_HANA"."CDA_4_HANA.ETL.M_Tables::M_CHIAVE_CONTABILE" b
+		FROM :WT_RESI_PASSO1 a
+		join :M_CHIAVE_CONTABILE b
 		on (a.BSCHL=b.BSCHL)
 		where b.DESTINAZIONE='Cliente'
 		and b.TIPO_CHIAVE='Fatture'
@@ -159,7 +162,7 @@ BEGIN
 	Temp_Fatture =
 		select BUKRS, GJAHR, BELNR, BUZEI, ifnull(max("ROWID"), 0) MAX_ROWID
 		--into #Temp_Fatture
-		From "CDA_4_HANA.ETL.Functions::TB_CLI_RESI_PASSO1" ()
+		From :WT_RESI_PASSO1
 		group by BUKRS, GJAHR, BELNR, BUZEI
 	;
 	
@@ -181,8 +184,8 @@ BEGIN
 		null AUGDT,
 		null DATA_PAREGGIO
 		--into #TMP_Passo2_P5
-		from "CDA_4_HANA.ETL.Functions::TB_CLI_RESI_PASSO1" () a
-		inner join "CDA_4_HANA"."CDA_4_HANA.ETL.M_Tables::M_CHIAVE_CONTABILE" b
+		from :WT_RESI_PASSO1 a
+		inner join :M_CHIAVE_CONTABILE b
 		on (a.BSCHL=b.BSCHL)
 		where "ROWID" is not null --Fatture già elaborate
 		and  b.DESTINAZIONE='Cliente'
@@ -205,10 +208,10 @@ BEGIN
 		a.AUGBL, 
 		a.AUGDT,
 		null DATA_PAREGGIO
-		from "CDA_4_HANA.ETL.Functions::TB_CLI_RESI_PASSO1" () a
+		from :WT_RESI_PASSO1 a
 		join :TMP_Passo2_Resi b
 		on (a.BUKRS=b.BUKRS and a.GJAHR=b.GJAHR and a.BELNR=b.BELNR and a.BUZEI=b.BUZEI)
-		inner join "CDA_4_HANA"."CDA_4_HANA.ETL.M_Tables::M_CHIAVE_CONTABILE" c
+		inner join :M_CHIAVE_CONTABILE c
 		on (a.BSCHL=c.BSCHL)
 		where c.DESTINAZIONE='Cliente'
 		and c.TIPO_CHIAVE='Fatture'
@@ -230,8 +233,8 @@ BEGIN
 		null AUGBL, 
 		null AUGDT,
 		null DATA_PAREGGIO
-		from "CDA_4_HANA.ETL.Functions::TB_CLI_RESI_PASSO1" () a
-		join "CDA_4_HANA"."CDA_4_HANA.ETL.M_Tables::M_CHIAVE_CONTABILE" c
+		from :WT_RESI_PASSO1 a
+		join :M_CHIAVE_CONTABILE c
 		on (a.BSCHL=c.BSCHL)
 		where c.DESTINAZIONE='Cliente'
 		and c.TIPO_CHIAVE='Fatture'
@@ -347,7 +350,7 @@ BEGIN
 			end VAL_PAGATO_ALLOCATO_LC, 
 			max(DATA_PAREGGIO) DATA_PAREGGIO
 			from #TMP_Passo2_P5 a
-			join "CDA_4_HANA"."CDA_4_HANA.ETL.M_Tables::M_CHIAVE_CONTABILE" b
+			join :M_CHIAVE_CONTABILE b
 			on (a.BSCHL=b.BSCHL)
 			group by BUKRS, GJAHR, BELNR, BUZEI, a.BSCHL, b.TIPO_CHIAVE, b.TIPO
 		) b
@@ -373,8 +376,8 @@ BEGIN
 			a.AUGBL, --Vengono considerate anche le partite pareggiate ma che non si chiudono a causa di insoluti e resi in fattura
 			a.AUGDT, --Vengono considerate anche le partite pareggiate ma che non si chiudono a causa di insoluti e resi in fattura
 			null DATA_PAREGGIO
-		from "CDA_4_HANA.ETL.Functions::TB_CLI_RESI_PASSO1" () a
-		join "CDA_4_HANA"."CDA_4_HANA.ETL.M_Tables::M_CHIAVE_CONTABILE" c
+		from :WT_RESI_PASSO1 a
+		join :M_CHIAVE_CONTABILE c
 		on (a.BSCHL=c.BSCHL)
 		left join #TMP_Passo2_P5 d
 		on (a.BUKRS=d.BUKRS and a.GJAHR=d.GJAHR and a.BELNR=d.BELNR and a.BUZEI=d.BUZEI)

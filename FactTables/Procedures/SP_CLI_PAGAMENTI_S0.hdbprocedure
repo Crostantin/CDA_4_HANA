@@ -1,4 +1,4 @@
-PROCEDURE "CDA_4_HANA"."CDA_4_HANA.ETL.Procedures::SP_CLI_PAGAMENTI_S0" ( 
+PROCEDURE "CDA_4_HANA"."CDA_4_HANA.FactTables.Procedures::SP_CLI_PAGAMENTI_S0" ( 
 		OUT var_out TABLE(
 		-- return_table_type
 		BUKRS NVARCHAR(4),
@@ -36,7 +36,7 @@ BEGIN
  
  M_CHIAVE_CONTABILE = select * from "CDA_4_HANA.ETL.M_Tables::M_CHIAVE_CONTABILE";
  T_0FI_AR_4 = select * from "CDA_4_HANA.ETL.Tables::T_0FI_AR_4";
- call "CDA_4_HANA"."CDA_4_HANA.ETL.Procedures::SP_CLI_RESI" (WT_CLI_RESI_PASSO2);
+ call "CDA_4_HANA"."CDA_4_HANA.FactTables.Procedures::SP_CLI_RESI" (WT_CLI_RESI_PASSO2);
 
 	--Passo 1
 

@@ -36,7 +36,7 @@
         <viewAttribute id="KKBER"/>
         <viewAttribute id="MABER"/>
         <viewAttribute id="KOART"/>
-        <viewAttribute id="UMSKZ_TMP"/>
+        <viewAttribute id="UMSKZ_ORI"/>
         <viewAttribute id="BLART"/>
         <viewAttribute id="BSCHL"/>
         <viewAttribute id="FISCVAR"/>
@@ -76,16 +76,16 @@
         <viewAttribute id="BSTAT"/>
         <viewAttribute id="GJAHR"/>
         <viewAttribute id="MONAT"/>
-        <viewAttribute id="LIFNR_TMP"/>
+        <viewAttribute id="LIFNR_ORI"/>
         <viewAttribute id="WRSOL"/>
         <viewAttribute id="WRHAB"/>
       </viewAttributes>
       <calculatedViewAttributes>
         <calculatedViewAttribute datatype="NVARCHAR" id="LIFNR" length="10" expressionLanguage="COLUMN_ENGINE">
-          <formula>if(isnull(&quot;LIFNR_TMP&quot;),'#',&quot;LIFNR_TMP&quot;)</formula>
+          <formula>if(isnull(&quot;LIFNR_ORI&quot;),'#',&quot;LIFNR_ORI&quot;)</formula>
         </calculatedViewAttribute>
         <calculatedViewAttribute datatype="VARCHAR" id="UMSKZ" length="1" expressionLanguage="COLUMN_ENGINE">
-          <formula>case(isnull(&quot;UMSKZ_TMP&quot;),' ')</formula>
+          <formula>if(isnull(&quot;UMSKZ_ORI&quot;),' ',&quot;UMSKZ_ORI&quot;)</formula>
         </calculatedViewAttribute>
       </calculatedViewAttributes>
       <input node="#CDA_4_HANA.ETL.Tables::T_0FI_AR_4">
@@ -99,7 +99,7 @@
         <mapping xsi:type="Calculation:AttributeMapping" target="KKBER" source="KKBER"/>
         <mapping xsi:type="Calculation:AttributeMapping" target="MABER" source="MABER"/>
         <mapping xsi:type="Calculation:AttributeMapping" target="KOART" source="KOART"/>
-        <mapping xsi:type="Calculation:AttributeMapping" target="UMSKZ_TMP" source="UMSKZ"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="UMSKZ_ORI" source="UMSKZ"/>
         <mapping xsi:type="Calculation:AttributeMapping" target="BLART" source="BLART"/>
         <mapping xsi:type="Calculation:AttributeMapping" target="BSCHL" source="BSCHL"/>
         <mapping xsi:type="Calculation:AttributeMapping" target="FISCVAR" source="FISCVAR"/>
@@ -143,7 +143,7 @@
         <mapping xsi:type="Calculation:AttributeMapping" target="WRHAB" source="WRHAB"/>
       </input>
       <input node="#CA_S_CLIENTE">
-        <mapping xsi:type="Calculation:AttributeMapping" target="LIFNR_TMP" source="LIFNR"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="LIFNR_ORI" source="LIFNR"/>
         <mapping xsi:type="Calculation:AttributeMapping" target="KUNNR" source="KUNNR"/>
       </input>
       <joinAttribute name="KUNNR"/>
@@ -264,7 +264,7 @@
         <mapping xsi:type="Calculation:AttributeMapping" target="LIFNR" source="LIFNR"/>
         <mapping xsi:type="Calculation:AttributeMapping" target="WRSOL" source="WRSOL"/>
         <mapping xsi:type="Calculation:AttributeMapping" target="WRHAB" source="WRHAB"/>
-        <mapping xsi:type="Calculation:AttributeMapping" target="LIFNR_TMP" source="LIFNR_TMP"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="LIFNR_TMP" source="LIFNR_ORI"/>
       </input>
       <input node="#CDA_4_HANA.ETL.M_Tables::M_CHIAVE_CONTABILE">
         <mapping xsi:type="Calculation:AttributeMapping" target="CHIAVE_CONTABILE_DES" source="CHIAVE_CONTABILE_DES"/>
@@ -279,8 +279,8 @@
       <viewAttributes>
         <viewAttribute id="BUKRS"/>
         <viewAttribute id="FISCPER"/>
-        <viewAttribute id="BELNR"/>
         <viewAttribute id="BUZEI"/>
+        <viewAttribute id="BELNR"/>
         <viewAttribute id="UPOSZ"/>
         <viewAttribute id="STATUSPS"/>
         <viewAttribute id="KUNNR"/>
@@ -331,12 +331,16 @@
         <viewAttribute id="TIPO"/>
         <viewAttribute id="TIPO_CHIAVE"/>
         <viewAttribute id="CODICE_COGE_SPECIALE_DES_JOIN"/>
-        <viewAttribute id="UMSKZ"/>
         <viewAttribute id="WRSOL"/>
         <viewAttribute id="WRHAB"/>
         <viewAttribute id="LIFNR_TMP"/>
+        <viewAttribute id="UMSKZ_JOIN"/>
+        <viewAttribute hidden="true" id="JOIN$UMSKZ$UMSKZ"/>
       </viewAttributes>
       <calculatedViewAttributes>
+        <calculatedViewAttribute datatype="VARCHAR" id="UMSKZ" length="1" expressionLanguage="COLUMN_ENGINE">
+          <formula>if(isnull(&quot;UMSKZ_JOIN&quot;),'#',&quot;UMSKZ_JOIN&quot;)</formula>
+        </calculatedViewAttribute>
         <calculatedViewAttribute datatype="NVARCHAR" id="CODICE_SPECIALE_DES_UNDEF" length="255" expressionLanguage="COLUMN_ENGINE">
           <formula>'Non Definito'</formula>
         </calculatedViewAttribute>
@@ -395,16 +399,17 @@
         <mapping xsi:type="Calculation:AttributeMapping" target="CHIAVE_CONTABILE_DES" source="CHIAVE_CONTABILE_DES"/>
         <mapping xsi:type="Calculation:AttributeMapping" target="TIPO" source="TIPO"/>
         <mapping xsi:type="Calculation:AttributeMapping" target="TIPO_CHIAVE" source="TIPO_CHIAVE"/>
-        <mapping xsi:type="Calculation:AttributeMapping" target="UMSKZ" source="UMSKZ"/>
         <mapping xsi:type="Calculation:AttributeMapping" target="WRSOL" source="WRSOL"/>
         <mapping xsi:type="Calculation:AttributeMapping" target="WRHAB" source="WRHAB"/>
         <mapping xsi:type="Calculation:AttributeMapping" target="LIFNR_TMP" source="LIFNR_TMP"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="JOIN$UMSKZ$UMSKZ" source="UMSKZ"/>
       </input>
       <input node="#CDA_4_HANA.ETL.M_Tables::M_COGE_SPECIALE">
         <mapping xsi:type="Calculation:AttributeMapping" target="CODICE_COGE_SPECIALE_DES_JOIN" source="CODICE_COGE_SPECIALE_DES"/>
-        <mapping xsi:type="Calculation:AttributeMapping" target="UMSKZ" source="UMSKZ"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="UMSKZ_JOIN" source="UMSKZ"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="JOIN$UMSKZ$UMSKZ" source="UMSKZ"/>
       </input>
-      <joinAttribute name="UMSKZ"/>
+      <joinAttribute name="JOIN$UMSKZ$UMSKZ"/>
     </calculationView>
     <calculationView xsi:type="Calculation:ProjectionView" id="Projection_1">
       <descriptions>
@@ -465,11 +470,11 @@
         <viewAttribute id="TIPO"/>
         <viewAttribute id="TIPO_CHIAVE"/>
         <viewAttribute id="CODICE_COGE_SPECIALE_DES_JOIN"/>
-        <viewAttribute id="UMSKZ"/>
         <viewAttribute id="CODICE_SPECIALE_DES_UNDEF"/>
         <viewAttribute id="WRSOL"/>
         <viewAttribute id="WRHAB"/>
         <viewAttribute id="LIFNR_TMP"/>
+        <viewAttribute id="UMSKZ"/>
       </viewAttributes>
       <calculatedViewAttributes>
         <calculatedViewAttribute datatype="NVARCHAR" id="CODICE_SPECIALE_DES" length="255" expressionLanguage="COLUMN_ENGINE">
@@ -561,11 +566,11 @@
         <mapping xsi:type="Calculation:AttributeMapping" target="TIPO" source="TIPO"/>
         <mapping xsi:type="Calculation:AttributeMapping" target="TIPO_CHIAVE" source="TIPO_CHIAVE"/>
         <mapping xsi:type="Calculation:AttributeMapping" target="CODICE_COGE_SPECIALE_DES_JOIN" source="CODICE_COGE_SPECIALE_DES_JOIN"/>
-        <mapping xsi:type="Calculation:AttributeMapping" target="UMSKZ" source="UMSKZ"/>
         <mapping xsi:type="Calculation:AttributeMapping" target="CODICE_SPECIALE_DES_UNDEF" source="CODICE_SPECIALE_DES_UNDEF"/>
         <mapping xsi:type="Calculation:AttributeMapping" target="WRSOL" source="WRSOL"/>
         <mapping xsi:type="Calculation:AttributeMapping" target="WRHAB" source="WRHAB"/>
         <mapping xsi:type="Calculation:AttributeMapping" target="LIFNR_TMP" source="LIFNR_TMP"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="UMSKZ" source="UMSKZ"/>
       </input>
     </calculationView>
   </calculationViews>
@@ -784,57 +789,57 @@
         <descriptions defaultDescription="TIPO_CHIAVE"/>
         <keyMapping columnObjectName="Projection_1" columnName="TIPO_CHIAVE"/>
       </attribute>
-      <attribute id="UMSKZ" order="54" attributeHierarchyActive="false" displayAttribute="false">
-        <descriptions defaultDescription="UMSKZ"/>
-        <keyMapping columnObjectName="Projection_1" columnName="UMSKZ"/>
-      </attribute>
-      <attribute id="CODICE_SPECIALE_DES" order="55" attributeHierarchyActive="false" displayAttribute="false">
+      <attribute id="CODICE_SPECIALE_DES" order="54" attributeHierarchyActive="false" displayAttribute="false">
         <descriptions defaultDescription="CODICE_SPECIALE_DES"/>
         <keyMapping columnObjectName="Projection_1" columnName="CODICE_SPECIALE_DES"/>
       </attribute>
-      <attribute id="VAL_FATTURATO" order="56" attributeHierarchyActive="false" displayAttribute="false">
+      <attribute id="VAL_FATTURATO" order="55" attributeHierarchyActive="false" displayAttribute="false">
         <descriptions defaultDescription="VAL_FATTURATO"/>
         <keyMapping columnObjectName="Projection_1" columnName="VAL_FATTURATO"/>
       </attribute>
-      <attribute id="VAL_FATTURATO_LC" order="57" attributeHierarchyActive="false" displayAttribute="false">
+      <attribute id="VAL_FATTURATO_LC" order="56" attributeHierarchyActive="false" displayAttribute="false">
         <descriptions defaultDescription="VAL_FATTURATO_LC"/>
         <keyMapping columnObjectName="Projection_1" columnName="VAL_FATTURATO_LC"/>
       </attribute>
-      <attribute id="VAL_INCASSATO" order="58" attributeHierarchyActive="false" displayAttribute="false">
+      <attribute id="VAL_INCASSATO" order="57" attributeHierarchyActive="false" displayAttribute="false">
         <descriptions defaultDescription="VAL_INCASSATO"/>
         <keyMapping columnObjectName="Projection_1" columnName="VAL_INCASSATO"/>
       </attribute>
-      <attribute id="VAL_INCASSATO_LC" order="59" attributeHierarchyActive="false" displayAttribute="false">
+      <attribute id="VAL_INCASSATO_LC" order="58" attributeHierarchyActive="false" displayAttribute="false">
         <descriptions defaultDescription="VAL_INCASSATO_LC"/>
         <keyMapping columnObjectName="Projection_1" columnName="VAL_INCASSATO_LC"/>
       </attribute>
-      <attribute id="VAL_SALDO_CONTABILE" order="60" attributeHierarchyActive="false" displayAttribute="false">
+      <attribute id="VAL_SALDO_CONTABILE" order="59" attributeHierarchyActive="false" displayAttribute="false">
         <descriptions defaultDescription="VAL_SALDO_CONTABILE"/>
         <keyMapping columnObjectName="Projection_1" columnName="VAL_SALDO_CONTABILE"/>
       </attribute>
-      <attribute id="VAL_SALDO_CONTABILE_LC" order="61" attributeHierarchyActive="false" displayAttribute="false">
+      <attribute id="VAL_SALDO_CONTABILE_LC" order="60" attributeHierarchyActive="false" displayAttribute="false">
         <descriptions defaultDescription="VAL_SALDO_CONTABILE_LC"/>
         <keyMapping columnObjectName="Projection_1" columnName="VAL_SALDO_CONTABILE_LC"/>
       </attribute>
-      <attribute id="VAL_EFFETTI" order="62" attributeHierarchyActive="false" displayAttribute="false">
+      <attribute id="VAL_EFFETTI" order="61" attributeHierarchyActive="false" displayAttribute="false">
         <descriptions defaultDescription="VAL_EFFETTI"/>
         <keyMapping columnObjectName="Projection_1" columnName="VAL_EFFETTI"/>
       </attribute>
-      <attribute id="VAL_EFFETTI_LC" order="63" attributeHierarchyActive="false" displayAttribute="false">
+      <attribute id="VAL_EFFETTI_LC" order="62" attributeHierarchyActive="false" displayAttribute="false">
         <descriptions defaultDescription="VAL_EFFETTI_LC"/>
         <keyMapping columnObjectName="Projection_1" columnName="VAL_EFFETTI_LC"/>
       </attribute>
-      <attribute id="VAL_INSOLUTO" order="64" attributeHierarchyActive="false" displayAttribute="false">
+      <attribute id="VAL_INSOLUTO" order="63" attributeHierarchyActive="false" displayAttribute="false">
         <descriptions defaultDescription="VAL_INSOLUTO"/>
         <keyMapping columnObjectName="Projection_1" columnName="VAL_INSOLUTO"/>
       </attribute>
-      <attribute id="VAL_INSOLUTO_LC" order="65" attributeHierarchyActive="false" displayAttribute="false">
+      <attribute id="VAL_INSOLUTO_LC" order="64" attributeHierarchyActive="false" displayAttribute="false">
         <descriptions defaultDescription="VAL_INSOLUTO_LC"/>
         <keyMapping columnObjectName="Projection_1" columnName="VAL_INSOLUTO_LC"/>
       </attribute>
-      <attribute id="LIFNR_TMP" order="66" attributeHierarchyActive="false" displayAttribute="false">
+      <attribute id="LIFNR_TMP" order="65" attributeHierarchyActive="false" displayAttribute="false">
         <descriptions defaultDescription="LIFNR_TMP"/>
         <keyMapping columnObjectName="Projection_1" columnName="LIFNR_TMP"/>
+      </attribute>
+      <attribute id="UMSKZ" hidden="false" order="66" semanticType="empty" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions/>
+        <keyMapping columnObjectName="Projection_1" columnName="UMSKZ"/>
       </attribute>
     </attributes>
     <calculatedAttributes/>

@@ -1,4 +1,4 @@
-FUNCTION "CDA_4_HANA"."CDA_4_HANA.ETL.Functions::TB_CLI_RESI_PASSO1" ( ) 
+FUNCTION "CDA_4_HANA"."CDA_4_HANA.FactTables.Functions::TB_CLI_RESI_PASSO1" ( ) 
 	RETURNS TABLE (
 		--return_table_type	
 	BUKRS NVARCHAR(4),

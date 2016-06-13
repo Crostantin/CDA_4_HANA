@@ -9,9 +9,9 @@
       <viewAttributes allViewAttributes="true"/>
       <columnObject schemaName="CDA_4_HANA" columnObjectName="CDA_4_HANA.ETL.M_Tables::M_MANDANTE"/>
     </DataSource>
-    <DataSource id="TVZBT" type="DATA_BASE_TABLE">
+    <DataSource id="CDA_4_HANA.ETL.Tables::T_TVZBT" type="DATA_BASE_TABLE">
       <viewAttributes allViewAttributes="true"/>
-      <columnObject schemaName="CDA_TMP" columnObjectName="TVZBT"/>
+      <columnObject schemaName="CDA_4_HANA" columnObjectName="CDA_4_HANA.ETL.Tables::T_TVZBT"/>
     </DataSource>
   </dataSources>
   <calculationViews>
@@ -27,7 +27,7 @@
       <input node="#CDA_4_HANA.ETL.M_Tables::M_MANDANTE">
         <mapping xsi:type="Calculation:AttributeMapping" target="MANDT" source="MANDT"/>
       </input>
-      <input node="#TVZBT">
+      <input node="#CDA_4_HANA.ETL.Tables::T_TVZBT">
         <mapping xsi:type="Calculation:AttributeMapping" target="SPRAS" source="SPRAS"/>
         <mapping xsi:type="Calculation:AttributeMapping" target="ZTERM" source="ZTERM"/>
         <mapping xsi:type="Calculation:AttributeMapping" target="VTEXT" source="VTEXT"/>

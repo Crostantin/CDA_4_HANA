@@ -15,7 +15,7 @@
     </DataSource>
     <DataSource id="CA_S_TIME_DAY" type="CALCULATION_VIEW">
       <viewAttributes allViewAttributes="true"/>
-      <resourceUri>/CDA_4_HANA.Views/calculationviews/CA_S_TIME_DAY</resourceUri>
+      <resourceUri>/CDA_4_HANA.Views.Time/calculationviews/CA_S_TIME_DAY</resourceUri>
     </DataSource>
   </dataSources>
   <calculationViews>

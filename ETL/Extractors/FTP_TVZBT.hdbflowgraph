@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<flowgraph:ContainerNode xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:flowgraph="http://www.sap.com/ndb/flowgraph/1.0" xmi:id="_XWN58C5fEeazJ4udyfvcHg" name="FTP_0CUST_COMPC_ATTR" generateProcedure="false" generateTask="true" targetSchema="CDA_4_HANA">
+  <annotations xmi:id="_XWN58S5fEeazJ4udyfvcHg" key="sap.afm.layout">
+    <annotations xmi:id="_XWN58i5fEeazJ4udyfvcHg" key="x" value="10"/>
+    <annotations xmi:id="_XWN58y5fEeazJ4udyfvcHg" key="y" value="10"/>
+  </annotations>
+  <annotations xmi:id="_XWN59C5fEeazJ4udyfvcHg" key="sap.afm.palette" value="">
+    <annotations xmi:id="_XWN59S5fEeazJ4udyfvcHg" key="additions" value=""/>
+  </annotations>
+  <annotations xmi:id="_czv5oC5fEeazJ4udyfvcHg" key="sap.afm.nodeType" value="ContainerNode"/>
+  <annotations xmi:id="_cz4cgC5fEeazJ4udyfvcHg" key="sap.afm.nodeInputs"/>
+  <annotations xmi:id="_cz7f0C5fEeazJ4udyfvcHg" key="sap.afm.nodeOutputs"/>
+  <tableMappings xmi:id="_UiutUC8dEeawTsDYOivNwA" source="_aguuJS5fEeazJ4udyfvcHg" target="_b0Snxy5fEeazJ4udyfvcHg">
+    <attributeMappings xmi:id="_XVfTYS8eEeawTsDYOivNwA" source="_XVesUC8eEeawTsDYOivNwA" target="_XVfTYC8eEeawTsDYOivNwA"/>
+    <attributeMappings xmi:id="_XVfTZC8eEeawTsDYOivNwA" source="_XVfTYi8eEeawTsDYOivNwA" target="_XVfTYy8eEeawTsDYOivNwA"/>
+    <attributeMappings xmi:id="_XVf6cS8eEeawTsDYOivNwA" source="_XVfTZS8eEeawTsDYOivNwA" target="_XVf6cC8eEeawTsDYOivNwA"/>
+    <attributeMappings xmi:id="_XVf6dC8eEeawTsDYOivNwA" source="_XVf6ci8eEeawTsDYOivNwA" target="_XVf6cy8eEeawTsDYOivNwA"/>
+  </tableMappings>
+  <tableMappings xmi:id="_hL4mMC8dEeawTsDYOivNwA" source="_b0SnyC5fEeazJ4udyfvcHg" target="_AHc32C5gEeazJ4udyfvcHg">
+    <attributeMappings xmi:id="_hL4mMS8dEeawTsDYOivNwA" source="_X3Dk0C8dEeawTsDYOivNwA" target="_frLBYC8dEeawTsDYOivNwA"/>
+    <attributeMappings xmi:id="_hL4mMi8dEeawTsDYOivNwA" source="_X3EL4C8dEeawTsDYOivNwA" target="_frLocC8dEeawTsDYOivNwA"/>
+    <attributeMappings xmi:id="_hL4mMy8dEeawTsDYOivNwA" source="_X3EL4S8dEeawTsDYOivNwA" target="_frLocS8dEeawTsDYOivNwA"/>
+    <attributeMappings xmi:id="_hL4mNC8dEeawTsDYOivNwA" source="_X3EL4y8dEeawTsDYOivNwA" target="_frLoci8dEeawTsDYOivNwA"/>
+  </tableMappings>
+  <nodes xsi:type="flowgraph:DataNode" xmi:id="_aguHEC5fEeazJ4udyfvcHg" name="TVZBT_2" type="DATABASE_TABLE" authoringSchemaName="CDA_TMP" catalogObjectName="TVZBT" dataLayout="COLUMN" truncateTable="false">
+    <annotations xmi:id="_aguHES5fEeazJ4udyfvcHg" key="sap.afm.description" value="Read data from a catalog or repository object"/>
+    <annotations xmi:id="_aguHEi5fEeazJ4udyfvcHg" key="sap.afm.displayName" value="Data Source"/>
+    <annotations xmi:id="_aguuIC5fEeazJ4udyfvcHg" key="sap.afm.layout">
+      <annotations xmi:id="_aguuIS5fEeazJ4udyfvcHg" key="x" value="20"/>
+      <annotations xmi:id="_aguuIi5fEeazJ4udyfvcHg" key="y" value="68"/>
+      <annotations xmi:id="_aguuIy5fEeazJ4udyfvcHg" key="width" value="100"/>
+      <annotations xmi:id="_aguuJC5fEeazJ4udyfvcHg" key="height" value="64"/>
+    </annotations>
+    <annotations xmi:id="_cz_KMC5fEeazJ4udyfvcHg" key="sap.afm.nodeType" value="DataNode"/>
+    <annotations xmi:id="_c0F34C5fEeazJ4udyfvcHg" key="sap.afm.nodeInputs"/>
+    <annotations xmi:id="_c0HtEC5fEeazJ4udyfvcHg" key="sap.afm.nodeOutputs">
+      <annotations xmi:id="_c0KJUC5fEeazJ4udyfvcHg" key="DATA" value="INPUT"/>
+    </annotations>
+    <outputs xmi:id="_aguuJS5fEeazJ4udyfvcHg" name="DATA" kind="TABLE">
+      <attributes xmi:id="_XVesUC8eEeawTsDYOivNwA" name="MANDT" type="VARCHAR" nullable="false" length="3" scale="0"/>
+      <attributes xmi:id="_XVfTYi8eEeawTsDYOivNwA" name="SPRAS" type="VARCHAR" nullable="false" length="1" scale="0"/>
+      <attributes xmi:id="_XVfTZS8eEeawTsDYOivNwA" name="ZTERM" type="VARCHAR" nullable="false" length="4" scale="0"/>
+      <attributes xmi:id="_XVf6ci8eEeawTsDYOivNwA" name="VTEXT" type="VARCHAR" nullable="true" length="30" scale="0"/>
+    </outputs>
+  </nodes>
+  <nodes xsi:type="flowgraph:TableComparisonNode" xmi:id="_b0SnwC5fEeazJ4udyfvcHg" name="TABLECOMP" detectDeletedRows="false" compareTableName="CDA_4_HANA.ETL.Tables::T_TVZBT" compareTableSchema="CDA_4_HANA" compareTableType="DATABASE_TABLE" compareTableLayout="COLUMN" compareAttributes="_XVfTYC8eEeawTsDYOivNwA _XVfTYy8eEeawTsDYOivNwA _XVf6cC8eEeawTsDYOivNwA _XVf6cy8eEeawTsDYOivNwA">
+    <annotations xmi:id="_b0SnwS5fEeazJ4udyfvcHg" key="sap.afm.displayName" value="Table Comparison"/>
+    <annotations xmi:id="_b0Snwi5fEeazJ4udyfvcHg" key="sap.im.tableComparisonGenDelKey" value="allRows"/>
+    <annotations xmi:id="_b0Snwy5fEeazJ4udyfvcHg" key="sap.afm.description" value="Compares two data sets and produces the difference between them as a data set with rows flagged as INSERT, UPDATE, or DELETE."/>
+    <annotations xmi:id="_b0SnxC5fEeazJ4udyfvcHg" key="sap.afm.layout">
+      <annotations xmi:id="_b0SnxS5fEeazJ4udyfvcHg" key="x" value="202"/>
+      <annotations xmi:id="_b0Snxi5fEeazJ4udyfvcHg" key="y" value="75"/>
+    </annotations>
+    <annotations xmi:id="_c0Po4C5fEeazJ4udyfvcHg" key="sap.afm.nodeType" value="TableComparisonNode"/>
+    <annotations xmi:id="_c0TTQC5fEeazJ4udyfvcHg" key="sap.afm.nodeInputs">
+      <annotations xmi:id="_c0VvgC5fEeazJ4udyfvcHg" key="INPUT" value="DATA"/>
+    </annotations>
+    <annotations xmi:id="_c0aoAC5fEeazJ4udyfvcHg" key="sap.afm.nodeOutputs">
+      <annotations xmi:id="_c0cdMC5fEeazJ4udyfvcHg" key="OUTPUT" value="DATA_2"/>
+    </annotations>
+    <inputs xmi:id="_b0Snxy5fEeazJ4udyfvcHg" name="INPUT" kind="TABLE">
+      <attributes xmi:id="_XVfTYC8eEeawTsDYOivNwA" name="MANDT" type="VARCHAR" nullable="false" length="3" scale="0">
+        <annotations xmi:id="_b86xgC8eEeawTsDYOivNwA" key="sap.im.primaryKey" value="true"/>
+      </attributes>
+      <attributes xmi:id="_XVfTYy8eEeawTsDYOivNwA" name="SPRAS" type="VARCHAR" nullable="false" length="1" scale="0">
+        <annotations xmi:id="_cSNsEC8eEeawTsDYOivNwA" key="sap.im.primaryKey" value="true"/>
+      </attributes>
+      <attributes xmi:id="_XVf6cC8eEeawTsDYOivNwA" name="ZTERM" type="VARCHAR" nullable="false" length="4" scale="0">
+        <annotations xmi:id="_c8jpkC8eEeawTsDYOivNwA" key="sap.im.primaryKey" value="true"/>
+      </attributes>
+      <attributes xmi:id="_XVf6cy8eEeawTsDYOivNwA" name="VTEXT" type="VARCHAR" nullable="true" length="30" scale="0"/>
+    </inputs>
+    <outputs xmi:id="_b0SnyC5fEeazJ4udyfvcHg" name="OUTPUT" kind="TABLE">
+      <attributes xmi:id="_X3Dk0C8dEeawTsDYOivNwA" name="MANDT" type="VARCHAR" nullable="false" length="3" scale="0" mappedName="MANDT"/>
+      <attributes xmi:id="_X3EL4C8dEeawTsDYOivNwA" name="SPRAS" type="VARCHAR" nullable="false" length="1" scale="0" mappedName="SPRAS"/>
+      <attributes xmi:id="_X3EL4S8dEeawTsDYOivNwA" name="ZTERM" type="VARCHAR" nullable="false" length="4" scale="0" mappedName="ZTERM"/>
+      <attributes xmi:id="_X3EL4y8dEeawTsDYOivNwA" name="VTEXT" type="VARCHAR" nullable="true" length="30" scale="0" mappedName="VTEXT"/>
+    </outputs>
+  </nodes>
+  <nodes xsi:type="flowgraph:DataNode" xmi:id="_AHc30C5gEeazJ4udyfvcHg" name="CDA_4_HANA_ETL_TABLES__T_TVZBT_2" type="DATABASE_TABLE" authoringSchemaName="CDA_4_HANA" catalogObjectName="CDA_4_HANA.ETL.Tables::T_TVZBT" dataLayout="COLUMN" truncateTable="false">
+    <annotations xmi:id="_AHc30S5gEeazJ4udyfvcHg" key="sap.afm.description" value="Write data to a catalog object"/>
+    <annotations xmi:id="_AHc30i5gEeazJ4udyfvcHg" key="sap.afm.displayName" value="Data Sink"/>
+    <annotations xmi:id="_AHc30y5gEeazJ4udyfvcHg" key="sap.afm.layout">
+      <annotations xmi:id="_AHc31C5gEeazJ4udyfvcHg" key="x" value="426"/>
+      <annotations xmi:id="_AHc31S5gEeazJ4udyfvcHg" key="y" value="88"/>
+      <annotations xmi:id="_AHc31i5gEeazJ4udyfvcHg" key="width" value="100"/>
+      <annotations xmi:id="_AHc31y5gEeazJ4udyfvcHg" key="height" value="64"/>
+    </annotations>
+    <annotations xmi:id="_A84rAC5gEeazJ4udyfvcHg" key="sap.afm.nodeType" value="DataNode"/>
+    <annotations xmi:id="_A9KX0C5gEeazJ4udyfvcHg" key="sap.afm.nodeInputs">
+      <annotations xmi:id="_A9OCMC5gEeazJ4udyfvcHg" key="DATA_2" value="OUTPUT"/>
+    </annotations>
+    <annotations xmi:id="_A9cEoC5gEeazJ4udyfvcHg" key="sap.afm.nodeOutputs"/>
+    <annotations xmi:id="_ggp34C8dEeawTsDYOivNwA" key="sap.im.writerType" value="insert"/>
+    <inputs xmi:id="_AHc32C5gEeazJ4udyfvcHg" name="DATA_2" kind="TABLE">
+      <attributes xmi:id="_frLBYC8dEeawTsDYOivNwA" name="MANDT" type="VARCHAR" nullable="false" length="3" scale="0"/>
+      <attributes xmi:id="_frLocC8dEeawTsDYOivNwA" name="SPRAS" type="VARCHAR" nullable="false" length="1" scale="0"/>
+      <attributes xmi:id="_frLocS8dEeawTsDYOivNwA" name="ZTERM" type="VARCHAR" nullable="false" length="4" scale="0"/>
+      <attributes xmi:id="_frLoci8dEeawTsDYOivNwA" name="VTEXT" type="VARCHAR" nullable="true" length="30" scale="0"/>
+    </inputs>
+  </nodes>
+</flowgraph:ContainerNode>

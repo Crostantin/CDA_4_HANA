@@ -1,0 +1,80 @@
+PROCEDURE "CDA_4_HANA"."CDA_4_HANA.FactTables.Procedures::SP_WRITE_FC_CLI_AGEING" ( ) 
+	LANGUAGE SQLSCRIPT
+	SQL SECURITY INVOKER 
+	DEFAULT SCHEMA "CDA_4_HANA"
+	--READS SQL DATA 
+	AS
+BEGIN
+/***************************** 
+	Write your procedure logic 
+ *****************************/
+
+delete from "CDA_4_HANA.FactTables.Tables::SF_CDA_CLI_AGEING"; 
+insert into "CDA_4_HANA.FactTables.Tables::SF_CDA_CLI_AGEING" 
+	SELECT
+	 "PARTITA_ID",
+	 "BUKRS",
+	 "FISCPER",
+	 "BELNR",
+	 "BUZEI",
+	 "UPOSZ",
+	 "LIFNR",
+	 "STATUSPS",
+	 "KUNNR",
+	 "KKBER",
+	 "MABER",
+	 "KOART",
+	 "UMSKZ",
+	 "CODICE_SPECIALE_DES" as "CODICE_COGE_SPECIALE_DES",
+	 "BLART",
+	 "BSCHL",
+	 "FISCVAR",
+	 "BLDAT",
+	 "BUDAT",
+	 "CPUDT",
+	 "AUGDT",
+	 "MADAT",
+	 "NETDT",
+	 "ZFBDT",
+	 "ZLSCH",
+	 "ZTERM",
+	 "ZLSPR",
+	 "MANSP",
+	 "MSCHL",
+	 "MANST",
+	 "LCURR",
+	 "DMSOL",
+	 "SKNTO",
+	 "WAERS",
+	 "WRSHB",
+	 "SKFBT",
+	 "KTOPL",
+	 "HKONT",
+	 "SAKNR",
+	 "AUGBL",
+	 "XBLNR",
+	 "REBZG",
+	 "REBZJ",
+	 "REBZZ",
+	 "VBELN",
+	 "XREF1",
+	 "XREF2",
+	 "XREF3",
+	 "UMSKS",
+	 "BSTAT",
+	 "GJAHR",
+	 "MONAT",
+	 "VAL_FATTURATO",
+	 "VAL_FATTURATO_LC",
+	 "VAL_INCASSATO",
+	 "VAL_INCASSATO_LC",
+	 "VAL_SALDO_CONTABILE",
+	 "VAL_SALDO_CONTABILE_LC",
+	 "VAL_EFFETTI",
+	 "VAL_EFFETTI_LC",
+	 "VAL_INSOLUTI",
+	 "VAL_INSOLUTI_LC"
+FROM "CDA_4_HANA.Ageing.Cliente.Views::CA_AGEING_CLIENTE_S1" 
+;
+
+END;

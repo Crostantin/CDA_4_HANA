@@ -1,0 +1,568 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Calculation:scenario xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:Calculation="http://www.sap.com/ndb/BiModelCalculation.ecore" schemaVersion="2.3" id="CA_SF_CDA_AGEING_CLI" applyPrivilegeType="ANALYTIC_PRIVILEGE" checkAnalyticPrivileges="true" defaultClient="$$client$$" defaultLanguage="$$language$$" hierarchiesSQLEnabled="false" translationRelevant="true" visibility="reportingEnabled" calculationScenarioType="TREE_BASED" dataCategory="CUBE" enforceSqlExecution="false" executionSemantic="UNDEFINED">
+  <descriptions defaultDescription="CA_SF_CDA_AGEING_CLI"/>
+  <localVariables/>
+  <variableMappings/>
+  <informationModelLayout relativeWidthScenario="27"/>
+  <dataSources>
+    <DataSource id="CDA_4_HANA.FactTables.Tables::SF_CDA_CLI_AGEING" type="DATA_BASE_TABLE">
+      <viewAttributes allViewAttributes="true"/>
+      <columnObject schemaName="CDA_4_HANA" columnObjectName="CDA_4_HANA.FactTables.Tables::SF_CDA_CLI_AGEING"/>
+    </DataSource>
+  </dataSources>
+  <calculationViews>
+    <calculationView xsi:type="Calculation:ProjectionView" id="Projection_1">
+      <descriptions/>
+      <viewAttributes>
+        <viewAttribute id="PARTITA_ID"/>
+        <viewAttribute id="BUKRS"/>
+        <viewAttribute id="FISCPER"/>
+        <viewAttribute id="BELNR"/>
+        <viewAttribute id="BUZEI"/>
+        <viewAttribute id="UPOSZ"/>
+        <viewAttribute id="LIFNR"/>
+        <viewAttribute id="STATUSPS"/>
+        <viewAttribute id="KUNNR"/>
+        <viewAttribute id="KKBER"/>
+        <viewAttribute id="MABER"/>
+        <viewAttribute id="KOART"/>
+        <viewAttribute id="UMSKZ"/>
+        <viewAttribute id="CODICE_COGE_SPECIALE_DES"/>
+        <viewAttribute id="BLART"/>
+        <viewAttribute id="BSCHL"/>
+        <viewAttribute id="FISCVAR"/>
+        <viewAttribute id="BLDAT"/>
+        <viewAttribute id="BUDAT"/>
+        <viewAttribute id="CPUDT"/>
+        <viewAttribute id="AUGDT"/>
+        <viewAttribute id="MADAT"/>
+        <viewAttribute id="NETDT"/>
+        <viewAttribute id="ZFBDT"/>
+        <viewAttribute id="ZLSCH"/>
+        <viewAttribute id="ZTERM"/>
+        <viewAttribute id="ZLSPR"/>
+        <viewAttribute id="MANSP"/>
+        <viewAttribute id="MSCHL"/>
+        <viewAttribute id="MANST"/>
+        <viewAttribute id="LCURR"/>
+        <viewAttribute id="DMSOL"/>
+        <viewAttribute id="SKNTO"/>
+        <viewAttribute id="WAERS"/>
+        <viewAttribute id="WRSHB"/>
+        <viewAttribute id="SKFBT"/>
+        <viewAttribute id="KTOPL"/>
+        <viewAttribute id="HKONT"/>
+        <viewAttribute id="SAKNR"/>
+        <viewAttribute id="AUGBL"/>
+        <viewAttribute id="XBLNR"/>
+        <viewAttribute id="REBZG"/>
+        <viewAttribute id="REBZJ"/>
+        <viewAttribute id="REBZZ"/>
+        <viewAttribute id="VBELN"/>
+        <viewAttribute id="XREF1"/>
+        <viewAttribute id="XREF2"/>
+        <viewAttribute id="XREF3"/>
+        <viewAttribute id="UMSKS"/>
+        <viewAttribute id="BSTAT"/>
+        <viewAttribute id="GJAHR"/>
+        <viewAttribute id="MONAT"/>
+        <viewAttribute id="VAL_FATTURATO"/>
+        <viewAttribute id="VAL_FATTURATO_LC"/>
+        <viewAttribute id="VAL_INCASSATO"/>
+        <viewAttribute id="VAL_INCASSATO_LC"/>
+        <viewAttribute id="VAL_SALDO_CONTABILE"/>
+        <viewAttribute id="VAL_SALDO_CONTABILE_LC"/>
+        <viewAttribute id="VAL_EFFETTI"/>
+        <viewAttribute id="VAL_EFFETTI_LC"/>
+        <viewAttribute id="VAL_INSOLUTI"/>
+        <viewAttribute id="VAL_INSOLUTI_LC"/>
+      </viewAttributes>
+      <calculatedViewAttributes/>
+      <input node="#CDA_4_HANA.FactTables.Tables::SF_CDA_CLI_AGEING">
+        <mapping xsi:type="Calculation:AttributeMapping" target="PARTITA_ID" source="PARTITA_ID"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="BUKRS" source="BUKRS"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="FISCPER" source="FISCPER"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="BELNR" source="BELNR"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="BUZEI" source="BUZEI"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="UPOSZ" source="UPOSZ"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="LIFNR" source="LIFNR"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="STATUSPS" source="STATUSPS"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="KUNNR" source="KUNNR"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="KKBER" source="KKBER"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="MABER" source="MABER"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="KOART" source="KOART"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="UMSKZ" source="UMSKZ"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="CODICE_COGE_SPECIALE_DES" source="CODICE_COGE_SPECIALE_DES"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="BLART" source="BLART"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="BSCHL" source="BSCHL"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="FISCVAR" source="FISCVAR"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="BLDAT" source="BLDAT"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="BUDAT" source="BUDAT"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="CPUDT" source="CPUDT"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="AUGDT" source="AUGDT"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="MADAT" source="MADAT"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="NETDT" source="NETDT"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="ZFBDT" source="ZFBDT"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="ZLSCH" source="ZLSCH"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="ZTERM" source="ZTERM"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="ZLSPR" source="ZLSPR"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="MANSP" source="MANSP"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="MSCHL" source="MSCHL"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="MANST" source="MANST"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="LCURR" source="LCURR"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="DMSOL" source="DMSOL"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="SKNTO" source="SKNTO"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="WAERS" source="WAERS"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="WRSHB" source="WRSHB"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="SKFBT" source="SKFBT"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="KTOPL" source="KTOPL"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="HKONT" source="HKONT"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="SAKNR" source="SAKNR"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="AUGBL" source="AUGBL"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="XBLNR" source="XBLNR"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="REBZG" source="REBZG"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="REBZJ" source="REBZJ"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="REBZZ" source="REBZZ"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="VBELN" source="VBELN"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="XREF1" source="XREF1"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="XREF2" source="XREF2"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="XREF3" source="XREF3"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="UMSKS" source="UMSKS"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="BSTAT" source="BSTAT"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="GJAHR" source="GJAHR"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="MONAT" source="MONAT"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="VAL_FATTURATO" source="VAL_FATTURATO"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="VAL_FATTURATO_LC" source="VAL_FATTURATO_LC"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="VAL_INCASSATO" source="VAL_INCASSATO"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="VAL_INCASSATO_LC" source="VAL_INCASSATO_LC"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="VAL_SALDO_CONTABILE" source="VAL_SALDO_CONTABILE"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="VAL_SALDO_CONTABILE_LC" source="VAL_SALDO_CONTABILE_LC"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="VAL_EFFETTI" source="VAL_EFFETTI"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="VAL_EFFETTI_LC" source="VAL_EFFETTI_LC"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="VAL_INSOLUTI" source="VAL_INSOLUTI"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="VAL_INSOLUTI_LC" source="VAL_INSOLUTI_LC"/>
+      </input>
+    </calculationView>
+  </calculationViews>
+  <logicalModel id="Projection_1">
+    <descriptions/>
+    <attributes>
+      <attribute id="STATUSPS" order="1" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="STATUSPS"/>
+        <keyMapping columnObjectName="Projection_1" columnName="STATUSPS"/>
+      </attribute>
+      <attribute id="KKBER" order="2" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="KKBER"/>
+        <keyMapping columnObjectName="Projection_1" columnName="KKBER"/>
+      </attribute>
+      <attribute id="MABER" order="3" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="MABER"/>
+        <keyMapping columnObjectName="Projection_1" columnName="MABER"/>
+      </attribute>
+      <attribute id="KOART" order="4" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="KOART"/>
+        <keyMapping columnObjectName="Projection_1" columnName="KOART"/>
+      </attribute>
+      <attribute id="UMSKZ" order="5" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="UMSKZ"/>
+        <keyMapping columnObjectName="Projection_1" columnName="UMSKZ"/>
+      </attribute>
+      <attribute id="CODICE_COGE_SPECIALE_DES" order="6" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="CODICE_COGE_SPECIALE_DES"/>
+        <keyMapping columnObjectName="Projection_1" columnName="CODICE_COGE_SPECIALE_DES"/>
+      </attribute>
+      <attribute id="BLART" order="7" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="BLART"/>
+        <keyMapping columnObjectName="Projection_1" columnName="BLART"/>
+      </attribute>
+      <attribute id="BSCHL" order="8" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="BSCHL"/>
+        <keyMapping columnObjectName="Projection_1" columnName="BSCHL"/>
+      </attribute>
+      <attribute id="FISCVAR" order="9" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="FISCVAR"/>
+        <keyMapping columnObjectName="Projection_1" columnName="FISCVAR"/>
+      </attribute>
+      <attribute id="ZLSCH" order="15" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="ZLSCH"/>
+        <keyMapping columnObjectName="Projection_1" columnName="ZLSCH"/>
+      </attribute>
+      <attribute id="MANSP" order="16" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="MANSP"/>
+        <keyMapping columnObjectName="Projection_1" columnName="MANSP"/>
+      </attribute>
+      <attribute id="MSCHL" order="17" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="MSCHL"/>
+        <keyMapping columnObjectName="Projection_1" columnName="MSCHL"/>
+      </attribute>
+      <attribute id="LCURR" order="19" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="LCURR"/>
+        <keyMapping columnObjectName="Projection_1" columnName="LCURR"/>
+      </attribute>
+      <attribute id="WAERS" order="22" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="WAERS"/>
+        <keyMapping columnObjectName="Projection_1" columnName="WAERS"/>
+      </attribute>
+      <attribute id="KTOPL" order="25" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="KTOPL"/>
+        <keyMapping columnObjectName="Projection_1" columnName="KTOPL"/>
+      </attribute>
+      <attribute id="HKONT" order="26" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="HKONT"/>
+        <keyMapping columnObjectName="Projection_1" columnName="HKONT"/>
+      </attribute>
+      <attribute id="SAKNR" order="27" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="SAKNR"/>
+        <keyMapping columnObjectName="Projection_1" columnName="SAKNR"/>
+      </attribute>
+      <attribute id="AUGBL" order="28" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="AUGBL"/>
+        <keyMapping columnObjectName="Projection_1" columnName="AUGBL"/>
+      </attribute>
+      <attribute id="XBLNR" order="29" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="XBLNR"/>
+        <keyMapping columnObjectName="Projection_1" columnName="XBLNR"/>
+      </attribute>
+      <attribute id="REBZG" order="30" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="REBZG"/>
+        <keyMapping columnObjectName="Projection_1" columnName="REBZG"/>
+      </attribute>
+      <attribute id="VBELN" order="33" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="VBELN"/>
+        <keyMapping columnObjectName="Projection_1" columnName="VBELN"/>
+      </attribute>
+      <attribute id="XREF1" order="34" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="XREF1"/>
+        <keyMapping columnObjectName="Projection_1" columnName="XREF1"/>
+      </attribute>
+      <attribute id="XREF2" order="35" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="XREF2"/>
+        <keyMapping columnObjectName="Projection_1" columnName="XREF2"/>
+      </attribute>
+      <attribute id="XREF3" order="36" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="XREF3"/>
+        <keyMapping columnObjectName="Projection_1" columnName="XREF3"/>
+      </attribute>
+      <attribute id="UMSKS" order="37" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="UMSKS"/>
+        <keyMapping columnObjectName="Projection_1" columnName="UMSKS"/>
+      </attribute>
+      <attribute id="BSTAT" order="38" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="BSTAT"/>
+        <keyMapping columnObjectName="Projection_1" columnName="BSTAT"/>
+      </attribute>
+      <attribute id="UPOSZ" order="52" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="UPOSZ"/>
+        <keyMapping columnObjectName="Projection_1" columnName="UPOSZ"/>
+      </attribute>
+      <attribute id="BELNR" order="53" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="BELNR"/>
+        <keyMapping columnObjectName="Projection_1" columnName="BELNR"/>
+      </attribute>
+      <attribute id="BUDAT$local">
+        <descriptions defaultDescription="BUDAT"/>
+        <keyMapping columnObjectName="Projection_1" columnName="BUDAT"/>
+      </attribute>
+      <attribute id="ZLSPR$local">
+        <descriptions defaultDescription="ZLSPR"/>
+        <keyMapping columnObjectName="Projection_1" columnName="ZLSPR"/>
+      </attribute>
+      <attribute id="ZTERM$local">
+        <descriptions defaultDescription="ZTERM"/>
+        <keyMapping columnObjectName="Projection_1" columnName="ZTERM"/>
+      </attribute>
+      <attribute id="KUNNR$local">
+        <descriptions defaultDescription="KUNNR"/>
+        <keyMapping columnObjectName="Projection_1" columnName="KUNNR"/>
+      </attribute>
+      <attribute id="BUKRS$local">
+        <descriptions defaultDescription="BUKRS"/>
+        <keyMapping columnObjectName="Projection_1" columnName="BUKRS"/>
+      </attribute>
+      <attribute id="LIFNR$local">
+        <descriptions defaultDescription="LIFNR"/>
+        <keyMapping columnObjectName="Projection_1" columnName="LIFNR"/>
+      </attribute>
+      <attribute id="NETDT$local">
+        <descriptions defaultDescription="NETDT"/>
+        <keyMapping columnObjectName="Projection_1" columnName="NETDT"/>
+      </attribute>
+    </attributes>
+    <calculatedAttributes/>
+    <privateDataFoundation>
+      <tableProxies/>
+      <joins/>
+      <layout>
+        <shapes/>
+      </layout>
+    </privateDataFoundation>
+    <baseMeasures>
+      <measure id="BLDAT" order="10" aggregationType="min" measureType="simple">
+        <descriptions defaultDescription="BLDAT"/>
+        <measureMapping columnObjectName="Projection_1" columnName="BLDAT"/>
+      </measure>
+      <measure id="CPUDT" order="11" aggregationType="min" measureType="simple">
+        <descriptions defaultDescription="CPUDT"/>
+        <measureMapping columnObjectName="Projection_1" columnName="CPUDT"/>
+      </measure>
+      <measure id="AUGDT" order="12" aggregationType="min" measureType="simple">
+        <descriptions defaultDescription="AUGDT"/>
+        <measureMapping columnObjectName="Projection_1" columnName="AUGDT"/>
+      </measure>
+      <measure id="MADAT" order="13" aggregationType="min" measureType="simple">
+        <descriptions defaultDescription="MADAT"/>
+        <measureMapping columnObjectName="Projection_1" columnName="MADAT"/>
+      </measure>
+      <measure id="ZFBDT" order="14" aggregationType="min" measureType="simple">
+        <descriptions defaultDescription="ZFBDT"/>
+        <measureMapping columnObjectName="Projection_1" columnName="ZFBDT"/>
+      </measure>
+      <measure id="MANST" order="18" aggregationType="sum" measureType="simple">
+        <descriptions defaultDescription="MANST"/>
+        <measureMapping columnObjectName="Projection_1" columnName="MANST"/>
+      </measure>
+      <measure id="DMSOL" order="20" aggregationType="sum" measureType="simple">
+        <descriptions defaultDescription="DMSOL"/>
+        <measureMapping columnObjectName="Projection_1" columnName="DMSOL"/>
+      </measure>
+      <measure id="SKNTO" order="21" aggregationType="sum" measureType="simple">
+        <descriptions defaultDescription="SKNTO"/>
+        <measureMapping columnObjectName="Projection_1" columnName="SKNTO"/>
+      </measure>
+      <measure id="WRSHB" order="23" aggregationType="sum" measureType="simple">
+        <descriptions defaultDescription="WRSHB"/>
+        <measureMapping columnObjectName="Projection_1" columnName="WRSHB"/>
+      </measure>
+      <measure id="SKFBT" order="24" aggregationType="sum" measureType="simple">
+        <descriptions defaultDescription="SKFBT"/>
+        <measureMapping columnObjectName="Projection_1" columnName="SKFBT"/>
+      </measure>
+      <measure id="REBZJ" order="31" aggregationType="sum" measureType="simple">
+        <descriptions defaultDescription="REBZJ"/>
+        <measureMapping columnObjectName="Projection_1" columnName="REBZJ"/>
+      </measure>
+      <measure id="REBZZ" order="32" aggregationType="sum" measureType="simple">
+        <descriptions defaultDescription="REBZZ"/>
+        <measureMapping columnObjectName="Projection_1" columnName="REBZZ"/>
+      </measure>
+      <measure id="GJAHR" order="39" aggregationType="sum" measureType="simple">
+        <descriptions defaultDescription="GJAHR"/>
+        <measureMapping columnObjectName="Projection_1" columnName="GJAHR"/>
+      </measure>
+      <measure id="MONAT" order="40" aggregationType="sum" measureType="simple">
+        <descriptions defaultDescription="MONAT"/>
+        <measureMapping columnObjectName="Projection_1" columnName="MONAT"/>
+      </measure>
+      <measure id="VAL_FATTURATO" order="41" aggregationType="sum" measureType="simple">
+        <descriptions defaultDescription="VAL_FATTURATO"/>
+        <measureMapping columnObjectName="Projection_1" columnName="VAL_FATTURATO"/>
+      </measure>
+      <measure id="VAL_FATTURATO_LC" order="42" aggregationType="sum" measureType="simple">
+        <descriptions defaultDescription="VAL_FATTURATO_LC"/>
+        <measureMapping columnObjectName="Projection_1" columnName="VAL_FATTURATO_LC"/>
+      </measure>
+      <measure id="VAL_INCASSATO" order="43" aggregationType="sum" measureType="simple">
+        <descriptions defaultDescription="VAL_INCASSATO"/>
+        <measureMapping columnObjectName="Projection_1" columnName="VAL_INCASSATO"/>
+      </measure>
+      <measure id="VAL_INCASSATO_LC" order="44" aggregationType="sum" measureType="simple">
+        <descriptions defaultDescription="VAL_INCASSATO_LC"/>
+        <measureMapping columnObjectName="Projection_1" columnName="VAL_INCASSATO_LC"/>
+      </measure>
+      <measure id="VAL_SALDO_CONTABILE" order="45" aggregationType="sum" measureType="simple">
+        <descriptions defaultDescription="VAL_SALDO_CONTABILE"/>
+        <measureMapping columnObjectName="Projection_1" columnName="VAL_SALDO_CONTABILE"/>
+      </measure>
+      <measure id="VAL_SALDO_CONTABILE_LC" order="46" aggregationType="sum" measureType="simple">
+        <descriptions defaultDescription="VAL_SALDO_CONTABILE_LC"/>
+        <measureMapping columnObjectName="Projection_1" columnName="VAL_SALDO_CONTABILE_LC"/>
+      </measure>
+      <measure id="VAL_EFFETTI" order="47" aggregationType="sum" measureType="simple">
+        <descriptions defaultDescription="VAL_EFFETTI"/>
+        <measureMapping columnObjectName="Projection_1" columnName="VAL_EFFETTI"/>
+      </measure>
+      <measure id="VAL_EFFETTI_LC" order="48" aggregationType="sum" measureType="simple">
+        <descriptions defaultDescription="VAL_EFFETTI_LC"/>
+        <measureMapping columnObjectName="Projection_1" columnName="VAL_EFFETTI_LC"/>
+      </measure>
+      <measure id="VAL_INSOLUTI" order="49" aggregationType="sum" measureType="simple">
+        <descriptions defaultDescription="VAL_INSOLUTI"/>
+        <measureMapping columnObjectName="Projection_1" columnName="VAL_INSOLUTI"/>
+      </measure>
+      <measure id="VAL_INSOLUTI_LC" order="50" aggregationType="sum" measureType="simple">
+        <descriptions defaultDescription="VAL_INSOLUTI_LC"/>
+        <measureMapping columnObjectName="Projection_1" columnName="VAL_INSOLUTI_LC"/>
+      </measure>
+      <measure id="BUZEI" order="51" aggregationType="sum" measureType="simple">
+        <descriptions defaultDescription="BUZEI"/>
+        <measureMapping columnObjectName="Projection_1" columnName="BUZEI"/>
+      </measure>
+      <measure id="FISCPER" order="54" aggregationType="sum" measureType="simple">
+        <descriptions defaultDescription="FISCPER"/>
+        <measureMapping columnObjectName="Projection_1" columnName="FISCPER"/>
+      </measure>
+      <measure id="PARTITA_ID" order="55" aggregationType="sum" measureType="simple">
+        <descriptions defaultDescription="PARTITA_ID"/>
+        <measureMapping columnObjectName="Projection_1" columnName="PARTITA_ID"/>
+      </measure>
+    </baseMeasures>
+    <calculatedMeasures/>
+    <restrictedMeasures/>
+    <localDimensions/>
+    <sharedDimensions>
+      <logicalJoin associatedObjectUri="/CDA_4_HANA.Views.Time/calculationviews/CA_S_TIME_DAY">
+        <attributes>
+          <attributeRef>#BUDAT$local</attributeRef>
+        </attributes>
+        <associatedAttributeNames>
+          <attributeName>DAY_ID</attributeName>
+        </associatedAttributeNames>
+        <properties joinOperator="Equal" joinType="inner"/>
+        <associatedAttributeFeatures/>
+      </logicalJoin>
+      <logicalJoin associatedObjectUri="/CDA_4_HANA.Views.Pagamenti/calculationviews/S_CDA_CLI_MODALITA_PAGAMENTO" languageAttributeName="MOD_PAG_LANG_ID">
+        <attributes>
+          <attributeRef>#ZLSPR$local</attributeRef>
+        </attributes>
+        <associatedAttributeNames>
+          <attributeName>MODALITA_PAGAMENTO_ID</attributeName>
+        </associatedAttributeNames>
+        <properties cardinality="C1_1" joinOperator="Equal" joinType="textTable"/>
+        <associatedAttributeFeatures/>
+      </logicalJoin>
+      <logicalJoin associatedObjectUri="/CDA_4_HANA.Views.Pagamenti/calculationviews/S_CDA_CLI_CONDIZIONI_PAGAMENTO" languageAttributeName="COND_PAG_LANG_ID">
+        <attributes>
+          <attributeRef>#ZTERM$local</attributeRef>
+        </attributes>
+        <associatedAttributeNames>
+          <attributeName>COND_PAGAMENTO_ID</attributeName>
+        </associatedAttributeNames>
+        <properties cardinality="C1_1" joinOperator="Equal" joinType="textTable"/>
+        <associatedAttributeFeatures/>
+      </logicalJoin>
+      <logicalJoin associatedObjectUri="/CDA_4_HANA.Views.Clienti/calculationviews/CA_S_CLIENTE_SOCIETA">
+        <attributes>
+          <attributeRef>#KUNNR$local</attributeRef>
+          <attributeRef>#BUKRS$local</attributeRef>
+        </attributes>
+        <associatedAttributeNames>
+          <attributeName>KUNNR</attributeName>
+          <attributeName>BUKRS</attributeName>
+        </associatedAttributeNames>
+        <properties joinOperator="Equal" joinType="leftOuter"/>
+        <associatedAttributeFeatures/>
+      </logicalJoin>
+      <logicalJoin associatedObjectUri="/CDA_4_HANA.Views.Fornitori/calculationviews/CA_FORNITORI_SOCIETA">
+        <attributes>
+          <attributeRef>#LIFNR$local</attributeRef>
+          <attributeRef>#BUKRS$local</attributeRef>
+        </attributes>
+        <associatedAttributeNames>
+          <attributeName>LIFNR</attributeName>
+          <attributeName>BUKRS</attributeName>
+        </associatedAttributeNames>
+        <properties joinOperator="Equal" joinType="leftOuter"/>
+        <associatedAttributeFeatures>
+          <attributeReference alias="CA_FORNITORI_SOCIETA_BUKRS" attributeName="BUKRS"/>
+          <attributeReference alias="CA_FORNITORI_SOCIETA_PERNR" attributeName="PERNR"/>
+          <attributeReference alias="CA_FORNITORI_SOCIETA_ERDAT" attributeName="ERDAT"/>
+          <attributeReference alias="CA_FORNITORI_SOCIETA_ERNAM" attributeName="ERNAM"/>
+          <attributeReference alias="CA_FORNITORI_SOCIETA_SPERR" attributeName="SPERR"/>
+          <attributeReference alias="CA_FORNITORI_SOCIETA_LOEVM" attributeName="LOEVM"/>
+          <attributeReference alias="CA_FORNITORI_SOCIETA_ZUAWA" attributeName="ZUAWA"/>
+          <attributeReference alias="CA_FORNITORI_SOCIETA_AKONT" attributeName="AKONT"/>
+          <attributeReference alias="CA_FORNITORI_SOCIETA_BEGRU" attributeName="BEGRU"/>
+          <attributeReference alias="CA_FORNITORI_SOCIETA_VZSKZ" attributeName="VZSKZ"/>
+          <attributeReference alias="CA_FORNITORI_SOCIETA_ZWELS" attributeName="ZWELS"/>
+          <attributeReference alias="CA_FORNITORI_SOCIETA_XVERR" attributeName="XVERR"/>
+          <attributeReference alias="CA_FORNITORI_SOCIETA_ZAHLS" attributeName="ZAHLS"/>
+          <attributeReference alias="CA_FORNITORI_SOCIETA_ZTERM" attributeName="ZTERM"/>
+          <attributeReference alias="CA_FORNITORI_SOCIETA_EIKTO" attributeName="EIKTO"/>
+          <attributeReference alias="CA_FORNITORI_SOCIETA_ZSABE" attributeName="ZSABE"/>
+          <attributeReference alias="CA_FORNITORI_SOCIETA_KVERM" attributeName="KVERM"/>
+          <attributeReference alias="CA_FORNITORI_SOCIETA_FDGRV" attributeName="FDGRV"/>
+          <attributeReference alias="CA_FORNITORI_SOCIETA_BUSAB" attributeName="BUSAB"/>
+          <attributeReference alias="CA_FORNITORI_SOCIETA_DATLZ" attributeName="DATLZ"/>
+          <attributeReference alias="CA_FORNITORI_SOCIETA_XDEZV" attributeName="XDEZV"/>
+          <attributeReference alias="CA_FORNITORI_SOCIETA_KULTG" attributeName="KULTG"/>
+          <attributeReference alias="CA_FORNITORI_SOCIETA_TOGRU" attributeName="TOGRU"/>
+          <attributeReference alias="CA_FORNITORI_SOCIETA_HBKID" attributeName="HBKID"/>
+          <attributeReference alias="CA_FORNITORI_SOCIETA_XPORE" attributeName="XPORE"/>
+          <attributeReference alias="CA_FORNITORI_SOCIETA_BLNKZ" attributeName="BLNKZ"/>
+          <attributeReference alias="CA_FORNITORI_SOCIETA_ALTKN" attributeName="ALTKN"/>
+          <attributeReference alias="CA_FORNITORI_SOCIETA_ZGRUP" attributeName="ZGRUP"/>
+          <attributeReference alias="CA_FORNITORI_SOCIETA_MGRUP" attributeName="MGRUP"/>
+          <attributeReference alias="CA_FORNITORI_SOCIETA_UZAWE" attributeName="UZAWE"/>
+          <attributeReference alias="CA_FORNITORI_SOCIETA_XEDIP" attributeName="XEDIP"/>
+          <attributeReference alias="CA_FORNITORI_SOCIETA_FRGRP" attributeName="FRGRP"/>
+          <attributeReference alias="CA_FORNITORI_SOCIETA_TLFXS" attributeName="TLFXS"/>
+          <attributeReference alias="CA_FORNITORI_SOCIETA_INTAD" attributeName="INTAD"/>
+          <attributeReference alias="CA_FORNITORI_SOCIETA_GUZTE" attributeName="GUZTE"/>
+          <attributeReference alias="CA_FORNITORI_SOCIETA_GRICD" attributeName="GRICD"/>
+          <attributeReference alias="CA_FORNITORI_SOCIETA_GRIDT" attributeName="GRIDT"/>
+          <attributeReference alias="CA_FORNITORI_SOCIETA_XAUSZ" attributeName="XAUSZ"/>
+          <attributeReference alias="CA_FORNITORI_SOCIETA_CONFS" attributeName="CONFS"/>
+          <attributeReference alias="CA_FORNITORI_SOCIETA_UPDAT" attributeName="UPDAT"/>
+          <attributeReference alias="CA_FORNITORI_SOCIETA_UPTIM" attributeName="UPTIM"/>
+          <attributeReference alias="CA_FORNITORI_SOCIETA_NODEL" attributeName="NODEL"/>
+          <attributeReference alias="CA_FORNITORI_SOCIETA_TLFNS" attributeName="TLFNS"/>
+        </associatedAttributeFeatures>
+      </logicalJoin>
+      <logicalJoin associatedObjectUri="/CDA_4_HANA.Views.Time/calculationviews/CA_S_TIME_DAY_SCADENZA">
+        <attributes>
+          <attributeRef>#NETDT$local</attributeRef>
+        </attributes>
+        <associatedAttributeNames>
+          <attributeName>DAY_ID</attributeName>
+        </associatedAttributeNames>
+        <properties joinOperator="Equal" joinType="inner"/>
+        <associatedAttributeFeatures>
+          <attributeReference alias="CA_S_TIME_DAY_SCADENZA_DAY_ID" attributeName="DAY_ID"/>
+          <attributeReference alias="CA_S_TIME_DAY_SCADENZA_DATE_COD" attributeName="DATE_COD"/>
+          <attributeReference alias="CA_S_TIME_DAY_SCADENZA_MONTH_ID" attributeName="MONTH_ID"/>
+          <attributeReference alias="CA_S_TIME_DAY_SCADENZA_QUARTER_ID" attributeName="QUARTER_ID"/>
+          <attributeReference alias="CA_S_TIME_DAY_SCADENZA_YEAR_ID" attributeName="YEAR_ID"/>
+          <attributeReference alias="CA_S_TIME_DAY_SCADENZA_NUM_QUARTER" attributeName="NUM_QUARTER"/>
+          <attributeReference alias="CA_S_TIME_DAY_SCADENZA_NUM_MONTH" attributeName="NUM_MONTH"/>
+          <attributeReference alias="CA_S_TIME_DAY_SCADENZA_DAY_OF_WEEK" attributeName="DAY_OF_WEEK"/>
+          <attributeReference alias="CA_S_TIME_DAY_SCADENZA_DAY" attributeName="DAY"/>
+          <attributeReference alias="CA_S_TIME_DAY_SCADENZA_MONTH_DES" attributeName="MONTH_DES"/>
+          <attributeReference alias="CA_S_TIME_DAY_SCADENZA_DAY_IN_MONTH" attributeName="DAY_IN_MONTH"/>
+        </associatedAttributeFeatures>
+      </logicalJoin>
+    </sharedDimensions>
+  </logicalModel>
+  <layout>
+    <shapes>
+      <shape expanded="true" modelObjectName="Output" modelObjectNameSpace="MeasureGroup">
+        <upperLeftCorner x="40" y="85"/>
+        <rectangleSize height="0" width="0"/>
+      </shape>
+      <shape modelObjectName="Projection_1" modelObjectNameSpace="StarJoinViewNodeInput" modelObjectType="repository">
+        <upperLeftCorner x="429" y="224"/>
+      </shape>
+      <shape modelObjectName="/CDA_4_HANA.Views.Time/calculationviews/CA_S_TIME_DAY" modelObjectNameSpace="StarJoinViewNodeSharedCV" modelObjectType="repository">
+        <upperLeftCorner x="16" y="1025"/>
+      </shape>
+      <shape modelObjectName="/CDA_4_HANA.Views.Pagamenti/calculationviews/S_CDA_CLI_MODALITA_PAGAMENTO" modelObjectNameSpace="StarJoinViewNodeSharedCV" modelObjectType="repository">
+        <upperLeftCorner x="868" y="1330"/>
+      </shape>
+      <shape modelObjectName="/CDA_4_HANA.Views.Pagamenti/calculationviews/S_CDA_CLI_CONDIZIONI_PAGAMENTO" modelObjectNameSpace="StarJoinViewNodeSharedCV" modelObjectType="repository">
+        <upperLeftCorner x="868" y="1217"/>
+      </shape>
+      <shape modelObjectName="/CDA_4_HANA.Views.Clienti/calculationviews/CA_S_CLIENTE_SOCIETA" modelObjectNameSpace="StarJoinViewNodeSharedCV" modelObjectType="repository">
+        <upperLeftCorner x="868" y="64"/>
+      </shape>
+      <shape modelObjectName="/CDA_4_HANA.Views.Fornitori/calculationviews/CA_FORNITORI_SOCIETA" modelObjectNameSpace="StarJoinViewNodeSharedCV" modelObjectType="repository">
+        <upperLeftCorner x="16" y="16"/>
+      </shape>
+      <shape modelObjectName="/CDA_4_HANA.Views.Time/calculationviews/CA_S_TIME_DAY_SCADENZA" modelObjectNameSpace="StarJoinViewNodeSharedCV" modelObjectType="repository">
+        <upperLeftCorner x="16" y="1266"/>
+      </shape>
+      <shape expanded="true" modelObjectName="Projection_1" modelObjectNameSpace="CalculationView">
+        <upperLeftCorner x="40" y="310"/>
+        <rectangleSize height="-1" width="-1"/>
+      </shape>
+    </shapes>
+  </layout>
+</Calculation:scenario>

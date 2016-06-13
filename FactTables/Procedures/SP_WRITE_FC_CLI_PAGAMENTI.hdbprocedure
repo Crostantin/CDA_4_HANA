@@ -1,0 +1,17 @@
+PROCEDURE "CDA_4_HANA"."CDA_4_HANA.FactTables.Procedures::SP_WRITE_FC_CLI_PAGAMENTI" ( ) 
+	LANGUAGE SQLSCRIPT
+	SQL SECURITY INVOKER 
+	DEFAULT SCHEMA "CDA_4_HANA"
+	--READS SQL DATA 
+	AS
+BEGIN
+/***************************** 
+	Write your procedure logic 
+ *****************************/
+ 
+delete from "CDA_4_HANA.FactTables.Tables::SF_CDA_CLI_PAGAMENTI";
+call  "CDA_4_HANA"."CDA_4_HANA.FactTables.Procedures::SP_CLI_PAGAMENTI"(TEMP_CLI_PAGAMENTI);
+insert into  "CDA_4_HANA.FactTables.Tables::SF_CDA_CLI_PAGAMENTI"
+select * from :TEMP_CLI_PAGAMENTI;
+ 
+END;

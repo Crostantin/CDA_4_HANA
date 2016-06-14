@@ -2,7 +2,16 @@
 <Calculation:scenario xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:Calculation="http://www.sap.com/ndb/BiModelCalculation.ecore" schemaVersion="2.3" id="CA_SF_CDA_CLI_AGEING" applyPrivilegeType="ANALYTIC_PRIVILEGE" checkAnalyticPrivileges="true" defaultClient="$$client$$" defaultLanguage="$$language$$" hierarchiesSQLEnabled="false" translationRelevant="true" visibility="reportingEnabled" calculationScenarioType="TREE_BASED" dataCategory="CUBE" enforceSqlExecution="false" executionSemantic="UNDEFINED">
   <descriptions defaultDescription="CA_SF_CDA_AGEING_CLI"/>
   <defaultSchema schemaName="CDA_4_HANA"/>
-  <localVariables/>
+  <localVariables>
+    <variable id="i_data_analisi" parameter="true">
+      <descriptions defaultDescription="i_data_analisi"/>
+      <variableProperties datatype="DATE" defaultExpressionLanguage="COLUMN_ENGINE" mandatory="true">
+        <valueDomain type="Date"/>
+        <selection multiLine="false" type="SingleValue"/>
+        <defaultExpression>now()</defaultExpression>
+      </variableProperties>
+    </variable>
+  </localVariables>
   <variableMappings/>
   <informationModelLayout relativeWidthScenario="27"/>
   <dataSources>
@@ -297,7 +306,14 @@
         <keyMapping columnObjectName="Projection_1" columnName="PARTITA_ID"/>
       </attribute>
     </attributes>
-    <calculatedAttributes/>
+    <calculatedAttributes>
+      <calculatedAttribute id="VAR_DATA_ANALISI" hidden="true" order="56" semanticType="date" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="VAR_DATA_ANALISI"/>
+        <keyCalculation datatype="DATE" expressionLanguage="COLUMN_ENGINE">
+          <formula>'$$i_data_analisi$$'</formula>
+        </keyCalculation>
+      </calculatedAttribute>
+    </calculatedAttributes>
     <privateDataFoundation>
       <tableProxies/>
       <joins/>
@@ -407,7 +423,15 @@
         <measureMapping columnObjectName="Projection_1" columnName="BUZEI"/>
       </measure>
     </baseMeasures>
-    <calculatedMeasures/>
+    <calculatedMeasures>
+      <measure id="A_SCADERE" hidden="false" order="55" aggregationType="sum" measureType="simple" datatype="DECIMAL" expressionLanguage="COLUMN_ENGINE" length="13" scale="2">
+        <descriptions defaultDescription="A_SCADERE"/>
+        <formula>if(&#xD;
+&quot;CA_DOCUMENTO_NETDT&quot;>=&quot;VAR_DATA_ANALISI&quot;,&#xD;
+&quot;WRSHB&quot;,&#xD;
+0)</formula>
+      </measure>
+    </calculatedMeasures>
     <restrictedMeasures/>
     <localDimensions/>
     <sharedDimensions>
@@ -564,31 +588,31 @@
         <rectangleSize height="-1" width="-1"/>
       </shape>
       <shape modelObjectName="Projection_1" modelObjectNameSpace="StarJoinViewNodeInput" modelObjectType="repository">
-        <upperLeftCorner x="427" y="144"/>
+        <upperLeftCorner x="516" y="416"/>
       </shape>
       <shape modelObjectName="/CDA_4_HANA.Views.Time/calculationviews/CA_S_TIME_DAY" modelObjectNameSpace="StarJoinViewNodeSharedCV" modelObjectType="repository">
-        <upperLeftCorner x="742" y="196"/>
+        <upperLeftCorner x="16" y="1282"/>
       </shape>
       <shape modelObjectName="/CDA_4_HANA.Views.Pagamenti/calculationviews/S_CDA_CLI_MODALITA_PAGAMENTO" modelObjectNameSpace="StarJoinViewNodeSharedCV" modelObjectType="repository">
-        <upperLeftCorner x="742" y="360"/>
+        <upperLeftCorner x="831" y="1730"/>
       </shape>
       <shape modelObjectName="/CDA_4_HANA.Views.Pagamenti/calculationviews/S_CDA_CLI_CONDIZIONI_PAGAMENTO" modelObjectNameSpace="StarJoinViewNodeSharedCV" modelObjectType="repository">
-        <upperLeftCorner x="742" y="278"/>
+        <upperLeftCorner x="16" y="1764"/>
       </shape>
       <shape modelObjectName="/CDA_4_HANA.Views.Clienti/calculationviews/CA_S_CLIENTE_SOCIETA" modelObjectNameSpace="StarJoinViewNodeSharedCV" modelObjectType="repository">
-        <upperLeftCorner x="16" y="32"/>
+        <upperLeftCorner x="16" y="16"/>
       </shape>
       <shape modelObjectName="/CDA_4_HANA.Views.Fornitori/calculationviews/CA_FORNITORI_SOCIETA" modelObjectNameSpace="StarJoinViewNodeSharedCV" modelObjectType="repository">
-        <upperLeftCorner x="742" y="98"/>
+        <upperLeftCorner x="831" y="721"/>
       </shape>
       <shape modelObjectName="/CDA_4_HANA.Views.Time/calculationviews/CA_S_TIME_DAY_SCADENZA" modelObjectNameSpace="StarJoinViewNodeSharedCV" modelObjectType="repository">
-        <upperLeftCorner x="16" y="212"/>
+        <upperLeftCorner x="16" y="1523"/>
       </shape>
       <shape modelObjectName="/CDA_4_HANA.Views.Societa/calculationviews/CA_CDA_SOCIETA" modelObjectNameSpace="StarJoinViewNodeSharedCV" modelObjectType="repository">
-        <upperLeftCorner x="16" y="130"/>
+        <upperLeftCorner x="16" y="1169"/>
       </shape>
       <shape modelObjectName="/CDA_4_HANA.Views.Documento/calculationviews/CA_CDA_DOCUMENTO_REP" modelObjectNameSpace="StarJoinViewNodeSharedCV" modelObjectType="repository">
-        <upperLeftCorner x="742" y="16"/>
+        <upperLeftCorner x="831" y="48"/>
       </shape>
     </shapes>
   </layout>

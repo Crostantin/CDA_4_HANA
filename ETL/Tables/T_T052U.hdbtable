@@ -1,0 +1,11 @@
+table.schemaName = "CDA_4_HANA";
+table.tableType = COLUMNSTORE;
+table.columns = [
+	 {name="MANDT"; sqlType=VARCHAR; length=3; nullable=false; },
+	 {name="SPRAS"; sqlType=VARCHAR; length=1; nullable=false; },
+	 {name="ZTERM"; sqlType=VARCHAR; length=4; nullable=false; },
+	 {name="ZTAGG"; sqlType=VARCHAR; length=2; nullable=false; },
+	 {name="TEXT1"; sqlType=VARCHAR; length=50; }
+	 	
+];
+table.primaryKey.pkcolumns=["MANDT", "SPRAS", "ZTERM", "ZTAGG"];

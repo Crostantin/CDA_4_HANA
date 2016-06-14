@@ -11,13 +11,13 @@
       <viewAttributes allViewAttributes="true"/>
       <columnObject schemaName="CDA_4_HANA" columnObjectName="CDA_4_HANA.ETL.M_Tables::M_MANDANTE"/>
     </DataSource>
-    <DataSource id="T_T042Z" type="DATA_BASE_TABLE">
+    <DataSource id="CDA_4_HANA.ETL.Tables::T_T042Z" type="DATA_BASE_TABLE">
       <viewAttributes allViewAttributes="true"/>
-      <columnObject schemaName="CDA_TMP" columnObjectName="T_T042Z"/>
+      <columnObject schemaName="CDA_4_HANA" columnObjectName="CDA_4_HANA.ETL.Tables::T_T042Z"/>
     </DataSource>
-    <DataSource id="T005" type="DATA_BASE_TABLE">
+    <DataSource id="CDA_4_HANA.ETL.Tables::T_T005" type="DATA_BASE_TABLE">
       <viewAttributes allViewAttributes="true"/>
-      <columnObject schemaName="CDA_TMP" columnObjectName="T005"/>
+      <columnObject schemaName="CDA_4_HANA" columnObjectName="CDA_4_HANA.ETL.Tables::T_T005"/>
     </DataSource>
   </dataSources>
   <calculationViews>
@@ -33,7 +33,7 @@
       <input node="#CDA_4_HANA.ETL.M_Tables::M_MANDANTE">
         <mapping xsi:type="Calculation:AttributeMapping" target="MANDT" source="MANDT"/>
       </input>
-      <input node="#T_T042Z">
+      <input node="#CDA_4_HANA.ETL.Tables::T_T042Z">
         <mapping xsi:type="Calculation:AttributeMapping" target="LAND1" source="LAND1"/>
         <mapping xsi:type="Calculation:AttributeMapping" target="ZLSCH" source="ZLSCH"/>
         <mapping xsi:type="Calculation:AttributeMapping" target="TEXT1" source="TEXT1"/>
@@ -47,23 +47,23 @@
         <viewAttribute id="SPRAS"/>
         <viewAttribute id="ZLSCH"/>
         <viewAttribute id="TEXT1"/>
-        <viewAttribute hidden="true" id="JOIN$MANDT$MANDT"/>
-        <viewAttribute hidden="true" id="JOIN$LAND1$LAND1"/>
+        <viewAttribute id="MANDT"/>
+        <viewAttribute id="LAND1"/>
       </viewAttributes>
       <calculatedViewAttributes/>
       <input node="#Join_1">
         <mapping xsi:type="Calculation:AttributeMapping" target="ZLSCH" source="ZLSCH"/>
         <mapping xsi:type="Calculation:AttributeMapping" target="TEXT1" source="TEXT1"/>
-        <mapping xsi:type="Calculation:AttributeMapping" target="JOIN$MANDT$MANDT" source="MANDT"/>
-        <mapping xsi:type="Calculation:AttributeMapping" target="JOIN$LAND1$LAND1" source="LAND1"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="MANDT" source="MANDT"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="LAND1" source="LAND1"/>
       </input>
-      <input node="#T005">
+      <input node="#CDA_4_HANA.ETL.Tables::T_T005">
         <mapping xsi:type="Calculation:AttributeMapping" target="SPRAS" source="SPRAS"/>
-        <mapping xsi:type="Calculation:AttributeMapping" target="JOIN$MANDT$MANDT" source="MANDT"/>
-        <mapping xsi:type="Calculation:AttributeMapping" target="JOIN$LAND1$LAND1" source="LAND1"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="MANDT" source="MANDT"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="LAND1" source="LAND1"/>
       </input>
-      <joinAttribute name="JOIN$MANDT$MANDT"/>
-      <joinAttribute name="JOIN$LAND1$LAND1"/>
+      <joinAttribute name="MANDT"/>
+      <joinAttribute name="LAND1"/>
     </calculationView>
   </calculationViews>
   <logicalModel id="Join_2">

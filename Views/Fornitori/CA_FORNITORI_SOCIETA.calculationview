@@ -5,250 +5,250 @@
   <variableMappings/>
   <informationModelLayout relativeWidthScenario="27"/>
   <dataSources>
-    <DataSource id="T_0VEN_COMPC_ATTR" type="DATA_BASE_TABLE">
+    <DataSource id="CDA_4_HANA.ETL.Tables::T_0VEN_COMPC_ATTR" type="DATA_BASE_TABLE">
       <viewAttributes allViewAttributes="true"/>
-      <columnObject schemaName="CDA_4_HANA" columnObjectName="T_0VEN_COMPC_ATTR"/>
+      <columnObject schemaName="CDA_4_HANA" columnObjectName="CDA_4_HANA.ETL.Tables::T_0VEN_COMPC_ATTR"/>
     </DataSource>
   </dataSources>
   <calculationViews/>
-  <logicalModel id="T_0VEN_COMPC_ATTR">
+  <logicalModel id="CDA_4_HANA.ETL.Tables::T_0VEN_COMPC_ATTR">
     <descriptions/>
     <attributes>
       <attribute id="LIFNR" order="1" attributeHierarchyActive="false" displayAttribute="false">
         <descriptions defaultDescription="LIFNR"/>
-        <keyMapping schemaName="CDA_4_HANA" columnObjectName="T_0VEN_COMPC_ATTR" columnName="LIFNR"/>
+        <keyMapping schemaName="CDA_4_HANA" columnObjectName="CDA_4_HANA.ETL.Tables::T_0VEN_COMPC_ATTR" columnName="LIFNR"/>
       </attribute>
       <attribute id="BUKRS" order="2" attributeHierarchyActive="false" displayAttribute="false">
         <descriptions defaultDescription="BUKRS"/>
-        <keyMapping schemaName="CDA_4_HANA" columnObjectName="T_0VEN_COMPC_ATTR" columnName="BUKRS"/>
+        <keyMapping schemaName="CDA_4_HANA" columnObjectName="CDA_4_HANA.ETL.Tables::T_0VEN_COMPC_ATTR" columnName="BUKRS"/>
       </attribute>
       <attribute id="PERNR" order="3" attributeHierarchyActive="false" displayAttribute="false">
         <descriptions defaultDescription="PERNR"/>
-        <keyMapping schemaName="CDA_4_HANA" columnObjectName="T_0VEN_COMPC_ATTR" columnName="PERNR"/>
+        <keyMapping schemaName="CDA_4_HANA" columnObjectName="CDA_4_HANA.ETL.Tables::T_0VEN_COMPC_ATTR" columnName="PERNR"/>
       </attribute>
       <attribute id="ERDAT" order="4" attributeHierarchyActive="false" displayAttribute="false">
         <descriptions defaultDescription="ERDAT"/>
-        <keyMapping schemaName="CDA_4_HANA" columnObjectName="T_0VEN_COMPC_ATTR" columnName="ERDAT"/>
+        <keyMapping schemaName="CDA_4_HANA" columnObjectName="CDA_4_HANA.ETL.Tables::T_0VEN_COMPC_ATTR" columnName="ERDAT"/>
       </attribute>
       <attribute id="ERNAM" order="5" attributeHierarchyActive="false" displayAttribute="false">
         <descriptions defaultDescription="ERNAM"/>
-        <keyMapping schemaName="CDA_4_HANA" columnObjectName="T_0VEN_COMPC_ATTR" columnName="ERNAM"/>
+        <keyMapping schemaName="CDA_4_HANA" columnObjectName="CDA_4_HANA.ETL.Tables::T_0VEN_COMPC_ATTR" columnName="ERNAM"/>
       </attribute>
       <attribute id="SPERR" order="6" attributeHierarchyActive="false" displayAttribute="false">
         <descriptions defaultDescription="SPERR"/>
-        <keyMapping schemaName="CDA_4_HANA" columnObjectName="T_0VEN_COMPC_ATTR" columnName="SPERR"/>
+        <keyMapping schemaName="CDA_4_HANA" columnObjectName="CDA_4_HANA.ETL.Tables::T_0VEN_COMPC_ATTR" columnName="SPERR"/>
       </attribute>
       <attribute id="LOEVM" order="7" attributeHierarchyActive="false" displayAttribute="false">
         <descriptions defaultDescription="LOEVM"/>
-        <keyMapping schemaName="CDA_4_HANA" columnObjectName="T_0VEN_COMPC_ATTR" columnName="LOEVM"/>
+        <keyMapping schemaName="CDA_4_HANA" columnObjectName="CDA_4_HANA.ETL.Tables::T_0VEN_COMPC_ATTR" columnName="LOEVM"/>
       </attribute>
       <attribute id="ZUAWA" order="8" attributeHierarchyActive="false" displayAttribute="false">
         <descriptions defaultDescription="ZUAWA"/>
-        <keyMapping schemaName="CDA_4_HANA" columnObjectName="T_0VEN_COMPC_ATTR" columnName="ZUAWA"/>
+        <keyMapping schemaName="CDA_4_HANA" columnObjectName="CDA_4_HANA.ETL.Tables::T_0VEN_COMPC_ATTR" columnName="ZUAWA"/>
       </attribute>
       <attribute id="AKONT" order="9" attributeHierarchyActive="false" displayAttribute="false">
         <descriptions defaultDescription="AKONT"/>
-        <keyMapping schemaName="CDA_4_HANA" columnObjectName="T_0VEN_COMPC_ATTR" columnName="AKONT"/>
+        <keyMapping schemaName="CDA_4_HANA" columnObjectName="CDA_4_HANA.ETL.Tables::T_0VEN_COMPC_ATTR" columnName="AKONT"/>
       </attribute>
       <attribute id="BEGRU" order="10" attributeHierarchyActive="false" displayAttribute="false">
         <descriptions defaultDescription="BEGRU"/>
-        <keyMapping schemaName="CDA_4_HANA" columnObjectName="T_0VEN_COMPC_ATTR" columnName="BEGRU"/>
+        <keyMapping schemaName="CDA_4_HANA" columnObjectName="CDA_4_HANA.ETL.Tables::T_0VEN_COMPC_ATTR" columnName="BEGRU"/>
       </attribute>
       <attribute id="VZSKZ" order="11" attributeHierarchyActive="false" displayAttribute="false">
         <descriptions defaultDescription="VZSKZ"/>
-        <keyMapping schemaName="CDA_4_HANA" columnObjectName="T_0VEN_COMPC_ATTR" columnName="VZSKZ"/>
+        <keyMapping schemaName="CDA_4_HANA" columnObjectName="CDA_4_HANA.ETL.Tables::T_0VEN_COMPC_ATTR" columnName="VZSKZ"/>
       </attribute>
       <attribute id="ZWELS" order="12" attributeHierarchyActive="false" displayAttribute="false">
         <descriptions defaultDescription="ZWELS"/>
-        <keyMapping schemaName="CDA_4_HANA" columnObjectName="T_0VEN_COMPC_ATTR" columnName="ZWELS"/>
+        <keyMapping schemaName="CDA_4_HANA" columnObjectName="CDA_4_HANA.ETL.Tables::T_0VEN_COMPC_ATTR" columnName="ZWELS"/>
       </attribute>
       <attribute id="XVERR" order="13" attributeHierarchyActive="false" displayAttribute="false">
         <descriptions defaultDescription="XVERR"/>
-        <keyMapping schemaName="CDA_4_HANA" columnObjectName="T_0VEN_COMPC_ATTR" columnName="XVERR"/>
+        <keyMapping schemaName="CDA_4_HANA" columnObjectName="CDA_4_HANA.ETL.Tables::T_0VEN_COMPC_ATTR" columnName="XVERR"/>
       </attribute>
       <attribute id="ZAHLS" order="14" attributeHierarchyActive="false" displayAttribute="false">
         <descriptions defaultDescription="ZAHLS"/>
-        <keyMapping schemaName="CDA_4_HANA" columnObjectName="T_0VEN_COMPC_ATTR" columnName="ZAHLS"/>
+        <keyMapping schemaName="CDA_4_HANA" columnObjectName="CDA_4_HANA.ETL.Tables::T_0VEN_COMPC_ATTR" columnName="ZAHLS"/>
       </attribute>
       <attribute id="ZTERM" order="15" attributeHierarchyActive="false" displayAttribute="false">
         <descriptions defaultDescription="ZTERM"/>
-        <keyMapping schemaName="CDA_4_HANA" columnObjectName="T_0VEN_COMPC_ATTR" columnName="ZTERM"/>
+        <keyMapping schemaName="CDA_4_HANA" columnObjectName="CDA_4_HANA.ETL.Tables::T_0VEN_COMPC_ATTR" columnName="ZTERM"/>
       </attribute>
       <attribute id="EIKTO" order="16" attributeHierarchyActive="false" displayAttribute="false">
         <descriptions defaultDescription="EIKTO"/>
-        <keyMapping schemaName="CDA_4_HANA" columnObjectName="T_0VEN_COMPC_ATTR" columnName="EIKTO"/>
+        <keyMapping schemaName="CDA_4_HANA" columnObjectName="CDA_4_HANA.ETL.Tables::T_0VEN_COMPC_ATTR" columnName="EIKTO"/>
       </attribute>
       <attribute id="ZSABE" order="17" attributeHierarchyActive="false" displayAttribute="false">
         <descriptions defaultDescription="ZSABE"/>
-        <keyMapping schemaName="CDA_4_HANA" columnObjectName="T_0VEN_COMPC_ATTR" columnName="ZSABE"/>
+        <keyMapping schemaName="CDA_4_HANA" columnObjectName="CDA_4_HANA.ETL.Tables::T_0VEN_COMPC_ATTR" columnName="ZSABE"/>
       </attribute>
       <attribute id="KVERM" order="18" attributeHierarchyActive="false" displayAttribute="false">
         <descriptions defaultDescription="KVERM"/>
-        <keyMapping schemaName="CDA_4_HANA" columnObjectName="T_0VEN_COMPC_ATTR" columnName="KVERM"/>
+        <keyMapping schemaName="CDA_4_HANA" columnObjectName="CDA_4_HANA.ETL.Tables::T_0VEN_COMPC_ATTR" columnName="KVERM"/>
       </attribute>
       <attribute id="FDGRV" order="19" attributeHierarchyActive="false" displayAttribute="false">
         <descriptions defaultDescription="FDGRV"/>
-        <keyMapping schemaName="CDA_4_HANA" columnObjectName="T_0VEN_COMPC_ATTR" columnName="FDGRV"/>
+        <keyMapping schemaName="CDA_4_HANA" columnObjectName="CDA_4_HANA.ETL.Tables::T_0VEN_COMPC_ATTR" columnName="FDGRV"/>
       </attribute>
       <attribute id="BUSAB" order="20" attributeHierarchyActive="false" displayAttribute="false">
         <descriptions defaultDescription="BUSAB"/>
-        <keyMapping schemaName="CDA_4_HANA" columnObjectName="T_0VEN_COMPC_ATTR" columnName="BUSAB"/>
+        <keyMapping schemaName="CDA_4_HANA" columnObjectName="CDA_4_HANA.ETL.Tables::T_0VEN_COMPC_ATTR" columnName="BUSAB"/>
       </attribute>
       <attribute id="LNRZE" order="21" attributeHierarchyActive="false" displayAttribute="false">
         <descriptions defaultDescription="LNRZE"/>
-        <keyMapping schemaName="CDA_4_HANA" columnObjectName="T_0VEN_COMPC_ATTR" columnName="LNRZE"/>
+        <keyMapping schemaName="CDA_4_HANA" columnObjectName="CDA_4_HANA.ETL.Tables::T_0VEN_COMPC_ATTR" columnName="LNRZE"/>
       </attribute>
       <attribute id="LNRZB" order="22" attributeHierarchyActive="false" displayAttribute="false">
         <descriptions defaultDescription="LNRZB"/>
-        <keyMapping schemaName="CDA_4_HANA" columnObjectName="T_0VEN_COMPC_ATTR" columnName="LNRZB"/>
+        <keyMapping schemaName="CDA_4_HANA" columnObjectName="CDA_4_HANA.ETL.Tables::T_0VEN_COMPC_ATTR" columnName="LNRZB"/>
       </attribute>
       <attribute id="ZINDT" order="23" attributeHierarchyActive="false" displayAttribute="false">
         <descriptions defaultDescription="ZINDT"/>
-        <keyMapping schemaName="CDA_4_HANA" columnObjectName="T_0VEN_COMPC_ATTR" columnName="ZINDT"/>
+        <keyMapping schemaName="CDA_4_HANA" columnObjectName="CDA_4_HANA.ETL.Tables::T_0VEN_COMPC_ATTR" columnName="ZINDT"/>
       </attribute>
       <attribute id="ZINRT" order="24" attributeHierarchyActive="false" displayAttribute="false">
         <descriptions defaultDescription="ZINRT"/>
-        <keyMapping schemaName="CDA_4_HANA" columnObjectName="T_0VEN_COMPC_ATTR" columnName="ZINRT"/>
+        <keyMapping schemaName="CDA_4_HANA" columnObjectName="CDA_4_HANA.ETL.Tables::T_0VEN_COMPC_ATTR" columnName="ZINRT"/>
       </attribute>
       <attribute id="DATLZ" order="25" attributeHierarchyActive="false" displayAttribute="false">
         <descriptions defaultDescription="DATLZ"/>
-        <keyMapping schemaName="CDA_4_HANA" columnObjectName="T_0VEN_COMPC_ATTR" columnName="DATLZ"/>
+        <keyMapping schemaName="CDA_4_HANA" columnObjectName="CDA_4_HANA.ETL.Tables::T_0VEN_COMPC_ATTR" columnName="DATLZ"/>
       </attribute>
       <attribute id="XDEZV" order="26" attributeHierarchyActive="false" displayAttribute="false">
         <descriptions defaultDescription="XDEZV"/>
-        <keyMapping schemaName="CDA_4_HANA" columnObjectName="T_0VEN_COMPC_ATTR" columnName="XDEZV"/>
+        <keyMapping schemaName="CDA_4_HANA" columnObjectName="CDA_4_HANA.ETL.Tables::T_0VEN_COMPC_ATTR" columnName="XDEZV"/>
       </attribute>
       <attribute id="KULTG" order="27" attributeHierarchyActive="false" displayAttribute="false">
         <descriptions defaultDescription="KULTG"/>
-        <keyMapping schemaName="CDA_4_HANA" columnObjectName="T_0VEN_COMPC_ATTR" columnName="KULTG"/>
+        <keyMapping schemaName="CDA_4_HANA" columnObjectName="CDA_4_HANA.ETL.Tables::T_0VEN_COMPC_ATTR" columnName="KULTG"/>
       </attribute>
       <attribute id="REPRF" order="28" attributeHierarchyActive="false" displayAttribute="false">
         <descriptions defaultDescription="REPRF"/>
-        <keyMapping schemaName="CDA_4_HANA" columnObjectName="T_0VEN_COMPC_ATTR" columnName="REPRF"/>
+        <keyMapping schemaName="CDA_4_HANA" columnObjectName="CDA_4_HANA.ETL.Tables::T_0VEN_COMPC_ATTR" columnName="REPRF"/>
       </attribute>
       <attribute id="TOGRU" order="29" attributeHierarchyActive="false" displayAttribute="false">
         <descriptions defaultDescription="TOGRU"/>
-        <keyMapping schemaName="CDA_4_HANA" columnObjectName="T_0VEN_COMPC_ATTR" columnName="TOGRU"/>
+        <keyMapping schemaName="CDA_4_HANA" columnObjectName="CDA_4_HANA.ETL.Tables::T_0VEN_COMPC_ATTR" columnName="TOGRU"/>
       </attribute>
       <attribute id="HBKID" order="30" attributeHierarchyActive="false" displayAttribute="false">
         <descriptions defaultDescription="HBKID"/>
-        <keyMapping schemaName="CDA_4_HANA" columnObjectName="T_0VEN_COMPC_ATTR" columnName="HBKID"/>
+        <keyMapping schemaName="CDA_4_HANA" columnObjectName="CDA_4_HANA.ETL.Tables::T_0VEN_COMPC_ATTR" columnName="HBKID"/>
       </attribute>
       <attribute id="XPORE" order="31" attributeHierarchyActive="false" displayAttribute="false">
         <descriptions defaultDescription="XPORE"/>
-        <keyMapping schemaName="CDA_4_HANA" columnObjectName="T_0VEN_COMPC_ATTR" columnName="XPORE"/>
+        <keyMapping schemaName="CDA_4_HANA" columnObjectName="CDA_4_HANA.ETL.Tables::T_0VEN_COMPC_ATTR" columnName="XPORE"/>
       </attribute>
       <attribute id="QSZNR" order="32" attributeHierarchyActive="false" displayAttribute="false">
         <descriptions defaultDescription="QSZNR"/>
-        <keyMapping schemaName="CDA_4_HANA" columnObjectName="T_0VEN_COMPC_ATTR" columnName="QSZNR"/>
+        <keyMapping schemaName="CDA_4_HANA" columnObjectName="CDA_4_HANA.ETL.Tables::T_0VEN_COMPC_ATTR" columnName="QSZNR"/>
       </attribute>
       <attribute id="QSZDT" order="33" attributeHierarchyActive="false" displayAttribute="false">
         <descriptions defaultDescription="QSZDT"/>
-        <keyMapping schemaName="CDA_4_HANA" columnObjectName="T_0VEN_COMPC_ATTR" columnName="QSZDT"/>
+        <keyMapping schemaName="CDA_4_HANA" columnObjectName="CDA_4_HANA.ETL.Tables::T_0VEN_COMPC_ATTR" columnName="QSZDT"/>
       </attribute>
       <attribute id="QSSKZ" order="34" attributeHierarchyActive="false" displayAttribute="false">
         <descriptions defaultDescription="QSSKZ"/>
-        <keyMapping schemaName="CDA_4_HANA" columnObjectName="T_0VEN_COMPC_ATTR" columnName="QSSKZ"/>
+        <keyMapping schemaName="CDA_4_HANA" columnObjectName="CDA_4_HANA.ETL.Tables::T_0VEN_COMPC_ATTR" columnName="QSSKZ"/>
       </attribute>
       <attribute id="BLNKZ" order="35" attributeHierarchyActive="false" displayAttribute="false">
         <descriptions defaultDescription="BLNKZ"/>
-        <keyMapping schemaName="CDA_4_HANA" columnObjectName="T_0VEN_COMPC_ATTR" columnName="BLNKZ"/>
+        <keyMapping schemaName="CDA_4_HANA" columnObjectName="CDA_4_HANA.ETL.Tables::T_0VEN_COMPC_ATTR" columnName="BLNKZ"/>
       </attribute>
       <attribute id="MINDK" order="36" attributeHierarchyActive="false" displayAttribute="false">
         <descriptions defaultDescription="MINDK"/>
-        <keyMapping schemaName="CDA_4_HANA" columnObjectName="T_0VEN_COMPC_ATTR" columnName="MINDK"/>
+        <keyMapping schemaName="CDA_4_HANA" columnObjectName="CDA_4_HANA.ETL.Tables::T_0VEN_COMPC_ATTR" columnName="MINDK"/>
       </attribute>
       <attribute id="ALTKN" order="37" attributeHierarchyActive="false" displayAttribute="false">
         <descriptions defaultDescription="ALTKN"/>
-        <keyMapping schemaName="CDA_4_HANA" columnObjectName="T_0VEN_COMPC_ATTR" columnName="ALTKN"/>
+        <keyMapping schemaName="CDA_4_HANA" columnObjectName="CDA_4_HANA.ETL.Tables::T_0VEN_COMPC_ATTR" columnName="ALTKN"/>
       </attribute>
       <attribute id="ZGRUP" order="38" attributeHierarchyActive="false" displayAttribute="false">
         <descriptions defaultDescription="ZGRUP"/>
-        <keyMapping schemaName="CDA_4_HANA" columnObjectName="T_0VEN_COMPC_ATTR" columnName="ZGRUP"/>
+        <keyMapping schemaName="CDA_4_HANA" columnObjectName="CDA_4_HANA.ETL.Tables::T_0VEN_COMPC_ATTR" columnName="ZGRUP"/>
       </attribute>
       <attribute id="MGRUP" order="39" attributeHierarchyActive="false" displayAttribute="false">
         <descriptions defaultDescription="MGRUP"/>
-        <keyMapping schemaName="CDA_4_HANA" columnObjectName="T_0VEN_COMPC_ATTR" columnName="MGRUP"/>
+        <keyMapping schemaName="CDA_4_HANA" columnObjectName="CDA_4_HANA.ETL.Tables::T_0VEN_COMPC_ATTR" columnName="MGRUP"/>
       </attribute>
       <attribute id="UZAWE" order="40" attributeHierarchyActive="false" displayAttribute="false">
         <descriptions defaultDescription="UZAWE"/>
-        <keyMapping schemaName="CDA_4_HANA" columnObjectName="T_0VEN_COMPC_ATTR" columnName="UZAWE"/>
+        <keyMapping schemaName="CDA_4_HANA" columnObjectName="CDA_4_HANA.ETL.Tables::T_0VEN_COMPC_ATTR" columnName="UZAWE"/>
       </attribute>
       <attribute id="QSREC" order="41" attributeHierarchyActive="false" displayAttribute="false">
         <descriptions defaultDescription="QSREC"/>
-        <keyMapping schemaName="CDA_4_HANA" columnObjectName="T_0VEN_COMPC_ATTR" columnName="QSREC"/>
+        <keyMapping schemaName="CDA_4_HANA" columnObjectName="CDA_4_HANA.ETL.Tables::T_0VEN_COMPC_ATTR" columnName="QSREC"/>
       </attribute>
       <attribute id="QSBGR" order="42" attributeHierarchyActive="false" displayAttribute="false">
         <descriptions defaultDescription="QSBGR"/>
-        <keyMapping schemaName="CDA_4_HANA" columnObjectName="T_0VEN_COMPC_ATTR" columnName="QSBGR"/>
+        <keyMapping schemaName="CDA_4_HANA" columnObjectName="CDA_4_HANA.ETL.Tables::T_0VEN_COMPC_ATTR" columnName="QSBGR"/>
       </attribute>
       <attribute id="QLAND" order="43" attributeHierarchyActive="false" displayAttribute="false">
         <descriptions defaultDescription="QLAND"/>
-        <keyMapping schemaName="CDA_4_HANA" columnObjectName="T_0VEN_COMPC_ATTR" columnName="QLAND"/>
+        <keyMapping schemaName="CDA_4_HANA" columnObjectName="CDA_4_HANA.ETL.Tables::T_0VEN_COMPC_ATTR" columnName="QLAND"/>
       </attribute>
       <attribute id="XEDIP" order="44" attributeHierarchyActive="false" displayAttribute="false">
         <descriptions defaultDescription="XEDIP"/>
-        <keyMapping schemaName="CDA_4_HANA" columnObjectName="T_0VEN_COMPC_ATTR" columnName="XEDIP"/>
+        <keyMapping schemaName="CDA_4_HANA" columnObjectName="CDA_4_HANA.ETL.Tables::T_0VEN_COMPC_ATTR" columnName="XEDIP"/>
       </attribute>
       <attribute id="FRGRP" order="45" attributeHierarchyActive="false" displayAttribute="false">
         <descriptions defaultDescription="FRGRP"/>
-        <keyMapping schemaName="CDA_4_HANA" columnObjectName="T_0VEN_COMPC_ATTR" columnName="FRGRP"/>
+        <keyMapping schemaName="CDA_4_HANA" columnObjectName="CDA_4_HANA.ETL.Tables::T_0VEN_COMPC_ATTR" columnName="FRGRP"/>
       </attribute>
       <attribute id="TOGRR" order="46" attributeHierarchyActive="false" displayAttribute="false">
         <descriptions defaultDescription="TOGRR"/>
-        <keyMapping schemaName="CDA_4_HANA" columnObjectName="T_0VEN_COMPC_ATTR" columnName="TOGRR"/>
+        <keyMapping schemaName="CDA_4_HANA" columnObjectName="CDA_4_HANA.ETL.Tables::T_0VEN_COMPC_ATTR" columnName="TOGRR"/>
       </attribute>
       <attribute id="TLFXS" order="47" attributeHierarchyActive="false" displayAttribute="false">
         <descriptions defaultDescription="TLFXS"/>
-        <keyMapping schemaName="CDA_4_HANA" columnObjectName="T_0VEN_COMPC_ATTR" columnName="TLFXS"/>
+        <keyMapping schemaName="CDA_4_HANA" columnObjectName="CDA_4_HANA.ETL.Tables::T_0VEN_COMPC_ATTR" columnName="TLFXS"/>
       </attribute>
       <attribute id="INTAD" order="48" attributeHierarchyActive="false" displayAttribute="false">
         <descriptions defaultDescription="INTAD"/>
-        <keyMapping schemaName="CDA_4_HANA" columnObjectName="T_0VEN_COMPC_ATTR" columnName="INTAD"/>
+        <keyMapping schemaName="CDA_4_HANA" columnObjectName="CDA_4_HANA.ETL.Tables::T_0VEN_COMPC_ATTR" columnName="INTAD"/>
       </attribute>
       <attribute id="XLFZB" order="49" attributeHierarchyActive="false" displayAttribute="false">
         <descriptions defaultDescription="XLFZB"/>
-        <keyMapping schemaName="CDA_4_HANA" columnObjectName="T_0VEN_COMPC_ATTR" columnName="XLFZB"/>
+        <keyMapping schemaName="CDA_4_HANA" columnObjectName="CDA_4_HANA.ETL.Tables::T_0VEN_COMPC_ATTR" columnName="XLFZB"/>
       </attribute>
       <attribute id="GUZTE" order="50" attributeHierarchyActive="false" displayAttribute="false">
         <descriptions defaultDescription="GUZTE"/>
-        <keyMapping schemaName="CDA_4_HANA" columnObjectName="T_0VEN_COMPC_ATTR" columnName="GUZTE"/>
+        <keyMapping schemaName="CDA_4_HANA" columnObjectName="CDA_4_HANA.ETL.Tables::T_0VEN_COMPC_ATTR" columnName="GUZTE"/>
       </attribute>
       <attribute id="GRICD" order="51" attributeHierarchyActive="false" displayAttribute="false">
         <descriptions defaultDescription="GRICD"/>
-        <keyMapping schemaName="CDA_4_HANA" columnObjectName="T_0VEN_COMPC_ATTR" columnName="GRICD"/>
+        <keyMapping schemaName="CDA_4_HANA" columnObjectName="CDA_4_HANA.ETL.Tables::T_0VEN_COMPC_ATTR" columnName="GRICD"/>
       </attribute>
       <attribute id="GRIDT" order="52" attributeHierarchyActive="false" displayAttribute="false">
         <descriptions defaultDescription="GRIDT"/>
-        <keyMapping schemaName="CDA_4_HANA" columnObjectName="T_0VEN_COMPC_ATTR" columnName="GRIDT"/>
+        <keyMapping schemaName="CDA_4_HANA" columnObjectName="CDA_4_HANA.ETL.Tables::T_0VEN_COMPC_ATTR" columnName="GRIDT"/>
       </attribute>
       <attribute id="XAUSZ" order="53" attributeHierarchyActive="false" displayAttribute="false">
         <descriptions defaultDescription="XAUSZ"/>
-        <keyMapping schemaName="CDA_4_HANA" columnObjectName="T_0VEN_COMPC_ATTR" columnName="XAUSZ"/>
+        <keyMapping schemaName="CDA_4_HANA" columnObjectName="CDA_4_HANA.ETL.Tables::T_0VEN_COMPC_ATTR" columnName="XAUSZ"/>
       </attribute>
       <attribute id="CERDT" order="54" attributeHierarchyActive="false" displayAttribute="false">
         <descriptions defaultDescription="CERDT"/>
-        <keyMapping schemaName="CDA_4_HANA" columnObjectName="T_0VEN_COMPC_ATTR" columnName="CERDT"/>
+        <keyMapping schemaName="CDA_4_HANA" columnObjectName="CDA_4_HANA.ETL.Tables::T_0VEN_COMPC_ATTR" columnName="CERDT"/>
       </attribute>
       <attribute id="CONFS" order="55" attributeHierarchyActive="false" displayAttribute="false">
         <descriptions defaultDescription="CONFS"/>
-        <keyMapping schemaName="CDA_4_HANA" columnObjectName="T_0VEN_COMPC_ATTR" columnName="CONFS"/>
+        <keyMapping schemaName="CDA_4_HANA" columnObjectName="CDA_4_HANA.ETL.Tables::T_0VEN_COMPC_ATTR" columnName="CONFS"/>
       </attribute>
       <attribute id="UPDAT" order="56" attributeHierarchyActive="false" displayAttribute="false">
         <descriptions defaultDescription="UPDAT"/>
-        <keyMapping schemaName="CDA_4_HANA" columnObjectName="T_0VEN_COMPC_ATTR" columnName="UPDAT"/>
+        <keyMapping schemaName="CDA_4_HANA" columnObjectName="CDA_4_HANA.ETL.Tables::T_0VEN_COMPC_ATTR" columnName="UPDAT"/>
       </attribute>
       <attribute id="UPTIM" order="57" attributeHierarchyActive="false" displayAttribute="false">
         <descriptions defaultDescription="UPTIM"/>
-        <keyMapping schemaName="CDA_4_HANA" columnObjectName="T_0VEN_COMPC_ATTR" columnName="UPTIM"/>
+        <keyMapping schemaName="CDA_4_HANA" columnObjectName="CDA_4_HANA.ETL.Tables::T_0VEN_COMPC_ATTR" columnName="UPTIM"/>
       </attribute>
       <attribute id="NODEL" order="58" attributeHierarchyActive="false" displayAttribute="false">
         <descriptions defaultDescription="NODEL"/>
-        <keyMapping schemaName="CDA_4_HANA" columnObjectName="T_0VEN_COMPC_ATTR" columnName="NODEL"/>
+        <keyMapping schemaName="CDA_4_HANA" columnObjectName="CDA_4_HANA.ETL.Tables::T_0VEN_COMPC_ATTR" columnName="NODEL"/>
       </attribute>
       <attribute id="TLFNS" order="59" attributeHierarchyActive="false" displayAttribute="false">
         <descriptions defaultDescription="TLFNS"/>
-        <keyMapping schemaName="CDA_4_HANA" columnObjectName="T_0VEN_COMPC_ATTR" columnName="TLFNS"/>
+        <keyMapping schemaName="CDA_4_HANA" columnObjectName="CDA_4_HANA.ETL.Tables::T_0VEN_COMPC_ATTR" columnName="TLFNS"/>
       </attribute>
     </attributes>
     <calculatedAttributes/>

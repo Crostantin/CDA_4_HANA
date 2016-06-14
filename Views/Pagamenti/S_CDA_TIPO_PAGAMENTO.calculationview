@@ -11,9 +11,9 @@
       <viewAttributes allViewAttributes="true"/>
       <columnObject schemaName="CDA_4_HANA" columnObjectName="CDA_4_HANA.ETL.M_Tables::M_MANDANTE"/>
     </DataSource>
-    <DataSource id="T003T" type="DATA_BASE_TABLE">
+    <DataSource id="CDA_4_HANA.ETL.Tables::T_T003T" type="DATA_BASE_TABLE">
       <viewAttributes allViewAttributes="true"/>
-      <columnObject schemaName="CDA_TMP" columnObjectName="T003T"/>
+      <columnObject schemaName="CDA_4_HANA" columnObjectName="CDA_4_HANA.ETL.Tables::T_T003T"/>
     </DataSource>
   </dataSources>
   <calculationViews>
@@ -29,7 +29,7 @@
       <input node="#CDA_4_HANA.ETL.M_Tables::M_MANDANTE">
         <mapping xsi:type="Calculation:AttributeMapping" target="MANDT" source="MANDT"/>
       </input>
-      <input node="#T003T">
+      <input node="#CDA_4_HANA.ETL.Tables::T_T003T">
         <mapping xsi:type="Calculation:AttributeMapping" target="SPRAS" source="SPRAS"/>
         <mapping xsi:type="Calculation:AttributeMapping" target="BLART" source="BLART"/>
         <mapping xsi:type="Calculation:AttributeMapping" target="LTEXT" source="LTEXT"/>

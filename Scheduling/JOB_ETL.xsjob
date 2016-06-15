@@ -1,13 +1,10 @@
 {
     "description": "Start ETL",
-    "action": "CDA_4_HANA.Scheduling:Scheduler.xsjs::ETL",
+    "action": "CDA_4_HANA.Scheduling::SP_ETL",
     "schedules": [
        {
-          "description": "Update Tabellse",
-          "xscron": "* * * * 13 05 00",
-          "parameter": {
-             "ETL": "SAP.DE"
-             }
+          "description": "Update Tabelle",
+          "xscron": "* * * * 21 59 00"
        }
     ]
 }

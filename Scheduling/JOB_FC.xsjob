@@ -1,0 +1,10 @@
+{
+    "description": "Scrivi Fact Tables",
+    "action": "CDA_4_HANA.Scheduling::SP_FACT_TABLES",
+    "schedules": [
+       {
+          "description": "Scrivi Fact Tables",
+          "xscron": "* * * * 22 30 0"
+       }
+    ]
+}

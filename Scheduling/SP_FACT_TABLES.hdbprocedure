@@ -1,0 +1,21 @@
+PROCEDURE "CDA_4_HANA"."CDA_4_HANA.Scheduling::SP_FACT_TABLES" ( ) 
+	LANGUAGE SQLSCRIPT
+	SQL SECURITY INVOKER 
+	DEFAULT SCHEMA "CDA_4_HANA"
+	--READS SQL DATA 
+	AS
+BEGIN
+/***************************** 
+	Write your procedure logic 
+ *****************************/
+ 
+-- aggiorna anagrafiche partite
+START TASK "CDA_4_HANA"."CDA_4_HANA.FactTables.Task::FTP_ANAG_PARTITE";
+
+-- scrivi fact pagamenti 
+call "CDA_4_HANA.FactTables.Procedures::SP_WRITE_FC_CLI_PAGAMENTI"();
+
+-- scribi fact ageing cliente
+"CDA_4_HANA.FactTables.Procedures::SP_WRITE_FC_CLI_AGEING"();
+ 
+END;

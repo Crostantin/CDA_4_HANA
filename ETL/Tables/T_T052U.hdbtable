@@ -4,7 +4,7 @@ table.columns = [
 	 {name="MANDT"; sqlType=VARCHAR; length=3; nullable=false; },
 	 {name="SPRAS"; sqlType=VARCHAR; length=1; nullable=false; },
 	 {name="ZTERM"; sqlType=VARCHAR; length=4; nullable=false; },
-	 {name="ZTAGG"; sqlType=VARCHAR; length=2; nullable=false; },
+	 {name="ZTAGG"; sqlType=DECIMAL; precision=2; scale=0; nullable=false; },
 	 {name="TEXT1"; sqlType=VARCHAR; length=50; }
 	 	
 ];

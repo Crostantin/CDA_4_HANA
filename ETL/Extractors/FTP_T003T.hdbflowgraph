@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<flowgraph:ContainerNode xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:flowgraph="http://www.sap.com/ndb/flowgraph/1.0" xmi:id="_Vhf60DLPEeaiyrqsMuPNbg" name="FTP_T003T" generateProcedure="false" generateTask="true" targetSchema="CDA_4_HANA">
+  <annotations xmi:id="_Vhf60TLPEeaiyrqsMuPNbg" key="sap.afm.layout">
+    <annotations xmi:id="_Vhf60jLPEeaiyrqsMuPNbg" key="x" value="10"/>
+    <annotations xmi:id="_Vhf60zLPEeaiyrqsMuPNbg" key="y" value="10"/>
+  </annotations>
+  <annotations xmi:id="_Vhf61DLPEeaiyrqsMuPNbg" key="sap.afm.palette" value="">
+    <annotations xmi:id="_Vhf61TLPEeaiyrqsMuPNbg" key="additions" value=""/>
+  </annotations>
+  <annotations xmi:id="_ZzJWMDLPEeaiyrqsMuPNbg" key="sap.afm.nodeType" value="ContainerNode"/>
+  <annotations xmi:id="_ZzQq8DLPEeaiyrqsMuPNbg" key="sap.afm.nodeInputs"/>
+  <annotations xmi:id="_ZzTuQDLPEeaiyrqsMuPNbg" key="sap.afm.nodeOutputs"/>
+  <tableMappings xmi:id="_ZzZBQDLkEeaoup_cgRqXKA" source="_YaAZBDLPEeaiyrqsMuPNbg" target="_Y7behzLkEeaoup_cgRqXKA">
+    <attributeMappings xmi:id="_ZzZBQTLkEeaoup_cgRqXKA" source="_YaAZBTLPEeaiyrqsMuPNbg" target="_ZzLl4DLkEeaoup_cgRqXKA"/>
+    <attributeMappings xmi:id="_ZzZBQjLkEeaoup_cgRqXKA" source="_YaAZBjLPEeaiyrqsMuPNbg" target="_ZzNbEDLkEeaoup_cgRqXKA"/>
+    <attributeMappings xmi:id="_ZzZBQzLkEeaoup_cgRqXKA" source="_YaAZBzLPEeaiyrqsMuPNbg" target="_ZzPQQDLkEeaoup_cgRqXKA"/>
+    <attributeMappings xmi:id="_ZzZBRDLkEeaoup_cgRqXKA" source="_YaAZCDLPEeaiyrqsMuPNbg" target="_ZzRFcDLkEeaoup_cgRqXKA"/>
+  </tableMappings>
+  <tableMappings xmi:id="_aY3s4DLkEeaoup_cgRqXKA" source="_Y7beiDLkEeaoup_cgRqXKA" target="_ZOaRdDLPEeaiyrqsMuPNbg">
+    <attributeMappings xmi:id="_cLReoTLkEeaoup_cgRqXKA" source="_cLReoDLkEeaoup_cgRqXKA" target="_ZOaRdTLPEeaiyrqsMuPNbg"/>
+    <attributeMappings xmi:id="_cLReozLkEeaoup_cgRqXKA" source="_cLReojLkEeaoup_cgRqXKA" target="_ZOaRdjLPEeaiyrqsMuPNbg"/>
+    <attributeMappings xmi:id="_cLSFsDLkEeaoup_cgRqXKA" source="_cLRepDLkEeaoup_cgRqXKA" target="_ZOaRdzLPEeaiyrqsMuPNbg"/>
+    <attributeMappings xmi:id="_cLSFsjLkEeaoup_cgRqXKA" source="_cLSFsTLkEeaoup_cgRqXKA" target="_ZOaReDLPEeaiyrqsMuPNbg"/>
+  </tableMappings>
+  <nodes xsi:type="flowgraph:DataNode" xmi:id="_YaAZADLPEeaiyrqsMuPNbg" name="T003T" type="DATABASE_TABLE" authoringSchemaName="CDA_FLOW_TEST" catalogObjectName="T003T" dataLayout="COLUMN" truncateTable="false">
+    <annotations xmi:id="_YaAZATLPEeaiyrqsMuPNbg" key="sap.afm.layout">
+      <annotations xmi:id="_YaAZAjLPEeaiyrqsMuPNbg" key="x" value="41"/>
+      <annotations xmi:id="_YaAZAzLPEeaiyrqsMuPNbg" key="y" value="116"/>
+    </annotations>
+    <annotations xmi:id="_ZzWKgDLPEeaiyrqsMuPNbg" key="sap.afm.nodeType" value="DataNode"/>
+    <annotations xmi:id="_Zzab8DLPEeaiyrqsMuPNbg" key="sap.afm.nodeInputs"/>
+    <annotations xmi:id="_ZzdfQDLPEeaiyrqsMuPNbg" key="sap.afm.nodeOutputs">
+      <annotations xmi:id="_ZzfUcDLPEeaiyrqsMuPNbg" key="DATA" value="INPUT"/>
+    </annotations>
+    <outputs xmi:id="_YaAZBDLPEeaiyrqsMuPNbg" name="DATA" kind="TABLE">
+      <attributes xmi:id="_YaAZBTLPEeaiyrqsMuPNbg" name="MANDT" type="VARCHAR" nullable="true" length="3" scale="0"/>
+      <attributes xmi:id="_YaAZBjLPEeaiyrqsMuPNbg" name="SPRAS" type="VARCHAR" nullable="false" length="1" scale="0"/>
+      <attributes xmi:id="_YaAZBzLPEeaiyrqsMuPNbg" name="BLART" type="VARCHAR" nullable="false" length="2" scale="0"/>
+      <attributes xmi:id="_YaAZCDLPEeaiyrqsMuPNbg" name="LTEXT" type="VARCHAR" nullable="true" length="20" scale="0"/>
+    </outputs>
+  </nodes>
+  <nodes xsi:type="flowgraph:DataNode" xmi:id="_ZOaRcDLPEeaiyrqsMuPNbg" name="CDA_4_HANA_ETL_TABLES__T_T003T" type="DATABASE_TABLE" authoringSchemaName="CDA_4_HANA" catalogObjectName="CDA_4_HANA.ETL.Tables::T_T003T" dataLayout="COLUMN" truncateTable="false">
+    <annotations xmi:id="_ZOaRcTLPEeaiyrqsMuPNbg" key="sap.afm.layout">
+      <annotations xmi:id="_ZOaRcjLPEeaiyrqsMuPNbg" key="x" value="446"/>
+      <annotations xmi:id="_ZOaRczLPEeaiyrqsMuPNbg" key="y" value="150"/>
+    </annotations>
+    <annotations xmi:id="_ZzpsgDLPEeaiyrqsMuPNbg" key="sap.afm.nodeType" value="DataNode"/>
+    <annotations xmi:id="_ZzvzIDLPEeaiyrqsMuPNbg" key="sap.afm.nodeInputs">
+      <annotations xmi:id="_ZzzdgDLPEeaiyrqsMuPNbg" key="DATA_2" value="OUTPUT"/>
+    </annotations>
+    <annotations xmi:id="_Zz91kDLPEeaiyrqsMuPNbg" key="sap.afm.nodeOutputs"/>
+    <annotations xmi:id="_9bteMDLcEeaCn9c7_Iu1HA" key="sap.im.writerType" value="insert"/>
+    <inputs xmi:id="_ZOaRdDLPEeaiyrqsMuPNbg" name="DATA_2" kind="TABLE">
+      <attributes xmi:id="_ZOaRdTLPEeaiyrqsMuPNbg" name="MANDT" type="VARCHAR" nullable="true" length="3" scale="0"/>
+      <attributes xmi:id="_ZOaRdjLPEeaiyrqsMuPNbg" name="SPRAS" type="VARCHAR" nullable="false" length="1" scale="0"/>
+      <attributes xmi:id="_ZOaRdzLPEeaiyrqsMuPNbg" name="BLART" type="VARCHAR" nullable="false" length="2" scale="0"/>
+      <attributes xmi:id="_ZOaReDLPEeaiyrqsMuPNbg" name="LTEXT" type="VARCHAR" nullable="true" length="20" scale="0"/>
+    </inputs>
+  </nodes>
+  <nodes xsi:type="flowgraph:TableComparisonNode" xmi:id="_Y7begDLkEeaoup_cgRqXKA" name="TABLECOMP" detectDeletedRows="false" compareTableName="CDA_4_HANA.ETL.Tables::T_T003T" compareTableSchema="CDA_4_HANA" compareTableType="DATABASE_TABLE" compareTableLayout="COLUMN" compareAttributes="_ZzLl4DLkEeaoup_cgRqXKA _ZzNbEDLkEeaoup_cgRqXKA _ZzPQQDLkEeaoup_cgRqXKA _ZzRFcDLkEeaoup_cgRqXKA">
+    <annotations xmi:id="_Y7begTLkEeaoup_cgRqXKA" key="sap.afm.displayName" value="Table Comparison"/>
+    <annotations xmi:id="_Y7begjLkEeaoup_cgRqXKA" key="sap.im.tableComparisonGenDelKey" value="allRows"/>
+    <annotations xmi:id="_Y7begzLkEeaoup_cgRqXKA" key="sap.afm.description" value="Compares two data sets and produces the difference between them as a data set with rows flagged as INSERT, UPDATE, or DELETE."/>
+    <annotations xmi:id="_Y7behDLkEeaoup_cgRqXKA" key="sap.afm.layout">
+      <annotations xmi:id="_Y7behTLkEeaoup_cgRqXKA" key="x" value="274"/>
+      <annotations xmi:id="_Y7behjLkEeaoup_cgRqXKA" key="y" value="72"/>
+    </annotations>
+    <annotations xmi:id="_e0QTEDLkEeaoup_cgRqXKA" key="sap.afm.nodeType" value="TableComparisonNode"/>
+    <annotations xmi:id="_e0Y18DLkEeaoup_cgRqXKA" key="sap.afm.nodeInputs">
+      <annotations xmi:id="_e0cgUDLkEeaoup_cgRqXKA" key="INPUT" value="DATA"/>
+    </annotations>
+    <annotations xmi:id="_e0qiwDLkEeaoup_cgRqXKA" key="sap.afm.nodeOutputs">
+      <annotations xmi:id="_e0uNIDLkEeaoup_cgRqXKA" key="OUTPUT" value="DATA_2"/>
+    </annotations>
+    <inputs xmi:id="_Y7behzLkEeaoup_cgRqXKA" name="INPUT" kind="TABLE">
+      <attributes xmi:id="_ZzLl4DLkEeaoup_cgRqXKA" name="MANDT" type="VARCHAR" nullable="true" length="3" scale="0"/>
+      <attributes xmi:id="_ZzNbEDLkEeaoup_cgRqXKA" name="SPRAS" type="VARCHAR" nullable="false" length="1" scale="0">
+        <annotations xmi:id="_eATGkDLkEeaoup_cgRqXKA" key="sap.im.primaryKey" value="true"/>
+      </attributes>
+      <attributes xmi:id="_ZzPQQDLkEeaoup_cgRqXKA" name="BLART" type="VARCHAR" nullable="false" length="2" scale="0">
+        <annotations xmi:id="_eopgADLkEeaoup_cgRqXKA" key="sap.im.primaryKey" value="true"/>
+      </attributes>
+      <attributes xmi:id="_ZzRFcDLkEeaoup_cgRqXKA" name="LTEXT" type="VARCHAR" nullable="true" length="20" scale="0"/>
+    </inputs>
+    <outputs xmi:id="_Y7beiDLkEeaoup_cgRqXKA" name="OUTPUT" kind="TABLE">
+      <attributes xmi:id="_cLReoDLkEeaoup_cgRqXKA" name="MANDT" type="VARCHAR" nullable="true" length="3" scale="0" mappedName="MANDT"/>
+      <attributes xmi:id="_cLReojLkEeaoup_cgRqXKA" name="SPRAS" type="VARCHAR" nullable="false" length="1" scale="0" mappedName="SPRAS"/>
+      <attributes xmi:id="_cLRepDLkEeaoup_cgRqXKA" name="BLART" type="VARCHAR" nullable="false" length="2" scale="0" mappedName="BLART"/>
+      <attributes xmi:id="_cLSFsTLkEeaoup_cgRqXKA" name="LTEXT" type="VARCHAR" nullable="true" length="20" scale="0" mappedName="LTEXT"/>
+    </outputs>
+  </nodes>
+</flowgraph:ContainerNode>

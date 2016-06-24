@@ -5,166 +5,166 @@
   <variableMappings/>
   <informationModelLayout relativeWidthScenario="27"/>
   <dataSources>
-    <DataSource id="CDA_4_HANA.FactTables.Tables::S_CDA_DOCUMENTO" type="DATA_BASE_TABLE">
+    <DataSource id="CDA_4_HANA.ETL.Tables::S_CDA_DOCUMENTO" type="DATA_BASE_TABLE">
       <viewAttributes allViewAttributes="true"/>
-      <columnObject schemaName="CDA_4_HANA" columnObjectName="CDA_4_HANA.FactTables.Tables::S_CDA_DOCUMENTO"/>
+      <columnObject schemaName="CDA_4_HANA" columnObjectName="CDA_4_HANA.ETL.Tables::S_CDA_DOCUMENTO"/>
     </DataSource>
   </dataSources>
   <calculationViews/>
-  <logicalModel id="CDA_4_HANA.FactTables.Tables::S_CDA_DOCUMENTO">
+  <logicalModel id="CDA_4_HANA.ETL.Tables::S_CDA_DOCUMENTO">
     <descriptions/>
     <attributes>
       <attribute id="PARTITA_ID" key="true" order="1" attributeHierarchyActive="false" displayAttribute="false">
         <descriptions defaultDescription="PARTITA_ID"/>
-        <keyMapping schemaName="CDA_4_HANA" columnObjectName="CDA_4_HANA.FactTables.Tables::S_CDA_DOCUMENTO" columnName="PARTITA_ID"/>
+        <keyMapping schemaName="CDA_4_HANA" columnObjectName="CDA_4_HANA.ETL.Tables::S_CDA_DOCUMENTO" columnName="PARTITA_ID"/>
       </attribute>
       <attribute id="BUKRS" order="2" attributeHierarchyActive="false" displayAttribute="false">
         <descriptions defaultDescription="BUKRS"/>
-        <keyMapping schemaName="CDA_4_HANA" columnObjectName="CDA_4_HANA.FactTables.Tables::S_CDA_DOCUMENTO" columnName="BUKRS"/>
+        <keyMapping schemaName="CDA_4_HANA" columnObjectName="CDA_4_HANA.ETL.Tables::S_CDA_DOCUMENTO" columnName="BUKRS"/>
       </attribute>
       <attribute id="FISCPER" order="3" attributeHierarchyActive="false" displayAttribute="false">
         <descriptions defaultDescription="DOC_FISCPER"/>
-        <keyMapping schemaName="CDA_4_HANA" columnObjectName="CDA_4_HANA.FactTables.Tables::S_CDA_DOCUMENTO" columnName="FISCPER"/>
+        <keyMapping schemaName="CDA_4_HANA" columnObjectName="CDA_4_HANA.ETL.Tables::S_CDA_DOCUMENTO" columnName="FISCPER"/>
       </attribute>
       <attribute id="BELNR" order="4" attributeHierarchyActive="false" displayAttribute="false">
         <descriptions defaultDescription="BELNR"/>
-        <keyMapping schemaName="CDA_4_HANA" columnObjectName="CDA_4_HANA.FactTables.Tables::S_CDA_DOCUMENTO" columnName="BELNR"/>
+        <keyMapping schemaName="CDA_4_HANA" columnObjectName="CDA_4_HANA.ETL.Tables::S_CDA_DOCUMENTO" columnName="BELNR"/>
       </attribute>
       <attribute id="BUZEI" order="5" attributeHierarchyActive="false" displayAttribute="false">
         <descriptions defaultDescription="BUZEI"/>
-        <keyMapping schemaName="CDA_4_HANA" columnObjectName="CDA_4_HANA.FactTables.Tables::S_CDA_DOCUMENTO" columnName="BUZEI"/>
+        <keyMapping schemaName="CDA_4_HANA" columnObjectName="CDA_4_HANA.ETL.Tables::S_CDA_DOCUMENTO" columnName="BUZEI"/>
       </attribute>
       <attribute id="UPOSZ" order="6" attributeHierarchyActive="false" displayAttribute="false">
         <descriptions defaultDescription="UPOSZ"/>
-        <keyMapping schemaName="CDA_4_HANA" columnObjectName="CDA_4_HANA.FactTables.Tables::S_CDA_DOCUMENTO" columnName="UPOSZ"/>
+        <keyMapping schemaName="CDA_4_HANA" columnObjectName="CDA_4_HANA.ETL.Tables::S_CDA_DOCUMENTO" columnName="UPOSZ"/>
       </attribute>
       <attribute id="STATUSPS" order="7" attributeHierarchyActive="false" displayAttribute="false">
         <descriptions defaultDescription="STATUSPS"/>
-        <keyMapping schemaName="CDA_4_HANA" columnObjectName="CDA_4_HANA.FactTables.Tables::S_CDA_DOCUMENTO" columnName="STATUSPS"/>
+        <keyMapping schemaName="CDA_4_HANA" columnObjectName="CDA_4_HANA.ETL.Tables::S_CDA_DOCUMENTO" columnName="STATUSPS"/>
       </attribute>
       <attribute id="AUGBL" order="8" attributeHierarchyActive="false" displayAttribute="false">
         <descriptions defaultDescription="AUGBL"/>
-        <keyMapping schemaName="CDA_4_HANA" columnObjectName="CDA_4_HANA.FactTables.Tables::S_CDA_DOCUMENTO" columnName="AUGBL"/>
+        <keyMapping schemaName="CDA_4_HANA" columnObjectName="CDA_4_HANA.ETL.Tables::S_CDA_DOCUMENTO" columnName="AUGBL"/>
       </attribute>
       <attribute id="AUGDT" order="9" attributeHierarchyActive="false" displayAttribute="false">
         <descriptions defaultDescription="AUGDT"/>
-        <keyMapping schemaName="CDA_4_HANA" columnObjectName="CDA_4_HANA.FactTables.Tables::S_CDA_DOCUMENTO" columnName="AUGDT"/>
+        <keyMapping schemaName="CDA_4_HANA" columnObjectName="CDA_4_HANA.ETL.Tables::S_CDA_DOCUMENTO" columnName="AUGDT"/>
       </attribute>
       <attribute id="BSCHL" order="10" attributeHierarchyActive="false" displayAttribute="false">
         <descriptions defaultDescription="BSCHL"/>
-        <keyMapping schemaName="CDA_4_HANA" columnObjectName="CDA_4_HANA.FactTables.Tables::S_CDA_DOCUMENTO" columnName="BSCHL"/>
+        <keyMapping schemaName="CDA_4_HANA" columnObjectName="CDA_4_HANA.ETL.Tables::S_CDA_DOCUMENTO" columnName="BSCHL"/>
       </attribute>
       <attribute id="KKBER" order="11" attributeHierarchyActive="false" displayAttribute="false">
         <descriptions defaultDescription="KKBER"/>
-        <keyMapping schemaName="CDA_4_HANA" columnObjectName="CDA_4_HANA.FactTables.Tables::S_CDA_DOCUMENTO" columnName="KKBER"/>
+        <keyMapping schemaName="CDA_4_HANA" columnObjectName="CDA_4_HANA.ETL.Tables::S_CDA_DOCUMENTO" columnName="KKBER"/>
       </attribute>
       <attribute id="MABER" order="12" attributeHierarchyActive="false" displayAttribute="false">
         <descriptions defaultDescription="MABER"/>
-        <keyMapping schemaName="CDA_4_HANA" columnObjectName="CDA_4_HANA.FactTables.Tables::S_CDA_DOCUMENTO" columnName="MABER"/>
+        <keyMapping schemaName="CDA_4_HANA" columnObjectName="CDA_4_HANA.ETL.Tables::S_CDA_DOCUMENTO" columnName="MABER"/>
       </attribute>
       <attribute id="KOART" order="13" attributeHierarchyActive="false" displayAttribute="false">
         <descriptions defaultDescription="KOART"/>
-        <keyMapping schemaName="CDA_4_HANA" columnObjectName="CDA_4_HANA.FactTables.Tables::S_CDA_DOCUMENTO" columnName="KOART"/>
+        <keyMapping schemaName="CDA_4_HANA" columnObjectName="CDA_4_HANA.ETL.Tables::S_CDA_DOCUMENTO" columnName="KOART"/>
       </attribute>
       <attribute id="UMSKZ" order="14" attributeHierarchyActive="false" displayAttribute="false">
         <descriptions defaultDescription="UMSKZ"/>
-        <keyMapping schemaName="CDA_4_HANA" columnObjectName="CDA_4_HANA.FactTables.Tables::S_CDA_DOCUMENTO" columnName="UMSKZ"/>
+        <keyMapping schemaName="CDA_4_HANA" columnObjectName="CDA_4_HANA.ETL.Tables::S_CDA_DOCUMENTO" columnName="UMSKZ"/>
       </attribute>
       <attribute id="FISCVAR" order="15" attributeHierarchyActive="false" displayAttribute="false">
         <descriptions defaultDescription="FISCVAR"/>
-        <keyMapping schemaName="CDA_4_HANA" columnObjectName="CDA_4_HANA.FactTables.Tables::S_CDA_DOCUMENTO" columnName="FISCVAR"/>
+        <keyMapping schemaName="CDA_4_HANA" columnObjectName="CDA_4_HANA.ETL.Tables::S_CDA_DOCUMENTO" columnName="FISCVAR"/>
       </attribute>
       <attribute id="BLDAT" order="16" attributeHierarchyActive="false" displayAttribute="false">
         <descriptions defaultDescription="BLDAT"/>
-        <keyMapping schemaName="CDA_4_HANA" columnObjectName="CDA_4_HANA.FactTables.Tables::S_CDA_DOCUMENTO" columnName="BLDAT"/>
+        <keyMapping schemaName="CDA_4_HANA" columnObjectName="CDA_4_HANA.ETL.Tables::S_CDA_DOCUMENTO" columnName="BLDAT"/>
       </attribute>
       <attribute id="BUDAT" order="17" attributeHierarchyActive="false" displayAttribute="false">
         <descriptions defaultDescription="BUDAT"/>
-        <keyMapping schemaName="CDA_4_HANA" columnObjectName="CDA_4_HANA.FactTables.Tables::S_CDA_DOCUMENTO" columnName="BUDAT"/>
+        <keyMapping schemaName="CDA_4_HANA" columnObjectName="CDA_4_HANA.ETL.Tables::S_CDA_DOCUMENTO" columnName="BUDAT"/>
       </attribute>
       <attribute id="CPUDT" order="18" attributeHierarchyActive="false" displayAttribute="false">
         <descriptions defaultDescription="CPUDT"/>
-        <keyMapping schemaName="CDA_4_HANA" columnObjectName="CDA_4_HANA.FactTables.Tables::S_CDA_DOCUMENTO" columnName="CPUDT"/>
+        <keyMapping schemaName="CDA_4_HANA" columnObjectName="CDA_4_HANA.ETL.Tables::S_CDA_DOCUMENTO" columnName="CPUDT"/>
       </attribute>
       <attribute id="MADAT" order="19" attributeHierarchyActive="false" displayAttribute="false">
         <descriptions defaultDescription="MADAT"/>
-        <keyMapping schemaName="CDA_4_HANA" columnObjectName="CDA_4_HANA.FactTables.Tables::S_CDA_DOCUMENTO" columnName="MADAT"/>
+        <keyMapping schemaName="CDA_4_HANA" columnObjectName="CDA_4_HANA.ETL.Tables::S_CDA_DOCUMENTO" columnName="MADAT"/>
       </attribute>
       <attribute id="NETDT" order="20" attributeHierarchyActive="false" displayAttribute="false">
         <descriptions defaultDescription="NETDT"/>
-        <keyMapping schemaName="CDA_4_HANA" columnObjectName="CDA_4_HANA.FactTables.Tables::S_CDA_DOCUMENTO" columnName="NETDT"/>
+        <keyMapping schemaName="CDA_4_HANA" columnObjectName="CDA_4_HANA.ETL.Tables::S_CDA_DOCUMENTO" columnName="NETDT"/>
       </attribute>
       <attribute id="ZFBDT" order="21" attributeHierarchyActive="false" displayAttribute="false">
         <descriptions defaultDescription="ZFBDT"/>
-        <keyMapping schemaName="CDA_4_HANA" columnObjectName="CDA_4_HANA.FactTables.Tables::S_CDA_DOCUMENTO" columnName="ZFBDT"/>
+        <keyMapping schemaName="CDA_4_HANA" columnObjectName="CDA_4_HANA.ETL.Tables::S_CDA_DOCUMENTO" columnName="ZFBDT"/>
       </attribute>
       <attribute id="MANSP" order="22" attributeHierarchyActive="false" displayAttribute="false">
         <descriptions defaultDescription="MANSP"/>
-        <keyMapping schemaName="CDA_4_HANA" columnObjectName="CDA_4_HANA.FactTables.Tables::S_CDA_DOCUMENTO" columnName="MANSP"/>
+        <keyMapping schemaName="CDA_4_HANA" columnObjectName="CDA_4_HANA.ETL.Tables::S_CDA_DOCUMENTO" columnName="MANSP"/>
       </attribute>
       <attribute id="MSCHL" order="23" attributeHierarchyActive="false" displayAttribute="false">
         <descriptions defaultDescription="MSCHL"/>
-        <keyMapping schemaName="CDA_4_HANA" columnObjectName="CDA_4_HANA.FactTables.Tables::S_CDA_DOCUMENTO" columnName="MSCHL"/>
+        <keyMapping schemaName="CDA_4_HANA" columnObjectName="CDA_4_HANA.ETL.Tables::S_CDA_DOCUMENTO" columnName="MSCHL"/>
       </attribute>
       <attribute id="MANST" order="24" attributeHierarchyActive="false" displayAttribute="false">
         <descriptions defaultDescription="MANST"/>
-        <keyMapping schemaName="CDA_4_HANA" columnObjectName="CDA_4_HANA.FactTables.Tables::S_CDA_DOCUMENTO" columnName="MANST"/>
+        <keyMapping schemaName="CDA_4_HANA" columnObjectName="CDA_4_HANA.ETL.Tables::S_CDA_DOCUMENTO" columnName="MANST"/>
       </attribute>
       <attribute id="LCURR" order="25" attributeHierarchyActive="false" displayAttribute="false">
         <descriptions defaultDescription="LCURR"/>
-        <keyMapping schemaName="CDA_4_HANA" columnObjectName="CDA_4_HANA.FactTables.Tables::S_CDA_DOCUMENTO" columnName="LCURR"/>
+        <keyMapping schemaName="CDA_4_HANA" columnObjectName="CDA_4_HANA.ETL.Tables::S_CDA_DOCUMENTO" columnName="LCURR"/>
       </attribute>
       <attribute id="WAERS" order="26" attributeHierarchyActive="false" displayAttribute="false">
         <descriptions defaultDescription="WAERS"/>
-        <keyMapping schemaName="CDA_4_HANA" columnObjectName="CDA_4_HANA.FactTables.Tables::S_CDA_DOCUMENTO" columnName="WAERS"/>
+        <keyMapping schemaName="CDA_4_HANA" columnObjectName="CDA_4_HANA.ETL.Tables::S_CDA_DOCUMENTO" columnName="WAERS"/>
       </attribute>
       <attribute id="KTOPL" order="27" attributeHierarchyActive="false" displayAttribute="false">
         <descriptions defaultDescription="KTOPL"/>
-        <keyMapping schemaName="CDA_4_HANA" columnObjectName="CDA_4_HANA.FactTables.Tables::S_CDA_DOCUMENTO" columnName="KTOPL"/>
+        <keyMapping schemaName="CDA_4_HANA" columnObjectName="CDA_4_HANA.ETL.Tables::S_CDA_DOCUMENTO" columnName="KTOPL"/>
       </attribute>
       <attribute id="HKONT" order="28" attributeHierarchyActive="false" displayAttribute="false">
         <descriptions defaultDescription="HKONT"/>
-        <keyMapping schemaName="CDA_4_HANA" columnObjectName="CDA_4_HANA.FactTables.Tables::S_CDA_DOCUMENTO" columnName="HKONT"/>
+        <keyMapping schemaName="CDA_4_HANA" columnObjectName="CDA_4_HANA.ETL.Tables::S_CDA_DOCUMENTO" columnName="HKONT"/>
       </attribute>
       <attribute id="SAKNR" order="29" attributeHierarchyActive="false" displayAttribute="false">
         <descriptions defaultDescription="SAKNR"/>
-        <keyMapping schemaName="CDA_4_HANA" columnObjectName="CDA_4_HANA.FactTables.Tables::S_CDA_DOCUMENTO" columnName="SAKNR"/>
+        <keyMapping schemaName="CDA_4_HANA" columnObjectName="CDA_4_HANA.ETL.Tables::S_CDA_DOCUMENTO" columnName="SAKNR"/>
       </attribute>
       <attribute id="XBLNR" order="30" attributeHierarchyActive="false" displayAttribute="false">
         <descriptions defaultDescription="XBLNR"/>
-        <keyMapping schemaName="CDA_4_HANA" columnObjectName="CDA_4_HANA.FactTables.Tables::S_CDA_DOCUMENTO" columnName="XBLNR"/>
+        <keyMapping schemaName="CDA_4_HANA" columnObjectName="CDA_4_HANA.ETL.Tables::S_CDA_DOCUMENTO" columnName="XBLNR"/>
       </attribute>
       <attribute id="REBZG" order="31" attributeHierarchyActive="false" displayAttribute="false">
         <descriptions defaultDescription="REBZG"/>
-        <keyMapping schemaName="CDA_4_HANA" columnObjectName="CDA_4_HANA.FactTables.Tables::S_CDA_DOCUMENTO" columnName="REBZG"/>
+        <keyMapping schemaName="CDA_4_HANA" columnObjectName="CDA_4_HANA.ETL.Tables::S_CDA_DOCUMENTO" columnName="REBZG"/>
       </attribute>
       <attribute id="REBZJ" order="32" attributeHierarchyActive="false" displayAttribute="false">
         <descriptions defaultDescription="REBZJ"/>
-        <keyMapping schemaName="CDA_4_HANA" columnObjectName="CDA_4_HANA.FactTables.Tables::S_CDA_DOCUMENTO" columnName="REBZJ"/>
+        <keyMapping schemaName="CDA_4_HANA" columnObjectName="CDA_4_HANA.ETL.Tables::S_CDA_DOCUMENTO" columnName="REBZJ"/>
       </attribute>
       <attribute id="REBZZ" order="33" attributeHierarchyActive="false" displayAttribute="false">
         <descriptions defaultDescription="REBZZ"/>
-        <keyMapping schemaName="CDA_4_HANA" columnObjectName="CDA_4_HANA.FactTables.Tables::S_CDA_DOCUMENTO" columnName="REBZZ"/>
+        <keyMapping schemaName="CDA_4_HANA" columnObjectName="CDA_4_HANA.ETL.Tables::S_CDA_DOCUMENTO" columnName="REBZZ"/>
       </attribute>
       <attribute id="VBELN" order="34" attributeHierarchyActive="false" displayAttribute="false">
         <descriptions defaultDescription="VBELN"/>
-        <keyMapping schemaName="CDA_4_HANA" columnObjectName="CDA_4_HANA.FactTables.Tables::S_CDA_DOCUMENTO" columnName="VBELN"/>
+        <keyMapping schemaName="CDA_4_HANA" columnObjectName="CDA_4_HANA.ETL.Tables::S_CDA_DOCUMENTO" columnName="VBELN"/>
       </attribute>
       <attribute id="UMSKS" order="35" attributeHierarchyActive="false" displayAttribute="false">
         <descriptions defaultDescription="UMSKS"/>
-        <keyMapping schemaName="CDA_4_HANA" columnObjectName="CDA_4_HANA.FactTables.Tables::S_CDA_DOCUMENTO" columnName="UMSKS"/>
+        <keyMapping schemaName="CDA_4_HANA" columnObjectName="CDA_4_HANA.ETL.Tables::S_CDA_DOCUMENTO" columnName="UMSKS"/>
       </attribute>
       <attribute id="BSTAT" order="36" attributeHierarchyActive="false" displayAttribute="false">
         <descriptions defaultDescription="BSTAT"/>
-        <keyMapping schemaName="CDA_4_HANA" columnObjectName="CDA_4_HANA.FactTables.Tables::S_CDA_DOCUMENTO" columnName="BSTAT"/>
+        <keyMapping schemaName="CDA_4_HANA" columnObjectName="CDA_4_HANA.ETL.Tables::S_CDA_DOCUMENTO" columnName="BSTAT"/>
       </attribute>
       <attribute id="GJAHR" order="37" attributeHierarchyActive="false" displayAttribute="false">
         <descriptions defaultDescription="GJAHR"/>
-        <keyMapping schemaName="CDA_4_HANA" columnObjectName="CDA_4_HANA.FactTables.Tables::S_CDA_DOCUMENTO" columnName="GJAHR"/>
+        <keyMapping schemaName="CDA_4_HANA" columnObjectName="CDA_4_HANA.ETL.Tables::S_CDA_DOCUMENTO" columnName="GJAHR"/>
       </attribute>
       <attribute id="MONAT" order="38" attributeHierarchyActive="false" displayAttribute="false">
         <descriptions defaultDescription="MONAT"/>
-        <keyMapping schemaName="CDA_4_HANA" columnObjectName="CDA_4_HANA.FactTables.Tables::S_CDA_DOCUMENTO" columnName="MONAT"/>
+        <keyMapping schemaName="CDA_4_HANA" columnObjectName="CDA_4_HANA.ETL.Tables::S_CDA_DOCUMENTO" columnName="MONAT"/>
       </attribute>
     </attributes>
     <calculatedAttributes/>

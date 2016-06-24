@@ -10,7 +10,7 @@ BEGIN
  *****************************/
  
 -- aggiorna anagrafiche partite
-START TASK "CDA_4_HANA"."CDA_4_HANA.FactTables.Task::FTP_ANAG_PARTITE";
+START TASK "CDA_4_HANA"."CDA_4_HANA.ETL.Tasks::FTP_ANAG_PARTITE";
 
 -- scrivi fact pagamenti 
 call "CDA_4_HANA.FactTables.Procedures::SP_WRITE_FC_CLI_PAGAMENTI"();

@@ -13,9 +13,9 @@
       <viewAttributes allViewAttributes="true"/>
       <columnObject schemaName="CDA_4_HANA" columnObjectName="CDA_4_HANA.ETL.M_Tables::M_CODE_INSOLUTO"/>
     </DataSource>
-    <DataSource id="CDA_4_HANA.FactTables.Tables::S_CDA_DOCUMENTO" type="DATA_BASE_TABLE">
+    <DataSource id="CA_CDA_DOCUMENTO" type="CALCULATION_VIEW">
       <viewAttributes allViewAttributes="true"/>
-      <columnObject schemaName="CDA_4_HANA" columnObjectName="CDA_4_HANA.FactTables.Tables::S_CDA_DOCUMENTO"/>
+      <resourceUri>/CDA_4_HANA.Views.Documento/calculationviews/CA_CDA_DOCUMENTO</resourceUri>
     </DataSource>
   </dataSources>
   <calculationViews>
@@ -444,7 +444,7 @@
         <mapping xsi:type="Calculation:AttributeMapping" target="VAL_INSOLUTI" source="VAL_INSOLUTI"/>
         <mapping xsi:type="Calculation:AttributeMapping" target="VAL_INSOLUTI_LC" source="VAL_INSOLUTI_LC"/>
       </input>
-      <input node="#CDA_4_HANA.FactTables.Tables::S_CDA_DOCUMENTO">
+      <input node="#CA_CDA_DOCUMENTO">
         <mapping xsi:type="Calculation:AttributeMapping" target="PARTITA_ID" source="PARTITA_ID"/>
         <mapping xsi:type="Calculation:AttributeMapping" target="BUKRS" source="BUKRS"/>
         <mapping xsi:type="Calculation:AttributeMapping" target="FISCPER" source="FISCPER"/>

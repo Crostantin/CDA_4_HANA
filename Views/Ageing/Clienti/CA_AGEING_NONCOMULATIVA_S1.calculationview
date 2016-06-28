@@ -7,7 +7,7 @@
   <dataSources>
     <DataSource id="CA_AGEING_CLIENTE_S1" type="CALCULATION_VIEW">
       <viewAttributes allViewAttributes="true"/>
-      <resourceUri>/CDA_4_HANA.Ageing.Cliente.Views/calculationviews/CA_AGEING_CLIENTE_S1</resourceUri>
+      <resourceUri>/CDA_4_HANA.Views.Ageing.Clienti/calculationviews/CA_AGEING_CLIENTE_S1</resourceUri>
     </DataSource>
     <DataSource id="CA_S_TIME_DAY" type="CALCULATION_VIEW">
       <viewAttributes allViewAttributes="true"/>
@@ -22,7 +22,7 @@
       <resourceUri>/CDA_4_HANA.Views.Time/calculationviews/CA_S_TIME_DAY</resourceUri>
     </DataSource>
     <DataSource id="MESE_ROLLING" type="TABLE_FUNCTION">
-      <resourceUri>CDA_4_HANA.Ageing.Functions::MESE_ROLLING</resourceUri>
+      <resourceUri>CDA_4_HANA.Views.Ageing.Functions::MESE_ROLLING</resourceUri>
     </DataSource>
   </dataSources>
   <calculationViews>
@@ -511,6 +511,7 @@
       <calculatedViewAttributes/>
       <input node="#MESE_SCADENZA">
         <mapping xsi:type="Calculation:AttributeMapping" target="PARTITA_ID" source="PARTITA_ID"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="BUKRS" source="BUKRS"/>
         <mapping xsi:type="Calculation:AttributeMapping" target="LIFNR" source="LIFNR"/>
         <mapping xsi:type="Calculation:AttributeMapping" target="KUNNR" source="KUNNR"/>
         <mapping xsi:type="Calculation:AttributeMapping" target="BLART" source="BLART"/>
@@ -518,15 +519,14 @@
         <mapping xsi:type="Calculation:AttributeMapping" target="BUDAT" source="BUDAT"/>
         <mapping xsi:type="Calculation:AttributeMapping" target="AUGDT" source="AUGDT"/>
         <mapping xsi:type="Calculation:AttributeMapping" target="NETDT" source="NETDT"/>
-        <mapping xsi:type="Calculation:AttributeMapping" target="MESE_SCADENZA" source="MESE_SCADENZA"/>
         <mapping xsi:type="Calculation:AttributeMapping" target="ZLSCH" source="ZLSCH"/>
         <mapping xsi:type="Calculation:AttributeMapping" target="ZTERM" source="ZTERM"/>
         <mapping xsi:type="Calculation:AttributeMapping" target="DMSOL" source="DMSOL"/>
         <mapping xsi:type="Calculation:AttributeMapping" target="WRSHB" source="WRSHB"/>
         <mapping xsi:type="Calculation:AttributeMapping" target="XBLNR" source="XBLNR"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="MESE_SCADENZA" source="MESE_SCADENZA"/>
         <mapping xsi:type="Calculation:AttributeMapping" target="MESE_REGISTRAZIONE" source="MESE_REGISTRAZIONE"/>
         <mapping xsi:type="Calculation:AttributeMapping" target="MESE_PAREGGIO" source="MESE_PAREGGIO"/>
-        <mapping xsi:type="Calculation:AttributeMapping" target="BUKRS" source="BUKRS"/>
       </input>
       <input node="#Projection_1">
         <mapping xsi:type="Calculation:AttributeMapping" target="MONTH_ID" source="MONTH_ID"/>
@@ -561,8 +561,9 @@
       <calculatedViewAttributes/>
       <input node="#SF_CDA_AGING_INC_S0">
         <mapping xsi:type="Calculation:AttributeMapping" target="PARTITA_ID" source="PARTITA_ID"/>
-        <mapping xsi:type="Calculation:AttributeMapping" target="LIFNR" source="LIFNR"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="BUKRS" source="BUKRS"/>
         <mapping xsi:type="Calculation:AttributeMapping" target="KUNNR" source="KUNNR"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="LIFNR" source="LIFNR"/>
         <mapping xsi:type="Calculation:AttributeMapping" target="BLART" source="BLART"/>
         <mapping xsi:type="Calculation:AttributeMapping" target="BLDAT" source="BLDAT"/>
         <mapping xsi:type="Calculation:AttributeMapping" target="BUDAT" source="BUDAT"/>
@@ -579,7 +580,6 @@
         <mapping xsi:type="Calculation:AttributeMapping" target="MONTH_ID" source="MONTH_ID"/>
         <mapping xsi:type="Calculation:AttributeMapping" target="DATA_APERTURA" source="DATA_APERTURA"/>
         <mapping xsi:type="Calculation:AttributeMapping" target="DATA_CHIUSURA" source="DATA_CHIUSURA"/>
-        <mapping xsi:type="Calculation:AttributeMapping" target="BUKRS" source="BUKRS"/>
       </input>
       <filter>(&quot;MONTH_ID&quot; >= &quot;MESE_REGISTRAZIONE&quot; )and &#xD;
 (&quot;MONTH_ID&quot; &lt; &quot;MESE_PAREGGIO&quot;)</filter>

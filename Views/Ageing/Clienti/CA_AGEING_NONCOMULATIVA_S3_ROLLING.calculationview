@@ -7,10 +7,10 @@
   <dataSources>
     <DataSource id="CA_AGEING_NONCOMULATIVA_S2" type="CALCULATION_VIEW">
       <viewAttributes allViewAttributes="true"/>
-      <resourceUri>/CDA_4_HANA.Ageing.Cliente.Views/calculationviews/CA_AGEING_NONCOMULATIVA_S2</resourceUri>
+      <resourceUri>/CDA_4_HANA.Views.Ageing.Clienti/calculationviews/CA_AGEING_NONCOMULATIVA_S2</resourceUri>
     </DataSource>
     <DataSource id="12M_ROLLING" type="TABLE_FUNCTION">
-      <resourceUri>CDA_4_HANA.Ageing.Functions::12M_ROLLING</resourceUri>
+      <resourceUri>CDA_4_HANA.Views.Ageing.Functions::12M_ROLLING</resourceUri>
     </DataSource>
   </dataSources>
   <calculationViews>

@@ -74,7 +74,7 @@ insert into "CDA_4_HANA.FactTables.Tables::SF_CDA_CLI_AGEING"
 	 "VAL_EFFETTI_LC",
 	 "VAL_INSOLUTI",
 	 "VAL_INSOLUTI_LC"
-FROM "CDA_4_HANA.Ageing.Cliente.Views::CA_AGEING_CLIENTE_S1" 
+FROM "CDA_4_HANA.Views.Ageing.Clienti::CA_AGEING_CLIENTE_S1"
 ;
 
 END;

@@ -7,7 +7,7 @@
   <dataSources>
     <DataSource id="CA_AGEING_CLIENTE_S0" type="CALCULATION_VIEW">
       <viewAttributes allViewAttributes="true"/>
-      <resourceUri>/CDA_4_HANA.Ageing.Cliente.Views/calculationviews/CA_AGEING_CLIENTE_S0</resourceUri>
+      <resourceUri>/CDA_4_HANA.Views.Ageing.Clienti/calculationviews/CA_AGEING_CLIENTE_S0</resourceUri>
     </DataSource>
     <DataSource id="CDA_4_HANA.ETL.M_Tables::M_CODE_INSOLUTO" type="DATA_BASE_TABLE">
       <viewAttributes allViewAttributes="true"/>

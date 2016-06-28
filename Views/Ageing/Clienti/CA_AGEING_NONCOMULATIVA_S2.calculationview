@@ -7,11 +7,11 @@
   <dataSources>
     <DataSource id="CA_AGEING_CLIENTE_S1" type="CALCULATION_VIEW">
       <viewAttributes allViewAttributes="true"/>
-      <resourceUri>/CDA_4_HANA.Ageing.Cliente.Views/calculationviews/CA_AGEING_CLIENTE_S1</resourceUri>
+      <resourceUri>/CDA_4_HANA.Views.Ageing.Clienti/calculationviews/CA_AGEING_CLIENTE_S1</resourceUri>
     </DataSource>
     <DataSource id="CA_AGEING_NONCOMULATIVA_S1" type="CALCULATION_VIEW">
       <viewAttributes allViewAttributes="true"/>
-      <resourceUri>/CDA_4_HANA.Ageing.Cliente.Views/calculationviews/CA_AGEING_NONCOMULATIVA_S1</resourceUri>
+      <resourceUri>/CDA_4_HANA.Views.Ageing.Clienti/calculationviews/CA_AGEING_NONCOMULATIVA_S1</resourceUri>
     </DataSource>
     <DataSource id="CA_S_TIME_DAY" type="CALCULATION_VIEW">
       <viewAttributes allViewAttributes="true"/>

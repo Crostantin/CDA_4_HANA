@@ -9,9 +9,9 @@ maxvalue= 99999999;
 minvalue= 1;           // can be used for descending
 //nominvalue=true;     // used in case minvalue is not defined
 cycles= false;         // when reaching max/min value 
+depends_on_table = "CDA_4_HANA.ETL.Tables::S_CDA_DOCUMENTO";   // depends_on refers to the table in the reset_by clause
 
 // A reset_by is triggered on every database restart 
 //reset_by = "SELECT \"MY_COL2\" FROM \"<MY_SAMPLE_SCHEMA>\".\"sample.test::MY_TABLE\" WHERE \"MY_COL2\"='12'"; 
-//depends_on_table = "sample.test::MY_TABLE";   // depends_on refers to the table in the reset_by clause
 //depends_on_view  = "sample.test::MY_VIEW";    // depends_on refers to a view in the reset_by clause
 

@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Calculation:scenario xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:Calculation="http://www.sap.com/ndb/BiModelCalculation.ecore" schemaVersion="2.3" id="CA_CDA_DOCUMENTO_REP_2" applyPrivilegeType="ANALYTIC_PRIVILEGE" checkAnalyticPrivileges="true" defaultClient="$$client$$" defaultLanguage="$$language$$" hierarchiesSQLEnabled="false" translationRelevant="true" visibility="internal" calculationScenarioType="TREE_BASED" dataCategory="DIMENSION" enforceSqlExecution="false" executionSemantic="UNDEFINED" outputViewType="Projection">
+  <descriptions defaultDescription="CA_CDA_DOCUMENTO"/>
+  <localVariables>
+    <variable id="i_data_analisi" parameter="true">
+      <descriptions defaultDescription="i_data_analisi"/>
+      <variableProperties datatype="DATE" defaultExpressionLanguage="COLUMN_ENGINE" mandatory="true">
+        <valueDomain type="Date"/>
+        <selection multiLine="false" type="SingleValue"/>
+        <defaultExpression>now()</defaultExpression>
+      </variableProperties>
+    </variable>
+  </localVariables>
+  <variableMappings/>
+  <informationModelLayout relativeWidthScenario="27"/>
+  <dataSources>
+    <DataSource id="CDA_4_HANA.ETL.Tables::S_CDA_DOCUMENTO" type="DATA_BASE_TABLE">
+      <viewAttributes allViewAttributes="true"/>
+      <columnObject schemaName="CDA_4_HANA" columnObjectName="CDA_4_HANA.ETL.Tables::S_CDA_DOCUMENTO"/>
+    </DataSource>
+  </dataSources>
+  <calculationViews>
+    <calculationView xsi:type="Calculation:ProjectionView" id="Projection_1" filterExpressionLanguage="COLUMN_ENGINE">
+      <descriptions/>
+      <viewAttributes>
+        <viewAttribute id="PARTITA_ID"/>
+        <viewAttribute id="BUKRS"/>
+        <viewAttribute id="BLDAT"/>
+        <viewAttribute id="BUDAT"/>
+        <viewAttribute id="CPUDT"/>
+        <viewAttribute id="MADAT"/>
+        <viewAttribute id="NETDT"/>
+        <viewAttribute id="ZFBDT"/>
+        <viewAttribute id="AUGDT"/>
+        <viewAttribute id="FISCPER"/>
+        <viewAttribute id="BELNR"/>
+        <viewAttribute id="BUZEI"/>
+      </viewAttributes>
+      <calculatedViewAttributes/>
+      <input node="#CDA_4_HANA.ETL.Tables::S_CDA_DOCUMENTO">
+        <mapping xsi:type="Calculation:AttributeMapping" target="PARTITA_ID" source="PARTITA_ID"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="BUKRS" source="BUKRS"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="BLDAT" source="BLDAT"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="BUDAT" source="BUDAT"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="CPUDT" source="CPUDT"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="MADAT" source="MADAT"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="NETDT" source="NETDT"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="ZFBDT" source="ZFBDT"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="AUGDT" source="AUGDT"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="FISCPER" source="FISCPER"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="BELNR" source="BELNR"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="BUZEI" source="BUZEI"/>
+      </input>
+      <filter>(&quot;BUDAT&quot;&lt;='$$i_data_analisi$$') and ( isNull(&quot;AUGDT&quot;) or &quot;AUGDT&quot;>'$$i_data_analisi$$' or &quot;AUGDT&quot; = '1900-01-01')</filter>
+    </calculationView>
+  </calculationViews>
+  <logicalModel id="Projection_1">
+    <descriptions/>
+    <attributes>
+      <attribute id="PARTITA_ID" order="1" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="PARTITA_ID"/>
+        <keyMapping columnObjectName="Projection_1" columnName="PARTITA_ID"/>
+      </attribute>
+      <attribute id="BLDAT" order="2" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="BLDAT"/>
+        <keyMapping columnObjectName="Projection_1" columnName="BLDAT"/>
+      </attribute>
+      <attribute id="BUDAT" order="3" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="BUDAT"/>
+        <keyMapping columnObjectName="Projection_1" columnName="BUDAT"/>
+      </attribute>
+      <attribute id="CPUDT" order="4" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="CPUDT"/>
+        <keyMapping columnObjectName="Projection_1" columnName="CPUDT"/>
+      </attribute>
+      <attribute id="MADAT" order="5" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="MADAT"/>
+        <keyMapping columnObjectName="Projection_1" columnName="MADAT"/>
+      </attribute>
+      <attribute id="NETDT" order="6" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="NETDT"/>
+        <keyMapping columnObjectName="Projection_1" columnName="NETDT"/>
+      </attribute>
+      <attribute id="ZFBDT" order="7" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="ZFBDT"/>
+        <keyMapping columnObjectName="Projection_1" columnName="ZFBDT"/>
+      </attribute>
+      <attribute id="AUGDT" order="8" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="AUGDT"/>
+        <keyMapping columnObjectName="Projection_1" columnName="AUGDT"/>
+      </attribute>
+    </attributes>
+    <calculatedAttributes/>
+    <privateDataFoundation>
+      <tableProxies/>
+      <joins/>
+      <layout>
+        <shapes/>
+      </layout>
+    </privateDataFoundation>
+    <baseMeasures/>
+    <calculatedMeasures/>
+    <restrictedMeasures/>
+    <localDimensions/>
+  </logicalModel>
+  <layout>
+    <shapes>
+      <shape expanded="true" modelObjectName="Output" modelObjectNameSpace="MeasureGroup">
+        <upperLeftCorner x="22" y="87"/>
+        <rectangleSize height="74" width="140"/>
+      </shape>
+      <shape expanded="true" modelObjectName="Projection_1" modelObjectNameSpace="CalculationView">
+        <upperLeftCorner x="22" y="165"/>
+        <rectangleSize height="-1" width="-1"/>
+      </shape>
+    </shapes>
+  </layout>
+</Calculation:scenario>

@@ -1002,7 +1002,7 @@
     <annotations xmi:id="353905d22432f977c0b27a7ba6e454b4" key="sap.im.writerType" value="insert"/>
     <annotations xmi:id="c8e0daaaa072c755d0fe9bf0c82fceee" key="sap.im.keyGenerationAttribute" value="PARTITA_ID"/>
     <annotations xmi:id="84e3983214edebaae98e6b1ef6b859a1" key="sap.im.sequenceSchema" value="CDA_4_HANA"/>
-    <annotations xmi:id="0ef4db0228430bc519bda31fa525174b" key="sap.im.sequenceName" value="CDA_4_HANA.FactTables.Sequences::SEQ_S_CDA_DOCUMENTO"/>
+    <annotations xmi:id="0ef4db0228430bc519bda31fa525174b" key="sap.im.sequenceName" value="CDA_4_HANA.ETL.Sequences::SEQ_S_CDA_DOCUMENTO"/>
     <inputs xmi:id="_UoF5-C1mEeah8uIQECWRYg" name="DATA_2" kind="TABLE">
       <attributes xmi:id="_khlC4DniEeaGRJlAZItg6w" name="PARTITA_ID" type="INTEGER" nullable="false" length="0" scale="0"/>
       <attributes xmi:id="_khlC4TniEeaGRJlAZItg6w" name="BUKRS" type="VARCHAR" nullable="false" length="4" scale="0"/>

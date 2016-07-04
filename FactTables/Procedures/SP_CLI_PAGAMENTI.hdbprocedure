@@ -547,7 +547,7 @@ GROUP BY "BUKRS",
 	from :WT_CLI_PASSO2 a
 	join :M_CHIAVE_CONTABILE b
 	on (a.BSCHL=b.BSCHL)
-	left join "CDA_4_HANA.Ageing.Cliente.Views::CA_AGEING_CLIENTE_S1" c
+	left join "CDA_4_HANA.Views.Ageing.Clienti::CA_AGEING_CLIENTE_S1" c
 	on (a.KUNNR=c.KUNNR and a.belnr = c.belnr and a.buzei = c.buzei) -- MODDED (originale solo kunnr)
 	join "CDA_4_HANA.ETL.Tables::T_0FI_AR_4" d
 	on (a.BUKRS=d.BUKRS and a.GJAHR=d.GJAHR and a.BELNR=d.BELNR and a.BUZEI=d.BUZEI)

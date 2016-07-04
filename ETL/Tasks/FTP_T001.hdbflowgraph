@@ -269,7 +269,7 @@
       <annotations xmi:id="_zkN9AjLOEeaiyrqsMuPNbg" key="x" value="487"/>
       <annotations xmi:id="_zkN9AzLOEeaiyrqsMuPNbg" key="y" value="140"/>
     </annotations>
-    <annotations xmi:id="_2W7VMDLOEeaiyrqsMuPNbg" key="sap.im.writerType" value="upsert"/>
+    <annotations xmi:id="_2W7VMDLOEeaiyrqsMuPNbg" key="sap.im.writerType" value="insert"/>
     <annotations xmi:id="_3TNXQDLOEeaiyrqsMuPNbg" key="sap.afm.nodeType" value="DataNode"/>
     <annotations xmi:id="_3TWhMDLOEeaiyrqsMuPNbg" key="sap.afm.nodeInputs">
       <annotations xmi:id="_3TbZsDLOEeaiyrqsMuPNbg" key="DATA_2" value="OUTPUT"/>

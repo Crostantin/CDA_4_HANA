@@ -181,101 +181,97 @@
         <descriptions defaultDescription="CODICE_COGE_SPECIALE_DES"/>
         <keyMapping columnObjectName="Projection_1" columnName="CODICE_COGE_SPECIALE_DES"/>
       </attribute>
-      <attribute id="LCURR" order="7" attributeHierarchyActive="false" displayAttribute="false">
-        <descriptions defaultDescription="LCURR"/>
-        <keyMapping columnObjectName="Projection_1" columnName="LCURR"/>
-      </attribute>
-      <attribute id="WAERS" order="8" attributeHierarchyActive="false" displayAttribute="false">
-        <descriptions defaultDescription="WAERS"/>
-        <keyMapping columnObjectName="Projection_1" columnName="WAERS"/>
-      </attribute>
-      <attribute id="BLART" order="9" attributeHierarchyActive="false" displayAttribute="false">
+      <attribute id="BLART" order="7" attributeHierarchyActive="false" displayAttribute="false">
         <descriptions defaultDescription="BLART"/>
         <keyMapping columnObjectName="Projection_1" columnName="BLART"/>
       </attribute>
-      <attribute id="BSCHL" order="10" attributeHierarchyActive="false" displayAttribute="false">
+      <attribute id="BSCHL" order="8" attributeHierarchyActive="false" displayAttribute="false">
         <descriptions defaultDescription="BSCHL"/>
         <keyMapping columnObjectName="Projection_1" columnName="BSCHL"/>
       </attribute>
-      <attribute id="MANSP" order="11" attributeHierarchyActive="false" displayAttribute="false">
-        <descriptions defaultDescription="MANSP"/>
-        <keyMapping columnObjectName="Projection_1" columnName="MANSP"/>
-      </attribute>
-      <attribute id="MSCHL" order="12" attributeHierarchyActive="false" displayAttribute="false">
-        <descriptions defaultDescription="MSCHL"/>
-        <keyMapping columnObjectName="Projection_1" columnName="MSCHL"/>
-      </attribute>
-      <attribute id="KTOPL" order="13" attributeHierarchyActive="false" displayAttribute="false">
-        <descriptions defaultDescription="KTOPL"/>
-        <keyMapping columnObjectName="Projection_1" columnName="KTOPL"/>
-      </attribute>
-      <attribute id="HKONT" order="14" attributeHierarchyActive="false" displayAttribute="false">
-        <descriptions defaultDescription="HKONT"/>
-        <keyMapping columnObjectName="Projection_1" columnName="HKONT"/>
-      </attribute>
-      <attribute id="SAKNR" order="15" attributeHierarchyActive="false" displayAttribute="false">
-        <descriptions defaultDescription="SAKNR"/>
-        <keyMapping columnObjectName="Projection_1" columnName="SAKNR"/>
-      </attribute>
-      <attribute id="AUGBL" order="16" attributeHierarchyActive="false" displayAttribute="false">
-        <descriptions defaultDescription="AUGBL"/>
-        <keyMapping columnObjectName="Projection_1" columnName="AUGBL"/>
-      </attribute>
-      <attribute id="XBLNR" order="17" attributeHierarchyActive="false" displayAttribute="false">
-        <descriptions defaultDescription="XBLNR"/>
-        <keyMapping columnObjectName="Projection_1" columnName="XBLNR"/>
-      </attribute>
-      <attribute id="REBZG" order="18" attributeHierarchyActive="false" displayAttribute="false">
-        <descriptions defaultDescription="REBZG"/>
-        <keyMapping columnObjectName="Projection_1" columnName="REBZG"/>
-      </attribute>
-      <attribute id="ZLSCH" order="19" attributeHierarchyActive="false" displayAttribute="false">
-        <descriptions defaultDescription="ZLSCH"/>
-        <keyMapping columnObjectName="Projection_1" columnName="ZLSCH"/>
-      </attribute>
-      <attribute id="FISCVAR" order="20" attributeHierarchyActive="false" displayAttribute="false">
+      <attribute id="FISCVAR" order="9" attributeHierarchyActive="false" displayAttribute="false">
         <descriptions defaultDescription="FISCVAR"/>
         <keyMapping columnObjectName="Projection_1" columnName="FISCVAR"/>
       </attribute>
-      <attribute id="VBELN" order="21" attributeHierarchyActive="false" displayAttribute="false">
+      <attribute id="ZLSCH" order="15" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="ZLSCH"/>
+        <keyMapping columnObjectName="Projection_1" columnName="ZLSCH"/>
+      </attribute>
+      <attribute id="MANSP" order="16" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="MANSP"/>
+        <keyMapping columnObjectName="Projection_1" columnName="MANSP"/>
+      </attribute>
+      <attribute id="MSCHL" order="17" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="MSCHL"/>
+        <keyMapping columnObjectName="Projection_1" columnName="MSCHL"/>
+      </attribute>
+      <attribute id="LCURR" order="19" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="LCURR"/>
+        <keyMapping columnObjectName="Projection_1" columnName="LCURR"/>
+      </attribute>
+      <attribute id="WAERS" order="22" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="WAERS"/>
+        <keyMapping columnObjectName="Projection_1" columnName="WAERS"/>
+      </attribute>
+      <attribute id="KTOPL" order="25" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="KTOPL"/>
+        <keyMapping columnObjectName="Projection_1" columnName="KTOPL"/>
+      </attribute>
+      <attribute id="HKONT" order="26" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="HKONT"/>
+        <keyMapping columnObjectName="Projection_1" columnName="HKONT"/>
+      </attribute>
+      <attribute id="SAKNR" order="27" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="SAKNR"/>
+        <keyMapping columnObjectName="Projection_1" columnName="SAKNR"/>
+      </attribute>
+      <attribute id="AUGBL" order="28" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="AUGBL"/>
+        <keyMapping columnObjectName="Projection_1" columnName="AUGBL"/>
+      </attribute>
+      <attribute id="XBLNR" order="29" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="XBLNR"/>
+        <keyMapping columnObjectName="Projection_1" columnName="XBLNR"/>
+      </attribute>
+      <attribute id="REBZG" order="30" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="REBZG"/>
+        <keyMapping columnObjectName="Projection_1" columnName="REBZG"/>
+      </attribute>
+      <attribute id="VBELN" order="33" attributeHierarchyActive="false" displayAttribute="false">
         <descriptions defaultDescription="VBELN"/>
         <keyMapping columnObjectName="Projection_1" columnName="VBELN"/>
       </attribute>
-      <attribute id="BUZEI" order="22" attributeHierarchyActive="false" displayAttribute="false">
-        <descriptions defaultDescription="BUZEI"/>
-        <keyMapping columnObjectName="Projection_1" columnName="BUZEI"/>
-      </attribute>
-      <attribute id="XREF1" order="23" attributeHierarchyActive="false" displayAttribute="false">
+      <attribute id="XREF1" order="34" attributeHierarchyActive="false" displayAttribute="false">
         <descriptions defaultDescription="XREF1"/>
         <keyMapping columnObjectName="Projection_1" columnName="XREF1"/>
       </attribute>
-      <attribute id="XREF2" order="24" attributeHierarchyActive="false" displayAttribute="false">
+      <attribute id="XREF2" order="35" attributeHierarchyActive="false" displayAttribute="false">
         <descriptions defaultDescription="XREF2"/>
         <keyMapping columnObjectName="Projection_1" columnName="XREF2"/>
       </attribute>
-      <attribute id="UPOSZ" order="25" attributeHierarchyActive="false" displayAttribute="false">
-        <descriptions defaultDescription="UPOSZ"/>
-        <keyMapping columnObjectName="Projection_1" columnName="UPOSZ"/>
-      </attribute>
-      <attribute id="BELNR" order="26" attributeHierarchyActive="false" displayAttribute="false">
-        <descriptions defaultDescription="BELNR"/>
-        <keyMapping columnObjectName="Projection_1" columnName="BELNR"/>
-      </attribute>
-      <attribute id="FISCPER" order="27" attributeHierarchyActive="false" displayAttribute="false">
-        <descriptions defaultDescription="FISCPER"/>
-        <keyMapping columnObjectName="Projection_1" columnName="FISCPER"/>
-      </attribute>
-      <attribute id="XREF3" order="28" attributeHierarchyActive="false" displayAttribute="false">
+      <attribute id="XREF3" order="36" attributeHierarchyActive="false" displayAttribute="false">
         <descriptions defaultDescription="XREF3"/>
         <keyMapping columnObjectName="Projection_1" columnName="XREF3"/>
       </attribute>
-      <attribute id="UMSKS" order="29" attributeHierarchyActive="false" displayAttribute="false">
+      <attribute id="UMSKS" order="37" attributeHierarchyActive="false" displayAttribute="false">
         <descriptions defaultDescription="UMSKS"/>
         <keyMapping columnObjectName="Projection_1" columnName="UMSKS"/>
       </attribute>
-      <attribute id="BSTAT" order="30" attributeHierarchyActive="false" displayAttribute="false">
+      <attribute id="BSTAT" order="38" attributeHierarchyActive="false" displayAttribute="false">
         <descriptions defaultDescription="BSTAT"/>
         <keyMapping columnObjectName="Projection_1" columnName="BSTAT"/>
+      </attribute>
+      <attribute id="UPOSZ" order="52" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="UPOSZ"/>
+        <keyMapping columnObjectName="Projection_1" columnName="UPOSZ"/>
+      </attribute>
+      <attribute id="BELNR" order="53" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="BELNR"/>
+        <keyMapping columnObjectName="Projection_1" columnName="BELNR"/>
+      </attribute>
+      <attribute id="FISCPER" order="54" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="FISCPER"/>
+        <keyMapping columnObjectName="Projection_1" columnName="FISCPER"/>
       </attribute>
       <attribute id="BUDAT$local">
         <descriptions/>
@@ -311,7 +307,7 @@
       </attribute>
     </attributes>
     <calculatedAttributes>
-      <calculatedAttribute id="VAR_DATA_ANALISI" hidden="true" order="55" semanticType="date" attributeHierarchyActive="false" displayAttribute="false">
+      <calculatedAttribute id="VAR_DATA_ANALISI" hidden="true" order="56" semanticType="date" attributeHierarchyActive="false" displayAttribute="false">
         <descriptions defaultDescription="VAR_DATA_ANALISI"/>
         <keyCalculation datatype="DATE" expressionLanguage="COLUMN_ENGINE">
           <formula>'$$i_data_analisi$$'</formula>
@@ -326,183 +322,112 @@
       </layout>
     </privateDataFoundation>
     <baseMeasures>
-      <measure id="BLDAT" order="31" aggregationType="min" measureType="simple">
+      <measure id="BLDAT" order="10" aggregationType="min" measureType="simple">
         <descriptions defaultDescription="BLDAT"/>
         <measureMapping columnObjectName="Projection_1" columnName="BLDAT"/>
       </measure>
-      <measure id="CPUDT" order="32" aggregationType="min" measureType="simple">
+      <measure id="CPUDT" order="11" aggregationType="min" measureType="simple">
         <descriptions defaultDescription="CPUDT"/>
         <measureMapping columnObjectName="Projection_1" columnName="CPUDT"/>
       </measure>
-      <measure id="AUGDT" order="33" aggregationType="min" measureType="simple">
+      <measure id="AUGDT" order="12" aggregationType="min" measureType="simple">
         <descriptions defaultDescription="AUGDT"/>
         <measureMapping columnObjectName="Projection_1" columnName="AUGDT"/>
       </measure>
-      <measure id="MADAT" order="34" aggregationType="min" measureType="simple">
+      <measure id="MADAT" order="13" aggregationType="min" measureType="simple">
         <descriptions defaultDescription="MADAT"/>
         <measureMapping columnObjectName="Projection_1" columnName="MADAT"/>
       </measure>
-      <measure id="ZFBDT" order="35" aggregationType="min" measureType="simple">
+      <measure id="ZFBDT" order="14" aggregationType="min" measureType="simple">
         <descriptions defaultDescription="ZFBDT"/>
         <measureMapping columnObjectName="Projection_1" columnName="ZFBDT"/>
       </measure>
-      <measure id="MANST" order="36" aggregationType="sum" measureType="simple">
+      <measure id="MANST" order="18" aggregationType="sum" measureType="simple">
         <descriptions defaultDescription="MANST"/>
         <measureMapping columnObjectName="Projection_1" columnName="MANST"/>
       </measure>
-      <measure id="DMSOL" order="37" aggregationType="sum" measureType="simple">
+      <measure id="DMSOL" order="20" aggregationType="sum" measureType="simple">
         <descriptions defaultDescription="DMSOL"/>
         <measureMapping columnObjectName="Projection_1" columnName="DMSOL"/>
       </measure>
-      <measure id="SKNTO" order="38" aggregationType="sum" measureType="simple">
+      <measure id="SKNTO" order="21" aggregationType="sum" measureType="simple">
         <descriptions defaultDescription="SKNTO"/>
         <measureMapping columnObjectName="Projection_1" columnName="SKNTO"/>
       </measure>
-      <measure id="WRSHB" order="39" aggregationType="sum" measureType="simple">
+      <measure id="WRSHB" order="23" aggregationType="sum" measureType="simple">
         <descriptions defaultDescription="WRSHB"/>
         <measureMapping columnObjectName="Projection_1" columnName="WRSHB"/>
       </measure>
-      <measure id="SKFBT" order="40" aggregationType="sum" measureType="simple">
+      <measure id="SKFBT" order="24" aggregationType="sum" measureType="simple">
         <descriptions defaultDescription="SKFBT"/>
         <measureMapping columnObjectName="Projection_1" columnName="SKFBT"/>
       </measure>
-      <measure id="REBZJ" order="41" aggregationType="sum" measureType="simple">
+      <measure id="REBZJ" order="31" aggregationType="sum" measureType="simple">
         <descriptions defaultDescription="REBZJ"/>
         <measureMapping columnObjectName="Projection_1" columnName="REBZJ"/>
       </measure>
-      <measure id="REBZZ" order="42" aggregationType="sum" measureType="simple">
+      <measure id="REBZZ" order="32" aggregationType="sum" measureType="simple">
         <descriptions defaultDescription="REBZZ"/>
         <measureMapping columnObjectName="Projection_1" columnName="REBZZ"/>
       </measure>
-      <measure id="GJAHR" order="43" aggregationType="sum" measureType="simple">
+      <measure id="GJAHR" order="39" aggregationType="sum" measureType="simple">
         <descriptions defaultDescription="GJAHR"/>
         <measureMapping columnObjectName="Projection_1" columnName="GJAHR"/>
       </measure>
-      <measure id="MONAT" order="44" aggregationType="sum" measureType="simple">
+      <measure id="MONAT" order="40" aggregationType="sum" measureType="simple">
         <descriptions defaultDescription="MONAT"/>
         <measureMapping columnObjectName="Projection_1" columnName="MONAT"/>
       </measure>
-      <measure id="VAL_FATTURATO" order="45" aggregationType="sum" measureType="simple">
+      <measure id="VAL_FATTURATO" order="41" aggregationType="sum" measureType="simple">
         <descriptions defaultDescription="VAL_FATTURATO"/>
         <measureMapping columnObjectName="Projection_1" columnName="VAL_FATTURATO"/>
       </measure>
-      <measure id="VAL_FATTURATO_LC" order="46" aggregationType="sum" measureType="simple">
+      <measure id="VAL_FATTURATO_LC" order="42" aggregationType="sum" measureType="simple">
         <descriptions defaultDescription="VAL_FATTURATO_LC"/>
         <measureMapping columnObjectName="Projection_1" columnName="VAL_FATTURATO_LC"/>
       </measure>
-      <measure id="VAL_INCASSATO" order="47" aggregationType="sum" measureType="simple">
+      <measure id="VAL_INCASSATO" order="43" aggregationType="sum" measureType="simple">
         <descriptions defaultDescription="VAL_INCASSATO"/>
         <measureMapping columnObjectName="Projection_1" columnName="VAL_INCASSATO"/>
       </measure>
-      <measure id="VAL_INCASSATO_LC" order="48" aggregationType="sum" measureType="simple">
+      <measure id="VAL_INCASSATO_LC" order="44" aggregationType="sum" measureType="simple">
         <descriptions defaultDescription="VAL_INCASSATO_LC"/>
         <measureMapping columnObjectName="Projection_1" columnName="VAL_INCASSATO_LC"/>
       </measure>
-      <measure id="VAL_SALDO_CONTABILE" order="49" aggregationType="sum" measureType="simple">
+      <measure id="VAL_SALDO_CONTABILE" order="45" aggregationType="sum" measureType="simple">
         <descriptions defaultDescription="VAL_SALDO_CONTABILE"/>
         <measureMapping columnObjectName="Projection_1" columnName="VAL_SALDO_CONTABILE"/>
       </measure>
-      <measure id="VAL_SALDO_CONTABILE_LC" order="50" aggregationType="sum" measureType="simple">
+      <measure id="VAL_SALDO_CONTABILE_LC" order="46" aggregationType="sum" measureType="simple">
         <descriptions defaultDescription="VAL_SALDO_CONTABILE_LC"/>
         <measureMapping columnObjectName="Projection_1" columnName="VAL_SALDO_CONTABILE_LC"/>
       </measure>
-      <measure id="VAL_EFFETTI" order="51" aggregationType="sum" measureType="simple">
+      <measure id="VAL_EFFETTI" order="47" aggregationType="sum" measureType="simple">
         <descriptions defaultDescription="VAL_EFFETTI"/>
         <measureMapping columnObjectName="Projection_1" columnName="VAL_EFFETTI"/>
       </measure>
-      <measure id="VAL_EFFETTI_LC" order="52" aggregationType="sum" measureType="simple">
+      <measure id="VAL_EFFETTI_LC" order="48" aggregationType="sum" measureType="simple">
         <descriptions defaultDescription="VAL_EFFETTI_LC"/>
         <measureMapping columnObjectName="Projection_1" columnName="VAL_EFFETTI_LC"/>
       </measure>
-      <measure id="VAL_INSOLUTI" order="53" aggregationType="sum" measureType="simple">
+      <measure id="VAL_INSOLUTI" order="49" aggregationType="sum" measureType="simple">
         <descriptions defaultDescription="VAL_INSOLUTI"/>
         <measureMapping columnObjectName="Projection_1" columnName="VAL_INSOLUTI"/>
       </measure>
-      <measure id="VAL_INSOLUTI_LC" order="54" aggregationType="sum" measureType="simple">
+      <measure id="VAL_INSOLUTI_LC" order="50" aggregationType="sum" measureType="simple">
         <descriptions defaultDescription="VAL_INSOLUTI_LC"/>
         <measureMapping columnObjectName="Projection_1" columnName="VAL_INSOLUTI_LC"/>
       </measure>
+      <measure id="BUZEI" order="51" aggregationType="sum" measureType="simple">
+        <descriptions defaultDescription="BUZEI"/>
+        <measureMapping columnObjectName="Projection_1" columnName="BUZEI"/>
+      </measure>
     </baseMeasures>
     <calculatedMeasures>
-      <measure id="A_SCADERE" hidden="false" order="56" aggregationType="sum" measureType="simple" datatype="DECIMAL" expressionLanguage="COLUMN_ENGINE" length="13" scale="2">
+      <measure id="A_SCADERE" hidden="false" order="55" aggregationType="sum" measureType="simple" datatype="DECIMAL" expressionLanguage="COLUMN_ENGINE" length="13" scale="2">
         <descriptions defaultDescription="A_SCADERE"/>
         <formula>if(&#xD;
-&quot;CA_DOCUMENTO_NETDT&quot;>&quot;VAR_DATA_ANALISI&quot;,&#xD;
-&quot;WRSHB&quot;,&#xD;
-0)</formula>
-      </measure>
-      <measure id="A_SCADERE_30gg" hidden="false" order="57" aggregationType="sum" measureType="simple" datatype="DECIMAL" expressionLanguage="COLUMN_ENGINE" length="13" scale="2">
-        <descriptions defaultDescription="A_SCADERE"/>
-        <formula>if(&#xD;
-(&quot;CA_DOCUMENTO_NETDT&quot;>=adddays(&quot;VAR_DATA_ANALISI&quot;,1))&#xD;
-and &#xD;
-(&quot;CA_DOCUMENTO_NETDT&quot;&lt;=adddays(&quot;VAR_DATA_ANALISI&quot;,30)),&#xD;
-&quot;WRSHB&quot;,&#xD;
-0)</formula>
-      </measure>
-      <measure id="A_SCADERE_31_60gg" hidden="false" order="58" aggregationType="sum" measureType="simple" datatype="DECIMAL" expressionLanguage="COLUMN_ENGINE" length="13" scale="2">
-        <descriptions defaultDescription="A_SCADERE"/>
-        <formula>if(&#xD;
-(&quot;CA_DOCUMENTO_NETDT&quot;>=adddays(&quot;VAR_DATA_ANALISI&quot;,31))&#xD;
-and &#xD;
-(&quot;CA_DOCUMENTO_NETDT&quot;&lt;=adddays(&quot;VAR_DATA_ANALISI&quot;,60)),&#xD;
-&quot;WRSHB&quot;,&#xD;
-0)</formula>
-      </measure>
-      <measure id="A_SCADERE_61_90gg" hidden="false" order="59" aggregationType="sum" measureType="simple" datatype="DECIMAL" expressionLanguage="COLUMN_ENGINE" length="13" scale="2">
-        <descriptions defaultDescription="A_SCADERE"/>
-        <formula>if(&#xD;
-(&quot;CA_DOCUMENTO_NETDT&quot;>=adddays(&quot;VAR_DATA_ANALISI&quot;,61))&#xD;
-and &#xD;
-(&quot;CA_DOCUMENTO_NETDT&quot;&lt;=adddays(&quot;VAR_DATA_ANALISI&quot;,90)),&#xD;
-&quot;WRSHB&quot;,&#xD;
-0)</formula>
-      </measure>
-      <measure id="A_SCADERE_90gg" hidden="false" order="60" aggregationType="sum" measureType="simple" datatype="DECIMAL" expressionLanguage="COLUMN_ENGINE" length="13" scale="2">
-        <descriptions defaultDescription="A_SCADERE"/>
-        <formula>if(&#xD;
-(&quot;CA_DOCUMENTO_NETDT&quot;>adddays(&quot;VAR_DATA_ANALISI&quot;,90)),&#xD;
-&quot;WRSHB&quot;,&#xD;
-0)</formula>
-      </measure>
-      <measure id="SCADUTO" hidden="false" order="61" aggregationType="sum" measureType="simple" datatype="DECIMAL" expressionLanguage="COLUMN_ENGINE" length="13" scale="2">
-        <descriptions defaultDescription="A_SCADERE"/>
-        <formula>if(&#xD;
-&quot;CA_DOCUMENTO_NETDT&quot;&lt;&quot;VAR_DATA_ANALISI&quot;,&#xD;
-&quot;WRSHB&quot;,&#xD;
-0)</formula>
-      </measure>
-      <measure id="SCADUTO_30gg" hidden="false" order="62" aggregationType="sum" measureType="simple" datatype="DECIMAL" expressionLanguage="COLUMN_ENGINE" length="13" scale="2">
-        <descriptions defaultDescription="A_SCADERE"/>
-        <formula>if(&#xD;
-(&quot;CA_DOCUMENTO_NETDT&quot;&lt;=adddays(&quot;VAR_DATA_ANALISI&quot;,1))&#xD;
-and &#xD;
-(&quot;CA_DOCUMENTO_NETDT&quot;>=adddays(&quot;VAR_DATA_ANALISI&quot;,30)),&#xD;
-&quot;WRSHB&quot;,&#xD;
-0)</formula>
-      </measure>
-      <measure id="SCADUTO_31_60gg" hidden="false" order="63" aggregationType="sum" measureType="simple" datatype="DECIMAL" expressionLanguage="COLUMN_ENGINE" length="13" scale="2">
-        <descriptions defaultDescription="A_SCADERE"/>
-        <formula>if(&#xD;
-(&quot;CA_DOCUMENTO_NETDT&quot;&lt;=adddays(&quot;VAR_DATA_ANALISI&quot;,31))&#xD;
-and &#xD;
-(&quot;CA_DOCUMENTO_NETDT&quot;>=adddays(&quot;VAR_DATA_ANALISI&quot;,60)),&#xD;
-&quot;WRSHB&quot;,&#xD;
-0)</formula>
-      </measure>
-      <measure id="SCADUTO_61_90gg" hidden="false" order="64" aggregationType="sum" measureType="simple" datatype="DECIMAL" expressionLanguage="COLUMN_ENGINE" length="13" scale="2">
-        <descriptions defaultDescription="A_SCADERE"/>
-        <formula>if(&#xD;
-(&quot;CA_DOCUMENTO_NETDT&quot;&lt;=adddays(&quot;VAR_DATA_ANALISI&quot;,61))&#xD;
-and &#xD;
-(&quot;CA_DOCUMENTO_NETDT&quot;>=adddays(&quot;VAR_DATA_ANALISI&quot;,90)),&#xD;
-&quot;WRSHB&quot;,&#xD;
-0)</formula>
-      </measure>
-      <measure id="SCADUTO_90gg" hidden="false" order="65" aggregationType="sum" measureType="simple" datatype="DECIMAL" expressionLanguage="COLUMN_ENGINE" length="13" scale="2">
-        <descriptions defaultDescription="A_SCADERE"/>
-        <formula>if(&#xD;
-(&quot;CA_DOCUMENTO_NETDT&quot;&lt;=adddays(&quot;VAR_DATA_ANALISI&quot;,90)),&#xD;
+&quot;CA_DOCUMENTO_NETDT&quot;>=&quot;VAR_DATA_ANALISI&quot;,&#xD;
 &quot;WRSHB&quot;,&#xD;
 0)</formula>
       </measure>

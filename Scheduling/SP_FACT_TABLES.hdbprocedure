@@ -16,6 +16,6 @@ START TASK "CDA_4_HANA"."CDA_4_HANA.ETL.Tasks::FTP_ANAG_PARTITE";
 call "CDA_4_HANA.FactTables.Procedures::SP_WRITE_FC_CLI_PAGAMENTI"();
 
 -- scribi fact ageing cliente
-call "CDA_4_HANA.FactTables.Procedures::SP_WRITE_FC_CLI_AGEING"();
+"CDA_4_HANA.FactTables.Procedures::SP_WRITE_FC_CLI_AGEING"();
  
 END;

@@ -1,0 +1,54 @@
+PROCEDURE "CDA_4_HANA"."CDA_4_HANA.FactTables.Procedures::SP_WRITE_FC_CLI_AGEING_NC" ( ) 
+	LANGUAGE SQLSCRIPT
+	SQL SECURITY INVOKER 
+	DEFAULT SCHEMA "CDA_4_HANA"
+	--READS SQL DATA 
+	AS
+BEGIN
+/***************************** 
+	Write your procedure logic 
+ *****************************/
+
+delete from "CDA_4_HANA.FactTables.Tables::SF_CDA_CLI_AGEING_NC"; 
+insert into "CDA_4_HANA.FactTables.Tables::SF_CDA_CLI_AGEING_NC" 
+	SELECT
+	 "PARTITA_ID",
+	 "BUKRS",
+	 "KUNNR",
+	 "BLART",
+	 "BUDAT",
+	 "NETDT",
+	 "ZLSCH",
+	 "ZTERM",
+	 "XBLNR",
+	 "AUGDT",
+	 "BLDAT",
+	 "LIFNR",
+	 "MONTH_ID",
+	 sum("DMSOL") AS "DMSOL",
+	 sum("WRSHB") AS "WRSHB",
+	 sum("VAL_SCADUTO") AS "VAL_SCADUTO",
+	 sum("VAL_SCADUTO_LC") AS "VAL_SCADUTO_LC",
+	 sum("VAL_A_SCADERE") AS "VAL_A_SCADERE",
+	 sum("VAL_A_SCADERE_LC") AS "VAL_A_SCADERE_LC",
+	 sum("VAL_FATTURATO") AS "VAL_FATTURATO",
+	 sum("VAL_FATTURATO_LC") AS "VAL_FATTURATO_LC",
+	 sum("VAL_FATTURATO_12M") AS "VAL_FATTURATO_12M",
+	 sum("VAL_FATTURATO_LC_12M") AS "VAL_FATTURATO_LC_12M" 
+FROM "_SYS_BIC"."CDA_4_HANA.Views.Ageing.Clienti/CA_AGING_NONCOMULATIVA_TOTALE" 
+GROUP BY "PARTITA_ID",
+	 "BUKRS",
+	 "KUNNR",
+	 "BLART",
+	 "BUDAT",
+	 "NETDT",
+	 "ZLSCH",
+	 "ZTERM",
+	 "XBLNR",
+	 "AUGDT",
+	 "BLDAT",
+	 "LIFNR",
+	 "MONTH_ID"
+;
+
+END;

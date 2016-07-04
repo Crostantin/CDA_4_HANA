@@ -1,0 +1,28 @@
+table.schemaName = "CDA_4_HANA";
+table.tableType = COLUMNSTORE;
+table.columns = [
+	 {name="PARTITA_ID"; sqlType=INTEGER;  nullable=false; },
+	 {name="BUKRS"; sqlType=VARCHAR; length=4; nullable=false; },
+	 {name="KUNNR"; sqlType=VARCHAR; length=10;},
+	 {name="BLART"; sqlType=VARCHAR; length=2;},
+	 {name="BUDAT"; sqlType=DATE;  },
+	 {name="NETDT"; sqlType=DATE; },
+	 {name="ZLSCH"; sqlType=VARCHAR; length=1;},
+	 {name="ZTERM"; sqlType=VARCHAR; length=4;},
+	 {name="XBLNR"; sqlType=VARCHAR; length=16;},
+	 {name="AUGDT"; sqlType=DATE; },
+	 {name="BLDAT"; sqlType=DATE; },
+	 {name="LIFNR"; sqlType=NVARCHAR; length=10;},
+	 {name="MONTH_ID"; sqlType=VARCHAR; length=6; nullable=false; },
+	 {name="DMSOL"; sqlType=DECIMAL; scale=18; scale=2; },
+	 {name="WRSHB"; sqlType=DECIMAL; scale=18; scale=2; },
+	 {name="VAL_SCADUTO"; sqlType=DECIMAL; scale=18; scale=2; },
+	 {name="VAL_SCADUTO_LC"; sqlType=DECIMAL; scale=18; scale=2; },
+	 {name="VAL_A_SCADERE"; sqlType=DECIMAL; scale=18; scale=2; },
+	 {name="VAL_A_SCADERE_LC"; sqlType=DECIMAL; scale=18; scale=2; },
+	 {name="VAL_FATTURATO"; sqlType=DECIMAL; scale=18; scale=2; },
+	 {name="VAL_FATTURATO_LC"; sqlType=DECIMAL; scale=18; scale=2; },
+	 {name="VAL_FATTURATO_12M"; sqlType=DECIMAL; scale=18; scale=2; },
+	 {name="VAL_FATTURATO_LC_12M"; sqlType=DECIMAL; scale=18; scale=2; }
+];
+table.primaryKey.pkcolumns=["PARTITA_ID", "BUKRS", "MONTH_ID"];

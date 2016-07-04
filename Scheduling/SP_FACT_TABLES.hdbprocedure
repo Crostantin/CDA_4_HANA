@@ -15,7 +15,10 @@ START TASK "CDA_4_HANA"."CDA_4_HANA.ETL.Tasks::FTP_ANAG_PARTITE";
 -- scrivi fact pagamenti 
 call "CDA_4_HANA.FactTables.Procedures::SP_WRITE_FC_CLI_PAGAMENTI"();
 
--- scribi fact ageing cliente
-"CDA_4_HANA.FactTables.Procedures::SP_WRITE_FC_CLI_AGEING"();
+-- scrivi fact ageing cliente
+call "CDA_4_HANA.FactTables.Procedures::SP_WRITE_FC_CLI_AGEING"();
+   
+-- scribi fact ageing cliente non comulativa
+call "CDA_4_HANA.FactTables.Procedures::SP_WRITE_FC_CLI_AGEING_NC"(); 
  
 END;

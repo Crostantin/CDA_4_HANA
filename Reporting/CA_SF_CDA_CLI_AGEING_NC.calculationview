@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Calculation:scenario xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:Calculation="http://www.sap.com/ndb/BiModelCalculation.ecore" schemaVersion="2.3" id="CA_SF_CDA_CLI_AGEING_NC" applyPrivilegeType="ANALYTIC_PRIVILEGE" checkAnalyticPrivileges="true" defaultClient="$$client$$" defaultLanguage="$$language$$" hierarchiesSQLEnabled="false" translationRelevant="true" visibility="reportingEnabled" calculationScenarioType="TREE_BASED" dataCategory="CUBE" enforceSqlExecution="false" executionSemantic="UNDEFINED">
+  <descriptions defaultDescription="CA_SF_CDA_CLI_AGEING_NC"/>
+  <localVariables/>
+  <variableMappings/>
+  <informationModelLayout relativeWidthScenario="27"/>
+  <dataSources>
+    <DataSource id="CDA_4_HANA.FactTables.Tables::SF_CDA_CLI_AGEING_NC" type="DATA_BASE_TABLE">
+      <viewAttributes allViewAttributes="true"/>
+      <columnObject schemaName="CDA_4_HANA" columnObjectName="CDA_4_HANA.FactTables.Tables::SF_CDA_CLI_AGEING_NC"/>
+    </DataSource>
+  </dataSources>
+  <calculationViews>
+    <calculationView xsi:type="Calculation:ProjectionView" id="Projection_1">
+      <descriptions/>
+      <viewAttributes>
+        <viewAttribute id="PARTITA_ID"/>
+        <viewAttribute id="BUKRS"/>
+        <viewAttribute id="KUNNR"/>
+        <viewAttribute id="MONTH_ID"/>
+        <viewAttribute id="BLART"/>
+        <viewAttribute id="ZTERM"/>
+        <viewAttribute id="ZLSCH"/>
+        <viewAttribute id="WRSHB"/>
+        <viewAttribute id="DMSOL"/>
+        <viewAttribute id="VAL_SCADUTO"/>
+        <viewAttribute id="VAL_SCADUTO_LC"/>
+        <viewAttribute id="VAL_A_SCADERE"/>
+        <viewAttribute id="VAL_A_SCADERE_LC"/>
+        <viewAttribute id="VAL_FATTURATO"/>
+        <viewAttribute id="VAL_FATTURATO_LC"/>
+        <viewAttribute id="VAL_FATTURATO_12M"/>
+        <viewAttribute id="VAL_FATTURATO_LC_12M"/>
+      </viewAttributes>
+      <calculatedViewAttributes/>
+      <input node="#CDA_4_HANA.FactTables.Tables::SF_CDA_CLI_AGEING_NC">
+        <mapping xsi:type="Calculation:AttributeMapping" target="PARTITA_ID" source="PARTITA_ID"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="BUKRS" source="BUKRS"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="KUNNR" source="KUNNR"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="MONTH_ID" source="MONTH_ID"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="WRSHB" source="WRSHB"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="DMSOL" source="DMSOL"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="VAL_SCADUTO" source="VAL_SCADUTO"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="VAL_SCADUTO_LC" source="VAL_SCADUTO_LC"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="VAL_A_SCADERE" source="VAL_A_SCADERE"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="VAL_A_SCADERE_LC" source="VAL_A_SCADERE_LC"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="VAL_FATTURATO" source="VAL_FATTURATO"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="VAL_FATTURATO_LC" source="VAL_FATTURATO_LC"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="VAL_FATTURATO_12M" source="VAL_FATTURATO_12M"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="VAL_FATTURATO_LC_12M" source="VAL_FATTURATO_LC_12M"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="BLART" source="BLART"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="ZTERM" source="ZTERM"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="ZLSCH" source="ZLSCH"/>
+      </input>
+    </calculationView>
+  </calculationViews>
+  <logicalModel id="Projection_1">
+    <descriptions/>
+    <attributes>
+      <attribute id="PARTITA_ID$local">
+        <descriptions/>
+        <keyMapping columnObjectName="Projection_1" columnName="PARTITA_ID"/>
+      </attribute>
+      <attribute id="BUKRS$local">
+        <descriptions/>
+        <keyMapping columnObjectName="Projection_1" columnName="BUKRS"/>
+      </attribute>
+      <attribute id="KUNNR$local">
+        <descriptions/>
+        <keyMapping columnObjectName="Projection_1" columnName="KUNNR"/>
+      </attribute>
+      <attribute id="BLART$local">
+        <descriptions defaultDescription="BLART"/>
+        <keyMapping columnObjectName="Projection_1" columnName="BLART"/>
+      </attribute>
+      <attribute id="ZLSCH$local">
+        <descriptions defaultDescription="ZLSCH"/>
+        <keyMapping columnObjectName="Projection_1" columnName="ZLSCH"/>
+      </attribute>
+      <attribute id="ZTERM$local">
+        <descriptions defaultDescription="ZTERM"/>
+        <keyMapping columnObjectName="Projection_1" columnName="ZTERM"/>
+      </attribute>
+    </attributes>
+    <calculatedAttributes/>
+    <privateDataFoundation>
+      <tableProxies/>
+      <joins/>
+      <layout>
+        <shapes/>
+      </layout>
+    </privateDataFoundation>
+    <baseMeasures>
+      <measure id="VAL_SCADUTO_LC" order="1" aggregationType="sum" measureType="simple">
+        <descriptions defaultDescription="VAL_SCADUTO_LC"/>
+        <measureMapping columnObjectName="Projection_1" columnName="VAL_SCADUTO_LC"/>
+      </measure>
+      <measure id="VAL_A_SCADERE_LC" order="2" aggregationType="sum" measureType="simple">
+        <descriptions defaultDescription="VAL_A_SCADERE_LC"/>
+        <measureMapping columnObjectName="Projection_1" columnName="VAL_A_SCADERE_LC"/>
+      </measure>
+      <measure id="VAL_FATTURATO_LC_12M" order="3" aggregationType="sum" measureType="simple">
+        <descriptions defaultDescription="VAL_FATTURATO_LC_12M"/>
+        <measureMapping columnObjectName="Projection_1" columnName="VAL_FATTURATO_LC_12M"/>
+      </measure>
+    </baseMeasures>
+    <calculatedMeasures/>
+    <restrictedMeasures/>
+    <localDimensions/>
+    <sharedDimensions>
+      <logicalJoin associatedObjectUri="/CDA_4_HANA.Views.Documento/calculationviews/CA_CDA_DOCUMENTO_REP_2">
+        <attributes>
+          <attributeRef>#PARTITA_ID$local</attributeRef>
+        </attributes>
+        <associatedAttributeNames>
+          <attributeName>PARTITA_ID</attributeName>
+        </associatedAttributeNames>
+        <properties joinOperator="Equal" joinType="referential"/>
+        <associatedAttributeFeatures/>
+      </logicalJoin>
+      <logicalJoin associatedObjectUri="/CDA_4_HANA.Views.Clienti/calculationviews/CA_S_CLIENTE_SOCIETA_REP">
+        <attributes>
+          <attributeRef>#BUKRS$local</attributeRef>
+          <attributeRef>#KUNNR$local</attributeRef>
+        </attributes>
+        <associatedAttributeNames>
+          <attributeName>Societa_Cliente</attributeName>
+          <attributeName>Cod_Cliente</attributeName>
+        </associatedAttributeNames>
+        <properties joinOperator="Equal" joinType="leftOuter"/>
+        <associatedAttributeFeatures/>
+      </logicalJoin>
+      <logicalJoin associatedObjectUri="/CDA_4_HANA.Views.Pagamenti/calculationviews/S_CDA_CLI_CONDIZIONI_PAGAMENTO" languageAttributeName="COND_PAG_LANG_ID">
+        <attributes>
+          <attributeRef>#ZTERM$local</attributeRef>
+        </attributes>
+        <associatedAttributeNames>
+          <attributeName>COND_PAGAMENTO_ID</attributeName>
+        </associatedAttributeNames>
+        <properties cardinality="C1_1" joinOperator="Equal" joinType="textTable"/>
+        <associatedAttributeFeatures/>
+      </logicalJoin>
+      <logicalJoin associatedObjectUri="/CDA_4_HANA.Views.Pagamenti/calculationviews/S_CDA_CLI_MODALITA_PAGAMENTO" languageAttributeName="MOD_PAG_LANG_ID">
+        <attributes>
+          <attributeRef>#ZLSCH$local</attributeRef>
+        </attributes>
+        <associatedAttributeNames>
+          <attributeName>MODALITA_PAGAMENTO_ID</attributeName>
+        </associatedAttributeNames>
+        <properties cardinality="C1_1" joinOperator="Equal" joinType="textTable"/>
+        <associatedAttributeFeatures/>
+      </logicalJoin>
+      <logicalJoin associatedObjectUri="/CDA_4_HANA.Views.Pagamenti/calculationviews/S_CDA_TIPO_PAGAMENTO" languageAttributeName="TIPO_DOC_LANG_ID">
+        <attributes>
+          <attributeRef>#BLART$local</attributeRef>
+        </attributes>
+        <associatedAttributeNames>
+          <attributeName>TIPO_DOCUMENTO_ID</attributeName>
+        </associatedAttributeNames>
+        <properties cardinality="C1_1" joinOperator="Equal" joinType="textTable"/>
+        <associatedAttributeFeatures/>
+      </logicalJoin>
+    </sharedDimensions>
+  </logicalModel>
+  <layout>
+    <shapes>
+      <shape expanded="true" modelObjectName="Output" modelObjectNameSpace="MeasureGroup">
+        <upperLeftCorner x="40" y="120"/>
+        <rectangleSize height="0" width="0"/>
+      </shape>
+      <shape expanded="true" modelObjectName="Projection_1" modelObjectNameSpace="CalculationView">
+        <upperLeftCorner x="40" y="310"/>
+        <rectangleSize height="-1" width="-1"/>
+      </shape>
+      <shape modelObjectName="Projection_1" modelObjectNameSpace="StarJoinViewNodeInput" modelObjectType="repository">
+        <upperLeftCorner x="516" y="64"/>
+      </shape>
+      <shape modelObjectName="/CDA_4_HANA.Views.Documento/calculationviews/CA_CDA_DOCUMENTO_REP_2" modelObjectNameSpace="StarJoinViewNodeSharedCV" modelObjectType="repository">
+        <upperLeftCorner x="852" y="80"/>
+      </shape>
+      <shape modelObjectName="/CDA_4_HANA.Views.Clienti/calculationviews/CA_S_CLIENTE_SOCIETA_REP" modelObjectNameSpace="StarJoinViewNodeSharedCV" modelObjectType="repository">
+        <upperLeftCorner x="16" y="16"/>
+      </shape>
+      <shape modelObjectName="/CDA_4_HANA.Views.Pagamenti/calculationviews/S_CDA_CLI_CONDIZIONI_PAGAMENTO" modelObjectNameSpace="StarJoinViewNodeSharedCV" modelObjectType="repository">
+        <upperLeftCorner x="16" y="338"/>
+      </shape>
+      <shape modelObjectName="/CDA_4_HANA.Views.Pagamenti/calculationviews/S_CDA_CLI_MODALITA_PAGAMENTO" modelObjectNameSpace="StarJoinViewNodeSharedCV" modelObjectType="repository">
+        <upperLeftCorner x="852" y="273"/>
+      </shape>
+      <shape modelObjectName="/CDA_4_HANA.Views.Pagamenti/calculationviews/S_CDA_TIPO_PAGAMENTO" modelObjectNameSpace="StarJoinViewNodeSharedCV" modelObjectType="repository">
+        <upperLeftCorner x="16" y="225"/>
+      </shape>
+    </shapes>
+  </layout>
+</Calculation:scenario>

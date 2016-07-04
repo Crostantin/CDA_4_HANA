@@ -39,7 +39,11 @@
       <viewAttributes>
         <viewAttribute id="BUKRS"/>
         <viewAttribute id="PARTITA_ID"/>
+        <viewAttribute id="BLART"/>
         <viewAttribute id="KUNNR"/>
+        <viewAttribute id="ZLSCH"/>
+        <viewAttribute id="ZTERM"/>
+        <viewAttribute id="BUDAT"/>
         <viewAttribute id="WRSHB"/>
         <viewAttribute id="VAL_FATTURATO_LC"/>
         <viewAttribute id="VAL_INCASSATO_LC"/>
@@ -58,6 +62,10 @@
         <mapping xsi:type="Calculation:AttributeMapping" target="VAL_SALDO_CONTABILE_LC" source="VAL_SALDO_CONTABILE_LC"/>
         <mapping xsi:type="Calculation:AttributeMapping" target="VAL_EFFETTI_LC" source="VAL_EFFETTI_LC"/>
         <mapping xsi:type="Calculation:AttributeMapping" target="VAL_INSOLUTI_LC" source="VAL_INSOLUTI_LC"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="BLART" source="BLART"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="ZLSCH" source="ZLSCH"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="ZTERM" source="ZTERM"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="BUDAT" source="BUDAT"/>
       </input>
     </calculationView>
   </calculationViews>
@@ -75,6 +83,22 @@
       <attribute id="KUNNR$local">
         <descriptions/>
         <keyMapping columnObjectName="Projection_1" columnName="KUNNR"/>
+      </attribute>
+      <attribute id="BLART$local">
+        <descriptions defaultDescription="BLART"/>
+        <keyMapping columnObjectName="Projection_1" columnName="BLART"/>
+      </attribute>
+      <attribute id="ZLSCH$local">
+        <descriptions defaultDescription="ZLSCH"/>
+        <keyMapping columnObjectName="Projection_1" columnName="ZLSCH"/>
+      </attribute>
+      <attribute id="ZTERM$local">
+        <descriptions defaultDescription="ZTERM"/>
+        <keyMapping columnObjectName="Projection_1" columnName="ZTERM"/>
+      </attribute>
+      <attribute id="BUDAT$local">
+        <descriptions defaultDescription="BUDAT"/>
+        <keyMapping columnObjectName="Projection_1" columnName="BUDAT"/>
       </attribute>
     </attributes>
     <calculatedAttributes>
@@ -249,12 +273,52 @@ and &#xD;
         <properties cardinality="CN_1" joinOperator="Equal" joinType="referential"/>
         <associatedAttributeFeatures/>
       </logicalJoin>
+      <logicalJoin associatedObjectUri="/CDA_4_HANA.Views.Pagamenti/calculationviews/S_CDA_TIPO_PAGAMENTO" languageAttributeName="TIPO_DOC_LANG_ID">
+        <attributes>
+          <attributeRef>#BLART$local</attributeRef>
+        </attributes>
+        <associatedAttributeNames>
+          <attributeName>TIPO_DOCUMENTO_ID</attributeName>
+        </associatedAttributeNames>
+        <properties cardinality="C1_1" joinOperator="Equal" joinType="textTable"/>
+        <associatedAttributeFeatures/>
+      </logicalJoin>
+      <logicalJoin associatedObjectUri="/CDA_4_HANA.Views.Pagamenti/calculationviews/S_CDA_CLI_MODALITA_PAGAMENTO" languageAttributeName="MOD_PAG_LANG_ID">
+        <attributes>
+          <attributeRef>#ZLSCH$local</attributeRef>
+        </attributes>
+        <associatedAttributeNames>
+          <attributeName>MODALITA_PAGAMENTO_ID</attributeName>
+        </associatedAttributeNames>
+        <properties cardinality="C1_1" joinOperator="Equal" joinType="textTable"/>
+        <associatedAttributeFeatures/>
+      </logicalJoin>
+      <logicalJoin associatedObjectUri="/CDA_4_HANA.Views.Pagamenti/calculationviews/S_CDA_CLI_CONDIZIONI_PAGAMENTO" languageAttributeName="COND_PAG_LANG_ID">
+        <attributes>
+          <attributeRef>#ZTERM$local</attributeRef>
+        </attributes>
+        <associatedAttributeNames>
+          <attributeName>COND_PAGAMENTO_ID</attributeName>
+        </associatedAttributeNames>
+        <properties cardinality="C1_1" joinOperator="Equal" joinType="textTable"/>
+        <associatedAttributeFeatures/>
+      </logicalJoin>
+      <logicalJoin associatedObjectUri="/CDA_4_HANA.Views.Time/calculationviews/CA_S_TIME_DAY">
+        <attributes>
+          <attributeRef>#BUDAT$local</attributeRef>
+        </attributes>
+        <associatedAttributeNames>
+          <attributeName>DAY_ID</attributeName>
+        </associatedAttributeNames>
+        <properties joinOperator="Equal" joinType="referential"/>
+        <associatedAttributeFeatures/>
+      </logicalJoin>
     </sharedDimensions>
   </logicalModel>
   <layout>
     <shapes>
       <shape expanded="true" modelObjectName="Output" modelObjectNameSpace="MeasureGroup">
-        <upperLeftCorner x="22" y="87"/>
+        <upperLeftCorner x="22" y="70"/>
         <rectangleSize height="0" width="0"/>
       </shape>
       <shape expanded="true" modelObjectName="Projection_1" modelObjectNameSpace="CalculationView">
@@ -262,16 +326,28 @@ and &#xD;
         <rectangleSize height="-1" width="-1"/>
       </shape>
       <shape modelObjectName="Projection_1" modelObjectNameSpace="StarJoinViewNodeInput" modelObjectType="repository">
-        <upperLeftCorner x="474" y="64"/>
+        <upperLeftCorner x="474" y="144"/>
       </shape>
       <shape modelObjectName="/CDA_4_HANA.Views.Documento/calculationviews/CA_CDA_DOCUMENTO_REP_2" modelObjectNameSpace="StarJoinViewNodeSharedCV" modelObjectType="repository">
         <upperLeftCorner x="16" y="129"/>
       </shape>
       <shape modelObjectName="/CDA_4_HANA.Views.Clienti/calculationviews/CA_S_CLIENTE_SOCIETA_REP" modelObjectNameSpace="StarJoinViewNodeSharedCV" modelObjectType="repository">
-        <upperLeftCorner x="779" y="64"/>
+        <upperLeftCorner x="821" y="16"/>
       </shape>
       <shape modelObjectName="/CDA_4_HANA.Views.Societa/calculationviews/CA_CDA_SOCIETA" modelObjectNameSpace="StarJoinViewNodeSharedCV" modelObjectType="repository">
         <upperLeftCorner x="16" y="16"/>
+      </shape>
+      <shape modelObjectName="/CDA_4_HANA.Views.Pagamenti/calculationviews/S_CDA_TIPO_PAGAMENTO" modelObjectNameSpace="StarJoinViewNodeSharedCV" modelObjectType="repository">
+        <upperLeftCorner x="821" y="225"/>
+      </shape>
+      <shape modelObjectName="/CDA_4_HANA.Views.Pagamenti/calculationviews/S_CDA_CLI_MODALITA_PAGAMENTO" modelObjectNameSpace="StarJoinViewNodeSharedCV" modelObjectType="repository">
+        <upperLeftCorner x="821" y="338"/>
+      </shape>
+      <shape modelObjectName="/CDA_4_HANA.Views.Pagamenti/calculationviews/S_CDA_CLI_CONDIZIONI_PAGAMENTO" modelObjectNameSpace="StarJoinViewNodeSharedCV" modelObjectType="repository">
+        <upperLeftCorner x="821" y="451"/>
+      </shape>
+      <shape modelObjectName="/CDA_4_HANA.Views.Time/calculationviews/CA_S_TIME_DAY" modelObjectNameSpace="StarJoinViewNodeSharedCV" modelObjectType="repository">
+        <upperLeftCorner x="16" y="322"/>
       </shape>
     </shapes>
   </layout>

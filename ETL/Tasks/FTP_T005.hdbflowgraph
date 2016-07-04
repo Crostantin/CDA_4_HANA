@@ -232,7 +232,7 @@
       <annotations xmi:id="_mDzPgDLPEeaiyrqsMuPNbg" key="DATA_2" value="OUTPUT"/>
     </annotations>
     <annotations xmi:id="_mD7yYDLPEeaiyrqsMuPNbg" key="sap.afm.nodeOutputs"/>
-    <annotations xmi:id="_-vR-4DLcEeaCn9c7_Iu1HA" key="sap.im.writerType" value="insert"/>
+    <annotations xmi:id="_-vR-4DLcEeaCn9c7_Iu1HA" key="sap.im.writerType" value="upsert"/>
     <inputs xmi:id="_hXWHdDLPEeaiyrqsMuPNbg" name="DATA_2" kind="TABLE">
       <attributes xmi:id="_hXWHdTLPEeaiyrqsMuPNbg" name="MANDT" type="VARCHAR" nullable="true" length="3" scale="0"/>
       <attributes xmi:id="_hXWHdjLPEeaiyrqsMuPNbg" name="LAND1" type="VARCHAR" nullable="false" length="3" scale="0"/>

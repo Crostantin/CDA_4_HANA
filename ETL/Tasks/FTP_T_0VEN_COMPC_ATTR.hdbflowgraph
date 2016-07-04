@@ -214,7 +214,7 @@
       <annotations xmi:id="_PonxADLREeaiyrqsMuPNbg" key="DATA_2" value="OUTPUT"/>
     </annotations>
     <annotations xmi:id="_PoxiADLREeaiyrqsMuPNbg" key="sap.afm.nodeOutputs"/>
-    <annotations xmi:id="_4_0hsDLcEeaCn9c7_Iu1HA" key="sap.im.writerType" value="insert"/>
+    <annotations xmi:id="_4_0hsDLcEeaCn9c7_Iu1HA" key="sap.im.writerType" value="upsert"/>
     <inputs xmi:id="_Nhg6lDLREeaiyrqsMuPNbg" name="DATA_2" kind="TABLE">
       <attributes xmi:id="_Nhg6lTLREeaiyrqsMuPNbg" name="LIFNR" type="VARCHAR" nullable="false" length="10" scale="0"/>
       <attributes xmi:id="_Nhg6ljLREeaiyrqsMuPNbg" name="BUKRS" type="VARCHAR" nullable="false" length="4" scale="0"/>

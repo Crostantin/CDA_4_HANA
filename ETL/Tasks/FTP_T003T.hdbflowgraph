@@ -49,7 +49,7 @@
       <annotations xmi:id="_ZzzdgDLPEeaiyrqsMuPNbg" key="DATA_2" value="OUTPUT"/>
     </annotations>
     <annotations xmi:id="_Zz91kDLPEeaiyrqsMuPNbg" key="sap.afm.nodeOutputs"/>
-    <annotations xmi:id="_9bteMDLcEeaCn9c7_Iu1HA" key="sap.im.writerType" value="insert"/>
+    <annotations xmi:id="_9bteMDLcEeaCn9c7_Iu1HA" key="sap.im.writerType" value="upsert"/>
     <inputs xmi:id="_ZOaRdDLPEeaiyrqsMuPNbg" name="DATA_2" kind="TABLE">
       <attributes xmi:id="_ZOaRdTLPEeaiyrqsMuPNbg" name="MANDT" type="VARCHAR" nullable="true" length="3" scale="0"/>
       <attributes xmi:id="_ZOaRdjLPEeaiyrqsMuPNbg" name="SPRAS" type="VARCHAR" nullable="false" length="1" scale="0"/>

@@ -280,7 +280,7 @@
       <annotations xmi:id="_EIv0YDLREeaiyrqsMuPNbg" key="DATA_2" value="OUTPUT"/>
     </annotations>
     <annotations xmi:id="_EI3JIDLREeaiyrqsMuPNbg" key="sap.afm.nodeOutputs"/>
-    <annotations xmi:id="_3c26IDLcEeaCn9c7_Iu1HA" key="sap.im.writerType" value="insert"/>
+    <annotations xmi:id="_3c26IDLcEeaCn9c7_Iu1HA" key="sap.im.writerType" value="upsert"/>
     <inputs xmi:id="_BwbSJDLREeaiyrqsMuPNbg" name="DATA_2" kind="TABLE">
       <attributes xmi:id="_BwbSJTLREeaiyrqsMuPNbg" name="BUKRS" type="VARCHAR" nullable="false" length="4" scale="0"/>
       <attributes xmi:id="_BwbSJjLREeaiyrqsMuPNbg" name="FISCPER" type="DECIMAL" nullable="false" length="7" scale="0"/>

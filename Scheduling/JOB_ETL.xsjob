@@ -4,7 +4,7 @@
     "schedules": [
        {
           "description": "Update Tabelle",
-          "xscron": "* * * * 21 59 00"
+          "xscron": "* * * * 09 51 00"
        }
     ]
 }

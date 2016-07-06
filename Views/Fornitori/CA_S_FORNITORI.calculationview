@@ -1,0 +1,319 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Calculation:scenario xmlns:Calculation="http://www.sap.com/ndb/BiModelCalculation.ecore" schemaVersion="2.3" id="CA_S_FORNITORI" applyPrivilegeType="ANALYTIC_PRIVILEGE" checkAnalyticPrivileges="true" defaultClient="$$client$$" defaultLanguage="$$language$$" hierarchiesSQLEnabled="false" translationRelevant="true" visibility="internal" calculationScenarioType="TREE_BASED" dataCategory="DIMENSION" enforceSqlExecution="false" executionSemantic="UNDEFINED" outputViewType="Projection">
+  <descriptions defaultDescription="CA_S_FORNITORI"/>
+  <localVariables/>
+  <variableMappings/>
+  <informationModelLayout relativeWidthScenario="27"/>
+  <dataSources>
+    <DataSource id="CDA_4_HANA.ETL.Tables::T_0VENDOR_ATTR" type="DATA_BASE_TABLE">
+      <viewAttributes allViewAttributes="true"/>
+      <columnObject schemaName="CDA_4_HANA" columnObjectName="CDA_4_HANA.ETL.Tables::T_0VENDOR_ATTR"/>
+    </DataSource>
+  </dataSources>
+  <calculationViews/>
+  <logicalModel id="CDA_4_HANA.ETL.Tables::T_0VENDOR_ATTR">
+    <descriptions/>
+    <attributes>
+      <attribute id="LIFNR" order="1" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="LIFNR"/>
+        <keyMapping schemaName="CDA_4_HANA" columnObjectName="CDA_4_HANA.ETL.Tables::T_0VENDOR_ATTR" columnName="LIFNR"/>
+      </attribute>
+      <attribute id="ANRED" order="2" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="ANRED"/>
+        <keyMapping schemaName="CDA_4_HANA" columnObjectName="CDA_4_HANA.ETL.Tables::T_0VENDOR_ATTR" columnName="ANRED"/>
+      </attribute>
+      <attribute id="BAHNS" order="3" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="BAHNS"/>
+        <keyMapping schemaName="CDA_4_HANA" columnObjectName="CDA_4_HANA.ETL.Tables::T_0VENDOR_ATTR" columnName="BAHNS"/>
+      </attribute>
+      <attribute id="BBBNR" order="4" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="BBBNR"/>
+        <keyMapping schemaName="CDA_4_HANA" columnObjectName="CDA_4_HANA.ETL.Tables::T_0VENDOR_ATTR" columnName="BBBNR"/>
+      </attribute>
+      <attribute id="BBSNR" order="5" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="BBSNR"/>
+        <keyMapping schemaName="CDA_4_HANA" columnObjectName="CDA_4_HANA.ETL.Tables::T_0VENDOR_ATTR" columnName="BBSNR"/>
+      </attribute>
+      <attribute id="BEGRU" order="6" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="BEGRU"/>
+        <keyMapping schemaName="CDA_4_HANA" columnObjectName="CDA_4_HANA.ETL.Tables::T_0VENDOR_ATTR" columnName="BEGRU"/>
+      </attribute>
+      <attribute id="BRSCH" order="7" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="BRSCH"/>
+        <keyMapping schemaName="CDA_4_HANA" columnObjectName="CDA_4_HANA.ETL.Tables::T_0VENDOR_ATTR" columnName="BRSCH"/>
+      </attribute>
+      <attribute id="BUBKZ" order="8" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="BUBKZ"/>
+        <keyMapping schemaName="CDA_4_HANA" columnObjectName="CDA_4_HANA.ETL.Tables::T_0VENDOR_ATTR" columnName="BUBKZ"/>
+      </attribute>
+      <attribute id="DATLT" order="9" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="DATLT"/>
+        <keyMapping schemaName="CDA_4_HANA" columnObjectName="CDA_4_HANA.ETL.Tables::T_0VENDOR_ATTR" columnName="DATLT"/>
+      </attribute>
+      <attribute id="DTAMS" order="10" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="DTAMS"/>
+        <keyMapping schemaName="CDA_4_HANA" columnObjectName="CDA_4_HANA.ETL.Tables::T_0VENDOR_ATTR" columnName="DTAMS"/>
+      </attribute>
+      <attribute id="DTAWS" order="11" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="DTAWS"/>
+        <keyMapping schemaName="CDA_4_HANA" columnObjectName="CDA_4_HANA.ETL.Tables::T_0VENDOR_ATTR" columnName="DTAWS"/>
+      </attribute>
+      <attribute id="ERDAT" order="12" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="ERDAT"/>
+        <keyMapping schemaName="CDA_4_HANA" columnObjectName="CDA_4_HANA.ETL.Tables::T_0VENDOR_ATTR" columnName="ERDAT"/>
+      </attribute>
+      <attribute id="ERNAM" order="13" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="ERNAM"/>
+        <keyMapping schemaName="CDA_4_HANA" columnObjectName="CDA_4_HANA.ETL.Tables::T_0VENDOR_ATTR" columnName="ERNAM"/>
+      </attribute>
+      <attribute id="ESRNR" order="14" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="ESRNR"/>
+        <keyMapping schemaName="CDA_4_HANA" columnObjectName="CDA_4_HANA.ETL.Tables::T_0VENDOR_ATTR" columnName="ESRNR"/>
+      </attribute>
+      <attribute id="KONZS" order="15" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="KONZS"/>
+        <keyMapping schemaName="CDA_4_HANA" columnObjectName="CDA_4_HANA.ETL.Tables::T_0VENDOR_ATTR" columnName="KONZS"/>
+      </attribute>
+      <attribute id="KTOKK" order="16" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="KTOKK"/>
+        <keyMapping schemaName="CDA_4_HANA" columnObjectName="CDA_4_HANA.ETL.Tables::T_0VENDOR_ATTR" columnName="KTOKK"/>
+      </attribute>
+      <attribute id="KUNNR" order="17" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="KUNNR"/>
+        <keyMapping schemaName="CDA_4_HANA" columnObjectName="CDA_4_HANA.ETL.Tables::T_0VENDOR_ATTR" columnName="KUNNR"/>
+      </attribute>
+      <attribute id="LAND1" order="18" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="LAND1"/>
+        <keyMapping schemaName="CDA_4_HANA" columnObjectName="CDA_4_HANA.ETL.Tables::T_0VENDOR_ATTR" columnName="LAND1"/>
+      </attribute>
+      <attribute id="LNRZA" order="19" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="LNRZA"/>
+        <keyMapping schemaName="CDA_4_HANA" columnObjectName="CDA_4_HANA.ETL.Tables::T_0VENDOR_ATTR" columnName="LNRZA"/>
+      </attribute>
+      <attribute id="LOEVM" order="20" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="LOEVM"/>
+        <keyMapping schemaName="CDA_4_HANA" columnObjectName="CDA_4_HANA.ETL.Tables::T_0VENDOR_ATTR" columnName="LOEVM"/>
+      </attribute>
+      <attribute id="NAME1" order="21" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="NAME1"/>
+        <keyMapping schemaName="CDA_4_HANA" columnObjectName="CDA_4_HANA.ETL.Tables::T_0VENDOR_ATTR" columnName="NAME1"/>
+      </attribute>
+      <attribute id="NAME2" order="22" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="NAME2"/>
+        <keyMapping schemaName="CDA_4_HANA" columnObjectName="CDA_4_HANA.ETL.Tables::T_0VENDOR_ATTR" columnName="NAME2"/>
+      </attribute>
+      <attribute id="NAME3" order="23" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="NAME3"/>
+        <keyMapping schemaName="CDA_4_HANA" columnObjectName="CDA_4_HANA.ETL.Tables::T_0VENDOR_ATTR" columnName="NAME3"/>
+      </attribute>
+      <attribute id="NAME4" order="24" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="NAME4"/>
+        <keyMapping schemaName="CDA_4_HANA" columnObjectName="CDA_4_HANA.ETL.Tables::T_0VENDOR_ATTR" columnName="NAME4"/>
+      </attribute>
+      <attribute id="ORT01" order="25" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="ORT01"/>
+        <keyMapping schemaName="CDA_4_HANA" columnObjectName="CDA_4_HANA.ETL.Tables::T_0VENDOR_ATTR" columnName="ORT01"/>
+      </attribute>
+      <attribute id="ORT02" order="26" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="ORT02"/>
+        <keyMapping schemaName="CDA_4_HANA" columnObjectName="CDA_4_HANA.ETL.Tables::T_0VENDOR_ATTR" columnName="ORT02"/>
+      </attribute>
+      <attribute id="PFACH" order="27" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="PFACH"/>
+        <keyMapping schemaName="CDA_4_HANA" columnObjectName="CDA_4_HANA.ETL.Tables::T_0VENDOR_ATTR" columnName="PFACH"/>
+      </attribute>
+      <attribute id="PSTL2" order="28" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="PSTL2"/>
+        <keyMapping schemaName="CDA_4_HANA" columnObjectName="CDA_4_HANA.ETL.Tables::T_0VENDOR_ATTR" columnName="PSTL2"/>
+      </attribute>
+      <attribute id="PSTLZ" order="29" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="PSTLZ"/>
+        <keyMapping schemaName="CDA_4_HANA" columnObjectName="CDA_4_HANA.ETL.Tables::T_0VENDOR_ATTR" columnName="PSTLZ"/>
+      </attribute>
+      <attribute id="REGIO" order="30" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="REGIO"/>
+        <keyMapping schemaName="CDA_4_HANA" columnObjectName="CDA_4_HANA.ETL.Tables::T_0VENDOR_ATTR" columnName="REGIO"/>
+      </attribute>
+      <attribute id="SORTL" order="31" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="SORTL"/>
+        <keyMapping schemaName="CDA_4_HANA" columnObjectName="CDA_4_HANA.ETL.Tables::T_0VENDOR_ATTR" columnName="SORTL"/>
+      </attribute>
+      <attribute id="SPERR" order="32" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="SPERR"/>
+        <keyMapping schemaName="CDA_4_HANA" columnObjectName="CDA_4_HANA.ETL.Tables::T_0VENDOR_ATTR" columnName="SPERR"/>
+      </attribute>
+      <attribute id="SPERM" order="33" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="SPERM"/>
+        <keyMapping schemaName="CDA_4_HANA" columnObjectName="CDA_4_HANA.ETL.Tables::T_0VENDOR_ATTR" columnName="SPERM"/>
+      </attribute>
+      <attribute id="SPRAS" order="34" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="SPRAS"/>
+        <keyMapping schemaName="CDA_4_HANA" columnObjectName="CDA_4_HANA.ETL.Tables::T_0VENDOR_ATTR" columnName="SPRAS"/>
+      </attribute>
+      <attribute id="STCD1" order="35" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="STCD1"/>
+        <keyMapping schemaName="CDA_4_HANA" columnObjectName="CDA_4_HANA.ETL.Tables::T_0VENDOR_ATTR" columnName="STCD1"/>
+      </attribute>
+      <attribute id="STCD2" order="36" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="STCD2"/>
+        <keyMapping schemaName="CDA_4_HANA" columnObjectName="CDA_4_HANA.ETL.Tables::T_0VENDOR_ATTR" columnName="STCD2"/>
+      </attribute>
+      <attribute id="STCD3" order="37" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="STCD3"/>
+        <keyMapping schemaName="CDA_4_HANA" columnObjectName="CDA_4_HANA.ETL.Tables::T_0VENDOR_ATTR" columnName="STCD3"/>
+      </attribute>
+      <attribute id="STKZA" order="38" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="STKZA"/>
+        <keyMapping schemaName="CDA_4_HANA" columnObjectName="CDA_4_HANA.ETL.Tables::T_0VENDOR_ATTR" columnName="STKZA"/>
+      </attribute>
+      <attribute id="STKZU" order="39" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="STKZU"/>
+        <keyMapping schemaName="CDA_4_HANA" columnObjectName="CDA_4_HANA.ETL.Tables::T_0VENDOR_ATTR" columnName="STKZU"/>
+      </attribute>
+      <attribute id="STRAS" order="40" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="STRAS"/>
+        <keyMapping schemaName="CDA_4_HANA" columnObjectName="CDA_4_HANA.ETL.Tables::T_0VENDOR_ATTR" columnName="STRAS"/>
+      </attribute>
+      <attribute id="TELBX" order="41" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="TELBX"/>
+        <keyMapping schemaName="CDA_4_HANA" columnObjectName="CDA_4_HANA.ETL.Tables::T_0VENDOR_ATTR" columnName="TELBX"/>
+      </attribute>
+      <attribute id="TELF1" order="42" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="TELF1"/>
+        <keyMapping schemaName="CDA_4_HANA" columnObjectName="CDA_4_HANA.ETL.Tables::T_0VENDOR_ATTR" columnName="TELF1"/>
+      </attribute>
+      <attribute id="TELF2" order="43" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="TELF2"/>
+        <keyMapping schemaName="CDA_4_HANA" columnObjectName="CDA_4_HANA.ETL.Tables::T_0VENDOR_ATTR" columnName="TELF2"/>
+      </attribute>
+      <attribute id="TELFX" order="44" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="TELFX"/>
+        <keyMapping schemaName="CDA_4_HANA" columnObjectName="CDA_4_HANA.ETL.Tables::T_0VENDOR_ATTR" columnName="TELFX"/>
+      </attribute>
+      <attribute id="TELTX" order="45" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="TELTX"/>
+        <keyMapping schemaName="CDA_4_HANA" columnObjectName="CDA_4_HANA.ETL.Tables::T_0VENDOR_ATTR" columnName="TELTX"/>
+      </attribute>
+      <attribute id="TELX1" order="46" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="TELX1"/>
+        <keyMapping schemaName="CDA_4_HANA" columnObjectName="CDA_4_HANA.ETL.Tables::T_0VENDOR_ATTR" columnName="TELX1"/>
+      </attribute>
+      <attribute id="XCPDK" order="47" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="XCPDK"/>
+        <keyMapping schemaName="CDA_4_HANA" columnObjectName="CDA_4_HANA.ETL.Tables::T_0VENDOR_ATTR" columnName="XCPDK"/>
+      </attribute>
+      <attribute id="XZEMP" order="48" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="XZEMP"/>
+        <keyMapping schemaName="CDA_4_HANA" columnObjectName="CDA_4_HANA.ETL.Tables::T_0VENDOR_ATTR" columnName="XZEMP"/>
+      </attribute>
+      <attribute id="VBUND" order="49" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="VBUND"/>
+        <keyMapping schemaName="CDA_4_HANA" columnObjectName="CDA_4_HANA.ETL.Tables::T_0VENDOR_ATTR" columnName="VBUND"/>
+      </attribute>
+      <attribute id="FISKN" order="50" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="FISKN"/>
+        <keyMapping schemaName="CDA_4_HANA" columnObjectName="CDA_4_HANA.ETL.Tables::T_0VENDOR_ATTR" columnName="FISKN"/>
+      </attribute>
+      <attribute id="STCEG" order="51" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="STCEG"/>
+        <keyMapping schemaName="CDA_4_HANA" columnObjectName="CDA_4_HANA.ETL.Tables::T_0VENDOR_ATTR" columnName="STCEG"/>
+      </attribute>
+      <attribute id="STKZN" order="52" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="STKZN"/>
+        <keyMapping schemaName="CDA_4_HANA" columnObjectName="CDA_4_HANA.ETL.Tables::T_0VENDOR_ATTR" columnName="STKZN"/>
+      </attribute>
+      <attribute id="SPERQ" order="53" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="SPERQ"/>
+        <keyMapping schemaName="CDA_4_HANA" columnObjectName="CDA_4_HANA.ETL.Tables::T_0VENDOR_ATTR" columnName="SPERQ"/>
+      </attribute>
+      <attribute id="MCOD1" order="54" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="MCOD1"/>
+        <keyMapping schemaName="CDA_4_HANA" columnObjectName="CDA_4_HANA.ETL.Tables::T_0VENDOR_ATTR" columnName="MCOD1"/>
+      </attribute>
+      <attribute id="MCOD2" order="55" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="MCOD2"/>
+        <keyMapping schemaName="CDA_4_HANA" columnObjectName="CDA_4_HANA.ETL.Tables::T_0VENDOR_ATTR" columnName="MCOD2"/>
+      </attribute>
+      <attribute id="MCOD3" order="56" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="MCOD3"/>
+        <keyMapping schemaName="CDA_4_HANA" columnObjectName="CDA_4_HANA.ETL.Tables::T_0VENDOR_ATTR" columnName="MCOD3"/>
+      </attribute>
+      <attribute id="GBORT" order="57" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="GBORT"/>
+        <keyMapping schemaName="CDA_4_HANA" columnObjectName="CDA_4_HANA.ETL.Tables::T_0VENDOR_ATTR" columnName="GBORT"/>
+      </attribute>
+      <attribute id="GBDAT" order="58" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="GBDAT"/>
+        <keyMapping schemaName="CDA_4_HANA" columnObjectName="CDA_4_HANA.ETL.Tables::T_0VENDOR_ATTR" columnName="GBDAT"/>
+      </attribute>
+      <attribute id="SEXKZ" order="59" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="SEXKZ"/>
+        <keyMapping schemaName="CDA_4_HANA" columnObjectName="CDA_4_HANA.ETL.Tables::T_0VENDOR_ATTR" columnName="SEXKZ"/>
+      </attribute>
+      <attribute id="KRAUS" order="60" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="KRAUS"/>
+        <keyMapping schemaName="CDA_4_HANA" columnObjectName="CDA_4_HANA.ETL.Tables::T_0VENDOR_ATTR" columnName="KRAUS"/>
+      </attribute>
+      <attribute id="REVDB" order="61" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="REVDB"/>
+        <keyMapping schemaName="CDA_4_HANA" columnObjectName="CDA_4_HANA.ETL.Tables::T_0VENDOR_ATTR" columnName="REVDB"/>
+      </attribute>
+      <attribute id="QSSYS" order="62" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="QSSYS"/>
+        <keyMapping schemaName="CDA_4_HANA" columnObjectName="CDA_4_HANA.ETL.Tables::T_0VENDOR_ATTR" columnName="QSSYS"/>
+      </attribute>
+      <attribute id="KTOCK" order="63" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="KTOCK"/>
+        <keyMapping schemaName="CDA_4_HANA" columnObjectName="CDA_4_HANA.ETL.Tables::T_0VENDOR_ATTR" columnName="KTOCK"/>
+      </attribute>
+      <attribute id="PFORT" order="64" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="PFORT"/>
+        <keyMapping schemaName="CDA_4_HANA" columnObjectName="CDA_4_HANA.ETL.Tables::T_0VENDOR_ATTR" columnName="PFORT"/>
+      </attribute>
+      <attribute id="WERKS" order="65" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="WERKS"/>
+        <keyMapping schemaName="CDA_4_HANA" columnObjectName="CDA_4_HANA.ETL.Tables::T_0VENDOR_ATTR" columnName="WERKS"/>
+      </attribute>
+      <attribute id="LTSNA" order="66" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="LTSNA"/>
+        <keyMapping schemaName="CDA_4_HANA" columnObjectName="CDA_4_HANA.ETL.Tables::T_0VENDOR_ATTR" columnName="LTSNA"/>
+      </attribute>
+      <attribute id="WERKR" order="67" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="WERKR"/>
+        <keyMapping schemaName="CDA_4_HANA" columnObjectName="CDA_4_HANA.ETL.Tables::T_0VENDOR_ATTR" columnName="WERKR"/>
+      </attribute>
+      <attribute id="PLKAL" order="68" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="PLKAL"/>
+        <keyMapping schemaName="CDA_4_HANA" columnObjectName="CDA_4_HANA.ETL.Tables::T_0VENDOR_ATTR" columnName="PLKAL"/>
+      </attribute>
+      <attribute id="TXJCD" order="69" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="TXJCD"/>
+        <keyMapping schemaName="CDA_4_HANA" columnObjectName="CDA_4_HANA.ETL.Tables::T_0VENDOR_ATTR" columnName="TXJCD"/>
+      </attribute>
+      <attribute id="SPERZ" order="70" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="SPERZ"/>
+        <keyMapping schemaName="CDA_4_HANA" columnObjectName="CDA_4_HANA.ETL.Tables::T_0VENDOR_ATTR" columnName="SPERZ"/>
+      </attribute>
+    </attributes>
+    <calculatedAttributes/>
+    <privateDataFoundation>
+      <tableProxies/>
+      <joins/>
+      <layout>
+        <shapes/>
+      </layout>
+    </privateDataFoundation>
+    <baseMeasures/>
+    <calculatedMeasures/>
+    <restrictedMeasures/>
+    <localDimensions/>
+  </logicalModel>
+  <layout>
+    <shapes>
+      <shape expanded="true" modelObjectName="Output" modelObjectNameSpace="MeasureGroup">
+        <upperLeftCorner x="40" y="85"/>
+        <rectangleSize height="0" width="0"/>
+      </shape>
+    </shapes>
+  </layout>
+</Calculation:scenario>

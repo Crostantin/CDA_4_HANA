@@ -1,0 +1,23 @@
+PROCEDURE "CDA_4_HANA"."CDA_4_HANA.FactTables.Procedures::SP_WRITE_FC_FIDO" ( ) 
+	LANGUAGE SQLSCRIPT
+	SQL SECURITY INVOKER 
+	DEFAULT SCHEMA "CDA_4_HANA"
+	--READS SQL DATA 
+	AS
+BEGIN
+/***************************** 
+	Write your procedure logic 
+ *****************************/
+ 
+delete from "CDA_4_HANA.FactTables.Tables::SF_CDA_FIDO";
+insert into "CDA_4_HANA.FactTables.Tables::SF_CDA_FIDO"
+SELECT
+	 "KUNNR",
+	 "KKBER",
+	 sum("KLIMK") AS "KLIMK" 
+FROM "CDA_4_HANA.Views.Fido::CA_FIDO_CLIENTI" 
+GROUP BY "KUNNR",
+	 "KKBER"
+; 
+ 
+END;

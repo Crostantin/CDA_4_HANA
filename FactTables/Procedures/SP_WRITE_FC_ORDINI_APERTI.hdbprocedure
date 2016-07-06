@@ -1,0 +1,25 @@
+PROCEDURE "CDA_4_HANA"."CDA_4_HANA.FactTables.Procedures::SP_WRITE_FC_ORDINI_APERTI" ( ) 
+	LANGUAGE SQLSCRIPT
+	SQL SECURITY INVOKER 
+	DEFAULT SCHEMA "CDA_4_HANA"
+	--READS SQL DATA 
+	AS
+BEGIN
+/***************************** 
+	Write your procedure logic 
+ *****************************/
+
+delete from "CDA_4_HANA"."CDA_4_HANA.FactTables.Tables::SF_CDA_ORDINI_APERTI"; 
+insert into  "CDA_4_HANA"."CDA_4_HANA.FactTables.Tables::SF_CDA_ORDINI_APERTI"
+SELECT
+	 "KKBER",
+	 "KUNNR",
+	 sum("OEIKW") AS "OEIKW",
+	 sum("OLIKW") AS "OLIKW",
+	 sum("OFAKW") AS "OFAKW" 
+FROM "CDA_4_HANA.Views.OrdiniAperti::CA_ORDINI_APERTI" 
+GROUP BY "KKBER",
+	 "KUNNR"
+;
+
+END;

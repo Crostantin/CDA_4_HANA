@@ -26,7 +26,7 @@
     </DataSource>
   </dataSources>
   <calculationViews>
-    <calculationView xsi:type="Calculation:JoinView" id="MESE_REGISTRAZIONE" cardinality="C1_N" joinType="inner">
+    <calculationView xsi:type="Calculation:JoinView" id="MESE_REGISTRAZIONE" cardinality="CN_1" joinType="inner">
       <descriptions/>
       <viewAttributes>
         <viewAttribute id="PARTITA_ID"/>
@@ -172,7 +172,7 @@
       </input>
       <joinAttribute name="BUDAT"/>
     </calculationView>
-    <calculationView xsi:type="Calculation:JoinView" id="MESE_PAREGGIO" cardinality="C1_N" joinType="inner">
+    <calculationView xsi:type="Calculation:JoinView" id="MESE_PAREGGIO" cardinality="CN_1" joinType="leftOuter">
       <descriptions/>
       <viewAttributes>
         <viewAttribute id="PARTITA_ID"/>
@@ -320,7 +320,7 @@
       </input>
       <joinAttribute name="AUGDT"/>
     </calculationView>
-    <calculationView xsi:type="Calculation:JoinView" id="MESE_SCADENZA" cardinality="C1_N" joinType="inner">
+    <calculationView xsi:type="Calculation:JoinView" id="MESE_SCADENZA" cardinality="CN_1" joinType="inner">
       <descriptions/>
       <viewAttributes>
         <viewAttribute id="PARTITA_ID"/>
@@ -508,7 +508,15 @@
         <viewAttribute id="DATA_APERTURA"/>
         <viewAttribute id="DATA_CHIUSURA"/>
       </viewAttributes>
-      <calculatedViewAttributes/>
+      <calculatedViewAttributes>
+        <calculatedViewAttribute datatype="NVARCHAR" id="MESE_PAREGGIO_CALC" length="6" expressionLanguage="COLUMN_ENGINE">
+          <formula>if(&#xD;
+isnull(&quot;MESE_PAREGGIO&quot;)&#xD;
+,'205012'&#xD;
+,&quot;MESE_PAREGGIO&quot;)&#xD;
+</formula>
+        </calculatedViewAttribute>
+      </calculatedViewAttributes>
       <input node="#MESE_SCADENZA">
         <mapping xsi:type="Calculation:AttributeMapping" target="PARTITA_ID" source="PARTITA_ID"/>
         <mapping xsi:type="Calculation:AttributeMapping" target="BUKRS" source="BUKRS"/>
@@ -553,10 +561,10 @@
         <viewAttribute id="XBLNR"/>
         <viewAttribute id="MESE_SCADENZA"/>
         <viewAttribute id="MESE_REGISTRAZIONE"/>
-        <viewAttribute id="MESE_PAREGGIO"/>
         <viewAttribute id="MONTH_ID"/>
         <viewAttribute id="DATA_APERTURA"/>
         <viewAttribute id="DATA_CHIUSURA"/>
+        <viewAttribute id="MESE_PAREGGIO_CALC"/>
       </viewAttributes>
       <calculatedViewAttributes/>
       <input node="#SF_CDA_AGING_INC_S0">
@@ -576,13 +584,12 @@
         <mapping xsi:type="Calculation:AttributeMapping" target="XBLNR" source="XBLNR"/>
         <mapping xsi:type="Calculation:AttributeMapping" target="MESE_SCADENZA" source="MESE_SCADENZA"/>
         <mapping xsi:type="Calculation:AttributeMapping" target="MESE_REGISTRAZIONE" source="MESE_REGISTRAZIONE"/>
-        <mapping xsi:type="Calculation:AttributeMapping" target="MESE_PAREGGIO" source="MESE_PAREGGIO"/>
         <mapping xsi:type="Calculation:AttributeMapping" target="MONTH_ID" source="MONTH_ID"/>
         <mapping xsi:type="Calculation:AttributeMapping" target="DATA_APERTURA" source="DATA_APERTURA"/>
         <mapping xsi:type="Calculation:AttributeMapping" target="DATA_CHIUSURA" source="DATA_CHIUSURA"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="MESE_PAREGGIO_CALC" source="MESE_PAREGGIO_CALC"/>
       </input>
-      <filter>(&quot;MONTH_ID&quot; >= &quot;MESE_REGISTRAZIONE&quot; )and &#xD;
-(&quot;MONTH_ID&quot; &lt; &quot;MESE_PAREGGIO&quot;)</filter>
+      <filter>&quot;MONTH_ID&quot; >= &quot;MESE_REGISTRAZIONE&quot; and &quot;MONTH_ID&quot; &lt; &quot;MESE_PAREGGIO_CALC&quot;</filter>
     </calculationView>
   </calculationViews>
   <logicalModel id="SF_CDA_AGING_INC_S1">
@@ -656,43 +663,43 @@
         <descriptions defaultDescription="MESE_REGISTRAZIONE"/>
         <keyMapping columnObjectName="SF_CDA_AGING_INC_S1" columnName="MESE_REGISTRAZIONE"/>
       </attribute>
-      <attribute id="MESE_PAREGGIO" order="18" attributeHierarchyActive="false" displayAttribute="false">
-        <descriptions defaultDescription="MONTH_ID"/>
-        <keyMapping columnObjectName="SF_CDA_AGING_INC_S1" columnName="MESE_PAREGGIO"/>
+      <attribute id="MESE_PAREGGIO_CALC" order="24" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="MESE_PAREGGIO_CALC"/>
+        <keyMapping columnObjectName="SF_CDA_AGING_INC_S1" columnName="MESE_PAREGGIO_CALC"/>
       </attribute>
     </attributes>
     <calculatedAttributes>
-      <calculatedAttribute id="VAL_FATTURATO" hidden="false" order="19" semanticType="empty" attributeHierarchyActive="false" displayAttribute="false">
+      <calculatedAttribute id="VAL_FATTURATO" hidden="false" order="18" semanticType="empty" attributeHierarchyActive="false" displayAttribute="false">
         <descriptions defaultDescription="VAL_FATTURATO"/>
         <keyCalculation datatype="DECIMAL" expressionLanguage="COLUMN_ENGINE" length="13" scale="2">
           <formula>NULL</formula>
         </keyCalculation>
       </calculatedAttribute>
-      <calculatedAttribute id="VAL_FATTURATO_LC" hidden="false" order="20" semanticType="empty" attributeHierarchyActive="false" displayAttribute="false">
+      <calculatedAttribute id="VAL_FATTURATO_LC" hidden="false" order="19" semanticType="empty" attributeHierarchyActive="false" displayAttribute="false">
         <descriptions defaultDescription="VAL_FATTURATO"/>
         <keyCalculation datatype="DECIMAL" expressionLanguage="COLUMN_ENGINE" length="13" scale="2">
           <formula>NULL</formula>
         </keyCalculation>
       </calculatedAttribute>
-      <calculatedAttribute id="VAL_SCADUTO" hidden="false" order="21" semanticType="empty" attributeHierarchyActive="false" displayAttribute="false">
+      <calculatedAttribute id="VAL_SCADUTO" hidden="false" order="20" semanticType="empty" attributeHierarchyActive="false" displayAttribute="false">
         <descriptions defaultDescription="VAL_SCADUTO"/>
         <keyCalculation datatype="DECIMAL" expressionLanguage="COLUMN_ENGINE" length="13" scale="2">
           <formula>if(&quot;MESE_SCADENZA&quot;&lt;=&quot;MONTH_ID&quot;,&quot;DMSOL&quot;,null)</formula>
         </keyCalculation>
       </calculatedAttribute>
-      <calculatedAttribute id="VAL_SCADUTO_LC" hidden="false" order="22" semanticType="empty" attributeHierarchyActive="false" displayAttribute="false">
+      <calculatedAttribute id="VAL_SCADUTO_LC" hidden="false" order="21" semanticType="empty" attributeHierarchyActive="false" displayAttribute="false">
         <descriptions defaultDescription="VAL_SCADUTO"/>
         <keyCalculation datatype="DECIMAL" expressionLanguage="COLUMN_ENGINE" length="13" scale="2">
           <formula>if(&quot;MESE_SCADENZA&quot;&lt;=&quot;MONTH_ID&quot;,&quot;WRSHB&quot;,null)</formula>
         </keyCalculation>
       </calculatedAttribute>
-      <calculatedAttribute id="VAL_A_SCADERE" hidden="false" order="23" semanticType="empty" attributeHierarchyActive="false" displayAttribute="false">
+      <calculatedAttribute id="VAL_A_SCADERE" hidden="false" order="22" semanticType="empty" attributeHierarchyActive="false" displayAttribute="false">
         <descriptions defaultDescription="VAL_A_SCADERE"/>
         <keyCalculation datatype="DECIMAL" expressionLanguage="COLUMN_ENGINE" length="13" scale="2">
           <formula>if(&quot;MESE_SCADENZA&quot;>&quot;MONTH_ID&quot;,&quot;DMSOL&quot;,null)</formula>
         </keyCalculation>
       </calculatedAttribute>
-      <calculatedAttribute id="VAL_A_SCADERE_LC" hidden="false" order="24" semanticType="empty" attributeHierarchyActive="false" displayAttribute="false">
+      <calculatedAttribute id="VAL_A_SCADERE_LC" hidden="false" order="23" semanticType="empty" attributeHierarchyActive="false" displayAttribute="false">
         <descriptions defaultDescription="VAL_A_SCADERE"/>
         <keyCalculation datatype="DECIMAL" expressionLanguage="COLUMN_ENGINE" length="13" scale="2">
           <formula>if(&quot;MESE_SCADENZA&quot;>&quot;MONTH_ID&quot;,&quot;WRSHB&quot;,null)</formula>

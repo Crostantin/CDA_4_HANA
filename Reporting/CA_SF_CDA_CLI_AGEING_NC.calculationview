@@ -30,7 +30,7 @@
         <viewAttribute id="VAL_FATTURATO"/>
         <viewAttribute id="VAL_FATTURATO_LC"/>
         <viewAttribute id="VAL_FATTURATO_12M"/>
-        <viewAttribute id="VAL_FATTURATO_LC_12M"/>
+        <viewAttribute id="VAL_FATTURATO_12M_LC"/>
       </viewAttributes>
       <calculatedViewAttributes/>
       <input node="#CDA_4_HANA.FactTables.Tables::SF_CDA_CLI_AGEING_NC">
@@ -38,6 +38,9 @@
         <mapping xsi:type="Calculation:AttributeMapping" target="BUKRS" source="BUKRS"/>
         <mapping xsi:type="Calculation:AttributeMapping" target="KUNNR" source="KUNNR"/>
         <mapping xsi:type="Calculation:AttributeMapping" target="MONTH_ID" source="MONTH_ID"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="BLART" source="BLART"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="ZTERM" source="ZTERM"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="ZLSCH" source="ZLSCH"/>
         <mapping xsi:type="Calculation:AttributeMapping" target="WRSHB" source="WRSHB"/>
         <mapping xsi:type="Calculation:AttributeMapping" target="DMSOL" source="DMSOL"/>
         <mapping xsi:type="Calculation:AttributeMapping" target="VAL_SCADUTO" source="VAL_SCADUTO"/>
@@ -47,10 +50,7 @@
         <mapping xsi:type="Calculation:AttributeMapping" target="VAL_FATTURATO" source="VAL_FATTURATO"/>
         <mapping xsi:type="Calculation:AttributeMapping" target="VAL_FATTURATO_LC" source="VAL_FATTURATO_LC"/>
         <mapping xsi:type="Calculation:AttributeMapping" target="VAL_FATTURATO_12M" source="VAL_FATTURATO_12M"/>
-        <mapping xsi:type="Calculation:AttributeMapping" target="VAL_FATTURATO_LC_12M" source="VAL_FATTURATO_LC_12M"/>
-        <mapping xsi:type="Calculation:AttributeMapping" target="BLART" source="BLART"/>
-        <mapping xsi:type="Calculation:AttributeMapping" target="ZTERM" source="ZTERM"/>
-        <mapping xsi:type="Calculation:AttributeMapping" target="ZLSCH" source="ZLSCH"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="VAL_FATTURATO_12M_LC" source="VAL_FATTURATO_12M_LC"/>
       </input>
     </calculationView>
   </calculationViews>
@@ -69,17 +69,17 @@
         <descriptions/>
         <keyMapping columnObjectName="Projection_1" columnName="KUNNR"/>
       </attribute>
-      <attribute id="BLART$local">
-        <descriptions defaultDescription="BLART"/>
-        <keyMapping columnObjectName="Projection_1" columnName="BLART"/>
+      <attribute id="ZTERM$local">
+        <descriptions/>
+        <keyMapping columnObjectName="Projection_1" columnName="ZTERM"/>
       </attribute>
       <attribute id="ZLSCH$local">
-        <descriptions defaultDescription="ZLSCH"/>
+        <descriptions/>
         <keyMapping columnObjectName="Projection_1" columnName="ZLSCH"/>
       </attribute>
-      <attribute id="ZTERM$local">
-        <descriptions defaultDescription="ZTERM"/>
-        <keyMapping columnObjectName="Projection_1" columnName="ZTERM"/>
+      <attribute id="BLART$local">
+        <descriptions/>
+        <keyMapping columnObjectName="Projection_1" columnName="BLART"/>
       </attribute>
     </attributes>
     <calculatedAttributes/>
@@ -98,10 +98,6 @@
       <measure id="VAL_A_SCADERE_LC" order="2" aggregationType="sum" measureType="simple">
         <descriptions defaultDescription="VAL_A_SCADERE_LC"/>
         <measureMapping columnObjectName="Projection_1" columnName="VAL_A_SCADERE_LC"/>
-      </measure>
-      <measure id="VAL_FATTURATO_LC_12M" order="3" aggregationType="sum" measureType="simple">
-        <descriptions defaultDescription="VAL_FATTURATO_LC_12M"/>
-        <measureMapping columnObjectName="Projection_1" columnName="VAL_FATTURATO_LC_12M"/>
       </measure>
     </baseMeasures>
     <calculatedMeasures/>

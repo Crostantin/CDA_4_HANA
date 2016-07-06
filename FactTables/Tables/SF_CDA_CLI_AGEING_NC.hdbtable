@@ -5,7 +5,7 @@ table.columns = [
 	 {name="BUKRS"; sqlType=VARCHAR; length=4; nullable=false; },
 	 {name="KUNNR"; sqlType=VARCHAR; length=10;},
 	 {name="BLART"; sqlType=VARCHAR; length=2;},
-	 {name="BUDAT"; sqlType=DATE;  },
+	 {name="BUDAT"; sqlType=DATE; },
 	 {name="NETDT"; sqlType=DATE; },
 	 {name="ZLSCH"; sqlType=VARCHAR; length=1;},
 	 {name="ZTERM"; sqlType=VARCHAR; length=4;},
@@ -23,6 +23,6 @@ table.columns = [
 	 {name="VAL_FATTURATO"; sqlType=DECIMAL; scale=18; scale=2; },
 	 {name="VAL_FATTURATO_LC"; sqlType=DECIMAL; scale=18; scale=2; },
 	 {name="VAL_FATTURATO_12M"; sqlType=DECIMAL; scale=18; scale=2; },
-	 {name="VAL_FATTURATO_LC_12M"; sqlType=DECIMAL; scale=18; scale=2; }
+	 {name="VAL_FATTURATO_12M_LC"; sqlType=DECIMAL; scale=18; scale=2; }
 ];
 table.primaryKey.pkcolumns=["PARTITA_ID", "BUKRS", "MONTH_ID"];

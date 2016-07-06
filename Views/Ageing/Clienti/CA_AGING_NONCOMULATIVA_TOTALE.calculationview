@@ -18,7 +18,10 @@
     <calculationView xsi:type="Calculation:ProjectionView" id="Projection_2">
       <descriptions/>
       <viewAttributes>
+        <viewAttribute id="PARTITA_ID"/>
         <viewAttribute id="BUKRS"/>
+        <viewAttribute id="LIFNR"/>
+        <viewAttribute id="MONTH_ID"/>
         <viewAttribute id="KUNNR"/>
         <viewAttribute id="BLART"/>
         <viewAttribute id="BUDAT"/>
@@ -27,9 +30,7 @@
         <viewAttribute id="ZTERM"/>
         <viewAttribute id="XBLNR"/>
         <viewAttribute id="AUGDT"/>
-        <viewAttribute id="MONTH_ID"/>
         <viewAttribute id="BLDAT"/>
-        <viewAttribute id="LIFNR"/>
         <viewAttribute id="DMSOL"/>
         <viewAttribute id="WRSHB"/>
         <viewAttribute id="VAL_FATTURATO"/>
@@ -38,18 +39,20 @@
         <viewAttribute id="VAL_SCADUTO_LC"/>
         <viewAttribute id="VAL_A_SCADERE"/>
         <viewAttribute id="VAL_A_SCADERE_LC"/>
-        <viewAttribute id="PARTITA_ID"/>
       </viewAttributes>
       <calculatedViewAttributes>
         <calculatedViewAttribute datatype="DECIMAL" id="VAL_FATTURATO_12M" length="13" scale="2" expressionLanguage="COLUMN_ENGINE">
           <formula>null</formula>
         </calculatedViewAttribute>
-        <calculatedViewAttribute datatype="DECIMAL" id="VAL_FATTURATO_LC_12M" length="13" scale="2" expressionLanguage="COLUMN_ENGINE">
+        <calculatedViewAttribute datatype="DECIMAL" id="VAL_FATTURATO_12M_LC" length="13" scale="2" expressionLanguage="COLUMN_ENGINE">
           <formula>null</formula>
         </calculatedViewAttribute>
       </calculatedViewAttributes>
       <input node="#CA_AGEING_NONCOMULATIVA_S2">
+        <mapping xsi:type="Calculation:AttributeMapping" target="PARTITA_ID" source="PARTITA_ID"/>
         <mapping xsi:type="Calculation:AttributeMapping" target="BUKRS" source="BUKRS"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="LIFNR" source="LIFNR"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="MONTH_ID" source="MONTH_ID"/>
         <mapping xsi:type="Calculation:AttributeMapping" target="KUNNR" source="KUNNR"/>
         <mapping xsi:type="Calculation:AttributeMapping" target="BLART" source="BLART"/>
         <mapping xsi:type="Calculation:AttributeMapping" target="BUDAT" source="BUDAT"/>
@@ -58,9 +61,7 @@
         <mapping xsi:type="Calculation:AttributeMapping" target="ZTERM" source="ZTERM"/>
         <mapping xsi:type="Calculation:AttributeMapping" target="XBLNR" source="XBLNR"/>
         <mapping xsi:type="Calculation:AttributeMapping" target="AUGDT" source="AUGDT"/>
-        <mapping xsi:type="Calculation:AttributeMapping" target="MONTH_ID" source="MONTH_ID"/>
         <mapping xsi:type="Calculation:AttributeMapping" target="BLDAT" source="BLDAT"/>
-        <mapping xsi:type="Calculation:AttributeMapping" target="LIFNR" source="LIFNR"/>
         <mapping xsi:type="Calculation:AttributeMapping" target="DMSOL" source="DMSOL"/>
         <mapping xsi:type="Calculation:AttributeMapping" target="WRSHB" source="WRSHB"/>
         <mapping xsi:type="Calculation:AttributeMapping" target="VAL_FATTURATO" source="VAL_FATTURATO"/>
@@ -69,12 +70,12 @@
         <mapping xsi:type="Calculation:AttributeMapping" target="VAL_SCADUTO_LC" source="VAL_SCADUTO_LC"/>
         <mapping xsi:type="Calculation:AttributeMapping" target="VAL_A_SCADERE" source="VAL_A_SCADERE"/>
         <mapping xsi:type="Calculation:AttributeMapping" target="VAL_A_SCADERE_LC" source="VAL_A_SCADERE_LC"/>
-        <mapping xsi:type="Calculation:AttributeMapping" target="PARTITA_ID" source="PARTITA_ID"/>
       </input>
     </calculationView>
     <calculationView xsi:type="Calculation:ProjectionView" id="Projection_1">
       <descriptions/>
       <viewAttributes>
+        <viewAttribute id="PARTITA_ID"/>
         <viewAttribute id="BUKRS"/>
         <viewAttribute id="KUNNR"/>
         <viewAttribute id="BLART"/>
@@ -87,15 +88,14 @@
         <viewAttribute id="BLDAT"/>
         <viewAttribute id="LIFNR"/>
         <viewAttribute id="MONTH_ID"/>
-        <viewAttribute id="VAL_FATTURATO_12M"/>
-        <viewAttribute id="VAL_FATTURATO_LC_12M"/>
         <viewAttribute id="DMSOL"/>
         <viewAttribute id="WRSHB"/>
         <viewAttribute id="VAL_SCADUTO"/>
+        <viewAttribute id="VAL_FATTURATO_12M"/>
+        <viewAttribute id="VAL_FATTURATO_12M_LC"/>
         <viewAttribute id="VAL_SCADUTO_LC"/>
         <viewAttribute id="VAL_A_SCADERE"/>
         <viewAttribute id="VAL_A_SCADERE_LC"/>
-        <viewAttribute id="PARTITA_ID"/>
       </viewAttributes>
       <calculatedViewAttributes>
         <calculatedViewAttribute datatype="DECIMAL" id="VAL_FATTURATO" length="13" scale="2" expressionLanguage="COLUMN_ENGINE">
@@ -106,6 +106,7 @@
         </calculatedViewAttribute>
       </calculatedViewAttributes>
       <input node="#CA_AGEING_NONCOMULATIVA_S3_ROLLING">
+        <mapping xsi:type="Calculation:AttributeMapping" target="PARTITA_ID" source="PARTITA_ID"/>
         <mapping xsi:type="Calculation:AttributeMapping" target="BUKRS" source="BUKRS"/>
         <mapping xsi:type="Calculation:AttributeMapping" target="KUNNR" source="KUNNR"/>
         <mapping xsi:type="Calculation:AttributeMapping" target="BLART" source="BLART"/>
@@ -118,20 +119,20 @@
         <mapping xsi:type="Calculation:AttributeMapping" target="BLDAT" source="BLDAT"/>
         <mapping xsi:type="Calculation:AttributeMapping" target="LIFNR" source="LIFNR"/>
         <mapping xsi:type="Calculation:AttributeMapping" target="MONTH_ID" source="MONTH_ID"/>
-        <mapping xsi:type="Calculation:AttributeMapping" target="VAL_FATTURATO_12M" source="VAL_FATTURATO_12M"/>
-        <mapping xsi:type="Calculation:AttributeMapping" target="VAL_FATTURATO_LC_12M" source="VAL_FATTURATO_LC_12M"/>
         <mapping xsi:type="Calculation:AttributeMapping" target="DMSOL" source="DMSOL"/>
         <mapping xsi:type="Calculation:AttributeMapping" target="WRSHB" source="WRSHB"/>
         <mapping xsi:type="Calculation:AttributeMapping" target="VAL_SCADUTO" source="VAL_SCADUTO"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="VAL_FATTURATO_12M" source="VAL_FATTURATO_12M"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="VAL_FATTURATO_12M_LC" source="VAL_FATTURATO_LC_12M"/>
         <mapping xsi:type="Calculation:AttributeMapping" target="VAL_SCADUTO_LC" source="VAL_SCADUTO_LC"/>
         <mapping xsi:type="Calculation:AttributeMapping" target="VAL_A_SCADERE" source="VAL_A_SCADERE"/>
         <mapping xsi:type="Calculation:AttributeMapping" target="VAL_A_SCADERE_LC" source="VAL_A_SCADERE_LC"/>
-        <mapping xsi:type="Calculation:AttributeMapping" target="PARTITA_ID" source="PARTITA_ID"/>
       </input>
     </calculationView>
     <calculationView xsi:type="Calculation:UnionView" id="Union_1">
       <descriptions/>
       <viewAttributes>
+        <viewAttribute id="PARTITA_ID"/>
         <viewAttribute id="BUKRS"/>
         <viewAttribute id="KUNNR"/>
         <viewAttribute id="BLART"/>
@@ -144,20 +145,22 @@
         <viewAttribute id="BLDAT"/>
         <viewAttribute id="LIFNR"/>
         <viewAttribute id="MONTH_ID"/>
-        <viewAttribute id="VAL_FATTURATO_12M"/>
-        <viewAttribute id="VAL_FATTURATO_LC_12M"/>
         <viewAttribute id="DMSOL"/>
         <viewAttribute id="WRSHB"/>
         <viewAttribute id="VAL_SCADUTO"/>
+        <viewAttribute id="VAL_FATTURATO_12M"/>
+        <viewAttribute id="VAL_FATTURATO_12M_LC"/>
         <viewAttribute id="VAL_SCADUTO_LC"/>
         <viewAttribute id="VAL_A_SCADERE"/>
         <viewAttribute id="VAL_A_SCADERE_LC"/>
         <viewAttribute id="VAL_FATTURATO"/>
         <viewAttribute id="VAL_FATTURATO_LC"/>
-        <viewAttribute id="PARTITA_ID"/>
       </viewAttributes>
       <calculatedViewAttributes/>
       <input emptyUnionBehavior="NO_ROW" node="#Projection_1">
+        <mapping xsi:type="Calculation:AttributeMapping" target="VAL_FATTURATO" source="VAL_FATTURATO"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="VAL_FATTURATO_LC" source="VAL_FATTURATO_LC"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="PARTITA_ID" source="PARTITA_ID"/>
         <mapping xsi:type="Calculation:AttributeMapping" target="BUKRS" source="BUKRS"/>
         <mapping xsi:type="Calculation:AttributeMapping" target="KUNNR" source="KUNNR"/>
         <mapping xsi:type="Calculation:AttributeMapping" target="BLART" source="BLART"/>
@@ -170,20 +173,22 @@
         <mapping xsi:type="Calculation:AttributeMapping" target="BLDAT" source="BLDAT"/>
         <mapping xsi:type="Calculation:AttributeMapping" target="LIFNR" source="LIFNR"/>
         <mapping xsi:type="Calculation:AttributeMapping" target="MONTH_ID" source="MONTH_ID"/>
-        <mapping xsi:type="Calculation:AttributeMapping" target="VAL_FATTURATO_12M" source="VAL_FATTURATO_12M"/>
-        <mapping xsi:type="Calculation:AttributeMapping" target="VAL_FATTURATO_LC_12M" source="VAL_FATTURATO_LC_12M"/>
         <mapping xsi:type="Calculation:AttributeMapping" target="DMSOL" source="DMSOL"/>
         <mapping xsi:type="Calculation:AttributeMapping" target="WRSHB" source="WRSHB"/>
         <mapping xsi:type="Calculation:AttributeMapping" target="VAL_SCADUTO" source="VAL_SCADUTO"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="VAL_FATTURATO_12M" source="VAL_FATTURATO_12M"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="VAL_FATTURATO_12M_LC" source="VAL_FATTURATO_12M_LC"/>
         <mapping xsi:type="Calculation:AttributeMapping" target="VAL_SCADUTO_LC" source="VAL_SCADUTO_LC"/>
         <mapping xsi:type="Calculation:AttributeMapping" target="VAL_A_SCADERE" source="VAL_A_SCADERE"/>
         <mapping xsi:type="Calculation:AttributeMapping" target="VAL_A_SCADERE_LC" source="VAL_A_SCADERE_LC"/>
-        <mapping xsi:type="Calculation:AttributeMapping" target="VAL_FATTURATO" source="VAL_FATTURATO"/>
-        <mapping xsi:type="Calculation:AttributeMapping" target="VAL_FATTURATO_LC" source="VAL_FATTURATO_LC"/>
-        <mapping xsi:type="Calculation:AttributeMapping" target="PARTITA_ID" source="PARTITA_ID"/>
       </input>
       <input emptyUnionBehavior="NO_ROW" node="#Projection_2">
+        <mapping xsi:type="Calculation:AttributeMapping" target="VAL_FATTURATO_12M" source="VAL_FATTURATO_12M"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="VAL_FATTURATO_12M_LC" source="VAL_FATTURATO_12M_LC"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="PARTITA_ID" source="PARTITA_ID"/>
         <mapping xsi:type="Calculation:AttributeMapping" target="BUKRS" source="BUKRS"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="LIFNR" source="LIFNR"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="MONTH_ID" source="MONTH_ID"/>
         <mapping xsi:type="Calculation:AttributeMapping" target="KUNNR" source="KUNNR"/>
         <mapping xsi:type="Calculation:AttributeMapping" target="BLART" source="BLART"/>
         <mapping xsi:type="Calculation:AttributeMapping" target="BUDAT" source="BUDAT"/>
@@ -193,19 +198,14 @@
         <mapping xsi:type="Calculation:AttributeMapping" target="XBLNR" source="XBLNR"/>
         <mapping xsi:type="Calculation:AttributeMapping" target="AUGDT" source="AUGDT"/>
         <mapping xsi:type="Calculation:AttributeMapping" target="BLDAT" source="BLDAT"/>
-        <mapping xsi:type="Calculation:AttributeMapping" target="LIFNR" source="LIFNR"/>
-        <mapping xsi:type="Calculation:AttributeMapping" target="MONTH_ID" source="MONTH_ID"/>
-        <mapping xsi:type="Calculation:AttributeMapping" target="VAL_FATTURATO_12M" source="VAL_FATTURATO_12M"/>
-        <mapping xsi:type="Calculation:AttributeMapping" target="VAL_FATTURATO_LC_12M" source="VAL_FATTURATO_LC_12M"/>
         <mapping xsi:type="Calculation:AttributeMapping" target="DMSOL" source="DMSOL"/>
         <mapping xsi:type="Calculation:AttributeMapping" target="WRSHB" source="WRSHB"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="VAL_FATTURATO" source="VAL_FATTURATO"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="VAL_FATTURATO_LC" source="VAL_FATTURATO_LC"/>
         <mapping xsi:type="Calculation:AttributeMapping" target="VAL_SCADUTO" source="VAL_SCADUTO"/>
         <mapping xsi:type="Calculation:AttributeMapping" target="VAL_SCADUTO_LC" source="VAL_SCADUTO_LC"/>
         <mapping xsi:type="Calculation:AttributeMapping" target="VAL_A_SCADERE" source="VAL_A_SCADERE"/>
         <mapping xsi:type="Calculation:AttributeMapping" target="VAL_A_SCADERE_LC" source="VAL_A_SCADERE_LC"/>
-        <mapping xsi:type="Calculation:AttributeMapping" target="VAL_FATTURATO" source="VAL_FATTURATO"/>
-        <mapping xsi:type="Calculation:AttributeMapping" target="VAL_FATTURATO_LC" source="VAL_FATTURATO_LC"/>
-        <mapping xsi:type="Calculation:AttributeMapping" target="PARTITA_ID" source="PARTITA_ID"/>
       </input>
     </calculationView>
   </calculationViews>
@@ -274,45 +274,45 @@
       </layout>
     </privateDataFoundation>
     <baseMeasures>
-      <measure id="DMSOL" order="14" aggregationType="sum" engineAggregation="count" measureType="simple">
+      <measure id="DMSOL" order="14" aggregationType="sum" measureType="simple">
         <descriptions defaultDescription="DMSOL"/>
         <measureMapping columnObjectName="Union_1" columnName="DMSOL"/>
       </measure>
-      <measure id="WRSHB" order="15" aggregationType="sum" engineAggregation="count" measureType="simple">
+      <measure id="WRSHB" order="15" aggregationType="sum" measureType="simple">
         <descriptions defaultDescription="WRSHB"/>
         <measureMapping columnObjectName="Union_1" columnName="WRSHB"/>
       </measure>
-      <measure id="VAL_SCADUTO" order="16" aggregationType="sum" engineAggregation="count" measureType="simple">
+      <measure id="VAL_SCADUTO" order="16" aggregationType="sum" measureType="simple">
         <descriptions defaultDescription="VAL_SCADUTO"/>
         <measureMapping columnObjectName="Union_1" columnName="VAL_SCADUTO"/>
       </measure>
-      <measure id="VAL_SCADUTO_LC" order="17" aggregationType="sum" engineAggregation="count" measureType="simple">
-        <descriptions defaultDescription="VAL_SCADUTO_LC"/>
-        <measureMapping columnObjectName="Union_1" columnName="VAL_SCADUTO_LC"/>
-      </measure>
-      <measure id="VAL_A_SCADERE" order="18" aggregationType="sum" engineAggregation="count" measureType="simple">
-        <descriptions defaultDescription="VAL_A_SCADERE"/>
-        <measureMapping columnObjectName="Union_1" columnName="VAL_A_SCADERE"/>
-      </measure>
-      <measure id="VAL_A_SCADERE_LC" order="19" aggregationType="sum" engineAggregation="count" measureType="simple">
-        <descriptions defaultDescription="VAL_A_SCADERE_LC"/>
-        <measureMapping columnObjectName="Union_1" columnName="VAL_A_SCADERE_LC"/>
-      </measure>
-      <measure id="VAL_FATTURATO" order="20" aggregationType="sum" engineAggregation="count" measureType="simple">
-        <descriptions defaultDescription="VAL_FATTURATO"/>
-        <measureMapping columnObjectName="Union_1" columnName="VAL_FATTURATO"/>
-      </measure>
-      <measure id="VAL_FATTURATO_LC" order="21" aggregationType="sum" engineAggregation="count" measureType="simple">
-        <descriptions defaultDescription="VAL_FATTURATO_LC"/>
-        <measureMapping columnObjectName="Union_1" columnName="VAL_FATTURATO_LC"/>
-      </measure>
-      <measure id="VAL_FATTURATO_12M" order="22" aggregationType="sum" engineAggregation="count" measureType="simple">
+      <measure id="VAL_FATTURATO_12M" order="17" aggregationType="sum" measureType="simple">
         <descriptions defaultDescription="VAL_FATTURATO_12M"/>
         <measureMapping columnObjectName="Union_1" columnName="VAL_FATTURATO_12M"/>
       </measure>
-      <measure id="VAL_FATTURATO_LC_12M" order="23" aggregationType="sum" engineAggregation="count" measureType="simple">
-        <descriptions defaultDescription="VAL_FATTURATO_LC_12M"/>
-        <measureMapping columnObjectName="Union_1" columnName="VAL_FATTURATO_LC_12M"/>
+      <measure id="VAL_FATTURATO_12M_LC" order="18" aggregationType="sum" measureType="simple">
+        <descriptions defaultDescription="VAL_FATTURATO_12M_LC"/>
+        <measureMapping columnObjectName="Union_1" columnName="VAL_FATTURATO_12M_LC"/>
+      </measure>
+      <measure id="VAL_SCADUTO_LC" order="19" aggregationType="sum" measureType="simple">
+        <descriptions defaultDescription="VAL_SCADUTO_LC"/>
+        <measureMapping columnObjectName="Union_1" columnName="VAL_SCADUTO_LC"/>
+      </measure>
+      <measure id="VAL_A_SCADERE" order="20" aggregationType="sum" measureType="simple">
+        <descriptions defaultDescription="VAL_A_SCADERE"/>
+        <measureMapping columnObjectName="Union_1" columnName="VAL_A_SCADERE"/>
+      </measure>
+      <measure id="VAL_A_SCADERE_LC" order="21" aggregationType="sum" measureType="simple">
+        <descriptions defaultDescription="VAL_A_SCADERE_LC"/>
+        <measureMapping columnObjectName="Union_1" columnName="VAL_A_SCADERE_LC"/>
+      </measure>
+      <measure id="VAL_FATTURATO" order="22" aggregationType="sum" measureType="simple">
+        <descriptions defaultDescription="VAL_FATTURATO"/>
+        <measureMapping columnObjectName="Union_1" columnName="VAL_FATTURATO"/>
+      </measure>
+      <measure id="VAL_FATTURATO_LC" order="23" aggregationType="sum" measureType="simple">
+        <descriptions defaultDescription="VAL_FATTURATO_LC"/>
+        <measureMapping columnObjectName="Union_1" columnName="VAL_FATTURATO_LC"/>
       </measure>
     </baseMeasures>
     <calculatedMeasures/>

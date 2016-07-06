@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Calculation:scenario xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:Calculation="http://www.sap.com/ndb/BiModelCalculation.ecore" schemaVersion="2.3" id="CA_ORDINI_APERTI" applyPrivilegeType="ANALYTIC_PRIVILEGE" checkAnalyticPrivileges="true" defaultClient="$$client$$" defaultLanguage="$$language$$" hierarchiesSQLEnabled="false" translationRelevant="true" visibility="reportingEnabled" calculationScenarioType="TREE_BASED" dataCategory="CUBE" enforceSqlExecution="false" executionSemantic="UNDEFINED" outputViewType="Aggregation">
+  <descriptions defaultDescription="CA_ORDINI_APERTI"/>
+  <localVariables/>
+  <variableMappings/>
+  <informationModelLayout relativeWidthScenario="36"/>
+  <dataSources>
+    <DataSource id="CDA_4_HANA.ETL.Tables::T_S066" type="DATA_BASE_TABLE">
+      <viewAttributes allViewAttributes="true"/>
+      <columnObject schemaName="CDA_4_HANA" columnObjectName="CDA_4_HANA.ETL.Tables::T_S066"/>
+    </DataSource>
+    <DataSource id="CDA_4_HANA.ETL.Tables::T_S067" type="DATA_BASE_TABLE">
+      <viewAttributes allViewAttributes="true"/>
+      <columnObject schemaName="CDA_4_HANA" columnObjectName="CDA_4_HANA.ETL.Tables::T_S067"/>
+    </DataSource>
+    <DataSource id="CDA_4_HANA.ETL.M_Tables::M_MANDANTE" type="DATA_BASE_TABLE">
+      <viewAttributes allViewAttributes="true"/>
+      <columnObject schemaName="CDA_4_HANA" columnObjectName="CDA_4_HANA.ETL.M_Tables::M_MANDANTE"/>
+    </DataSource>
+  </dataSources>
+  <calculationViews>
+    <calculationView xsi:type="Calculation:AggregationView" id="Aggregation_1">
+      <descriptions/>
+      <viewAttributes>
+        <viewAttribute id="MANDT"/>
+        <viewAttribute id="KKBER"/>
+        <viewAttribute id="KUNNR"/>
+        <viewAttribute aggregationType="sum" id="OEIKW"/>
+      </viewAttributes>
+      <calculatedViewAttributes>
+        <calculatedViewAttribute datatype="DECIMAL" id="OLIKW" length="19" scale="2" expressionLanguage="COLUMN_ENGINE">
+          <formula>0</formula>
+        </calculatedViewAttribute>
+        <calculatedViewAttribute datatype="DECIMAL" id="OFAKW" length="19" scale="2" expressionLanguage="COLUMN_ENGINE">
+          <formula>0</formula>
+        </calculatedViewAttribute>
+      </calculatedViewAttributes>
+      <input node="#CDA_4_HANA.ETL.Tables::T_S066">
+        <mapping xsi:type="Calculation:AttributeMapping" target="OEIKW" source="OEIKW"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="MANDT" source="MANDT"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="KKBER" source="KKBER"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="KUNNR" source="KNKLI"/>
+      </input>
+    </calculationView>
+    <calculationView xsi:type="Calculation:AggregationView" id="Aggregation_2">
+      <descriptions/>
+      <viewAttributes>
+        <viewAttribute id="MANDT"/>
+        <viewAttribute id="KKBER"/>
+        <viewAttribute id="KUNNR"/>
+        <viewAttribute aggregationType="sum" id="OLIKW"/>
+        <viewAttribute aggregationType="sum" id="OFAKW"/>
+      </viewAttributes>
+      <calculatedViewAttributes>
+        <calculatedViewAttribute datatype="DECIMAL" id="OEIKW" length="19" scale="2" expressionLanguage="COLUMN_ENGINE">
+          <formula>0</formula>
+        </calculatedViewAttribute>
+      </calculatedViewAttributes>
+      <input node="#CDA_4_HANA.ETL.Tables::T_S067">
+        <mapping xsi:type="Calculation:AttributeMapping" target="MANDT" source="MANDT"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="KKBER" source="KKBER"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="KUNNR" source="KNKLI"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="OLIKW" source="OLIKW"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="OFAKW" source="OFAKW"/>
+      </input>
+    </calculationView>
+    <calculationView xsi:type="Calculation:UnionView" id="Union_1">
+      <descriptions/>
+      <viewAttributes>
+        <viewAttribute id="MANDT"/>
+        <viewAttribute id="KKBER"/>
+        <viewAttribute id="KUNNR"/>
+        <viewAttribute id="OEIKW"/>
+        <viewAttribute id="OLIKW"/>
+        <viewAttribute id="OFAKW"/>
+      </viewAttributes>
+      <calculatedViewAttributes/>
+      <input emptyUnionBehavior="NO_ROW" node="#Aggregation_1">
+        <mapping xsi:type="Calculation:AttributeMapping" target="MANDT" source="MANDT"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="KKBER" source="KKBER"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="KUNNR" source="KUNNR"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="OEIKW" source="OEIKW"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="OLIKW" source="OLIKW"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="OFAKW" source="OFAKW"/>
+      </input>
+      <input emptyUnionBehavior="NO_ROW" node="#Aggregation_2">
+        <mapping xsi:type="Calculation:AttributeMapping" target="MANDT" source="MANDT"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="KKBER" source="KKBER"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="KUNNR" source="KUNNR"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="OLIKW" source="OLIKW"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="OFAKW" source="OFAKW"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="OEIKW" source="OEIKW"/>
+      </input>
+    </calculationView>
+    <calculationView xsi:type="Calculation:JoinView" id="Join_1" cardinality="CN_1" joinType="inner">
+      <descriptions/>
+      <viewAttributes>
+        <viewAttribute id="KKBER"/>
+        <viewAttribute id="KUNNR"/>
+        <viewAttribute id="OEIKW"/>
+        <viewAttribute id="OLIKW"/>
+        <viewAttribute id="OFAKW"/>
+        <viewAttribute hidden="true" id="JOIN$MANDT$MANDT"/>
+      </viewAttributes>
+      <calculatedViewAttributes/>
+      <input node="#Union_1">
+        <mapping xsi:type="Calculation:AttributeMapping" target="KKBER" source="KKBER"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="KUNNR" source="KUNNR"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="OEIKW" source="OEIKW"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="OLIKW" source="OLIKW"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="OFAKW" source="OFAKW"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="JOIN$MANDT$MANDT" source="MANDT"/>
+      </input>
+      <input node="#CDA_4_HANA.ETL.M_Tables::M_MANDANTE">
+        <mapping xsi:type="Calculation:AttributeMapping" target="JOIN$MANDT$MANDT" source="MANDT"/>
+      </input>
+      <joinAttribute name="JOIN$MANDT$MANDT"/>
+    </calculationView>
+  </calculationViews>
+  <logicalModel id="Join_1">
+    <descriptions/>
+    <attributes>
+      <attribute id="KKBER" order="1" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="KKBER"/>
+        <keyMapping columnObjectName="Join_1" columnName="KKBER"/>
+      </attribute>
+      <attribute id="KUNNR" order="2" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="KUNNR"/>
+        <keyMapping columnObjectName="Join_1" columnName="KUNNR"/>
+      </attribute>
+    </attributes>
+    <calculatedAttributes/>
+    <privateDataFoundation>
+      <tableProxies/>
+      <joins/>
+      <layout>
+        <shapes/>
+      </layout>
+    </privateDataFoundation>
+    <baseMeasures>
+      <measure id="OEIKW" order="3" aggregationType="sum" measureType="simple">
+        <descriptions defaultDescription="OEIKW"/>
+        <measureMapping columnObjectName="Join_1" columnName="OEIKW"/>
+      </measure>
+      <measure id="OLIKW" order="4" aggregationType="sum" measureType="simple">
+        <descriptions defaultDescription="OLIKW"/>
+        <measureMapping columnObjectName="Join_1" columnName="OLIKW"/>
+      </measure>
+      <measure id="OFAKW" order="5" aggregationType="sum" measureType="simple">
+        <descriptions defaultDescription="OFAKW"/>
+        <measureMapping columnObjectName="Join_1" columnName="OFAKW"/>
+      </measure>
+    </baseMeasures>
+    <calculatedMeasures/>
+    <restrictedMeasures/>
+    <localDimensions/>
+  </logicalModel>
+  <layout>
+    <shapes>
+      <shape expanded="true" modelObjectName="Output" modelObjectNameSpace="MeasureGroup">
+        <upperLeftCorner x="99" y="87"/>
+        <rectangleSize height="0" width="0"/>
+      </shape>
+      <shape expanded="true" modelObjectName="Aggregation_1" modelObjectNameSpace="CalculationView">
+        <upperLeftCorner x="22" y="377"/>
+        <rectangleSize height="-1" width="-1"/>
+      </shape>
+      <shape expanded="true" modelObjectName="Aggregation_2" modelObjectNameSpace="CalculationView">
+        <upperLeftCorner x="176" y="377"/>
+        <rectangleSize height="-1" width="-1"/>
+      </shape>
+      <shape expanded="true" modelObjectName="Union_1" modelObjectNameSpace="CalculationView">
+        <upperLeftCorner x="99" y="261"/>
+        <rectangleSize height="-1" width="-1"/>
+      </shape>
+      <shape expanded="true" modelObjectName="Join_1" modelObjectNameSpace="CalculationView">
+        <upperLeftCorner x="99" y="165"/>
+        <rectangleSize height="-1" width="-1"/>
+      </shape>
+    </shapes>
+  </layout>
+</Calculation:scenario>

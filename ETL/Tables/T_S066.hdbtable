@@ -1,0 +1,19 @@
+table.schemaName = "CDA_4_HANA";
+table.tableType = COLUMNSTORE;
+table.columns = [
+	 {name="MANDT"; sqlType=VARCHAR; length=3;},
+	 {name="SSOUR"; sqlType=VARCHAR; length=4; nullable=false; },
+	 {name="VRSIO"; sqlType=VARCHAR; length=3; nullable=false; },
+	 {name="KKBER"; sqlType=VARCHAR; length=4; nullable=false; },
+	 {name="KNKLI"; sqlType=VARCHAR; length=10; nullable=false; },
+	 {name="SPMON"; sqlType=DECIMAL; precision=6; scale=0;  nullable=false; },
+	 {name="SPTAG"; sqlType=DATE; nullable=false; },
+	 {name="SPWOC"; sqlType=DECIMAL; precision=6; scale=0;  nullable=false; },
+	 {name="SPBUP"; sqlType=DECIMAL; precision=6; scale=0;  nullable=false; },
+	 {name="PERIV"; sqlType=VARCHAR; length=2;},
+	 {name="VWDAT"; sqlType=DECIMAL; precision=10; scale=0; },
+	 {name="CMWAE"; sqlType=VARCHAR; length=5;},
+	 {name="OEIKW"; sqlType=DECIMAL; precision=19; scale=2; },
+	 {name="AOEIW"; sqlType=DECIMAL; precision=19; scale=2; } 
+];
+table.primaryKey.pkcolumns=["VRSIO", "SSOUR", "KKBER", "KNKLI", "SPMON", "SPTAG", "SPWOC", "SPBUP"];

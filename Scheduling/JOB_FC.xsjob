@@ -4,7 +4,7 @@
     "schedules": [
        {
           "description": "Scrivi Fact Tables",
-          "xscron": "* * * * 22 30 0"
+          "xscron": "* * * * 16 04 0"
        }
     ]
 }

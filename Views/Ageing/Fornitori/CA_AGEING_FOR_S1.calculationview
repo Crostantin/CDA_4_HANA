@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<Calculation:scenario xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:Calculation="http://www.sap.com/ndb/BiModelCalculation.ecore" schemaVersion="2.3" id="CA_AGEING_CLIENTE_S1" applyPrivilegeType="ANALYTIC_PRIVILEGE" checkAnalyticPrivileges="true" defaultClient="$$client$$" defaultLanguage="$$language$$" hierarchiesSQLEnabled="false" translationRelevant="true" visibility="internal" calculationScenarioType="TREE_BASED" dataCategory="DIMENSION" enforceSqlExecution="false" executionSemantic="UNDEFINED" outputViewType="Projection">
+<Calculation:scenario xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:Calculation="http://www.sap.com/ndb/BiModelCalculation.ecore" schemaVersion="2.3" id="CA_AGEING_FOR_S1" applyPrivilegeType="ANALYTIC_PRIVILEGE" checkAnalyticPrivileges="true" defaultClient="$$client$$" defaultLanguage="$$language$$" hierarchiesSQLEnabled="false" translationRelevant="true" visibility="internal" calculationScenarioType="TREE_BASED" dataCategory="DIMENSION" enforceSqlExecution="false" executionSemantic="UNDEFINED" outputViewType="Projection">
   <descriptions defaultDescription="CA_AEGING_S1"/>
   <localVariables/>
   <variableMappings/>
   <informationModelLayout relativeWidthScenario="27"/>
   <dataSources>
-    <DataSource id="CA_AGEING_CLIENTE_S0" type="CALCULATION_VIEW">
+    <DataSource id="CA_AGEING_FOR_S0" type="CALCULATION_VIEW">
       <viewAttributes allViewAttributes="true"/>
-      <resourceUri>/CDA_4_HANA.Views.Ageing.Clienti/calculationviews/CA_AGEING_CLIENTE_S0</resourceUri>
+      <resourceUri>/CDA_4_HANA.Views.Ageing.Fornitori/calculationviews/CA_AGEING_FOR_S0</resourceUri>
     </DataSource>
     <DataSource id="CDA_4_HANA.ETL.M_Tables::M_CODE_INSOLUTO" type="DATA_BASE_TABLE">
       <viewAttributes allViewAttributes="true"/>
@@ -88,7 +88,7 @@
         <viewAttribute id="BLART_INSOLUTO"/>
       </viewAttributes>
       <calculatedViewAttributes/>
-      <input node="#CA_AGEING_CLIENTE_S0">
+      <input node="#CA_AGEING_FOR_S0">
         <mapping xsi:type="Calculation:AttributeMapping" target="BUKRS" source="BUKRS"/>
         <mapping xsi:type="Calculation:AttributeMapping" target="FISCPER" source="FISCPER"/>
         <mapping xsi:type="Calculation:AttributeMapping" target="BELNR" source="BELNR"/>

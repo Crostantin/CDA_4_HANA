@@ -18,7 +18,13 @@ call "CDA_4_HANA.FactTables.Procedures::SP_WRITE_FC_CLI_PAGAMENTI"();
 -- scrivi fact ageing cliente
 call "CDA_4_HANA.FactTables.Procedures::SP_WRITE_FC_CLI_AGEING"();
    
--- scribi fact ageing cliente non comulativa
+-- scrivi fact ageing cliente non comulativa
 call "CDA_4_HANA.FactTables.Procedures::SP_WRITE_FC_CLI_AGEING_NC"(); 
  
+-- scrivi fact ordini aperti
+call "CDA_4_HANA.FactTables.Procedures::SP_WRITE_FC_ORDINI_APERTI" (); 
+
+-- scrivi fact fido
+call "CDA_4_HANA.FactTables.Procedures::SP_WRITE_FC_FIDO" ();
+
 END;

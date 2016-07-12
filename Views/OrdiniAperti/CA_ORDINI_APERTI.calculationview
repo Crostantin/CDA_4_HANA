@@ -36,10 +36,10 @@
         </calculatedViewAttribute>
       </calculatedViewAttributes>
       <input node="#CDA_4_HANA.ETL.Tables::T_S066">
-        <mapping xsi:type="Calculation:AttributeMapping" target="OEIKW" source="OEIKW"/>
         <mapping xsi:type="Calculation:AttributeMapping" target="MANDT" source="MANDT"/>
         <mapping xsi:type="Calculation:AttributeMapping" target="KKBER" source="KKBER"/>
         <mapping xsi:type="Calculation:AttributeMapping" target="KUNNR" source="KNKLI"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="OEIKW" source="OEIKW"/>
       </input>
     </calculationView>
     <calculationView xsi:type="Calculation:AggregationView" id="Aggregation_2">
@@ -87,9 +87,9 @@
         <mapping xsi:type="Calculation:AttributeMapping" target="MANDT" source="MANDT"/>
         <mapping xsi:type="Calculation:AttributeMapping" target="KKBER" source="KKBER"/>
         <mapping xsi:type="Calculation:AttributeMapping" target="KUNNR" source="KUNNR"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="OEIKW" source="OEIKW"/>
         <mapping xsi:type="Calculation:AttributeMapping" target="OLIKW" source="OLIKW"/>
         <mapping xsi:type="Calculation:AttributeMapping" target="OFAKW" source="OFAKW"/>
-        <mapping xsi:type="Calculation:AttributeMapping" target="OEIKW" source="OEIKW"/>
       </input>
     </calculationView>
     <calculationView xsi:type="Calculation:JoinView" id="Join_1" cardinality="CN_1" joinType="inner">
